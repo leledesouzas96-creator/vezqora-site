@@ -1,0 +1,7 @@
+VEZQORA — versão com imagens realistas do portfólio
+
+Conteúdo: index.html e quatro imagens individuais dos projetos conceituais.
+
+IMPORTANTE: os quatro projetos são conceitos demonstrativos, não trabalhos de clientes reais.
+
+Para publicar: envie TODOS os arquivos desta pasta para a raiz do repositório GitHub Pages, mantendo os nomes dos arquivos, substitua o index.html e confirme em Commit changes.
