@@ -1,7 +1,13 @@
-VEZQORA — versão com imagens realistas do portfólio
+VEZQORA — site com assistente de atendimento guiado
 
-Conteúdo: index.html e quatro imagens individuais dos projetos conceituais.
+Conteúdo: index.html e quatro imagens dos projetos conceituais (SuperGo, Sofia, Diagnóstico Inteligente e Loja Online).
 
-IMPORTANTE: os quatro projetos são conceitos demonstrativos, não trabalhos de clientes reais.
+IMPORTANTE: os quatro projetos são conceitos demonstrativos, não trabalhos de clientes reais. O assistente faz perguntas programadas para coletar nome, WhatsApp, tipo de projeto, detalhes, investimento e prazo. Ele monta um resumo e abre o WhatsApp do proprietário (+55 51 99189-5177) com a mensagem pronta. O cliente precisa tocar em ENVIAR no WhatsApp.
 
-Para publicar: envie TODOS os arquivos desta pasta para a raiz do repositório GitHub Pages, mantendo os nomes dos arquivos, substitua o index.html e confirme em Commit changes.
+Esta versão é gratuita e não usa API: é um fluxo automatizado por roteiro, não uma IA generativa capaz de responder livremente. Os dados digitados ficam no navegador durante o atendimento; o site não os envia automaticamente para um servidor.
+
+PARA PUBLICAR:
+1. Extraia o ZIP.
+2. Envie TODOS os arquivos para a raiz do repositório GitHub Pages.
+3. Substitua o index.html e mantenha os quatro JPG com os nomes originais.
+4. Confirme em Commit changes e aguarde alguns minutos.
