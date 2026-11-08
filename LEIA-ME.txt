@@ -1,13 +1,21 @@
-VEZQORA — site com assistente de atendimento guiado
+VEZQORA — VERSÃO ATUALIZADA
 
-Conteúdo: index.html e quatro imagens dos projetos conceituais (SuperGo, Sofia, Diagnóstico Inteligente e Loja Online).
+Conteúdo:
+- index.html
+- supergo.jpg
+- sofia.jpg
+- diagnostico-inteligente.jpg
+- loja-online.jpg
 
-IMPORTANTE: os quatro projetos são conceitos demonstrativos, não trabalhos de clientes reais. O assistente faz perguntas programadas para coletar nome, WhatsApp, tipo de projeto, detalhes, investimento e prazo. Ele monta um resumo e abre o WhatsApp do proprietário (+55 51 99189-5177) com a mensagem pronta. O cliente precisa tocar em ENVIAR no WhatsApp.
+O que foi melhorado:
+- Assistente guiado para coletar serviço, nome, WhatsApp, descrição, prazo e faixa de investimento.
+- Resumo do pedido com botão para abrir o WhatsApp da VEZQORA com a mensagem pronta.
+- Menu mobile com abrir/fechar e fechamento após selecionar uma seção.
+- Ajustes visuais do atendimento e melhor clareza sobre o funcionamento.
+- Mantidas as quatro imagens e a identificação dos projetos como conceitos demonstrativos.
 
-Esta versão é gratuita e não usa API: é um fluxo automatizado por roteiro, não uma IA generativa capaz de responder livremente. Os dados digitados ficam no navegador durante o atendimento; o site não os envia automaticamente para um servidor.
+IMPORTANTE:
+O assistente é guiado e funciona sem API paga; não é IA generativa. O botão abre o WhatsApp com o resumo preenchido, mas alguém precisa tocar em Enviar. Envio automático exige integração com a API oficial do WhatsApp Business e um backend.
 
-PARA PUBLICAR:
-1. Extraia o ZIP.
-2. Envie TODOS os arquivos para a raiz do repositório GitHub Pages.
-3. Substitua o index.html e mantenha os quatro JPG com os nomes originais.
-4. Confirme em Commit changes e aguarde alguns minutos.
+PUBLICAÇÃO:
+Extraia todos os arquivos e envie-os para a raiz do repositório GitHub Pages, substituindo os arquivos antigos. Faça Commit changes e aguarde a publicação.
