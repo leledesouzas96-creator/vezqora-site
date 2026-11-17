@@ -1,53 +1,1413 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050711"><meta name="description" content="VEZQORA cria sites, aplicativos, agentes de IA e automações sob medida. Tecnologia e design para negócios que querem evoluir."><meta name="robots" content="index,follow"><meta property="og:type" content="website"><meta property="og:title" content="VEZQORA — Technology & AI"><meta property="og:description" content="Digital experiences, intelligent products and automation for ambitious businesses."><meta property="og:site_name" content="VEZQORA"><title>VEZQORA — Tecnologia & IA | Soluções Digitais</title><style>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-:root{--bg:#050711;--panel:#0d1422;--gold:#e9c88b;--muted:#9aa9bf;--line:#ffffff1c;--blue:#378bff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:#f5f7fc;background:var(--bg);font-family:Manrope,Arial,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}.container{max-width:1180px;margin:auto;padding:0 22px}.gold{background:linear-gradient(110deg,#a97938,#fff1bf 45%,#d6a85d 70%,#fff0b3);color:transparent;background-clip:text;-webkit-background-clip:text}.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:800;color:var(--gold)}.glowbg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 76% 32%,#1663d530,transparent 40%),radial-gradient(ellipse at 23% 8%,#a17a321b,transparent 40%)}.header{position:sticky;top:0;z-index:20;background:#050711d9;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}.nav{display:flex;align-items:center;justify-content:space-between;min-height:78px;gap:20px}.brand{display:flex;align-items:center;gap:12px}.mark{display:grid;place-items:center;width:43px;height:43px;border-radius:12px;font:800 29px Space Grotesk,Arial;background:linear-gradient(145deg,#fff0b3,#a67a35);color:#101019;box-shadow:0 0 25px #d7a35b32}.brand b{display:block;font:700 22px Space Grotesk;letter-spacing:.15em}.brand small{display:block;font-size:8px;letter-spacing:.29em;color:#d8bc83}.links{display:flex;align-items:center;gap:25px;font-size:12px;font-weight:700;color:#bfc7d5}.links a:hover{color:#f6d89a}.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 22px;border-radius:12px;border:1px solid #ffffff36;font-size:13px;font-weight:800;transition:transform .2s,box-shadow .2s,background .2s}.button:hover{transform:translateY(-3px)}.button.primary{background:linear-gradient(115deg,#aa7835,#ffe5a4 47%,#b57c35);border:0;color:#141019;box-shadow:0 12px 38px #d3a05730}.button.primary:hover{box-shadow:0 15px 45px #e6b76d70}.button.secondary{background:#ffffff0b}.button.secondary:hover{background:#ffffff18}.lang-toggle{border:1px solid #d7ad6447;background:#d7ad640b;color:#f3d6a0;border-radius:10px;padding:10px 12px;font-size:11px;font-weight:800;letter-spacing:.08em}.menu{display:none;border:1px solid #ffffff30;background:#ffffff08;border-radius:10px;color:white;padding:9px 12px}.hero{position:relative;min-height:720px;overflow:hidden;border-bottom:1px solid #ffffff10;background:radial-gradient(ellipse at 78% 48%,#0c39702b,transparent 42%),linear-gradient(180deg,#050711 0%,#070b15 100%)}.hero:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(#8aa8d00d 1px,transparent 1px),linear-gradient(90deg,#8aa8d00d 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(90deg,black,transparent 90%)}.hero:before{content:"";position:absolute;z-index:0;top:-40%;left:-20%;width:70%;height:150%;background:linear-gradient(105deg,transparent 35%,#f1d49a0b 50%,transparent 65%);transform:rotate(8deg);animation:heroSweep 12s ease-in-out infinite}.hero-copy{animation:heroEnter .9s cubic-bezier(.2,.8,.2,1) both}.visual{animation:heroEnter 1.15s .12s cubic-bezier(.2,.8,.2,1) both}@keyframes heroEnter{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}.hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:35px;padding-top:100px;padding-bottom:100px}.hero h1{font:700 clamp(44px,5.9vw,82px)/1.02 Space Grotesk,Arial;letter-spacing:-.065em;margin:25px 0 22px;max-width:720px;text-wrap:balance;text-shadow:0 10px 50px #0009}.hero h1 .gold{filter:drop-shadow(0 0 22px #d6a85d32)}.hero .pill{box-shadow:0 0 35px #d7ad6417}.hero .hero-kicker{display:block;color:#9baec7;font-size:10px;letter-spacing:.32em;font-weight:800;margin:0 0 10px}.hero p{color:#aab8cc;line-height:1.85;font-size:15px;max-width:520px}.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid #d7ad6447;background:#d7ad640b;color:#f3d6a0;border-radius:50px;padding:10px 15px;font-size:10px;font-weight:800;letter-spacing:.12em}.dot{width:7px;height:7px;border-radius:50%;background:#eecb8b;box-shadow:0 0 14px #ffda9e}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0}.trust{display:flex;gap:20px;flex-wrap:wrap;font-size:11px;color:#9aaac1;margin-top:30px}.trust span:before{content:'✦';color:#e9c88b;margin-right:7px}.visual{position:relative;min-height:495px;display:grid;place-items:center;isolation:isolate}.visual:after{content:"";position:absolute;width:78%;height:78%;border-radius:50%;border:1px solid #e2bd7b18;box-shadow:0 0 100px #247bff13,inset 0 0 80px #e2bd7b0b;animation:pulseHalo 5s ease-in-out infinite;z-index:-1}.visual:before{content:'';position:absolute;width:410px;height:410px;max-width:95%;border-radius:50%;background:radial-gradient(circle,#0c58c457,transparent 66%);filter:blur(15px)}.orbit{position:absolute;width:420px;height:420px;max-width:98%;aspect-ratio:1;border-radius:50%;border:1px solid #398aff44;box-shadow:0 0 50px #1e74ff24,inset 0 0 60px #1156a925;animation:rotate 35s linear infinite}.orbit:before,.orbit:after{content:'';position:absolute;border-radius:50%;background:#f2c978;box-shadow:0 0 25px #ffe0a2;width:10px;height:10px;top:50%;left:-5px}.orbit:after{left:auto;right:-5px;background:#5da6ff;box-shadow:0 0 22px #378bff}.orbit2{width:325px;height:325px;border-style:dashed;border-color:#e5bd7550;animation-direction:reverse;animation-duration:28s}.core{width:230px;height:265px;display:grid;place-items:center;position:relative;transform:perspective(600px) rotateY(-12deg);filter:drop-shadow(0 0 32px #2676ff55)}.core:before{content:'';position:absolute;inset:13px;border:2px solid #c9a364;border-radius:35px;transform:rotate(45deg);box-shadow:0 0 45px #d4a76766,inset 0 0 40px #367eff44;background:linear-gradient(135deg,#e1b97012,#005dff16)}.core span{font:800 190px Space Grotesk,Arial;z-index:1;text-shadow:0 0 38px #d6a7657c}.float{position:absolute;background:#0d1629db;border:1px solid #cba86745;border-radius:12px;padding:12px 15px;box-shadow:0 15px 45px #0008;backdrop-filter:blur(12px);font-size:11px;color:#d6e1f2}.float strong{display:block;color:#f5d99c;font-size:12px;margin-bottom:4px}.f1{top:42px;right:0}.f2{bottom:47px;left:0}.f3{right:0;bottom:85px}.section{padding:100px 0}.section-head{text-align:center;max-width:680px;margin:0 auto 42px}.section h2{font:700 clamp(29px,4vw,46px)/1.18 Space Grotesk;letter-spacing:-.04em;margin:12px 0 15px}.section-head p,.muted{color:#9daec3;line-height:1.8;font-size:14px}.services{background:linear-gradient(180deg,#080d18,#070b13)}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{position:relative;overflow:hidden;background:linear-gradient(150deg,#172137,#0b101b 70%);border:1px solid #d2ad6640;border-radius:19px;padding:26px 22px;transition:transform .25s,border-color .25s,box-shadow .25s}.card:hover{transform:translateY(-8px);border-color:#ebc68a;box-shadow:0 22px 55px #0009,0 0 25px #276eff21}.card:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 100% 0,#4386ff18,transparent 55%);pointer-events:none}.card .ico{font-size:29px;display:grid;place-items:center;width:60px;height:60px;border-radius:16px;background:#d7b27715;border:1px solid #e6c1853d;color:#f2d499}.card h3{font:700 19px Space Grotesk;margin:22px 0 10px}.card p{color:#a6b5c8;font-size:12px;line-height:1.85;min-height:88px}.card a{font-size:12px;font-weight:800;color:#f3d397}.band{border-block:1px solid #ffffff12;background:#0b1322}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:30px 0;text-align:center}.stats strong{display:block;font:700 23px Space Grotesk;color:#efd49f}.stats span{display:block;font-size:11px;color:#9aabc1;margin-top:7px}.features{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.feature-art{min-height:360px;border:1px solid #d4b47b42;border-radius:24px;background:radial-gradient(circle at 50% 45%,#155bd04a,transparent 55%),linear-gradient(145deg,#101b30,#080b12);display:grid;place-items:center;position:relative;overflow:hidden}.feature-art .rings{width:240px;height:240px;border:1px solid #b3d3ff44;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 50px #176bff55,inset 0 0 40px #1c68d13a}.feature-art .rings:before{content:'';position:absolute;width:300px;height:300px;border:1px dashed #d9b77a66;border-radius:50%;animation:rotate 35s linear infinite}.feature-art b{font:700 95px Space Grotesk}.feature-list{display:grid;gap:16px;margin-top:25px}.feature-list div{padding:17px 19px;background:#ffffff07;border:1px solid #ffffff14;border-radius:13px;font-size:13px;color:#c8d4e4}.feature-list strong{color:#f4d79b;margin-right:10px}.projects{background:#080e1a}.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{padding:18px;border:1px solid #ffffff21;border-radius:18px;background:linear-gradient(125deg,#16223a,#0c111d);min-height:180px}.project-image{display:block;width:100%;height:220px;object-fit:cover;object-position:center;border:1px solid #d2ad6640;border-radius:13px;margin:0 0 20px;box-shadow:0 12px 30px #0008}.project small{color:#e4c487;letter-spacing:.15em;font-weight:800;font-size:10px}.project h3{font:700 23px Space Grotesk;margin:12px 0 7px}.project p{color:#a3b2c6;font-size:13px;line-height:1.7}.note{color:#8f9fb5;font-size:11px;margin-top:22px;text-align:center}.cta{padding:55px 25px;border:1px solid #dfbd7b66;border-radius:25px;text-align:center;background:radial-gradient(ellipse at 50% 0,#155dd03d,transparent 65%),linear-gradient(135deg,#131e32,#090d17);box-shadow:0 20px 80px #0005}.cta h2{max-width:690px;margin:15px auto}.contact{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:start}.form{padding:26px;background:#101828;border:1px solid #d4b27740;border-radius:19px}.form label{display:block;font-size:12px;color:#cbd7e6;margin:0 0 8px}.form select,.form textarea{display:block;width:100%;background:#080e19;border:1px solid #ffffff30;border-radius:10px;color:white;padding:13px;margin:0 0 17px;outline:none}.form select:focus,.form textarea:focus{border-color:#e7c788}.form textarea{min-height:110px;resize:vertical}.form .button{width:100%}.footer{padding:35px 0;border-top:1px solid #ffffff18}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;color:#8f9eb2;font-size:11px}.whatsapp{position:fixed;bottom:20px;right:20px;z-index:15;background:linear-gradient(135deg,#f5d79c,#b78541);color:#161017;border-radius:50px;padding:14px 17px;font-weight:800;font-size:12px;box-shadow:0 8px 30px #0009}.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}.reveal.visible{opacity:1;transform:none}@keyframes rotate{to{transform:rotate(360deg)}}@keyframes heroSweep{0%,100%{translate:-30% 0;opacity:0}35%,65%{opacity:1}50%{translate:55% 0}}@keyframes pulseHalo{0%,100%{transform:scale(.94);opacity:.45}50%{transform:scale(1.06);opacity:1}}
-/* VEZQORA motion + AI showcase */
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.20;background-image:linear-gradient(#4b8cff16 1px,transparent 1px),linear-gradient(90deg,#4b8cff16 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
-.hero:after{content:"";position:absolute;width:420px;height:420px;left:-180px;bottom:-240px;border-radius:50%;background:#b8873b22;filter:blur(90px);animation:pulseGlow 7s ease-in-out infinite alternate}
-.card,.project,.form,.feature-art,.cta{transform-style:preserve-3d}
-.project{position:relative;overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s}.project:after{content:"";position:absolute;inset:-100% auto -100% -35%;width:28%;transform:rotate(22deg);background:linear-gradient(90deg,transparent,#ffffff12,transparent);transition:left .7s}.project:hover{transform:translateY(-7px) scale(1.01);border-color:#e9c88b88;box-shadow:0 18px 45px #0008,0 0 30px #287dff18}.project:hover:after{left:120%}
-.ai-showcase{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:center}.ai-panel{padding:22px;border:1px solid #4d8fff55;border-radius:22px;background:linear-gradient(145deg,#101d35ed,#080d18);box-shadow:0 0 55px #176bff20;position:relative;overflow:hidden}.ai-panel:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent,#438cff0c,transparent);animation:scan 5s linear infinite;pointer-events:none}.ai-top{display:flex;align-items:center;gap:10px;border-bottom:1px solid #ffffff16;padding-bottom:15px;margin-bottom:16px;font-size:12px;color:#c8d8ed}.ai-status{width:8px;height:8px;border-radius:50%;background:#72e6ad;box-shadow:0 0 12px #72e6ad}.ai-messages{min-height:150px;display:flex;flex-direction:column;gap:12px}.ai-msg{padding:12px 14px;border-radius:13px;font-size:12px;line-height:1.7;max-width:92%;background:#ffffff0c;color:#cbd7e8;border:1px solid #ffffff12}.ai-msg.user{align-self:flex-end;background:#c99b5130;border-color:#d9b36a55;color:#fff0cb}.ai-controls{display:flex;gap:9px;margin-top:16px}.ai-controls input{min-width:0;flex:1;background:#070c16;border:1px solid #ffffff2c;border-radius:10px;color:white;padding:12px;outline:none}.ai-controls input:focus{border-color:#e9c88b}.ai-controls button{border:0;border-radius:10px;padding:0 16px;background:linear-gradient(120deg,#a97938,#ffe5a4);font-weight:800;color:#17121a}.ai-disclaimer{font-size:10px;color:#8798b0;margin-top:12px;line-height:1.6}.commitment-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.commitment-card{padding:24px;border:1px solid #d5b77942;border-radius:18px;background:linear-gradient(145deg,#152139,#0a101b);transition:transform .25s,border-color .25s,box-shadow .25s}.commitment-card:hover{transform:translateY(-6px);border-color:#e9c88b;box-shadow:0 18px 40px #0007}.commitment-card h3{font:700 17px Space Grotesk;margin:12px 0 8px}.commitment-card p{color:#aab9ce;font-size:12px;line-height:1.8;min-height:88px}.commitment-card small{color:#e7c88e;font-size:10px;letter-spacing:.1em;text-transform:uppercase}.portfolio-callout{padding:18px 20px;margin-top:18px;border:1px dashed #d8b77866;border-radius:14px;color:#aebbd0;font-size:12px;line-height:1.7}.portfolio-callout strong{color:#f0d49a}
-@keyframes pulseGlow{to{transform:scale(1.25);opacity:.55}}@keyframes scan{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-@media(max-width:1000px){.commitment-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:800px){.ai-showcase{grid-template-columns:1fr}.commitment-grid{grid-template-columns:1fr}.ai-panel{padding:17px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
-@media(max-width:900px){.links{display:none;position:absolute;top:77px;left:0;right:0;padding:25px;background:#080e1a;border-bottom:1px solid #ffffff24;flex-direction:column}.links.open{display:flex}.menu{display:block}.hero .container{grid-template-columns:1fr;text-align:center;padding-top:70px;padding-bottom:65px}.hero p{margin-inline:auto}.actions,.trust{justify-content:center}.visual{min-height:400px}.cards{grid-template-columns:repeat(2,1fr)}.features{gap:25px}.f1{right:8%}.f2{left:8%}.f3{right:8%}}@media(max-width:600px){.nav{min-height:70px}.brand b{font-size:18px}.brand small{font-size:7px}.hero h1{font-size:42px}.hero .container{padding-top:58px}.visual{min-height:340px}.orbit{width:300px;height:300px}.orbit2{width:240px;height:240px}.core{transform:scale(.78)}.float{font-size:9px;padding:9px}.f1{top:8px;right:0}.f2{bottom:9px;left:0}.f3{right:0;bottom:34px}.section{padding:72px 0}.cards,.project-grid,.features,.contact{grid-template-columns:1fr}.card p{min-height:0}.stats{gap:10px}.stats strong{font-size:17px}.stats span{font-size:9px}.feature-art{min-height:300px}.foot{flex-direction:column;text-align:center}.whatsapp{bottom:12px;right:12px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#050711">
+  <meta name="description" content="VEZQORA cria sites profissionais, aplicativos, sistemas sob medida, agentes de IA e automações para empresas que querem escalar.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VEZQORA — Tecnologia, Sistemas & Agentes de IA">
+  <meta property="og:description" content="Sites, aplicativos, sistemas personalizados e agentes de IA que atendem e vendem 24h pelo seu negócio.">
+  <meta property="og:site_name" content="VEZQORA">
+  <meta property="og:url" content="[https://leledesouzas96-creator.github.io/vezqora-site/](https://leledesouzas96-creator.github.io/vezqora-site/)">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23050711'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='38' fill='%23e9c88b'%3EV%3C/text%3E%3C/svg%3E">
+  <title>VEZQORA — Tecnologia & IA | Sites, Aplicativos, Sistemas e Agentes de IA</title>
+  <style>
+    @import url('[https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap)');
 
-.project{padding:20px;min-height:0}.project-screen{height:220px;border:1px solid #d9b66c55;border-radius:13px;margin:-2px -2px 20px;overflow:hidden;padding:14px;background:linear-gradient(145deg,#111d31,#050812);box-shadow:inset 0 0 35px #2c73b322,0 12px 25px #0005;color:#edf3ff;font-size:10px}.screen-top{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#f2d394;letter-spacing:.08em}.screen-top span{color:#67e6b1;font-size:9px}.screen-greeting{font:700 19px Space Grotesk;margin:17px 0 9px}.screen-greeting small,.sofia-title small,.diag-head small,.shop-banner small{display:block;color:#91a6c2;font:400 9px Manrope;margin-top:5px}.screen-map{height:76px;border-radius:9px;position:relative;overflow:hidden;background:linear-gradient(30deg,transparent 46%,#57b8b055 47%,#57b8b055 49%,transparent 50%),linear-gradient(120deg,transparent 42%,#d5bd7c44 43%,#d5bd7c44 46%,transparent 47%),#142944}.screen-map i{position:absolute;width:8px;height:8px;border-radius:50%;background:#e9c88b;box-shadow:0 0 10px #e9c88b;top:25px;left:25%}.screen-map i:nth-child(2){top:50px;left:68%}.screen-map i:nth-child(3){top:13px;left:82%}.screen-map b{position:absolute;top:25px;left:48%;font-size:25px;color:#f4d493}.screen-actions{display:flex;justify-content:space-around;margin:12px 0}.screen-actions span{text-align:center;font-size:18px}.screen-actions small{display:block;font-size:8px;color:#b6c3d5}.screen-bottom{border-top:1px solid #ffffff1c;padding-top:8px;color:#93a9c4;text-align:center;font-size:8px}.sofia-screen{background:radial-gradient(circle at 50% 42%,#15568b55,transparent 55%),#07101f}.screen-top em{font-style:normal;color:#5bd9ef}.sofia-avatar{margin:12px auto 5px;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(140deg,#123b70,#25a4b8);border:2px solid #5bd9ef;box-shadow:0 0 22px #25b9e855;font:700 25px Space Grotesk}.sofia-title{text-align:center;font-weight:700;font-size:12px}.sofia-chat{margin:10px auto;background:#10243a;border:1px solid #3c92ba55;border-radius:8px;padding:8px;max-width:90%;color:#c9dced}.sofia-chat b{display:block;color:#6ce1ec;margin-top:7px;font-size:8px}.sofia-stats{display:flex;justify-content:space-around;color:#90a9c3;font-size:8px}.sofia-stats strong{display:block;color:#f1d18e;font-size:13px}.diag-screen{background:radial-gradient(circle at 80% 0,#0b547b44,transparent 45%),#07111d}.diag-head{font:700 16px Space Grotesk;margin:18px 0 10px}.diag-metrics{display:flex;gap:6px}.diag-metrics span{flex:1;background:#10263a;border:1px solid #2d719055;border-radius:6px;padding:7px 5px;color:#9eb5ca;font-size:7px}.diag-metrics strong{display:block;color:#67d9ef;font-size:14px}.diag-chart{height:54px;display:flex;align-items:end;gap:7px;padding:5px 10px;margin:10px 0;background:#0b1c2d;border-radius:6px}.diag-chart i{flex:1;background:linear-gradient(#55d7ed,#17639a);border-radius:3px 3px 0 0}.diag-alert{padding:7px;background:#3a2a18;border:1px solid #b88a43;border-radius:6px;color:#f3ca80;font-size:8px}.diag-alert small{display:block;color:#c5b08a;margin-top:3px}.shop-screen{background:linear-gradient(150deg,#182335,#090d16)}.shop-banner{margin-top:15px;height:90px;border-radius:8px;padding:20px 12px;background:linear-gradient(110deg,#d5b06b,#f2e0b8 55%,#5d6a75);color:#111827;font:800 16px Space Grotesk;letter-spacing:.1em}.shop-banner small{color:#243247}.shop-products{display:flex;gap:10px;margin-top:10px}.shop-products span{flex:1;display:grid;grid-template-columns:34px 1fr;column-gap:7px;align-items:center;font-size:8px;color:#dce5f0}.shop-products i{grid-row:span 2;width:34px;height:34px;display:grid;place-items:center;background:linear-gradient(140deg,#e5e9ed,#64748b);border-radius:5px;color:#182337;font-size:19px}.shop-products small{color:#e9c88b}.shop-button{margin-top:9px;text-align:center;padding:7px;background:#d5ae69;color:#141820;border-radius:5px;font-weight:800;font-size:8px}.project-points{padding-left:17px;margin:12px 0 0;color:#a9bad0;font-size:11px;line-height:1.9}.project-points li::marker{color:#e9c88b}.trust-number{font:700 31px Space Grotesk;color:#e9c88b}.portfolio-callout{margin-top:24px;padding:20px;border:1px solid #d5b77945;border-radius:13px;background:#d5b7790b;color:#b9c6d8;font-size:12px;line-height:1.8}.portfolio-callout strong{color:#f1d49b}
-.commitment{background:radial-gradient(ellipse at 50% 0,#b58a3b12,transparent 58%),#070b13}.commitment .section-head{max-width:760px}.commitment-card .trust-number{font-size:34px}.commitment-card small{display:inline-block;margin-top:8px}.commitment .portfolio-callout{max-width:900px;margin:26px auto 0;text-align:center}
+    :root {
+      --bg: #050711;
+      --panel: #0d1422;
+      --gold: #e9c88b;
+      --muted: #9aa9bf;
+      --line: #ffffff1c;
+      --blue: #378bff;
+    }
 
-.ai-quick[hidden]{display:none}.ai-quick{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.ai-quick button{border:1px solid #d7ad6455;background:#d7ad6410;color:#f0d49c;border-radius:20px;padding:9px 12px;font-size:11px;font-weight:800}.ai-quick button:hover{background:#d7ad6425}.ai-summary{white-space:pre-wrap;background:#07101e;border:1px solid #d7ad6455;border-radius:12px;padding:14px;margin:12px 0;color:#dce6f3;font-size:11px;line-height:1.7}.ai-summary-send{width:100%;border:0;border-radius:10px;padding:13px;background:linear-gradient(115deg,#aa7835,#ffe5a4 47%,#b57c35);color:#141019;font-weight:800}.ai-reset{display:block;margin:12px auto 0;border:0;background:transparent;color:#aebbd0;text-decoration:underline;font-size:11px}.ai-controls button:disabled{opacity:.5;cursor:not-allowed}.ai-disclaimer{color:#8798af;font-size:10px;line-height:1.7}
-</style></head><body>
-<header class="header"><div class="container nav"><a href="#inicio" class="brand" aria-label="VEZQORA, início"><span class="mark">V</span><span><b>VEZQORA</b><small>TECHNOLOGY & AI</small></span></a><nav class="links" id="links" aria-label="Navegação"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#diferenciais">Diferenciais</a><a href="#portfolio">Conceitos</a><a href="#ia-demo">IA Demo</a><a href="#compromisso">Nosso compromisso</a><a href="#contato">Contato</a></nav><button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false">☰</button><div style="display:flex;align-items:center;gap:10px"><button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button><a class="button primary" href="https://wa.me/5551991895177?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20VEZQORA" target="_blank" rel="noopener noreferrer"><span data-i18n="quote">Orçamento ↗</span></a></div></div></header>
-<main><section class="hero" id="inicio"><div class="glowbg"></div><div class="container"><div class="hero-copy"><div class="pill"><span class="dot"></span> INOVAÇÃO • INTELIGÊNCIA • VISÃO GLOBAL</div><span class="hero-kicker">TECNOLOGIA PARA IR ALÉM DO AGORA</span><h1>O FUTURO DO SEU <span class="gold">NEGÓCIO COMEÇA AQUI.</span></h1><p>Criamos experiências digitais e soluções inteligentes para negócios que querem ir além. Sites premium, aplicativos, agentes de IA e automações — com visão global e execução sob medida.</p><div class="actions"><a class="button primary" href="https://wa.me/5551991895177?text=Ol%C3%A1%2C%20quero%20transformar%20minha%20ideia%20em%20um%20projeto%20com%20a%20VEZQORA" target="_blank" rel="noopener noreferrer">Iniciar meu projeto ↗</a><a class="button secondary" href="#servicos">Explorar soluções ↓</a></div><div class="trust"><span>Design de alto padrão</span><span>IA e automação</span><span>Projetos sob medida</span></div></div><div class="visual" aria-label="Emblema V holográfico com órbitas luminosas"><div class="orbit"></div><div class="orbit orbit2"></div><div class="core"><span class="gold">V</span></div><div class="float f1"><strong>✧ AI POWERED</strong>Inteligência aplicada</div><div class="float f2"><strong>◇ PREMIUM DESIGN</strong>Experiências marcantes</div><div class="float f3"><strong>↗ NEXT GENERATION</strong>Soluções digitais</div></div></div></section>
-<section class="band"><div class="container stats"><div><strong>01 / DESIGN</strong><span>Experiências digitais premium</span></div><div><strong>02 / INTELIGÊNCIA</strong><span>IA para novas possibilidades</span></div><div><strong>03 / EVOLUÇÃO</strong><span>Tecnologia que acompanha você</span></div></div></section>
-<section class="section services" id="servicos"><div class="container"><div class="section-head reveal"><span class="eyebrow">✦ NOSSAS ESPECIALIDADES</span><h2>Tecnologia que <span class="gold">impressiona.</span></h2><p>Da primeira ideia ao produto digital: tecnologia, design e inteligência trabalhando juntos para gerar valor.</p></div><div class="cards"><article class="card reveal"><div class="ico">◈</div><h3>Sites Premium</h3><p>Sites rápidos, elegantes, responsivos e planejados para transformar visitantes em oportunidades.</p><a href="https://wa.me/5551991895177?text=Quero%20um%20site%20premium%20da%20VEZQORA" target="_blank" rel="noopener noreferrer">Solicitar projeto ↗</a></article><article class="card reveal"><div class="ico">▣</div><h3>Aplicativos</h3><p>Aplicativos personalizados com experiências práticas, modernas e pensadas para seus clientes.</p><a href="https://wa.me/5551991895177?text=Quero%20um%20aplicativo%20da%20VEZQORA" target="_blank" rel="noopener noreferrer">Solicitar projeto ↗</a></article><article class="card reveal"><div class="ico">✧</div><h3>Agentes de IA</h3><p>Assistentes inteligentes para atendimento, organização de informações e apoio aos processos.</p><a href="https://wa.me/5551991895177?text=Quero%20um%20agente%20de%20IA%20da%20VEZQORA" target="_blank" rel="noopener noreferrer">Solicitar projeto ↗</a></article><article class="card reveal"><div class="ico">⌁</div><h3>Automações</h3><p>Integrações que simplificam rotinas, reduzem tarefas repetitivas e melhoram a produtividade.</p><a href="https://wa.me/5551991895177?text=Quero%20uma%20automa%C3%A7%C3%A3o%20da%20VEZQORA" target="_blank" rel="noopener noreferrer">Solicitar projeto ↗</a></article></div></div></section>
-<section class="section" id="diferenciais"><div class="container features"><div class="feature-art reveal"><div class="rings"><b class="gold">V</b></div></div><div class="reveal"><span class="eyebrow">✦ POR QUE VEZQORA</span><h2>Seu negócio merece o <span class="gold">extraordinário.</span></h2><p class="muted">Unimos estratégia, design sofisticado e tecnologia para criar soluções claras, úteis e preparadas para evoluir com cada negócio.</p><div class="feature-list"><div><strong>01</strong> Design premium e experiência intuitiva</div><div><strong>02</strong> Soluções personalizadas para cada objetivo</div><div><strong>03</strong> Tecnologia preparada para acompanhar seu crescimento</div></div></div></div></section>
-<section class="section projects" id="portfolio"><div class="container"><div class="section-head reveal"><span class="eyebrow">✦ LABORATÓRIO DE IDEIAS</span><h2>Produtos digitais com <span class="gold">visão de futuro.</span></h2><p>Conheça quatro conceitos demonstrativos que mostram como transformamos ideias em experiências digitais.</p></div><div class="project-grid">
-<article class="project reveal"><img class="project-image" src="supergo.jpg" alt="Tela conceitual do aplicativo SuperGo" loading="lazy"><small>◈ CONCEITO DE SUPER APP</small><h3>SuperGo</h3><p>Uma experiência integrada para mobilidade, delivery, compras e serviços locais, com navegação simples e área do usuário.</p><ul class="project-points"><li>Busca por serviços e estabelecimentos</li><li>Pedidos, acompanhamento e perfil</li></ul></article>
-<article class="project reveal"><img class="project-image" src="sofia.jpg" alt="Tela conceitual da assistente Sofia" loading="lazy"><small>✧ CONCEITO DE IA</small><h3>Sofia</h3><p>Assistente virtual conceitual para apoiar recrutadores na organização de vagas, entrevistas e etapas de seleção.</p><ul class="project-points"><li>Painel de vagas e candidatos</li><li>Roteiros e organização de entrevistas</li></ul></article>
-<article class="project reveal"><img class="project-image" src="diagnostico-inteligente.jpg" alt="Painel conceitual de Diagnóstico Inteligente" loading="lazy"><small>⌁ CONCEITO DE IA TÉCNICA</small><h3>Diagnóstico Inteligente</h3><p>Painel conceitual para centralizar indicadores, histórico e alertas técnicos, apoiando a análise de equipamentos.</p><ul class="project-points"><li>Indicadores e monitoramento</li><li>Alertas e histórico de ocorrências</li></ul></article>
-<article class="project reveal"><img class="project-image" src="loja-online.jpg" alt="Tela conceitual da Loja Online" loading="lazy"><small>▣ CONCEITO DE E-COMMERCE</small><h3>Loja Online</h3><p>Vitrine digital conceitual com catálogo organizado, páginas de produto e jornada de compra pensada para celular.</p><ul class="project-points"><li>Catálogo, busca e categorias</li><li>Carrinho e fluxo de pedidos</li></ul></article>
-</div><p class="note">Transparência: SuperGo, Sofia, Diagnóstico Inteligente e Loja Online são conceitos demonstrativos criados para apresentar possibilidades. Não são projetos entregues a clientes.</p></div></section>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: #f5f7fc;
+      background: var(--bg);
+      font-family: Manrope, Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    body:before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      opacity: .20;
+      background-image: linear-gradient(#4b8cff16 1px, transparent 1px), linear-gradient(90deg, #4b8cff16 1px, transparent 1px);
+      background-size: 58px 58px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
 
-<section class="section" id="ia-demo"><div class="container ai-showcase"><div class="reveal"><span class="eyebrow">✦ ATENDIMENTO VEZQORA</span><h2>Vamos transformar sua ideia em um <span class="gold">projeto.</span></h2><p class="muted">Converse com nosso assistente guiado. Ele vai entender o que você precisa, organizar as informações e preparar um resumo para enviar à equipe pelo WhatsApp.</p><div class="feature-list"><div><strong>01</strong> Você explica sua ideia no seu ritmo</div><div><strong>02</strong> Organizamos os detalhes essenciais</div><div><strong>03</strong> Você revisa e envia o resumo pelo WhatsApp</div></div><p class="ai-disclaimer" style="margin-top:18px">Atendimento guiado gratuito. Ainda não usa IA generativa; as respostas seguem um roteiro e você confirma o envio.</p></div><div class="ai-panel reveal"><div class="ai-top"><span class="ai-status"></span><strong>ASSISTENTE VEZQORA</strong><span style="margin-left:auto;color:#8298b6">ATENDIMENTO GUIADO</span></div><div class="ai-messages" id="aiMessages" aria-live="polite"><div class="ai-msg">Olá! 👋 Que bom receber você na VEZQORA. Vou fazer algumas perguntas rápidas para entender seu projeto e preparar um resumo para nossa equipe. O que você deseja criar?</div></div><div class="ai-quick" id="aiQuick"><button type="button" data-choice="Site profissional">🌐 Site</button><button type="button" data-choice="Aplicativo">📱 Aplicativo</button><button type="button" data-choice="Agente de IA">✧ Agente de IA</button><button type="button" data-choice="Automação">⌁ Automação</button><button type="button" data-choice="Outro projeto">＋ Outro</button></div><div class="ai-controls"><input id="aiInput" type="text" placeholder="Digite sua resposta..." aria-label="Digite sua resposta"><button id="aiSend" type="button">Enviar ↗</button></div><button class="ai-reset" id="aiReset" type="button">Recomeçar atendimento</button></div></div></section>
-<section class="section commitment" id="compromisso"><div class="container"><div class="section-head reveal"><span class="eyebrow">✦ NOSSO COMPROMISSO</span><h2>Uma parceria construída com <span class="gold">clareza.</span></h2><p>Você entende cada etapa, participa das decisões e sabe o que está sendo desenvolvido. Sem promessas vagas e sem surpresas no caminho.</p></div><div class="commitment-grid"><article class="commitment-card reveal"><div class="trust-number">01</div><h3>Escutamos primeiro</h3><p>Entendemos seu negócio, seu público e o resultado que você espera antes de recomendar uma solução.</p><small>CONVERSA E DIAGNÓSTICO</small></article><article class="commitment-card reveal"><div class="trust-number">02</div><h3>Combinamos o plano</h3><p>Apresentamos escopo, funcionalidades, etapas, prazo estimado e investimento para aprovação.</p><small>PROPOSTA TRANSPARENTE</small></article><article class="commitment-card reveal"><div class="trust-number">03</div><h3>Desenvolvemos com você</h3><p>Compartilhamos a evolução do projeto e alinhamos ajustes conforme o que foi combinado.</p><small>ACOMPANHAMENTO</small></article><article class="commitment-card reveal"><div class="trust-number">04</div><h3>Orientamos na entrega</h3><p>Apresentamos a solução, explicamos seu funcionamento e informamos claramente os próximos passos e o suporte acordado.</p><small>ENTREGA E ORIENTAÇÃO</small></article></div><div class="portfolio-callout"><strong>Transparência:</strong> nosso portfólio reúne conceitos demonstrativos. Quando tivermos avaliações de clientes reais, elas serão publicadas somente com autorização.</div></div></section>
-<section class="section"><div class="container"><div class="cta reveal"><span class="eyebrow">✦ SUA PRÓXIMA GRANDE IDEIA</span><h2>Vamos criar algo <span class="gold">fora do comum?</span></h2><p class="muted">Conte sua visão. A VEZQORA ajuda a transformá-la em uma solução digital.</p><a class="button primary" href="https://wa.me/5551991895177?text=Ol%C3%A1%2C%20quero%20conversar%20sobre%20um%20projeto%20com%20a%20VEZQORA" target="_blank" rel="noopener noreferrer">Conversar pelo WhatsApp ↗</a></div></div></section>
-<section class="section" id="contato"><div class="container contact"><div><span class="eyebrow">✦ ENTRE EM CONTATO</span><h2>O próximo passo é <span class="gold">seu.</span></h2><p class="muted">Atendimento digital para projetos no Brasil e no exterior. Escolha um serviço e conte sua ideia; o WhatsApp abrirá com uma mensagem pronta para nossa equipe.</p><p style="color:#f0d39a;font-weight:800">WhatsApp: (51) 99189-5177</p></div><form class="form" id="contactForm"><label for="service">Qual serviço você precisa?</label><select id="service"><option>Site profissional</option><option>Aplicativo</option><option>Agente de IA</option><option>Automação</option><option>Outro projeto</option></select><label for="message">Conte um pouco sobre sua ideia</label><textarea id="message" placeholder="Descreva o que você gostaria de criar..."></textarea><button class="button primary" type="submit">Enviar pelo WhatsApp ↗</button></form></div></section></main>
-<footer class="footer"><div class="container foot"><a href="#inicio" class="brand"><span class="mark">V</span><span><b>VEZQORA</b><small>TECHNOLOGY & AI</small></span></a><span>© <span id="year"></span> VEZQORA. Technology • Artificial Intelligence • Automation.</span></div></footer><a class="whatsapp" href="https://wa.me/5551991895177" target="_blank" rel="noopener noreferrer" aria-label="Falar com a VEZQORA pelo WhatsApp">✆ WhatsApp ↗</a><script>
-const menu=document.getElementById('menu'),links=document.getElementById('links');menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false')}));document.getElementById('year').textContent=new Date().getFullYear();
-const translations={en:{nav:['Home','Services','Why VEZQORA','Concepts','Assistant','Our commitment','Contact'],quote:'Get a quote ↗',pill:'INNOVATION • INTELLIGENCE • GLOBAL VISION',hero:'THE FUTURE OF YOUR <span class="gold">BUSINESS STARTS HERE.</span>',intro:'We create digital experiences and intelligent solutions for businesses ready to go further. Premium websites, apps, AI agents and automations — with a global vision and tailored execution.',start:'Start a project ↗',explore:'Explore solutions ↓',trust:['Premium design','AI & automation','Tailored projects'],stats:['01 / DESIGN','02 / INTELLIGENCE','03 / EVOLUTION'],statSub:['Premium digital experiences','AI for new possibilities','Technology that grows with you'],servicesEyebrow:'✦ WHAT WE DO',servicesTitle:'Technology that <span class="gold">moves you forward.</span>',servicesIntro:'From the first idea to the digital product: technology, design and intelligence working together to create value.',serviceNames:['Premium Websites','Applications','AI Agents','Automation'],serviceTexts:['Fast, elegant and responsive websites designed to turn visitors into opportunities.','Custom applications with practical, modern experiences designed around your customers.','Intelligent assistants for customer support, information management and business workflows.','Integrations that simplify routines, reduce repetitive tasks and improve productivity.'],request:'Discuss a project ↗',why:'✦ WHY VEZQORA',whyTitle:'Your business deserves the <span class="gold">extraordinary.</span>',whyText:'We combine strategy, sophisticated design and technology to create clear, useful solutions built to evolve with every business.',features:['Premium design and intuitive experiences','Tailored solutions for every goal','Technology ready to support your growth'],lab:'✦ IDEAS LAB',labTitle:'Concepts pointing toward <span class="gold">tomorrow.</span>',labIntro:'Explore digital product ideas that represent possibilities for what we can build.',conceptNote:'VEZQORA concept studies. These are demonstrations of creative direction and product possibilities — not client case studies.',ctaEyebrow:'✦ YOUR NEXT BIG IDEA',ctaTitle:'Let’s create something <span class="gold">remarkable.</span>',ctaText:'Tell us your vision. VEZQORA can help turn it into a digital solution.',talk:'Talk to us on WhatsApp ↗',contactEyebrow:'✦ GET IN TOUCH',contactTitle:'The next move is <span class="gold">yours.</span>',contactText:'Digital-first service for projects in Brazil and around the world. Choose a service and tell us your idea; WhatsApp will open with a message ready for our team.',serviceLabel:'What service do you need?',messageLabel:'Tell us about your idea',messagePlaceholder:'Describe what you would like to create...',send:'Send via WhatsApp ↗',phoneLabel:'WhatsApp: (51) 99189-5177',selectOptions:['Professional website','Application','AI agent','Automation','Other project'],projects:[['◈ SUPER APP CONCEPT','SuperGo','Mobility, food and stores brought together in an integrated digital experience.'],['✧ AI CONCEPT','Sofia','Virtual assistant concept to support interviews and recruitment processes.'],['⌁ TECHNICAL AI CONCEPT','Smart Diagnostics','Concept for a tool that supports equipment analysis.'],['▣ E-COMMERCE CONCEPT','Online Store','A modern digital storefront for products, orders and customer relationships.']],footer:'Technology • Artificial Intelligence • Automation.'},pt:{nav:['Início','Serviços','Diferenciais','Conceitos','Assistente','Nosso compromisso','Contato'],quote:'Orçamento ↗',pill:'INOVAÇÃO • INTELIGÊNCIA • VISÃO GLOBAL',hero:'O FUTURO DO SEU <span class="gold">NEGÓCIO COMEÇA AQUI.</span>',intro:'Criamos experiências digitais e soluções inteligentes para negócios que querem ir além. Sites premium, aplicativos, agentes de IA e automações — com visão global e execução sob medida.',start:'Iniciar meu projeto ↗',explore:'Explorar soluções ↓',trust:['Design de alto padrão','IA e automação','Projetos sob medida'],stats:['01 / DESIGN','02 / INTELIGÊNCIA','03 / EVOLUÇÃO'],statSub:['Experiências digitais premium','IA para novas possibilidades','Tecnologia que acompanha você'],servicesEyebrow:'✦ NOSSAS ESPECIALIDADES',servicesTitle:'Tecnologia que <span class="gold">impressiona.</span>',servicesIntro:'Da primeira ideia ao produto digital: tecnologia, design e inteligência trabalhando juntos para gerar valor.',serviceNames:['Sites Premium','Aplicativos','Agentes de IA','Automações'],serviceTexts:['Sites rápidos, elegantes, responsivos e planejados para transformar visitantes em oportunidades.','Aplicativos personalizados com experiências práticas, modernas e pensadas para seus clientes.','Assistentes inteligentes para atendimento, organização de informações e apoio aos processos.','Integrações que simplificam rotinas, reduzem tarefas repetitivas e melhoram a produtividade.'],request:'Solicitar projeto ↗',why:'✦ POR QUE VEZQORA',whyTitle:'Seu negócio merece o <span class="gold">extraordinário.</span>',whyText:'Unimos estratégia, design sofisticado e tecnologia para criar soluções claras, úteis e preparadas para evoluir com cada negócio.',features:['Design premium e experiência intuitiva','Soluções personalizadas para cada objetivo','Tecnologia preparada para acompanhar seu crescimento'],lab:'✦ LABORATÓRIO DE IDEIAS',labTitle:'Conceitos que apontam para <span class="gold">o amanhã.</span>',labIntro:'Explore ideias de soluções digitais que representam possibilidades de criação.',conceptNote:'Estudos conceituais da VEZQORA. São demonstrações de direção criativa e possibilidades de produto — não cases de clientes.',ctaEyebrow:'✦ SUA PRÓXIMA GRANDE IDEIA',ctaTitle:'Vamos criar algo <span class="gold">fora do comum?</span>',ctaText:'Conte sua visão. A VEZQORA ajuda a transformá-la em uma solução digital.',talk:'Conversar pelo WhatsApp ↗',contactEyebrow:'✦ ENTRE EM CONTATO',contactTitle:'O próximo passo é <span class="gold">seu.</span>',contactText:'Atendimento digital para projetos no Brasil e no exterior. Escolha um serviço e conte sua ideia; o WhatsApp abrirá com uma mensagem pronta para nossa equipe.',serviceLabel:'Qual serviço você precisa?',messageLabel:'Conte um pouco sobre sua ideia',messagePlaceholder:'Descreva o que você gostaria de criar...',send:'Enviar pelo WhatsApp ↗',phoneLabel:'WhatsApp: (51) 99189-5177',selectOptions:['Site profissional','Aplicativo','Agente de IA','Automação','Outro projeto'],projects:[['◈ CONCEITO DE SUPER APP','SuperGo','Mobilidade, alimentação e lojas reunidas em uma experiência digital integrada.'],['✧ CONCEITO DE IA','Sofia','Assistente virtual para apoiar entrevistas e processos seletivos.'],['⌁ CONCEITO DE IA TÉCNICA','Diagnóstico Inteligente','Conceito de ferramenta de apoio à análise de equipamentos.'],['▣ CONCEITO DE E-COMMERCE','Loja Online','Uma vitrine digital moderna para produtos, pedidos e relacionamento com clientes.']],footer:'Technology • Artificial Intelligence • Automation.'}};
-function setLanguage(lang){const t=translations[lang];document.documentElement.lang=lang==='en'?'en':'pt-BR';document.getElementById('langToggle').textContent=lang==='en'?'PT':'EN';document.querySelectorAll('#links a').forEach((a,i)=>a.textContent=t.nav[i]);document.querySelector('[data-i18n="quote"]').textContent=t.quote;document.querySelector('.pill').innerHTML='<span class="dot"></span> '+t.pill;document.querySelector('.hero h1').innerHTML=t.hero;document.querySelector('.hero p').textContent=t.intro;document.querySelectorAll('.actions a')[0].textContent=t.start;document.querySelectorAll('.actions a')[1].textContent=t.explore;document.querySelectorAll('.trust span').forEach((e,i)=>e.textContent=t.trust[i]);document.querySelectorAll('.stats strong').forEach((e,i)=>e.textContent=t.stats[i]);document.querySelectorAll('.stats span').forEach((e,i)=>e.textContent=t.statSub[i]);document.querySelector('.services .eyebrow').textContent=t.servicesEyebrow;document.querySelector('.services h2').innerHTML=t.servicesTitle;document.querySelector('.services .section-head p').textContent=t.servicesIntro;document.querySelectorAll('.card h3').forEach((e,i)=>e.textContent=t.serviceNames[i]);document.querySelectorAll('.card p').forEach((e,i)=>e.textContent=t.serviceTexts[i]);document.querySelectorAll('.card a').forEach(e=>e.textContent=t.request);document.querySelector('#diferenciais .eyebrow').textContent=t.why;document.querySelector('#diferenciais h2').innerHTML=t.whyTitle;document.querySelector('#diferenciais .muted').textContent=t.whyText;document.querySelectorAll('.feature-list div').forEach((e,i)=>e.innerHTML='<strong>0'+(i+1)+'</strong> '+t.features[i]);document.querySelector('#portfolio .eyebrow').textContent=t.lab;document.querySelector('#portfolio h2').innerHTML=t.labTitle;document.querySelector('#portfolio .section-head p').textContent=t.labIntro;document.querySelector('.note').textContent=t.conceptNote;document.querySelectorAll('.project').forEach((e,i)=>{e.querySelector('small').textContent=t.projects[i][0];e.querySelector('h3').textContent=t.projects[i][1];e.querySelector('p').textContent=t.projects[i][2]});document.querySelector('#contato p[style]').textContent=t.phoneLabel;document.querySelectorAll('#service option').forEach((e,i)=>e.textContent=t.selectOptions[i]);document.querySelector('.cta .eyebrow').textContent=t.ctaEyebrow;document.querySelector('.cta h2').innerHTML=t.ctaTitle;document.querySelector('.cta p').textContent=t.ctaText;document.querySelector('.cta a').textContent=t.talk;document.querySelector('#contato .eyebrow').textContent=t.contactEyebrow;document.querySelector('#contato h2').innerHTML=t.contactTitle;document.querySelector('#contato .muted').textContent=t.contactText;document.querySelector('label[for="service"]').textContent=t.serviceLabel;document.querySelector('label[for="message"]').textContent=t.messageLabel;document.getElementById('message').placeholder=t.messagePlaceholder;document.querySelector('#contactForm button').textContent=t.send;document.querySelector('.foot > span').textContent='© '+new Date().getFullYear()+' VEZQORA. '+t.footer;document.title=lang==='en'?'VEZQORA — Tecnologia & IA | Soluções Digitais':'VEZQORA — Tecnologia & IA | O futuro começa agora';}
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+    .container { max-width: 1180px; margin: auto; padding: 0 22px; }
 
-const aiInput=document.getElementById('aiInput'),aiMessages=document.getElementById('aiMessages'),aiQuick=document.getElementById('aiQuick');
-let intakeStep='service';
-const intake={service:'',name:'',phone:'',description:'',deadline:'',budget:''};
-function addChat(text,who='bot'){const el=document.createElement('div');el.className='ai-msg'+(who==='user'?' user':'');el.textContent=text;aiMessages.appendChild(el);aiMessages.scrollTop=aiMessages.scrollHeight;}
-function askNext(){const prompts={name:'Perfeito! Como podemos chamar você?',phone:'Qual é o seu WhatsApp com DDD? Assim a equipe poderá retornar, se necessário.',description:'Conte um pouco mais: qual problema você quer resolver ou quais funções gostaria que o projeto tivesse?',deadline:'Você tem algum prazo em mente? Pode dizer uma data ou “sem prazo definido”.',budget:'Tem uma faixa de investimento planejada? Se ainda não souber, responda “quero uma orientação”.'};addChat(prompts[intakeStep]);aiQuick.innerHTML='';aiQuick.hidden=true;aiInput.placeholder='Digite sua resposta...';aiInput.focus();}
-function showSummary(){const summary=`Resumo do pedido — VEZQORA\nServiço: ${intake.service}\nNome: ${intake.name}\nWhatsApp do cliente: ${intake.phone}\nProjeto: ${intake.description}\nPrazo: ${intake.deadline}\nInvestimento previsto: ${intake.budget}\n\nSolicito uma avaliação e um orçamento. Este resumo foi preenchido pelo assistente guiado do site.`;addChat('Obrigado, '+intake.name+'! Já organizei suas informações. Confira o resumo e, se estiver tudo certo, toque no botão abaixo para abrir o WhatsApp da VEZQORA com a mensagem pronta.');const box=document.createElement('div');box.className='ai-summary';box.textContent=summary;aiMessages.appendChild(box);const send=document.createElement('button');send.type='button';send.className='ai-summary-send';send.textContent='Enviar resumo pelo WhatsApp ↗';send.addEventListener('click',()=>window.open('https://wa.me/5551991895177?text='+encodeURIComponent(summary),'_blank','noopener,noreferrer'));aiMessages.appendChild(send);aiQuick.hidden=true;aiInput.disabled=true;document.getElementById('aiSend').disabled=true;aiMessages.scrollTop=aiMessages.scrollHeight;}
-function handleIntake(value){const q=value.trim();if(!q)return;addChat(q,'user');aiInput.value='';if(intakeStep==='service'){intake.service=q;intakeStep='name';askNext();return;}if(intakeStep==='name'){intake.name=q;intakeStep='phone';askNext();return;}if(intakeStep==='phone'){intake.phone=q;intakeStep='description';askNext();return;}if(intakeStep==='description'){intake.description=q;intakeStep='deadline';askNext();return;}if(intakeStep==='deadline'){intake.deadline=q;intakeStep='budget';askNext();return;}if(intakeStep==='budget'){intake.budget=q;showSummary();}}
-document.getElementById('aiSend').addEventListener('click',()=>handleIntake(aiInput.value));aiInput.addEventListener('keydown',e=>{if(e.key==='Enter')handleIntake(aiInput.value)});
-aiQuick.addEventListener('click',e=>{const b=e.target.closest('button[data-choice]');if(b&&intakeStep==='service')handleIntake(b.dataset.choice)});
-document.getElementById('aiReset').addEventListener('click',()=>{Object.keys(intake).forEach(k=>intake[k]='');intakeStep='service';aiMessages.innerHTML='';addChat('Vamos começar novamente! O que você deseja criar?');aiQuick.hidden=false;aiQuick.innerHTML='<button type="button" data-choice="Site profissional">🌐 Site</button><button type="button" data-choice="Aplicativo">📱 Aplicativo</button><button type="button" data-choice="Agente de IA">✧ Agente de IA</button><button type="button" data-choice="Automação">⌁ Automação</button><button type="button" data-choice="Outro projeto">＋ Outro</button>';aiInput.disabled=false;document.getElementById('aiSend').disabled=false;aiInput.value='';});
-document.getElementById('year').textContent=new Date().getFullYear();const menuButton=document.getElementById('menu'),navLinks=document.getElementById('links');menuButton.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'✕':'☰'});navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰'}));document.getElementById('langToggle').addEventListener('click',()=>setLanguage(document.documentElement.lang==='en'?'pt':'en'));document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const service=document.getElementById('service').value,msg=document.getElementById('message').value.trim(),english=document.documentElement.lang==='en';const text=english?`Hello, VEZQORA! I'm interested in: ${service}. ${msg?`My idea: ${msg}`:'I would like to learn more and request a quote.'}`:`Olá, VEZQORA! Tenho interesse em: ${service}. ${msg?`Minha ideia: ${msg}`:'Gostaria de saber mais e pedir um orçamento.'}`;window.open('https://wa.me/5551991895177?text='+encodeURIComponent(text),'_blank','noopener,noreferrer')});if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
-</script></body></html>
+    .gold {
+      background: linear-gradient(110deg, #a97938, #fff1bf 45%, #d6a85d 70%, #fff0b3);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: var(--gold);
+      display: block;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: #050711e0;
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid #ffffff12;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 78px;
+      gap: 20px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      border-radius: 12px;
+      font: 800 28px "Space Grotesk", Arial;
+      background: linear-gradient(145deg, #fff0b3, #a67a35);
+      color: #101019;
+      box-shadow: 0 0 25px #d7a35b32;
+    }
+    .brand b { display: block; font: 700 22px "Space Grotesk", Arial; letter-spacing: .15em; }
+    .brand small { display: block; font-size: 8px; letter-spacing: .29em; color: #d8bc83; }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #bfc7d5;
+    }
+    .links a:hover { color: #f6d89a; }
+
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .menu {
+      display: none;
+      border: 1px solid #ffffff30;
+      background: #ffffff08;
+      border-radius: 10px;
+      color: white;
+      padding: 9px 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 15px 22px;
+      border-radius: 12px;
+      border: 1px solid #ffffff36;
+      font-size: 13px;
+      font-weight: 800;
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+    .button:hover { transform: translateY(-3px); }
+    .button.primary {
+      background: linear-gradient(115deg, #aa7835, #ffe5a4 47%, #b57c35);
+      border: 0;
+      color: #141019;
+      box-shadow: 0 12px 38px #d3a05730;
+    }
+    .button.primary:hover { box-shadow: 0 15px 45px #e6b76d70; }
+    .button.secondary { background: #ffffff0b; }
+    .button.secondary:hover { background: #ffffff18; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 700px;
+      overflow: hidden;
+      border-bottom: 1px solid #ffffff10;
+      background: radial-gradient(ellipse at 78% 48%, #0c39702b, transparent 42%), linear-gradient(180deg, #050711 0%, #070b15 100%);
+    }
+    .hero .container {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 35px;
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid #d7ad6447;
+      background: #d7ad640b;
+      color: #f3d6a0;
+      border-radius: 50px;
+      padding: 10px 15px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #eecb8b;
+      box-shadow: 0 0 14px #ffda9e;
+    }
+    .hero h1 {
+      font: 700 clamp(40px, 5.5vw, 76px)/1.04 "Space Grotesk", Arial;
+      letter-spacing: -.055em;
+      margin: 22px 0 20px;
+      max-width: 700px;
+    }
+    .hero p {
+      color: #aab8cc;
+      line-height: 1.85;
+      font-size: 15.5px;
+      max-width: 530px;
+    }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0; }
+    .trust {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 11.5px;
+      color: #9aaac1;
+      margin-top: 26px;
+    }
+    .trust span:before { content: '✦'; color: #e9c88b; margin-right: 7px; }
+
+    .visual {
+      position: relative;
+      min-height: 470px;
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+    }
+    .visual:before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      max-width: 95%;
+      border-radius: 50%;
+      background: radial-gradient(circle, #0c58c457, transparent 66%);
+      filter: blur(15px);
+    }
+    .orbit {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      max-width: 96%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid #398aff44;
+      box-shadow: 0 0 50px #1e74ff24, inset 0 0 60px #1156a925;
+      animation: rotate 35s linear infinite;
+    }
+    .orbit:before, .orbit:after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background: #f2c978;
+      box-shadow: 0 0 25px #ffe0a2;
+      width: 10px;
+      height: 10px;
+      top: 50%;
+      left: -5px;
+    }
+    .orbit:after {
+      left: auto;
+      right: -5px;
+      background: #5da6ff;
+      box-shadow: 0 0 22px #378bff;
+    }
+    .orbit2 {
+      width: 310px;
+      height: 310px;
+      border-style: dashed;
+      border-color: #e5bd7550;
+      animation-direction: reverse;
+      animation-duration: 28s;
+    }
+    .core {
+      width: 220px;
+      height: 255px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      transform: perspective(600px) rotateY(-12deg);
+      filter: drop-shadow(0 0 32px #2676ff55);
+    }
+    .core:before {
+      content: '';
+      position: absolute;
+      inset: 13px;
+      border: 2px solid #c9a364;
+      border-radius: 35px;
+      transform: rotate(45deg);
+      box-shadow: 0 0 45px #d4a76766, inset 0 0 40px #367eff44;
+      background: linear-gradient(135deg, #e1b97012, #005dff16);
+    }
+    .core span {
+      font: 800 180px "Space Grotesk", Arial;
+      z-index: 1;
+      text-shadow: 0 0 38px #d6a7657c;
+    }
+    .float {
+      position: absolute;
+      background: #0d1629e6;
+      border: 1px solid #cba86745;
+      border-radius: 12px;
+      padding: 12px 15px;
+      box-shadow: 0 15px 45px #0008;
+      backdrop-filter: blur(12px);
+      font-size: 11px;
+      color: #d6e1f2;
+    }
+    .float strong { display: block; color: #f5d99c; font-size: 12px; margin-bottom: 3px; }
+    .f1 { top: 36px; right: 0; }
+    .f2 { bottom: 42px; left: 0; }
+    .f3 { right: 0; bottom: 78px; }
+
+    /* Band */
+    .band { border-block: 1px solid #ffffff12; background: #0b1322; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 30px 0;
+      text-align: center;
+    }
+    .stats strong { display: block; font: 700 22px "Space Grotesk", Arial; color: #efd49f; }
+    .stats span { display: block; font-size: 12px; color: #9aabc1; margin-top: 6px; }
+
+    /* Sections */
+    .section { padding: 95px 0; }
+    .section-head { text-align: center; max-width: 700px; margin: 0 auto 46px; }
+    .section h2 {
+      font: 700 clamp(29px, 4vw, 46px)/1.16 "Space Grotesk", Arial;
+      letter-spacing: -.04em;
+      margin: 12px 0 15px;
+    }
+    .section-head p, .muted { color: #9daec3; line-height: 1.8; font-size: 14.5px; }
+
+    /* Services */
+    .services { background: linear-gradient(180deg, #080d18, #070b13); }
+    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(150deg, #172137, #0b101b 70%);
+      border: 1px solid #d2ad6640;
+      border-radius: 19px;
+      padding: 26px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform .25s, border-color .25s, box-shadow .25s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #ebc68a;
+      box-shadow: 0 22px 55px #0009, 0 0 25px #276eff21;
+    }
+    .card .ico {
+      font-size: 28px;
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      background: #d7b27715;
+      border: 1px solid #e6c1853d;
+      color: #f2d499;
+    }
+    .card h3 { font: 700 19px "Space Grotesk", Arial; margin: 20px 0 10px; }
+    .card p { color: #a6b5c8; font-size: 12.5px; line-height: 1.8; margin-bottom: 18px; }
+    .card-link {
+      font-size: 12px;
+      font-weight: 800;
+      color: #f3d397;
+      background: none;
+      border: 0;
+      padding: 0;
+      text-align: left;
+    }
+    .card-link:hover { color: #fff0c4; }
+
+    /* Interactive AI Commercial Assistant Section */
+    .ai-sec {
+      background: radial-gradient(ellipse at 20% 20%, #155dd024, transparent 50%), #060a14;
+      border-block: 1px solid #ffffff12;
+    }
+    .ai-grid {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 44px;
+      align-items: center;
+    }
+    .ai-bullets { display: grid; gap: 13px; margin-top: 24px; }
+    .ai-bullets div {
+      padding: 14px 16px;
+      border-radius: 13px;
+      background: #ffffff07;
+      border: 1px solid #ffffff14;
+      font-size: 13px;
+      color: #c8d4e4;
+    }
+    .ai-bullets strong { color: #f4d79b; }
+
+    .ai-chat-card {
+      border: 1px solid #d7ad6455;
+      border-radius: 24px;
+      background: #0a101e;
+      box-shadow: 0 25px 75px rgba(0, 0, 0, .65), 0 0 40px rgba(38, 118, 255, .16);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 560px;
+    }
+    .ai-chat-head {
+      padding: 16px 20px;
+      background: linear-gradient(135deg, #131f36 0%, #0b1221 100%);
+      border-bottom: 1px solid #ffffff16;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .ai-chat-id { display: flex; align-items: center; gap: 11px; }
+    .ai-chat-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      font: 800 20px "Space Grotesk", Arial;
+      background: linear-gradient(145deg, #fff0b3, #a67a35);
+      color: #101019;
+    }
+    .ai-chat-id strong { display: block; font: 700 14.5px "Space Grotesk", Arial; color: #f6ddb0; }
+    .ai-chat-id span { font-size: 11.5px; color: #8fa6c4; display: flex; align-items: center; gap: 6px; }
+    .ai-chat-id span::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #72e6ad;
+      box-shadow: 0 0 10px #72e6ad;
+    }
+    .ai-reset-btn {
+      border: 1px solid #ffffff24;
+      background: #ffffff0a;
+      color: #cbd7e8;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .ai-reset-btn:hover { background: #ffffff18; }
+
+    .ai-chat-log {
+      flex: 1;
+      padding: 18px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: radial-gradient(circle at 85% 15%, #1659c41c, transparent 45%), #070b15;
+    }
+    .chat-msg {
+      max-width: 86%;
+      padding: 12px 15px;
+      border-radius: 15px;
+      font-size: 13.5px;
+      line-height: 1.6;
+      white-space: pre-line;
+      animation: msgIn .22s ease;
+    }
+    @keyframes msgIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    .chat-msg.ai {
+      align-self: flex-start;
+      background: #111b2e;
+      border: 1px solid #ffffff16;
+      color: #e4ecf7;
+      border-bottom-left-radius: 4px;
+    }
+    .chat-msg.user {
+      align-self: flex-end;
+      background: linear-gradient(115deg, #aa7835, #e9c88b);
+      color: #141019;
+      font-weight: 700;
+      border-bottom-right-radius: 4px;
+    }
+
+    .ai-quick-chips {
+      padding: 10px 16px;
+      background: #0b1220;
+      border-top: 1px solid #ffffff12;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .ai-quick-chips::-webkit-scrollbar { display: none; }
+    .ai-chip {
+      white-space: nowrap;
+      border: 1px solid #d7ad6447;
+      background: #d7ad6412;
+      color: #f3d6a0;
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .ai-chip:hover { background: #e9c88b; color: #141019; }
+
+    .ai-wa-cta {
+      padding: 10px 16px;
+      background: #0d1626;
+      border-top: 1px solid #ffffff12;
+      display: none;
+    }
+    .ai-wa-cta.visible { display: block; }
+    .ai-wa-cta a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 12px 16px;
+      border-radius: 11px;
+      background: linear-gradient(115deg, #aa7835, #ffe5a4 50%, #b57c35);
+      color: #141019;
+      font-weight: 800;
+      font-size: 13px;
+      box-shadow: 0 8px 25px rgba(233, 200, 139, .22);
+    }
+
+    .ai-chat-input-row {
+      padding: 12px 14px;
+      background: #0a101d;
+      border-top: 1px solid #ffffff14;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ai-chat-input-row input {
+      flex: 1;
+      background: #121c30;
+      border: 1px solid #ffffff24;
+      border-radius: 999px;
+      padding: 11px 16px;
+      color: #fff;
+      font-size: 13.5px;
+      outline: none;
+      min-width: 0;
+    }
+    .ai-chat-input-row input:focus { border-color: #e9c88b; }
+    .ai-icon-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 0;
+      font-weight: 800;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      font-size: 16px;
+    }
+    .ai-mic-btn {
+      background: #18253d;
+      border: 1px solid #d7ad6455;
+      color: #f4d79b;
+    }
+    .ai-mic-btn:hover { background: #223352; }
+    .ai-send-btn {
+      background: linear-gradient(135deg, #ffe5a4, #b57c35);
+      color: #141019;
+    }
+
+    /* Barra de Gravação de Áudio */
+    .ai-rec-bar {
+      display: none;
+      padding: 12px 14px;
+      background: #1a1018;
+      border-top: 1px solid #ff6b6b55;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .ai-rec-bar.active { display: flex; }
+    .ai-rec-status {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #ffb3b3;
+    }
+    .ai-rec-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ff4d4d;
+      animation: recPulse 1s infinite;
+    }
+    @keyframes recPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .35; transform: scale(.8); }
+    }
+    .ai-rec-actions { display: flex; gap: 8px; }
+    .ai-rec-cancel {
+      border: 1px solid #ffffff28;
+      background: #ffffff10;
+      color: #dbe4f0;
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .ai-rec-send {
+      border: 0;
+      background: linear-gradient(135deg, #ffe5a4, #b57c35);
+      color: #141019;
+      border-radius: 999px;
+      padding: 8px 15px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    /* Projects */
+    .projects { background: #080e1a; }
+    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .project {
+      padding: 24px;
+      border: 1px solid #ffffff21;
+      border-radius: 18px;
+      background: linear-gradient(125deg, #16223a, #0c111d);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform .3s, border-color .3s, box-shadow .3s;
+    }
+    .project:hover {
+      transform: translateY(-6px);
+      border-color: #e9c88b88;
+      box-shadow: 0 18px 45px #0008;
+    }
+    .project small { color: #e4c487; letter-spacing: .15em; font-weight: 800; font-size: 10px; }
+    .project h3 { font: 700 22px "Space Grotesk", Arial; margin: 10px 0 8px; }
+    .project p { color: #a3b2c6; font-size: 13px; line-height: 1.7; margin-bottom: 18px; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; }
+    .project-tags span {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #ffffff0a;
+      border: 1px solid #ffffff16;
+      color: #cbd7e8;
+    }
+    .project-link { font-size: 12.5px; font-weight: 800; color: #f3d397; }
+
+    /* Process */
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .step-card {
+      padding: 24px 20px;
+      border-radius: 18px;
+      background: #0d1422;
+      border: 1px solid #ffffff18;
+    }
+    .step-num {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #e9c88b1f;
+      border: 1px solid #e9c88b55;
+      color: #f4d79b;
+      font: 800 14px "Space Grotesk", Arial;
+      margin-bottom: 14px;
+    }
+    .step-card h3 { font: 700 17px "Space Grotesk", Arial; margin-bottom: 8px; }
+    .step-card p { font-size: 12.5px; color: #9daec3; line-height: 1.7; }
+
+    /* Contact & Guided Form */
+    .contact-sec { background: #070b14; border-top: 1px solid #ffffff12; }
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: start; }
+    .form {
+      padding: 28px;
+      background: #101828;
+      border: 1px solid #d4b27740;
+      border-radius: 20px;
+    }
+    .form label { display: block; font-size: 12px; color: #cbd7e6; margin: 0 0 7px; font-weight: 600; }
+    .form input, .form select, .form textarea {
+      display: block;
+      width: 100%;
+      background: #080e19;
+      border: 1px solid #ffffff30;
+      border-radius: 10px;
+      color: white;
+      padding: 13px;
+      margin: 0 0 16px;
+      outline: none;
+    }
+    .form input:focus, .form select:focus, .form textarea:focus { border-color: #e7c788; }
+    .form textarea { min-height: 100px; resize: vertical; }
+    .form .button { width: 100%; }
+
+    /* FAQ */
+    .faq-list { max-width: 820px; margin: 0 auto; display: grid; gap: 12px; }
+    .faq-item {
+      background: #0d1422;
+      border: 1px solid #ffffff1a;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 18px 22px;
+      font-weight: 700;
+      font-size: 14.5px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; color: var(--gold); font-size: 20px; }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-item p {
+      padding: 0 22px 18px;
+      margin: 0;
+      font-size: 13.5px;
+      color: #9daec3;
+      line-height: 1.7;
+      border-top: 1px solid #ffffff10;
+      padding-top: 12px;
+    }
+
+    /* Footer & Floating WhatsApp */
+    .footer { padding: 38px 0; border-top: 1px solid #ffffff18; background: #050711; }
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      color: #8f9eb2;
+      font-size: 12px;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 25;
+      background: linear-gradient(135deg, #f5d79c, #b78541);
+      color: #161017;
+      border-radius: 50px;
+      padding: 14px 18px;
+      font-weight: 800;
+      font-size: 12.5px;
+      box-shadow: 0 8px 30px #0009;
+    }
+    .whatsapp-float:hover { transform: translateY(-2px); }
+
+    @keyframes rotate { to { transform: rotate(360deg); } }
+
+    @media (max-width: 980px) {
+      .hero .container, .ai-grid, .contact { grid-template-columns: 1fr; }
+      .cards, .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .project-grid { grid-template-columns: 1fr; }
+      .visual { min-height: 360px; }
+      .core span { font-size: 130px; }
+    }
+
+    @media (max-width: 720px) {
+      .links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        background: #070b15;
+        border-bottom: 1px solid #ffffff18;
+        padding: 22px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .links.open { display: flex; }
+      .menu { display: block; }
+      .cards, .process-grid, .stats { grid-template-columns: 1fr; }
+      .ai-chat-card { height: 540px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#inicio">
+        <span class="mark">V</span>
+        <span>
+          <b>VEZQORA</b>
+          <small>TECNOLOGIA &amp; IA</small>
+        </span>
+      </a>
+
+      <nav class="links" id="navLinks">
+        <a href="#servicos">Soluções</a>
+        <a href="#ia">Consultor IA (Texto &amp; Áudio)</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#processo">Como Trabalhamos</a>
+        <a href="#orcamento">Orçamento</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="button primary" href="#ia" style="padding:11px 16px;font-size:12px;">Falar com IA</a>
+        <button class="menu" id="menuBtn" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-copy">
+        <span class="pill"><span class="dot"></span> SITES • APLICATIVOS • SISTEMAS • AGENTES DE IA</span>
+        <h1>Transformamos ideias em <span class="gold">tecnologia que vende</span> por você.</h1>
+        <p>A <strong>VEZQORA</strong> desenvolve sites de alta conversão, aplicativos sob medida, sistemas personalizados e agentes de inteligência artificial conectados ao WhatsApp e à sua operação 24 horas por dia.</p>
+        <div class="actions">
+          <a class="button primary" href="#ia">Explicar projeto por Texto ou Áudio →</a>
+          <a class="button secondary" href="#servicos">Explorar Soluções</a>
+        </div>
+        <div class="trust">
+          <span>Projetos sob medida</span>
+          <span>Integração com WhatsApp &amp; IA</span>
+          <span>Entrega ágil e suporte</span>
+        </div>
+      </div>
+
+      <div class="visual" aria-hidden="true">
+        <div class="orbit"></div>
+        <div class="orbit orbit2"></div>
+        <div class="core"><span class="gold">V</span></div>
+        <div class="float f1"><strong>🤖 Agentes de IA 24h</strong>Atendimento e agendamento automático</div>
+        <div class="float f2"><strong>📱 Apps &amp; Sistemas</strong>Web, Android e iOS sob medida</div>
+        <div class="float f3"><strong>🎤 Briefing por Áudio</strong>Fale sua ideia e receba o plano</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="band">
+    <div class="container stats">
+      <div>
+        <strong>Atendimento 24/7</strong>
+        <span>Agentes de IA que qualificam leads e agendam horários sozinhos</span>
+      </div>
+      <div>
+        <strong>100% Sob Medida</strong>
+        <span>Sites, apps e sistemas criados para a realidade do seu negócio</span>
+      </div>
+      <div>
+        <strong>Foco em Resultado</strong>
+        <span>Automação prática para reduzir tarefas manuais e aumentar vendas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Soluções / Serviços -->
+  <section class="section services" id="servicos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">SOLUÇÕES DIGITAIS</span>
+        <h2>O que a <span class="gold">VEZQORA</span> cria para sua empresa</h2>
+        <p>Escolha a solução ideal para profissionalizar sua presença digital e automatizar seu atendimento.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div>
+            <div class="ico">🌐</div>
+            <h3>Sites &amp; Landing Pages</h3>
+            <p>Sites institucionais, catálogos interativos e páginas de vendas rápidas, responsivas e otimizadas para Google e WhatsApp.</p>
+          </div>
+          <button type="button" class="card-link" data-service="Site Profissional / Landing Page">Simular projeto com a IA →</button>
+        </article>
+
+        <article class="card">
+          <div>
+            <div class="ico">📱</div>
+            <h3>Aplicativos Sob Medida</h3>
+            <p>Aplicativos modernos para Android e iOS com experiência intuitiva, notificações, área do cliente e integração em nuvem.</p>
+          </div>
+          <button type="button" class="card-link" data-service="Aplicativo Sob Medida">Simular projeto com a IA →</button>
+        </article>
+
+        <article class="card">
+          <div>
+            <div class="ico">⚙️</div>
+            <h3>Sistemas Personalizados</h3>
+            <p>Plataformas web, painéis administrativos, controle de agendamentos, financeiro e gestão interna sem planilhas bagunçadas.</p>
+          </div>
+          <button type="button" class="card-link" data-service="Sistema Personalizado">Simular projeto com a IA →</button>
+        </article>
+
+        <article class="card">
+          <div>
+            <div class="ico">🤖</div>
+            <h3>Agentes de IA &amp; Automações</h3>
+            <p>Assistentes comerciais inteligentes que respondem clientes, tiram dúvidas, consultam agenda em tempo real e enviam leads prontos.</p>
+          </div>
+          <button type="button" class="card-link" data-service="Agente de IA e Automação">Simular projeto com a IA →</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Assistente Comercial com IA (Texto e Áudio) -->
+  <section class="section ai-sec" id="ia">
+    <div class="container ai-grid">
+      <div>
+        <span class="eyebrow">INTELIGÊNCIA ARTIFICIAL NA PRÁTICA</span>
+        <h2>Fale por <span class="gold">Áudio ou Texto</span> com nossa IA Comercial</h2>
+        <p class="muted">Prefere explicar falando? Toque no botão do microfone <strong>🎤</strong> no chat, conte qual projeto você quer e do jeito que imagina. Nossa IA transcreve, organiza todo o briefing por escrito e prepara o envio direto para o WhatsApp da VEZQORA.</p>
+        <div class="ai-bullets">
+          <div><strong>🎤 Envio por Áudio:</strong> explique sua ideia falando naturalmente sem precisar digitar textos longos.</div>
+          <div><strong>📝 Resumo Automático por Escrito:</strong> a IA organiza todas as funcionalidades e o estilo desejado.</div>
+          <div><strong>📲 Fechamento no WhatsApp:</strong> um clique envia o briefing pronto direto para nossa equipe.</div>
+        </div>
+      </div>
+
+      <div class="ai-chat-card" aria-label="Chat Comercial VEZQORA IA">
+        <div class="ai-chat-head">
+          <div class="ai-chat-id">
+            <div class="ai-chat-badge">V</div>
+            <div>
+              <strong>VEZQORA IA • Consultora Comercial</strong>
+              <span>Online agora • Aceita texto e áudio 🎤</span>
+            </div>
+          </div>
+          <button type="button" class="ai-reset-btn" id="aiResetBtn">Reiniciar ↻</button>
+        </div>
+
+        <div class="ai-chat-log" id="aiChatLog"></div>
+        <div class="ai-quick-chips" id="aiQuickChips"></div>
+
+        <div class="ai-wa-cta" id="aiWaCta">
+          <a href="#" target="_blank" rel="noopener" id="aiWaLink">📲 Enviar Briefing por Escrito no WhatsApp ↗</a>
+        </div>
+
+        <div class="ai-rec-bar" id="aiRecBar">
+          <div class="ai-rec-status">
+            <span class="ai-rec-dot"></span>
+            <span id="aiRecTimer">Gravando áudio... 00:00</span>
+          </div>
+          <div class="ai-rec-actions">
+            <button type="button" class="ai-rec-cancel" id="aiRecCancelBtn">Cancelar</button>
+            <button type="button" class="ai-rec-send" id="aiRecSendBtn">Enviar Áudio ✓</button>
+          </div>
+        </div>
+
+        <form class="ai-chat-input-row" id="aiChatForm">
+          <input type="text" id="aiChatInput" placeholder="Digite ou toque no microfone 🎤 para falar..." autocomplete="off">
+          <button type="button" class="ai-icon-btn ai-mic-btn" id="aiMicBtn" title="Gravar áudio explicando o projeto" aria-label="Gravar áudio">🎤</button>
+          <button type="submit" class="ai-icon-btn ai-send-btn" aria-label="Enviar mensagem">➤</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section class="section projects" id="projetos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">PORTFÓLIO &amp; SOLUÇÕES</span>
+        <h2>Projetos e sistemas desenvolvidos</h2>
+        <p>Exemplos reais de como unimos design moderno, automação e inteligência artificial.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project">
+          <div>
+            <small>CASE REAL • SITE + AGENTE DE IA + GOOGLE AGENDA</small>
+            <h3>DIVAS — Salão de Beleza</h3>
+            <p>Site completo com catálogo de serviços e assistente virtual (Diva IA) que consulta horários livres na Google Agenda em tempo real, bloqueia horários ocupados e dispara lembretes automáticos por e-mail e WhatsApp.</p>
+            <div class="project-tags">
+              <span>Site Responsivo</span>
+              <span>Agente de IA</span>
+              <span>Google Agenda API</span>
+              <span>WhatsApp</span>
+            </div>
+          </div>
+          <a href="[https://leledesouzas96-creator.github.io/sal-odebelezadivas/](https://leledesouzas96-creator.github.io/sal-odebelezadivas/)" target="_blank" rel="noopener" class="project-link">Ver projeto funcionando ao vivo ↗</a>
+        </article>
+
+        <article class="project">
+          <div>
+            <small>SISTEMAS &amp; AUTOMAÇÃO COMERCIAL</small>
+            <h3>Assistentes de Atendimento &amp; Apps Sob Medida</h3>
+            <p>Desenvolvimento de aplicativos próprios, painéis administrativos e fluxos automatizados com IA para clínicas, prestadores de serviço, comércios e empresas B2B.</p>
+            <div class="project-tags">
+              <span>Aplicativos</span>
+              <span>Sistemas Web</span>
+              <span>Gemini AI / Cloudflare</span>
+              <span>Automações</span>
+            </div>
+          </div>
+          <a href="#ia" class="project-link">Solicitar uma solução parecida →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como Trabalhamos -->
+  <section class="section" id="processo">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">METODOLOGIA</span>
+        <h2>Do zero ao sistema rodando em <span class="gold">4 etapas</span></h2>
+      </div>
+
+      <div class="process-grid">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <h3>Diagnóstico</h3>
+          <p>Entendemos seu negócio, público, objetivos e prazos por áudio, chat com IA ou WhatsApp.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h3>Proposta &amp; Escopo</h3>
+          <p>Apresentamos a melhor estrutura técnica, prazo de entrega e investimento transparente.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h3>Criação &amp; IA</h3>
+          <p>Desenvolvemos o layout, código, integrações com WhatsApp, agenda e inteligência artificial.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">04</span>
+          <h3>Entrega &amp; Suporte</h3>
+          <p>Publicamos no ar com segurança, entregamos tudo pronto e acompanhamos sua operação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Orçamento Guiado -->
+  <section class="section contact-sec" id="orcamento">
+    <div class="container contact">
+      <div>
+        <span class="eyebrow">ORÇAMENTO RÁPIDO</span>
+        <h2>Pronto para tirar seu <span class="gold">projeto do papel?</span></h2>
+        <p class="muted">Preencha os dados ao lado para abrir o WhatsApp da VEZQORA com todas as informações do seu projeto já formatadas, ou grave um áudio para nossa IA acima.</p>
+        <div class="ai-bullets" style="margin-top:24px;">
+          <div><strong>🌐 Sites &amp; Landing Pages:</strong> presença profissional com foco em conversão.</div>
+          <div><strong>📱 Aplicativos &amp; Sistemas:</strong> ferramentas sob medida para escalar sua gestão.</div>
+          <div><strong>🤖 Agentes de IA:</strong> atendimento automático 24h integrado ao seu fluxo.</div>
+        </div>
+      </div>
+
+      <form class="form" id="quoteForm">
+        <label for="qName">Seu Nome ou Empresa</label>
+        <input type="text" id="qName" placeholder="Ex: João Silva / Clínica Vida" required>
+
+        <label for="qService">O que você deseja criar?</label>
+        <select id="qService">
+          <option value="Site Profissional / Landing Page">Site Profissional / Landing Page</option>
+          <option value="Aplicativo Sob Medida (Android / iOS)">Aplicativo Sob Medida (Android / iOS)</option>
+          <option value="Sistema Web Personalizado">Sistema Web Personalizado</option>
+          <option value="Agente de IA / Automação de Atendimento">Agente de IA / Automação de Atendimento</option>
+          <option value="Solução Completa (Site + Sistema + IA)">Solução Completa (Site + Sistema + IA)</option>
+        </select>
+
+        <label for="qDeadline">Prazo desejado</label>
+        <select id="qDeadline">
+          <option value="O mais rápido possível">O mais rápido possível</option>
+          <option value="Nos próximos 15 a 30 dias">Nos próximos 15 a 30 dias</option>
+          <option value="Estou planejando para os próximos meses">Estou planejando para os próximos meses</option>
+        </select>
+
+        <label for="qDetails">Conte resumidamente sua ideia</label>
+        <textarea id="qDetails" placeholder="Descreva o que seu site, aplicativo, sistema ou agente de IA precisa fazer..." required></textarea>
+
+        <button type="submit" class="button primary">Enviar Orçamento pelo WhatsApp ↗</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">PERGUNTAS FREQUENTES</span>
+        <h2>Dúvidas sobre nossos projetos</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Quanto custa criar um site, aplicativo, sistema ou agente de IA?</summary>
+          <p>Cada projeto é orçado sob medida conforme o número de telas, integrações e automações necessárias. Use o chat com nossa IA (por texto ou áudio) ou o formulário acima para receber uma estimativa rápida sem compromisso.</p>
+        </details>
+        <details class="faq-item">
+          <summary>O agente de IA pode agendar horários e responder clientes sozinho?</summary>
+          <p>Sim. Configuramos agentes treinados com os dados, serviços e preços do seu negócio, integrados ao WhatsApp, Google Agenda, planilhas ou sistemas internos.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Vocês entregam o projeto publicado e funcionando?</summary>
+          <p>Sim. Cuidamos de toda a configuração técnica, publicação online, domínio, segurança HTTPS e testes finais antes da entrega.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container foot">
+      <div><strong>VEZQORA</strong> — Tecnologia, Sistemas &amp; Agentes de IA</div>
+      <div>© 2026 VEZQORA. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+  <a href="[https://wa.me/5551991749541?text=Olá!%20Vim%20pelo%20site%20da%20VEZQORA%20e%20gostaria%20de%20um%20orçamento](https://wa.me/5551991749541?text=Olá!%20Vim%20pelo%20site%20da%20VEZQORA%20e%20gostaria%20de%20um%20orçamento)." class="whatsapp-float" id="floatWaBtn" target="_blank" rel="noopener">
+    💬 WhatsApp VEZQORA
+  </a>
+
+  <script>
+    // === CONFIGURAÇÃO PRINCIPAL ===
+    const WORKER_URL = "[https://vezqoraai.vezqoraai.workers.dev](https://vezqoraai.vezqoraai.workers.dev)";
+    const WHATSAPP_NUMBER = "5551991749541"; // Troque aqui se o WhatsApp comercial da VEZQORA for outro número (55 + DDD + número)
+
+    document.getElementById("floatWaBtn").href =
+      `[https://wa.me/$](https://wa.me/$){WHATSAPP_NUMBER}?text=${encodeURIComponent("Olá! Vim pelo site da VEZQORA e gostaria de conversar sobre um projeto.")}`;
+
+    // Menu mobile
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+    navLinks.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => navLinks.classList.remove("open"));
+    });
+
+    // === CHAT COMERCIAL COM IA (TEXTO + ÁUDIO) ===
+    const aiChatLog = document.getElementById("aiChatLog");
+    const aiQuickChips = document.getElementById("aiQuickChips");
+    const aiChatForm = document.getElementById("aiChatForm");
+    const aiChatInput = document.getElementById("aiChatInput");
+    const aiResetBtn = document.getElementById("aiResetBtn");
+    const aiWaCta = document.getElementById("aiWaCta");
+    const aiWaLink = document.getElementById("aiWaLink");
+
+    // Elementos de Áudio
+    const aiMicBtn = document.getElementById("aiMicBtn");
+    const aiRecBar = document.getElementById("aiRecBar");
+    const aiRecTimer = document.getElementById("aiRecTimer");
+    const aiRecCancelBtn = document.getElementById("aiRecCancelBtn");
+    const aiRecSendBtn = document.getElementById("aiRecSendBtn");
+
+    let conversation = [];
+    let latestBriefing = "";
+    let mediaRecorder = null;
+    let audioChunks = [];
+    let recordingInterval = null;
+    let recordingSeconds = 0;
+    let shouldSendAudio = false;
+
+    const initialChips = [
+      "🌐 Criar um Site",
+      "📱 Desenvolver Aplicativo",
+      "⚙️ Sistema Sob Medida",
+      "🤖 Agente de IA / Automação"
+    ];
+
+    function appendChatMsg(role, text) {
+      const div = document.createElement("div");
+      div.className = `chat-msg ${role}`;
+      div.textContent = text;
+      aiChatLog.appendChild(div);
+      aiChatLog.scrollTop = aiChatLog.scrollHeight;
+      return div;
+    }
+
+    function renderChips(list) {
+      aiQuickChips.innerHTML = "";
+      list.forEach(label => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "ai-chip";
+        btn.textContent = label;
+        btn.addEventListener("click", () => sendToAi(label));
+        aiQuickChips.appendChild(btn);
+      });
+    }
+
+    function refreshWhatsAppSummary() {
+      const userNotes = conversation
+        .filter(m => m.role === "user")
+        .map(m => `• ${m.content}`)
+        .join("\n");
+
+      const summaryBody = latestBriefing || userNotes;
+      if (!summaryBody) {
+        aiWaCta.classList.remove("visible");
+        return;
+      }
+
+      const msg =
+        `Olá, equipe VEZQORA! Conversei com a Assistente IA no site e envio abaixo o resumo por escrito do projeto que desejo criar:\n\n` +
+        `${summaryBody}\n\n` +
+        `Podemos conversar sobre a proposta?`;
+
+      aiWaLink.href = `[https://wa.me/$](https://wa.me/$){WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+      aiWaCta.classList.add("visible");
+    }
+
+    async function sendToAi(rawText, audioPayload = null) {
+      const text = (rawText || "").trim();
+      if (!text && !audioPayload) return;
+
+      aiChatInput.value = "";
+      aiQuickChips.innerHTML = "";
+
+      let userBubble = null;
+      if (audioPayload) {
+        userBubble = appendChatMsg("user", `🎤 Áudio enviado (${audioPayload.durationLabel}) — transcrevendo...`);
+      } else {
+        userBubble = appendChatMsg("user", text);
+        conversation.push({ role: "user", content: text });
+      }
+
+      refreshWhatsAppSummary();
+
+      const thinking = appendChatMsg(
+        "ai",
+        audioPayload ? "Ouvindo seu áudio e organizando o resumo do projeto..." : "Analisando seu projeto..."
+      );
+
+      try {
+        const payload = { messages: conversation };
+        if (audioPayload) {
+          payload.audio = {
+            data: audioPayload.base64,
+            mimeType: audioPayload.mimeType
+          };
+        }
+
+        const res = await fetch(WORKER_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json();
+
+        if (!res.ok || !data.reply) {
+          throw new Error(data.error || "Erro na resposta da IA");
+        }
+
+        if (audioPayload) {
+          const spokenText = data.transcript || "Áudio explicando os detalhes do projeto";
+          userBubble.textContent = `🎤 Áudio: "${spokenText}"`;
+          conversation.push({ role: "user", content: `[Áudio do cliente]: ${spokenText}` });
+        }
+
+        if (data.whatsapp_briefing) {
+          latestBriefing = data.whatsapp_briefing;
+        }
+
+        thinking.textContent = data.reply;
+        conversation.push({ role: "assistant", content: data.reply });
+        refreshWhatsAppSummary();
+      } catch (err) {
+        if (audioPayload && userBubble) {
+          userBubble.textContent = `🎤 Áudio enviado (${audioPayload.durationLabel})`;
+          conversation.push({ role: "user", content: "Cliente enviou um áudio explicando o projeto." });
+        }
+        const fallback =
+          "Recebi sua mensagem! Para agilizar seu atendimento agora mesmo, clique no botão dourado abaixo e envie os detalhes direto para nosso especialista no WhatsApp.";
+        thinking.textContent = fallback;
+        conversation.push({ role: "assistant", content: fallback });
+        refreshWhatsAppSummary();
+      }
+    }
+
+    // === GRAVAÇÃO DE ÁUDIO NO NAVEGADOR ===
+    function formatTimer(sec) {
+      const m = String(Math.floor(sec / 60)).padStart(2, "0");
+      const s = String(sec % 60).padStart(2, "0");
+      return `${m}:${s}`;
+    }
+
+    function resetRecordingUI() {
+      clearInterval(recordingInterval);
+      recordingInterval = null;
+      aiRecBar.classList.remove("active");
+      aiChatForm.style.display = "flex";
+    }
+
+    function blobToBase64(blob) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const result = String(reader.result || "");
+          const base64 = result.includes(",") ? result.split(",")[1] : result;
+          resolve(base64);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+    }
+
+    async function startAudioRecording() {
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        appendChatMsg("ai", "Seu navegador não permite gravação de áudio aqui. Você pode digitar sua ideia ou chamar direto no WhatsApp.");
+        return;
+      }
+
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        audioChunks = [];
+        shouldSendAudio = false;
+        recordingSeconds = 0;
+
+        const preferredTypes = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4", "audio/ogg;codecs=opus"];
+        const chosenType = preferredTypes.find(t => window.MediaRecorder && MediaRecorder.isTypeSupported(t)) || "";
+
+        mediaRecorder = chosenType ? new MediaRecorder(stream, { mimeType: chosenType }) : new MediaRecorder(stream);
+
+        mediaRecorder.ondataavailable = (e) => {
+          if (e.data && e.data.size > 0) audioChunks.push(e.data);
+        };
+
+        mediaRecorder.onstop = async () => {
+          stream.getTracks().forEach(track => track.stop());
+          const durationLabel = formatTimer(recordingSeconds);
+          resetRecordingUI();
+
+          if (!shouldSendAudio || audioChunks.length === 0) return;
+
+          const rawMime = mediaRecorder.mimeType || chosenType || "audio/webm";
+          const cleanMime = rawMime.split(";")[0].trim();
+          const audioBlob = new Blob(audioChunks, { type: cleanMime });
+          const base64 = await blobToBase64(audioBlob);
+
+          sendToAi("", {
+            base64,
+            mimeType: cleanMime,
+            durationLabel
+          });
+        };
+
+        mediaRecorder.start();
+        aiChatForm.style.display = "none";
+        aiRecBar.classList.add("active");
+        aiRecTimer.textContent = "Gravando áudio... 00:00";
+
+        recordingInterval = setInterval(() => {
+          recordingSeconds++;
+          aiRecTimer.textContent = `Gravando áudio... ${formatTimer(recordingSeconds)}`;
+          if (recordingSeconds >= 90 && mediaRecorder && mediaRecorder.state === "recording") {
+            shouldSendAudio = true;
+            mediaRecorder.stop();
+          }
+        }, 1000);
+      } catch (err) {
+        resetRecordingUI();
+        appendChatMsg("ai", "Não foi possível acessar o microfone. Libere a permissão do microfone no navegador ou escreva sua ideia abaixo.");
+      }
+    }
+
+    aiMicBtn.addEventListener("click", startAudioRecording);
+
+    aiRecCancelBtn.addEventListener("click", () => {
+      shouldSendAudio = false;
+      if (mediaRecorder && mediaRecorder.state === "recording") {
+        mediaRecorder.stop();
+      } else {
+        resetRecordingUI();
+      }
+    });
+
+    aiRecSendBtn.addEventListener("click", () => {
+      shouldSendAudio = true;
+      if (mediaRecorder && mediaRecorder.state === "recording") {
+        mediaRecorder.stop();
+      }
+    });
+
+    function initAiChat() {
+      aiChatLog.innerHTML = "";
+      aiWaCta.classList.remove("visible");
+      latestBriefing = "";
+      const welcome = "Olá! Sou a assistente comercial da VEZQORA. ✨\n\nVocê pode digitar ou tocar no microfone 🎤 para explicar por áudio qual site, aplicativo, sistema ou agente de IA deseja criar!";
+      conversation = [{ role: "assistant", content: welcome }];
+      appendChatMsg("ai", welcome);
+      renderChips(initialChips);
+    }
+
+    aiChatForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      sendToAi(aiChatInput.value);
+    });
+
+    aiResetBtn.addEventListener("click", initAiChat);
+
+    // Botões dos cards de serviço abrem o chat já com o serviço escolhido
+    document.querySelectorAll(".card-link[data-service]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const srv = btn.getAttribute("data-service");
+        document.getElementById("ia").scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => sendToAi(`Tenho interesse em: ${srv}`), 350);
+      });
+    });
+
+    // Formulário de Orçamento Guiado -> WhatsApp
+    document.getElementById("quoteForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("qName").value.trim();
+      const service = document.getElementById("qService").value;
+      const deadline = document.getElementById("qDeadline").value;
+      const details = document.getElementById("qDetails").value.trim();
+
+      const msg =
+        `Olá, equipe VEZQORA! Gostaria de solicitar um orçamento:\n\n` +
+        `👤 *Nome/Empresa:* ${name}\n` +
+        `🚀 *Solução:* ${service}\n` +
+        `⏱️ *Prazo:* ${deadline}\n` +
+        `📝 *Detalhes:* ${details}`;
+
+      window.open(`[https://wa.me/$](https://wa.me/$){WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
+    });
+
+    initAiChat();
+  </script>
+</body>
+</html>
