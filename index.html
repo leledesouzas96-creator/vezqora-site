@@ -392,7 +392,7 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      height: 580px;
+      height: 590px;
     }
     .ai-chat-head {
       padding: 16px 20px;
@@ -503,15 +503,21 @@
       justify-content: center;
       gap: 8px;
       padding: 12px 16px;
+      border: 0;
       border-radius: 12px;
       background: linear-gradient(115deg, #aa7835, #ffe5a4 47%, #b57c35);
       color: #141019;
       font-size: 13px;
       font-weight: 800;
       box-shadow: 0 8px 25px #d3a05730;
-      transition: transform .2s;
+      transition: transform .2s, opacity .2s;
     }
     .wa-btn:hover { transform: translateY(-2px); }
+    .wa-btn:disabled { opacity: .65; cursor: not-allowed; transform: none; }
+    .wa-btn.sent {
+      background: linear-gradient(115deg, #1f8f63, #4ae3a7);
+      color: #061c12;
+    }
 
     .rec-bar {
       display: none;
@@ -662,7 +668,7 @@
       }
       .menu { display: block; }
       .cards, .stats { grid-template-columns: 1fr; }
-      .ai-chat-card { height: 540px; }
+      .ai-chat-card { height: 550px; }
     }
   </style>
 </head>
@@ -707,7 +713,7 @@
         <div class="trust">
           <span>Projetos Sob Medida</span>
           <span>Atendimento IA por Texto &amp; Áudio</span>
-          <span>Integração WhatsApp</span>
+          <span>Envio Automático</span>
         </div>
       </div>
 
@@ -730,322 +736,4 @@
     </div>
   </div>
 
-  <section class="section services" id="servicos">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">SOLUÇÕES VEZQORA</span>
-        <h2>Tecnologia completa para escalar sua operação</h2>
-        <p>Do posicionamento digital à automação comercial com inteligência artificial integrada ao seu fluxo de atendimento.</p>
-      </div>
-
-      <div class="cards">
-        <div class="card">
-          <div>
-            <div class="ico">🌐</div>
-            <h3>Sites Profissionais</h3>
-            <p>Páginas institucionais e landing pages ultrarrápidas com design exclusivo, foco em autoridade e conversão imediata.</p>
-          </div>
-          <button class="card-link" onclick="preencherChat('Quero criar um site profissional de alta conversão para minha empresa.')">Solicitar orçamento →</button>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="ico">📱</div>
-            <h3>Aplicativos</h3>
-            <p>Aplicativos Android, iOS e Web Apps modernos com painel administrativo, notificações e experiência fluida.</p>
-          </div>
-          <button class="card-link" onclick="preencherChat('Tenho interesse em desenvolver um aplicativo personalizado.')">Solicitar orçamento →</button>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="ico">⚙️</div>
-            <h3>Sistemas Sob Medida</h3>
-            <p>Plataformas internas, dashboards, CRMs e painéis de gestão criados exatamente conforme as regras do seu negócio.</p>
-          </div>
-          <button class="card-link" onclick="preencherChat('Preciso de um sistema sob medida para gerenciar minha operação.')">Solicitar orçamento →</button>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="ico">🤖</div>
-            <h3>Agentes de IA</h3>
-            <p>Assistentes comerciais treinados no seu negócio para responder clientes, interpretar áudios, agendar e enviar resumos.</p>
-          </div>
-          <button class="card-link" onclick="preencherChat('Quero implementar um Agente de IA no atendimento da minha empresa.')">Solicitar orçamento →</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section ai-sec" id="ia">
-    <div class="container ai-grid">
-      <div>
-        <span class="eyebrow">CONSULTOR IA (TEXTO &amp; ÁUDIO)</span>
-        <h2>Explique sua ideia por texto ou grave um áudio agora</h2>
-        <p class="muted">Nossa inteligência artificial organiza os detalhes do seu projeto e prepara o briefing completo para você enviar direto no WhatsApp com um clique.</p>
-
-        <div class="ai-bullets">
-          <div><strong>1. Converse ou mande áudio 🎤:</strong> Fale livremente o que você precisa criar para sua empresa.</div>
-          <div><strong>2. Estruturação automática:</strong> A IA organiza objetivos, funcionalidades e prioridades do projeto.</div>
-          <div><strong>3. Envio direto no WhatsApp 📲:</strong> Abre seu WhatsApp em uma nova aba com o resumo pronto, sem fechar o site.</div>
-        </div>
-      </div>
-
-      <div class="ai-chat-card">
-        <div class="ai-chat-head">
-          <div class="ai-chat-id">
-            <div class="ai-chat-badge">V</div>
-            <div>
-              <strong>VEZQORA IA</strong>
-              <span>Online agora • Texto &amp; Áudio</span>
-            </div>
-          </div>
-          <button class="ai-reset-btn" id="resetChatBtn" type="button">Nova conversa</button>
-        </div>
-
-        <div class="ai-chat-log" id="chatLog">
-          <div class="chat-msg ai">Olá! Sou o consultor inteligente da <b>VEZQORA</b>. 👋
-
-Me conte por texto ou grave um áudio 🎤 explicando o site, aplicativo, sistema ou agente de IA que você deseja criar. Eu organizo seu briefing na hora!</div>
-        </div>
-
-        <div class="ai-chips">
-          <button type="button" class="ai-chip" onclick="preencherChat('Quero um site profissional com agente de IA')">🌐 Site + Agente IA</button>
-          <button type="button" class="ai-chip" onclick="preencherChat('Preciso de um agente de IA para atender no WhatsApp')">🤖 IA no WhatsApp</button>
-          <button type="button" class="ai-chip" onclick="preencherChat('Quero desenvolver um aplicativo ou sistema próprio')">📱 App / Sistema</button>
-        </div>
-
-        <div class="wa-bar">
-          <a id="whatsappBtn" class="wa-btn" href="https://wa.me/5551991749541?text=Ol%C3%A1%2C%20VEZQORA!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer">
-            📲 Enviar Briefing por Escrito no WhatsApp ↗
-          </a>
-        </div>
-
-        <div class="rec-bar" id="recBar">
-          <div><span class="rec-dot"></span> Gravando áudio... <span id="recTimer">00:00</span></div>
-          <div class="rec-actions">
-            <button type="button" class="rec-cancel" id="cancelRecBtn">Cancelar</button>
-            <button type="button" class="rec-send" id="sendRecBtn">Enviar Áudio ✓</button>
-          </div>
-        </div>
-
-        <form class="ai-input-row" id="chatForm">
-          <input type="text" class="ai-input" id="chatInput" placeholder="Digite sua ideia ou toque no microfone..." autocomplete="off">
-          <button type="button" class="ai-mic-btn" id="micBtn" title="Gravar áudio" aria-label="Gravar áudio">🎤</button>
-          <button type="submit" class="ai-send-btn" id="sendBtn">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="processo">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">COMO TRABALHAMOS</span>
-        <h2>Do briefing à entrega em produção</h2>
-      </div>
-      <div class="steps-grid">
-        <div class="step-box">
-          <span class="step-num">01 • DIAGNÓSTICO</span>
-          <h3>Briefing Inteligente</h3>
-          <p>Você envia sua necessidade pelo chat de IA ou WhatsApp e definimos arquitetura, prazos e escopo exato.</p>
-        </div>
-        <div class="step-box">
-          <span class="step-num">02 • ENGENHARIA</span>
-          <h3>Desenvolvimento &amp; Treinamento</h3>
-          <p>Construímos a interface, integrações e fluxos de inteligência artificial com acompanhamento transparente.</p>
-        </div>
-        <div class="step-box">
-          <span class="step-num">03 • ESCALA</span>
-          <h3>Publicação &amp; Suporte</h3>
-          <p>Colocamos sua estrutura online com alta disponibilidade e velocidade para gerar resultados desde o primeiro dia.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer" id="contato">
-    <div class="container footer-row">
-      <div><strong style="color:#f5d99c;">VEZQORA</strong> — Tecnologia, Sistemas &amp; Agentes de IA</div>
-      <div>
-        <a href="https://wa.me/5551991749541?text=Ol%C3%A1%2C%20VEZQORA!%20Vim%20pelo%20site." target="_blank" rel="noopener noreferrer" style="color:#f3d397;font-weight:700;">
-          Falar direto no WhatsApp ↗
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // CONFIGURAÇÕES PRINCIPAIS
-    const WORKER_URL = "https://vezqoraai.vezqoraai.workers.dev";
-    const WHATSAPP_NUMBER = "5551991749541"; // DDI + DDD + Número (ex: 5511999999999)
-
-    const chatLog = document.getElementById("chatLog");
-    const chatForm = document.getElementById("chatForm");
-    const chatInput = document.getElementById("chatInput");
-    const whatsappBtn = document.getElementById("whatsappBtn");
-    const resetChatBtn = document.getElementById("resetChatBtn");
-    const micBtn = document.getElementById("micBtn");
-    const recBar = document.getElementById("recBar");
-    const recTimer = document.getElementById("recTimer");
-    const cancelRecBtn = document.getElementById("cancelRecBtn");
-    const sendRecBtn = document.getElementById("sendRecBtn");
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
-
-    let chatHistory = [];
-    let userNotes = [];
-
-    menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
-
-    function atualizarLinkWhatsApp(resumoPersonalizado) {
-      const textoBase = resumoPersonalizado || (
-        userNotes.length > 0
-          ? `Olá, VEZQORA! Fiz meu briefing no site:\n\n${userNotes.map((n, i) => `${i + 1}. ${n}`).join("\n")}\n\nGostaria de avançar com o orçamento.`
-          : "Olá, VEZQORA! Gostaria de solicitar um orçamento."
-      );
-      whatsappBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(textoBase)}`;
-    }
-
-    function adicionarMensagem(texto, tipo) {
-      const div = document.createElement("div");
-      div.className = `chat-msg ${tipo}`;
-      div.textContent = texto;
-      chatLog.appendChild(div);
-      chatLog.scrollTop = chatLog.scrollHeight;
-      return div;
-    }
-
-    function preencherChat(texto) {
-      document.getElementById("ia").scrollIntoView({ behavior: "smooth" });
-      chatInput.value = texto;
-      chatInput.focus();
-    }
-
-    async function enviarParaIA(payload, bolhaUsuario) {
-      const pensando = adicionarMensagem("Analisando seu projeto...", "ai");
-      try {
-        const res = await fetch(WORKER_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
-        });
-        const data = await res.json();
-        pensando.remove();
-
-        if (data.transcript && bolhaUsuario) {
-          bolhaUsuario.textContent = `🎤 "${data.transcript}"`;
-          userNotes.push(data.transcript);
-        }
-
-        const resposta = data.reply || data.response || data.text || data.message || "Perfeito! Já estruturei os pontos principais do seu projeto. Toque no botão dourado acima para enviar o briefing completo no WhatsApp.";
-        adicionarMensagem(resposta, "ai");
-
-        chatHistory.push({ role: "assistant", content: resposta });
-        atualizarLinkWhatsApp(data.briefing || null);
-      } catch (err) {
-        pensando.remove();
-        const fallback = "Anotei os detalhes do seu pedido! Você já pode tocar no botão dourado acima para enviar seu briefing estruturado direto no WhatsApp.";
-        adicionarMensagem(fallback, "ai");
-        atualizarLinkWhatsApp();
-      }
-    }
-
-    chatForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const texto = chatInput.value.trim();
-      if (!texto) return;
-
-      chatInput.value = "";
-      const bolha = adicionarMensagem(texto, "user");
-      userNotes.push(texto);
-      chatHistory.push({ role: "user", content: texto });
-      atualizarLinkWhatsApp();
-
-      await enviarParaIA({ message: texto, history: chatHistory }, bolha);
-    });
-
-    resetChatBtn.addEventListener("click", () => {
-      chatHistory = [];
-      userNotes = [];
-      chatLog.innerHTML = `<div class="chat-msg ai">Conversa reiniciada! 👋 Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar.</div>`;
-      atualizarLinkWhatsApp();
-    });
-
-    // GRAVAÇÃO DE ÁUDIO
-    let mediaRecorder = null;
-    let audioChunks = [];
-    let timerInterval = null;
-    let secondsElapsed = 0;
-    let shouldSendAudio = false;
-
-    function formatarTempo(seg) {
-      const m = String(Math.floor(seg / 60)).padStart(2, "0");
-      const s = String(seg % 60).padStart(2, "0");
-      return `${m}:${s}`;
-    }
-
-    micBtn.addEventListener("click", async () => {
-      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-        alert("Seu navegador não suporta gravação de áudio. Digite sua mensagem no campo ao lado.");
-        return;
-      }
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        audioChunks = [];
-        shouldSendAudio = false;
-        mediaRecorder = new MediaRecorder(stream);
-
-        mediaRecorder.ondataavailable = (ev) => {
-          if (ev.data.size > 0) audioChunks.push(ev.data);
-        };
-
-        mediaRecorder.onstop = async () => {
-          stream.getTracks().forEach((t) => t.stop());
-          clearInterval(timerInterval);
-          recBar.classList.remove("active");
-
-          if (!shouldSendAudio || audioChunks.length === 0) return;
-
-          const mimeType = mediaRecorder.mimeType || "audio/webm";
-          const blob = new Blob(audioChunks, { type: mimeType });
-          const bolhaAudio = adicionarMensagem("🎤 Áudio enviado (transcrevendo...)", "user");
-
-          const reader = new FileReader();
-          reader.onloadend = async () => {
-            const base64Audio = reader.result.split(",")[1];
-            await enviarParaIA({
-              audio: base64Audio,
-              mimeType: mimeType,
-              history: chatHistory
-            }, bolhaAudio);
-          };
-          reader.readAsDataURL(blob);
-        };
-
-        mediaRecorder.start();
-        secondsElapsed = 0;
-        recTimer.textContent = "00:00";
-        recBar.classList.add("active");
-        timerInterval = setInterval(() => {
-          secondsElapsed++;
-          recTimer.textContent = formatarTempo(secondsElapsed);
-        }, 1000);
-      } catch (err) {
-        alert("Permita o acesso ao microfone no navegador para gravar seu áudio.");
-      }
-    });
-
-    cancelRecBtn.addEventListener("click", () => {
-      shouldSendAudio = false;
-      if (mediaRecorder && mediaRecorder.state !== "inactive") mediaRecorder.stop();
-    });
-
-    sendRecBtn.addEventListener("click", () => {
-      shouldSendAudio = true;
-      if (mediaRecorder && mediaRecorder.state !== "inactive") mediaRecorder.stop();
-    });
-  </script>
-</body>
-</html>
+  <section class="section services
