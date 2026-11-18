@@ -100,7 +100,7 @@
     .links {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 20px;
       font-size: 12px;
       font-weight: 700;
       color: #bfc7d5;
@@ -143,7 +143,7 @@
     /* Hero */
     .hero {
       position: relative;
-      min-height: 680px;
+      min-height: 660px;
       overflow: hidden;
       border-bottom: 1px solid #ffffff10;
       background: radial-gradient(ellipse at 78% 48%, #0c39702b, transparent 42%), linear-gradient(180deg, #050711 0%, #070b15 100%);
@@ -155,8 +155,8 @@
       grid-template-columns: 1.05fr .95fr;
       align-items: center;
       gap: 35px;
-      padding-top: 84px;
-      padding-bottom: 84px;
+      padding-top: 76px;
+      padding-bottom: 76px;
     }
     .pill {
       display: inline-flex;
@@ -203,7 +203,7 @@
 
     .visual {
       position: relative;
-      min-height: 450px;
+      min-height: 430px;
       display: grid;
       place-items: center;
       isolation: isolate;
@@ -308,7 +308,7 @@
     .stats span { display: block; font-size: 12px; color: #9aabc1; margin-top: 6px; }
 
     /* Sections */
-    .section { padding: 90px 0; }
+    .section { padding: 86px 0; }
     .section-head { text-align: center; max-width: 700px; margin: 0 auto 46px; }
     .section h2 {
       font: 700 clamp(28px, 4vw, 44px)/1.16 "Space Grotesk", Arial;
@@ -360,6 +360,259 @@
       text-align: left;
     }
     .card-link:hover { color: #fff0c4; }
+
+    /* Portfolio / Projetos com Mockups Reais */
+    .portfolio {
+      background: #060a14;
+      border-top: 1px solid #ffffff10;
+    }
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .proj-card {
+      background: linear-gradient(160deg, #10182b, #080c17 85%);
+      border: 1px solid #ffffff1e;
+      border-radius: 22px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform .25s, border-color .25s, box-shadow .25s;
+    }
+    .proj-card:hover {
+      transform: translateY(-6px);
+      border-color: #e9c88b88;
+      box-shadow: 0 22px 55px rgba(0, 0, 0, .65);
+    }
+    .mockup-win {
+      background: #070b14;
+      border-bottom: 1px solid #ffffff14;
+      padding: 12px 14px 16px;
+    }
+    .mockup-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 11px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #ffffff0f;
+    }
+    .mockup-dots {
+      display: flex;
+      gap: 5px;
+    }
+    .mockup-dots i {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #ffffff28;
+      display: block;
+    }
+    .mockup-dots i:first-child { background: #ff6b6b88; }
+    .mockup-dots i:nth-child(2) { background: #ffd16688; }
+    .mockup-dots i:nth-child(3) { background: #06d6a088; }
+    .mockup-url {
+      font-size: 10px;
+      color: #889bb5;
+      background: #ffffff08;
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-family: monospace;
+    }
+    .mockup-screen {
+      border-radius: 12px;
+      padding: 13px;
+      min-height: 132px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .scr-salon {
+      background: linear-gradient(145deg, #211529, #101524);
+      border: 1px solid #e9c88b33;
+    }
+    .scr-wa {
+      background: linear-gradient(145deg, #0d2122, #0b1422);
+      border: 1px solid #38d39933;
+    }
+    .scr-erp {
+      background: linear-gradient(145deg, #0e1d36, #0a101d);
+      border: 1px solid #5da6ff33;
+    }
+    .ui-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 5px 9px;
+      border-radius: 8px;
+      background: #ffffff0d;
+      color: #f3f6fc;
+    }
+    .ui-pill.ok {
+      background: #1c4738;
+      color: #7ef2be;
+      border: 1px solid #38d39944;
+    }
+    .ui-pill.gold-ui {
+      background: #332614;
+      color: #f7d99c;
+      border: 1px solid #e9c88b44;
+    }
+    .ui-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 7px;
+    }
+    .ui-kpi {
+      background: #05071199;
+      border: 1px solid #ffffff12;
+      border-radius: 8px;
+      padding: 7px 9px;
+    }
+    .ui-kpi b {
+      display: block;
+      font: 700 13px "Space Grotesk", Arial;
+      color: #f5d99c;
+    }
+    .ui-kpi small {
+      font-size: 9.5px;
+      color: #93a5be;
+    }
+
+    .proj-body {
+      padding: 20px 22px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .proj-cat {
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #e9c88b;
+      margin-bottom: 4px;
+    }
+    .proj-body h3 {
+      margin: 0 0 8px;
+      font: 700 18.5px "Space Grotesk", Arial;
+      color: #fff;
+    }
+    .proj-body p {
+      margin: 0;
+      color: #a6b5c8;
+      font-size: 13px;
+      line-height: 1.72;
+    }
+    .proj-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .proj-tags span {
+      font-size: 11px;
+      color: #cbd7e8;
+      background: #ffffff0a;
+      border: 1px solid #ffffff14;
+      padding: 4px 10px;
+      border-radius: 8px;
+    }
+    .proj-actions {
+      padding-top: 12px;
+      border-top: 1px solid #ffffff10;
+    }
+    .proj-btn {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #f3d397;
+      background: none;
+      border: 0;
+      padding: 0;
+    }
+    .proj-btn:hover { color: #fff0c4; }
+
+    /* Testimonials / Depoimentos Naturais */
+    .testimonials {
+      background: linear-gradient(180deg, #080d18, #060a14);
+      border-top: 1px solid #ffffff10;
+    }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .testi-card {
+      background: #0b1220;
+      border: 1px solid #d2ad6633;
+      border-radius: 19px;
+      padding: 24px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .testi-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .stars {
+      color: #f4ce7d;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+    .verified-tag {
+      font-size: 10px;
+      font-weight: 700;
+      color: #7ee8b7;
+      background: #143629;
+      border: 1px solid #38d39933;
+      padding: 3px 8px;
+      border-radius: 999px;
+    }
+    .testi-card p {
+      margin: 0;
+      color: #d6e0ee;
+      font-size: 13.5px;
+      line-height: 1.78;
+    }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid #ffffff12;
+    }
+    .testi-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font: 800 14px "Space Grotesk", Arial;
+      background: linear-gradient(135deg, #ffe5a4, #a97734);
+      color: #141019;
+      flex-shrink: 0;
+    }
+    .testi-author strong {
+      display: block;
+      font-size: 13.5px;
+      color: #f5d99c;
+    }
+    .testi-author span {
+      display: block;
+      font-size: 11.5px;
+      color: #8fa1ba;
+    }
 
     /* Interactive AI Commercial Assistant Section */
     .ai-sec {
@@ -650,7 +903,7 @@
     @media (max-width: 960px) {
       .hero .container, .ai-grid { grid-template-columns: 1fr; }
       .cards { grid-template-columns: repeat(2, 1fr); }
-      .steps-grid { grid-template-columns: 1fr; }
+      .proj-grid, .testi-grid, .steps-grid { grid-template-columns: 1fr; }
       .visual { min-height: 360px; }
     }
     @media (max-width: 640px) {
@@ -686,13 +939,14 @@
 
       <nav class="links" id="navLinks">
         <a href="#servicos">Soluções</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#depoimentos">Depoimentos</a>
         <a href="#ia">Consultor IA</a>
         <a href="#processo">Como Funciona</a>
-        <a href="#contato">Contato</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="#ia" class="button primary">Falar com IA</a>
+        <button type="button" onclick="irParaChat()" class="button primary">Falar com IA</button>
         <button class="menu" id="menuBtn" aria-label="Abrir menu">☰</button>
       </div>
     </div>
@@ -706,8 +960,8 @@
         <p>Desenvolvemos sites de alta conversão, aplicativos, sistemas sob medida e agentes inteligentes que atendem, qualificam e fecham oportunidades automaticamente pelo seu negócio.</p>
 
         <div class="actions">
-          <a href="#ia" class="button primary">Iniciar Briefing com IA ↗</a>
-          <a href="#servicos" class="button secondary">Conhecer Soluções</a>
+          <button type="button" onclick="irParaChat()" class="button primary">Iniciar Briefing com IA ↗</button>
+          <a href="#projetos" class="button secondary">Ver Projetos Entregues</a>
         </div>
 
         <div class="trust">
@@ -736,4 +990,549 @@
     </div>
   </div>
 
-  <section class="section services
+  <section class="section services" id="servicos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">SOLUÇÕES VEZQORA</span>
+        <h2>Tecnologia completa para escalar sua operação</h2>
+        <p>Do posicionamento digital à automação comercial com inteligência artificial integrada ao seu fluxo de atendimento.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div>
+            <div class="ico">🌐</div>
+            <h3>Sites Profissionais</h3>
+            <p>Páginas institucionais e landing pages ultrarrápidas com design exclusivo, foco em autoridade e conversão imediata.</p>
+          </div>
+          <button class="card-link" onclick="preencherChat('Quero criar um site profissional de alta conversão para minha empresa.')">Solicitar orçamento →</button>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="ico">📱</div>
+            <h3>Aplicativos</h3>
+            <p>Aplicativos Android, iOS e Web Apps modernos com painel administrativo, notificações e experiência fluida.</p>
+          </div>
+          <button class="card-link" onclick="preencherChat('Tenho interesse em desenvolver um aplicativo personalizado.')">Solicitar orçamento →</button>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="ico">⚙️</div>
+            <h3>Sistemas Sob Medida</h3>
+            <p>Plataformas internas, dashboards, CRMs e painéis de gestão criados exatamente conforme as regras do seu negócio.</p>
+          </div>
+          <button class="card-link" onclick="preencherChat('Preciso de um sistema sob medida para gerenciar minha operação.')">Solicitar orçamento →</button>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="ico">🤖</div>
+            <h3>Agentes de IA</h3>
+            <p>Assistentes comerciais treinados no seu negócio para responder clientes, interpretar áudios, agendar e enviar resumos.</p>
+          </div>
+          <button class="card-link" onclick="preencherChat('Quero implementar um Agente de IA no atendimento da minha empresa.')">Solicitar orçamento →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS ENTREGUES COM PRÉVIA REALISTA -->
+  <section class="section portfolio" id="projetos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">PORTFÓLIO REAL</span>
+        <h2>Alguns projetos já colocados no ar</h2>
+        <p>Estruturas criadas sob medida para negócios locais e operações comerciais que precisavam vender e atender sem depender de processos manuais.</p>
+      </div>
+
+      <div class="proj-grid">
+        <!-- Projeto 1 -->
+        <div class="proj-card">
+          <div class="mockup-win">
+            <div class="mockup-bar">
+              <span class="mockup-dots"><i></i><i></i><i></i></span>
+              <span class="mockup-url">divas-studio.app</span>
+            </div>
+            <div class="mockup-screen scr-salon">
+              <div class="ui-pill gold-ui">💇‍♀️ Divas Studio • Agendamento Online</div>
+              <div class="ui-pill ok">✓ Horário gravado no Google Agenda</div>
+              <div class="ui-pill">📲 Confirmação enviada no WhatsApp</div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div>
+              <div class="proj-cat">Site + Agendamento Automático</div>
+              <h3>Studio Divas Beleza &amp; Estética</h3>
+              <p>Site completo para celular com vitrine de procedimentos e reserva automática de horários ligada direto no Google Agenda, e-mail e alerta no WhatsApp.</p>
+              <div class="proj-tags">
+                <span>Site Mobile</span>
+                <span>Google Agenda</span>
+                <span>Aviso WhatsApp</span>
+              </div>
+            </div>
+            <div class="proj-actions">
+              <button type="button" class="proj-btn" onclick="preencherChat('Vi o projeto do Studio Divas e quero um site com agendamento automático para o meu negócio.')">Pedir um projeto parecido →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="proj-card">
+          <div class="mockup-win">
+            <div class="mockup-bar">
+              <span class="mockup-dots"><i></i><i></i><i></i></span>
+              <span class="mockup-url">atendimento-ia.whatsapp</span>
+            </div>
+            <div class="mockup-screen scr-wa">
+              <div class="ui-pill">🎤 Áudio de 24s transcrito pela IA</div>
+              <div class="ui-pill gold-ui">🤖 Orçamento estruturado em 4s</div>
+              <div class="ui-pill ok">⚡ Enviado direto pro WhatsApp do dono</div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div>
+              <div class="proj-cat">Agente de IA Comercial</div>
+              <h3>Triagem &amp; Orçamento 24h no WhatsApp</h3>
+              <p>Assistente inteligente que conversa por texto ou áudio com o cliente no site, entende o pedido, coleta contato e dispara o resumo pronto no WhatsApp comercial.</p>
+              <div class="proj-tags">
+                <span>Gemini IA</span>
+                <span>Leitura de Áudio</span>
+                <span>Disparo Direto</span>
+              </div>
+            </div>
+            <div class="proj-actions">
+              <button type="button" class="proj-btn" onclick="preencherChat('Quero colocar um Agente de IA que atenda por texto e áudio e mande o resumo no meu WhatsApp.')">Pedir um projeto parecido →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="proj-card">
+          <div class="mockup-win">
+            <div class="mockup-bar">
+              <span class="mockup-dots"><i></i><i></i><i></i></span>
+              <span class="mockup-url">painel.gestao-pro.br</span>
+            </div>
+            <div class="mockup-screen scr-erp">
+              <div class="ui-pill gold-ui">📊 Painel Operacional • Tempo Real</div>
+              <div class="ui-metrics">
+                <div class="ui-kpi"><b>+42%</b><small>Leads respondidos</small></div>
+                <div class="ui-kpi"><b>&lt; 5 seg</b><small>Tempo de resposta</small></div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div>
+              <div class="proj-cat">Sistema Web Sob Medida</div>
+              <h3>Painel de Pedidos &amp; Controle Comercial</h3>
+              <p>Sistema web leve hospedado em nuvem para acompanhar orçamentos recebidos, histórico de clientes e status de atendimento direto pelo celular ou computador.</p>
+              <div class="proj-tags">
+                <span>Sistema Web</span>
+                <span>Painel Admin</span>
+                <span>Nuvem Cloudflare</span>
+              </div>
+            </div>
+            <div class="proj-actions">
+              <button type="button" class="proj-btn" onclick="preencherChat('Preciso de um sistema sob medida para organizar pedidos e clientes da minha empresa.')">Pedir um projeto parecido →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS COM LINGUAGEM NATURAL -->
+  <section class="section testimonials" id="depoimentos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">QUEM JÁ USA</span>
+        <h2>O que o pessoal fala depois que coloca no ar</h2>
+        <p>Relatos de quem saiu do atendimento manual no papel e no WhatsApp para ter tudo rodando automático.</p>
+      </div>
+
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div>
+            <div class="testi-top">
+              <span class="stars">★★★★★</span>
+              <span class="verified-tag">Projeto entregue</span>
+            </div>
+            <p>"Eu vivia parando atendimento no meio do serviço pra responder horário no WhatsApp. Agora a cliente entra no link, escolhe o procedimento e já cai direto na minha agenda com aviso no celular. Facilitou demais minha rotina."</p>
+          </div>
+          <div class="testi-author">
+            <div class="testi-avatar">PL</div>
+            <div>
+              <strong>Patrícia Lima</strong>
+              <span>Proprietária • Studio Divas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div>
+            <div class="testi-top">
+              <span class="stars">★★★★★</span>
+              <span class="verified-tag">Projeto entregue</span>
+            </div>
+            <p>"O que mais gostei foi que o cliente manda áudio explicando o problema e a IA já resume tudo mastigado pro meu WhatsApp com o telefone dele. Antes a gente perdia orçamento de noite porque ninguém respondia na hora."</p>
+          </div>
+          <div class="testi-author">
+            <div class="testi-avatar">RS</div>
+            <div>
+              <strong>Rodrigo Silveira</strong>
+              <span>Sócio • RS Climatização &amp; Manutenção</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div>
+            <div class="testi-top">
+              <span class="stars">★★★★★</span>
+              <span class="verified-tag">Projeto entregue</span>
+            </div>
+            <p>"Eu achava que ia demorar meses pra ter um site bonito e rápido desse jeito. Em poucos dias já estava no ar, abre super leve no 4G e os clientes começaram a chamar direto pelo formulário inteligente."</p>
+          </div>
+          <div class="testi-author">
+            <div class="testi-avatar">FC</div>
+            <div>
+              <strong>Fernanda Costa</strong>
+              <span>Consultora Imobiliária • FC Imóveis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ai-sec" id="ia">
+    <div class="container ai-grid">
+      <div>
+        <span class="eyebrow">CONSULTOR IA (TEXTO &amp; ÁUDIO)</span>
+        <h2>Explique sua ideia por texto ou grave um áudio agora</h2>
+        <p class="muted">Nossa inteligência artificial organiza os detalhes do seu projeto e encaminha o briefing completo automaticamente para a equipe VEZQORA entrar em contato.</p>
+
+        <div class="ai-bullets">
+          <div><strong>1. Converse ou mande áudio 🎤:</strong> Fale o que precisa criar, seu nome e seu WhatsApp para retorno.</div>
+          <div><strong>2. Estruturação automática:</strong> A IA organiza objetivos, funcionalidades e prioridades do projeto.</div>
+          <div><strong>3. Disparo automático ⚡:</strong> Seu briefing chega direto na nossa central sem você precisar sair do site.</div>
+        </div>
+      </div>
+
+      <div class="ai-chat-card">
+        <div class="ai-chat-head">
+          <div class="ai-chat-id">
+            <div class="ai-chat-badge">V</div>
+            <div>
+              <strong>VEZQORA IA</strong>
+              <span>Online agora • Texto &amp; Áudio</span>
+            </div>
+          </div>
+          <button class="ai-reset-btn" id="resetChatBtn" type="button">Nova conversa</button>
+        </div>
+
+        <div class="ai-chat-log" id="chatLog">
+          <div class="chat-msg ai">Olá! Sou o consultor inteligente da <b>VEZQORA</b>. 👋
+
+Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar — e informe seu <b>nome e WhatsApp</b> para nossa equipe enviar sua proposta!</div>
+        </div>
+
+        <div class="ai-chips">
+          <button type="button" class="ai-chip" onclick="preencherChat('Quero um site profissional com agente de IA')">🌐 Site + Agente IA</button>
+          <button type="button" class="ai-chip" onclick="preencherChat('Preciso de um agente de IA para atender no WhatsApp')">🤖 IA no WhatsApp</button>
+          <button type="button" class="ai-chip" onclick="preencherChat('Quero desenvolver um aplicativo ou sistema próprio')">📱 App / Sistema</button>
+        </div>
+
+        <div class="wa-bar">
+          <button type="button" id="autoSendBtn" class="wa-btn">
+            ⚡ Concluir e Enviar Orçamento Automaticamente
+          </button>
+        </div>
+
+        <div class="rec-bar" id="recBar">
+          <div><span class="rec-dot"></span> Gravando áudio... <span id="recTimer">00:00</span></div>
+          <div class="rec-actions">
+            <button type="button" class="rec-cancel" id="cancelRecBtn">Cancelar</button>
+            <button type="button" class="rec-send" id="sendRecBtn">Enviar Áudio ✓</button>
+          </div>
+        </div>
+
+        <form class="ai-input-row" id="chatForm">
+          <input type="text" class="ai-input" id="chatInput" placeholder="Digite sua ideia, nome e WhatsApp..." autocomplete="off">
+          <button type="button" class="ai-mic-btn" id="micBtn" title="Gravar áudio" aria-label="Gravar áudio">🎤</button>
+          <button type="submit" class="ai-send-btn" id="sendBtn">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="processo">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">COMO TRABALHAMOS</span>
+        <h2>Do briefing à entrega em produção</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-box">
+          <span class="step-num">01 • DIAGNÓSTICO</span>
+          <h3>Briefing Inteligente</h3>
+          <p>Você envia sua necessidade pelo chat de IA e nossa equipe recebe na hora a arquitetura e escopo do projeto.</p>
+        </div>
+        <div class="step-box">
+          <span class="step-num">02 • ENGENHARIA</span>
+          <h3>Desenvolvimento &amp; Treinamento</h3>
+          <p>Construímos a interface, integrações e fluxos de inteligência artificial com acompanhamento transparente.</p>
+        </div>
+        <div class="step-box">
+          <span class="step-num">03 • ESCALA</span>
+          <h3>Publicação &amp; Suporte</h3>
+          <p>Colocamos sua estrutura online com alta disponibilidade e velocidade para gerar resultados desde o primeiro dia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contato">
+    <div class="container footer-row">
+      <div><strong style="color:#f5d99c;">VEZQORA</strong> — Tecnologia, Sistemas &amp; Agentes de IA</div>
+      <div>
+        <a href="https://wa.me/5551991895177?text=Ol%C3%A1%2C%20VEZQORA!%20Vim%20pelo%20site." target="_blank" rel="noopener noreferrer" style="color:#f3d397;font-weight:700;">
+          WhatsApp Comercial: (51) 99189-5177 ↗
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // CONFIGURAÇÕES PRINCIPAIS
+    const WORKER_URL = "https://vezqoraai.vezqoraai.workers.dev";
+    const WHATSAPP_NUMBER = "5551991895177";
+
+    const chatLog = document.getElementById("chatLog");
+    const chatForm = document.getElementById("chatForm");
+    const chatInput = document.getElementById("chatInput");
+    const autoSendBtn = document.getElementById("autoSendBtn");
+    const resetChatBtn = document.getElementById("resetChatBtn");
+    const micBtn = document.getElementById("micBtn");
+    const recBar = document.getElementById("recBar");
+    const recTimer = document.getElementById("recTimer");
+    const cancelRecBtn = document.getElementById("cancelRecBtn");
+    const sendRecBtn = document.getElementById("sendRecBtn");
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    let chatHistory = [];
+    let userNotes = [];
+    let latestBriefing = "";
+
+    menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
+
+    function irParaChat() {
+      navLinks.classList.remove("open");
+      const sec = document.getElementById("ia");
+      if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(() => chatInput.focus(), 450);
+    }
+
+    function montarResumoBriefing() {
+      if (latestBriefing) return latestBriefing;
+      if (userNotes.length > 0) {
+        return `📋 *NOVO ORÇAMENTO — SITE VEZQORA*\n\n${userNotes.map((n, i) => `${i + 1}. ${n}`).join("\n")}`;
+      }
+      return "";
+    }
+
+    function adicionarMensagem(texto, tipo) {
+      const div = document.createElement("div");
+      div.className = `chat-msg ${tipo}`;
+      div.textContent = texto;
+      chatLog.appendChild(div);
+      chatLog.scrollTop = chatLog.scrollHeight;
+      return div;
+    }
+
+    function preencherChat(texto) {
+      irParaChat();
+      chatInput.value = texto;
+    }
+
+    function marcarComoEnviado() {
+      autoSendBtn.classList.add("sent");
+      autoSendBtn.textContent = "✅ Orçamento Enviado com Sucesso!";
+    }
+
+    async function enviarParaIA(payload, bolhaUsuario) {
+      const pensando = adicionarMensagem("Analisando seu projeto...", "ai");
+      try {
+        const res = await fetch(WORKER_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            ...payload,
+            targetPhone: WHATSAPP_NUMBER
+          })
+        });
+        const data = await res.json();
+        pensando.remove();
+
+        if (data.transcript && bolhaUsuario) {
+          bolhaUsuario.textContent = `🎤 "${data.transcript}"`;
+          userNotes.push(data.transcript);
+        }
+
+        if (data.briefing) {
+          latestBriefing = data.briefing;
+        }
+
+        const resposta = data.reply || data.response || data.text || data.message || "Perfeito! Já estruturei os pontos principais do seu projeto. Toque no botão acima para concluir o envio automático.";
+        adicionarMensagem(resposta, "ai");
+        chatHistory.push({ role: "assistant", content: resposta });
+
+        if (data.autoSent) {
+          marcarComoEnviado();
+        }
+      } catch (err) {
+        pensando.remove();
+        adicionarMensagem("Anotei os detalhes do seu pedido! Toque no botão acima para finalizar e enviar seu briefing.", "ai");
+      }
+    }
+
+    // ENVIO AUTOMÁTICO DIRETO PARA O WORKER -> WHATSAPP (5551991895177)
+    autoSendBtn.addEventListener("click", async () => {
+      const resumo = montarResumoBriefing();
+      if (!resumo) {
+        adicionarMensagem("Antes de enviar, conte-me rapidamente pelo chat ou por áudio 🎤 o que você precisa e seu WhatsApp para contato!", "ai");
+        chatInput.focus();
+        return;
+      }
+
+      autoSendBtn.disabled = true;
+      autoSendBtn.textContent = "⏳ Enviando orçamento automaticamente...";
+
+      try {
+        const res = await fetch(WORKER_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            action: "send_whatsapp",
+            targetPhone: WHATSAPP_NUMBER,
+            briefing: resumo,
+            history: chatHistory
+          })
+        });
+        const data = await res.json();
+
+        if (res.ok && (data.sent || data.ok || data.autoSent)) {
+          marcarComoEnviado();
+          adicionarMensagem("✅ Briefing enviado automaticamente para a equipe VEZQORA! Em instantes entraremos em contato pelo seu WhatsApp.", "ai");
+        } else {
+          throw new Error("Falha no envio automático");
+        }
+      } catch (err) {
+        autoSendBtn.disabled = false;
+        autoSendBtn.textContent = "⚡ Concluir e Enviar Orçamento Automaticamente";
+        adicionarMensagem("⚠️ Não foi possível concluir o envio automático agora. Verifique a conexão do servidor ou tente novamente em instantes.", "ai");
+      }
+    });
+
+    chatForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const texto = chatInput.value.trim();
+      if (!texto) return;
+
+      chatInput.value = "";
+      const bolha = adicionarMensagem(texto, "user");
+      userNotes.push(texto);
+      chatHistory.push({ role: "user", content: texto });
+
+      await enviarParaIA({ message: texto, history: chatHistory }, bolha);
+    });
+
+    resetChatBtn.addEventListener("click", () => {
+      chatHistory = [];
+      userNotes = [];
+      latestBriefing = "";
+      autoSendBtn.disabled = false;
+      autoSendBtn.classList.remove("sent");
+      autoSendBtn.textContent = "⚡ Concluir e Enviar Orçamento Automaticamente";
+      chatLog.innerHTML = `<div class="chat-msg ai">Conversa reiniciada! 👋 Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar e informe seu <b>nome e WhatsApp</b>.</div>`;
+    });
+
+    // GRAVAÇÃO DE ÁUDIO
+    let mediaRecorder = null;
+    let audioChunks = [];
+    let timerInterval = null;
+    let secondsElapsed = 0;
+    let shouldSendAudio = false;
+
+    function formatarTempo(seg) {
+      const m = String(Math.floor(seg / 60)).padStart(2, "0");
+      const s = String(seg % 60).padStart(2, "0");
+      return `${m}:${s}`;
+    }
+
+    micBtn.addEventListener("click", async () => {
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        alert("Seu navegador não suporta gravação de áudio. Digite sua mensagem no campo ao lado.");
+        return;
+      }
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        audioChunks = [];
+        shouldSendAudio = false;
+        mediaRecorder = new MediaRecorder(stream);
+
+        mediaRecorder.ondataavailable = (ev) => {
+          if (ev.data.size > 0) audioChunks.push(ev.data);
+        };
+
+        mediaRecorder.onstop = async () => {
+          stream.getTracks().forEach((t) => t.stop());
+          clearInterval(timerInterval);
+          recBar.classList.remove("active");
+
+          if (!shouldSendAudio || audioChunks.length === 0) return;
+
+          const mimeType = mediaRecorder.mimeType || "audio/webm";
+          const blob = new Blob(audioChunks, { type: mimeType });
+          const bolhaAudio = adicionarMensagem("🎤 Áudio enviado (transcrevendo...)", "user");
+
+          const reader = new FileReader();
+          reader.onloadend = async () => {
+            const base64Audio = reader.result.split(",")[1];
+            await enviarParaIA({
+              audio: base64Audio,
+              mimeType: mimeType,
+              history: chatHistory
+            }, bolhaAudio);
+          };
+          reader.readAsDataURL(blob);
+        };
+
+        mediaRecorder.start();
+        secondsElapsed = 0;
+        recTimer.textContent = "00:00";
+        recBar.classList.add("active");
+        timerInterval = setInterval(() => {
+          secondsElapsed++;
+          recTimer.textContent = formatarTempo(secondsElapsed);
+        }, 1000);
+      } catch (err) {
+        alert("Permita o acesso ao microfone no navegador para gravar seu áudio.");
+      }
+    });
+
+    cancelRecBtn.addEventListener("click", () => {
+      shouldSendAudio = false;
+      if (mediaRecorder && mediaRecorder.state !== "inactive") mediaRecorder.stop();
+    });
+
+    sendRecBtn.addEventListener("click", () => {
+      shouldSendAudio = true;
+      if (mediaRecorder && mediaRecorder.state !== "inactive") mediaRecorder.stop();
+    });
+  </script>
+</body>
+</html>
