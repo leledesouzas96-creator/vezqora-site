@@ -3,77 +3,107 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#050711">
-  <meta name="description" content="VEZQORA cria sites profissionais, aplicativos, sistemas sob medida, agentes de IA e automações para empresas que querem escalar.">
+  <meta name="theme-color" content="#03050c">
+  <meta name="description" content="VEZQORA — Engenharia digital futurista, sites de alta conversão, aplicativos, sistemas sob medida e Agentes de IA que vendem 24h.">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="VEZQORA — Tecnologia, Sistemas & Agentes de IA">
-  <meta property="og:description" content="Sites, aplicativos, sistemas personalizados e agentes de IA que atendem e vendem 24h pelo seu negócio.">
+  <meta property="og:title" content="VEZQORA — Tecnologia Futurista & Agentes de IA">
+  <meta property="og:description" content="Estruturas digitais de próxima geração e Agentes de IA que atendem, qualificam e fecham vendas 24/7.">
   <meta property="og:site_name" content="VEZQORA">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23050711'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='38' fill='%23e9c88b'%3EV%3C/text%3E%3C/svg%3E">
-  <title>VEZQORA — Tecnologia & IA | Sites, Aplicativos, Sistemas e Agentes de IA</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23fff0b3'/%3E%3Cstop offset='100%25' stop-color='%23b57c35'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2304060f'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='900' font-size='38' fill='url(%23g)'%3EV%3C/text%3E%3C/svg%3E">
+  <title>VEZQORA — Engenharia Digital &amp; Agentes de IA</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
     :root {
-      --bg: #050711;
-      --panel: #0d1422;
-      --gold: #e9c88b;
-      --muted: #9aa9bf;
-      --line: #ffffff1c;
-      --blue: #378bff;
+      --bg: #03050c;
+      --bg-2: #070b17;
+      --panel: rgba(12, 19, 36, 0.72);
+      --gold: #f0cf8e;
+      --gold-deep: #b8823b;
+      --cyan: #38bdf8;
+      --blue: #2563eb;
+      --muted: #9eb0c9;
+      --line: rgba(255, 255, 255, 0.11);
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      color: #f5f7fc;
+      color: #f6f8fe;
       background: var(--bg);
-      font-family: Manrope, Arial, sans-serif;
+      font-family: 'Manrope', Arial, sans-serif;
       overflow-x: hidden;
     }
-    body:before {
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+      background:
+        radial-gradient(circle at 82% 18%, rgba(37, 99, 235, 0.24), transparent 42%),
+        radial-gradient(circle at 14% 72%, rgba(217, 165, 89, 0.14), transparent 45%),
+        radial-gradient(circle at 50% 45%, rgba(56, 189, 248, 0.08), transparent 55%);
+    }
+    body::after {
       content: "";
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: -1;
-      opacity: .20;
-      background-image: linear-gradient(#4b8cff16 1px, transparent 1px), linear-gradient(90deg, #4b8cff16 1px, transparent 1px);
-      background-size: 58px 58px;
-      mask-image: linear-gradient(to bottom, black, transparent 85%);
+      opacity: 0.25;
+      background-image:
+        linear-gradient(rgba(56, 189, 248, 0.14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.14) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: radial-gradient(ellipse at center, black 35%, transparent 88%);
     }
 
     a { color: inherit; text-decoration: none; }
-    button, input, textarea, select { font: inherit; }
+    button, input { font: inherit; }
     button { cursor: pointer; }
     .container { max-width: 1180px; margin: auto; padding: 0 22px; }
 
     .gold {
-      background: linear-gradient(110deg, #a97938, #fff1bf 45%, #d6a85d 70%, #fff0b3);
+      background: linear-gradient(115deg, #b57e36 0%, #fff4c7 38%, #eab96b 68%, #fff1be 100%);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .cyber-text {
+      background: linear-gradient(110deg, #60a5fa, #7dd3fc 50%, #f5d89c 100%);
       color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
     }
 
     .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       font-size: 11px;
       letter-spacing: .24em;
       text-transform: uppercase;
       font-weight: 800;
       color: var(--gold);
-      display: block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(240, 207, 142, 0.07);
+      border: 1px solid rgba(240, 207, 142, 0.24);
     }
 
     /* Header */
     .header {
       position: sticky;
       top: 0;
-      z-index: 30;
-      background: #050711e0;
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid #ffffff12;
+      z-index: 40;
+      background: rgba(3, 5, 12, 0.82);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
     .nav {
       display: flex;
@@ -84,259 +114,375 @@
     }
     .brand { display: flex; align-items: center; gap: 12px; }
     .mark {
+      position: relative;
       display: grid;
       place-items: center;
-      width: 43px;
-      height: 43px;
-      border-radius: 12px;
-      font: 800 28px "Space Grotesk", Arial;
-      background: linear-gradient(145deg, #fff0b3, #a67a35);
-      color: #101019;
-      box-shadow: 0 0 25px #d7a35b32;
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      font: 800 26px "Space Grotesk", Arial;
+      background: linear-gradient(145deg, #fff3c4, #a6742e);
+      color: #0b0c14;
+      box-shadow: 0 0 28px rgba(234, 185, 107, 0.42), inset 0 1px 1px #fff;
     }
-    .brand b { display: block; font: 700 22px "Space Grotesk", Arial; letter-spacing: .15em; }
-    .brand small { display: block; font-size: 8px; letter-spacing: .29em; color: #d8bc83; }
+    .brand b { display: block; font: 700 22px "Space Grotesk", Arial; letter-spacing: .16em; }
+    .brand small { display: block; font-size: 8.5px; letter-spacing: .3em; color: #e2c285; }
 
     .links {
       display: flex;
       align-items: center;
-      gap: 20px;
-      font-size: 12px;
+      gap: 22px;
+      font-size: 12.5px;
       font-weight: 700;
-      color: #bfc7d5;
+      color: #c5d1e3;
     }
-    .links a:hover { color: #f6d89a; }
+    .links a { position: relative; padding: 4px 0; transition: color .2s; }
+    .links a:hover { color: #ffe5a4; }
+    .links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #ffe5a4, #38bdf8);
+      transition: width .25s;
+    }
+    .links a:hover::after { width: 100%; }
 
     .nav-actions { display: flex; align-items: center; gap: 10px; }
     .menu {
       display: none;
-      border: 1px solid #ffffff30;
-      background: #ffffff08;
-      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 11px;
       color: white;
-      padding: 9px 12px;
+      padding: 9px 13px;
+      font-size: 16px;
     }
 
+    /* Botões */
     .button {
+      position: relative;
+      overflow: hidden;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 9px;
-      padding: 15px 22px;
-      border-radius: 12px;
-      border: 1px solid #ffffff36;
-      font-size: 13px;
+      padding: 15px 24px;
+      border-radius: 13px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      font-size: 13.5px;
       font-weight: 800;
-      transition: transform .2s, box-shadow .2s, background .2s;
+      letter-spacing: .01em;
+      transition: transform .22s, box-shadow .22s, border-color .22s;
     }
     .button:hover { transform: translateY(-3px); }
     .button.primary {
-      background: linear-gradient(115deg, #aa7835, #ffe5a4 47%, #b57c35);
+      background: linear-gradient(115deg, #a8722d, #ffe7a8 48%, #ba8136);
       border: 0;
-      color: #141019;
-      box-shadow: 0 12px 38px #d3a05730;
+      color: #110e17;
+      box-shadow: 0 12px 36px rgba(226, 176, 98, 0.34), 0 0 0 1px rgba(255, 240, 195, 0.35) inset;
     }
-    .button.primary:hover { box-shadow: 0 15px 45px #e6b76d70; }
-    .button.secondary { background: #ffffff0b; }
-    .button.secondary:hover { background: #ffffff18; }
+    .button.primary::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 80%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+      transform: skewX(-22deg);
+      animation: sheen 4.2s infinite;
+    }
+    @keyframes sheen {
+      0%, 60% { left: -120%; }
+      100% { left: 160%; }
+    }
+    .button.primary:hover { box-shadow: 0 16px 48px rgba(242, 194, 114, 0.55); }
+    .button.secondary {
+      background: rgba(15, 23, 42, 0.75);
+      border-color: rgba(56, 189, 248, 0.35);
+      color: #e6f0ff;
+      backdrop-filter: blur(10px);
+    }
+    .button.secondary:hover {
+      border-color: #7dd3fc;
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+    }
 
     /* Hero */
     .hero {
       position: relative;
-      min-height: 660px;
+      min-height: 680px;
       overflow: hidden;
-      border-bottom: 1px solid #ffffff10;
-      background: radial-gradient(ellipse at 78% 48%, #0c39702b, transparent 42%), linear-gradient(180deg, #050711 0%, #070b15 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -140px;
+      width: 140%;
+      height: 340px;
+      transform: translateX(-50%) perspective(420px) rotateX(68deg);
+      background-image:
+        linear-gradient(rgba(56, 189, 248, 0.25) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.25) 1px, transparent 1px);
+      background-size: 46px 46px;
+      mask-image: linear-gradient(to top, rgba(0,0,0,0.85), transparent 80%);
+      pointer-events: none;
     }
     .hero .container {
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
+      grid-template-columns: 1.06fr .94fr;
       align-items: center;
-      gap: 35px;
+      gap: 36px;
       padding-top: 76px;
-      padding-bottom: 76px;
+      padding-bottom: 84px;
     }
     .pill {
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      border: 1px solid #d7ad6447;
-      background: #d7ad640b;
-      color: #f3d6a0;
+      border: 1px solid rgba(56, 189, 248, 0.38);
+      background: rgba(14, 28, 56, 0.72);
+      color: #bae6fd;
       border-radius: 50px;
-      padding: 10px 15px;
-      font-size: 10px;
+      padding: 9px 16px;
+      font-size: 10.5px;
       font-weight: 800;
-      letter-spacing: .12em;
+      letter-spacing: .14em;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.16);
     }
     .dot {
-      width: 7px;
-      height: 7px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background: #eecb8b;
-      box-shadow: 0 0 14px #ffda9e;
+      background: #38bdf8;
+      box-shadow: 0 0 14px #38bdf8;
+      animation: blink 1.8s infinite;
     }
+    @keyframes blink { 50% { opacity: 0.35; transform: scale(0.85); } }
+
     .hero h1 {
-      font: 700 clamp(38px, 5.2vw, 72px)/1.05 "Space Grotesk", Arial;
-      letter-spacing: -.05em;
+      font: 700 clamp(38px, 5.1vw, 70px)/1.04 "Space Grotesk", Arial;
+      letter-spacing: -.045em;
       margin: 22px 0 20px;
       max-width: 700px;
     }
     .hero p {
-      color: #aab8cc;
+      color: #b2c2d9;
       line-height: 1.85;
       font-size: 15.5px;
-      max-width: 530px;
+      max-width: 540px;
     }
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0; }
+    .actions { display: flex; gap: 13px; flex-wrap: wrap; margin: 30px 0; }
     .trust {
       display: flex;
-      gap: 20px;
+      gap: 18px;
       flex-wrap: wrap;
-      font-size: 11.5px;
-      color: #9aaac1;
-      margin-top: 26px;
+      font-size: 12px;
+      color: #a9bad1;
+      margin-top: 24px;
     }
-    .trust span:before { content: '✦'; color: #e9c88b; margin-right: 7px; }
+    .trust span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+    .trust span::before { content: '✦'; color: #f3d28c; }
 
+    /* Núcleo Holográfico 3D */
     .visual {
       position: relative;
-      min-height: 430px;
+      min-height: 450px;
       display: grid;
       place-items: center;
       isolation: isolate;
     }
-    .visual:before {
+    .visual::before {
       content: '';
       position: absolute;
-      width: 390px;
-      height: 390px;
-      max-width: 95%;
+      width: 410px;
+      height: 410px;
+      max-width: 96%;
       border-radius: 50%;
-      background: radial-gradient(circle, #0c58c457, transparent 66%);
-      filter: blur(15px);
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.42), rgba(56, 189, 248, 0.12) 48%, transparent 70%);
+      filter: blur(18px);
+      animation: auraPulse 5s ease-in-out infinite;
+    }
+    @keyframes auraPulse {
+      0%, 100% { transform: scale(0.96); opacity: 0.85; }
+      50% { transform: scale(1.06); opacity: 1; }
     }
     @keyframes rotate { to { transform: rotate(360deg); } }
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
     .orbit {
       position: absolute;
-      width: 390px;
-      height: 390px;
+      width: 410px;
+      height: 410px;
       max-width: 96%;
       aspect-ratio: 1;
       border-radius: 50%;
-      border: 1px solid #398aff44;
-      box-shadow: 0 0 50px #1e74ff24, inset 0 0 60px #1156a925;
-      animation: rotate 35s linear infinite;
+      border: 1px solid rgba(56, 189, 248, 0.36);
+      box-shadow: 0 0 60px rgba(37, 99, 235, 0.22), inset 0 0 60px rgba(56, 189, 248, 0.14);
+      animation: rotate 30s linear infinite;
     }
-    .orbit:before, .orbit:after {
+    .orbit::before, .orbit::after {
       content: '';
       position: absolute;
       border-radius: 50%;
-      background: #f2c978;
-      box-shadow: 0 0 25px #ffe0a2;
-      width: 10px;
-      height: 10px;
+      width: 11px;
+      height: 11px;
       top: 50%;
-      left: -5px;
+      left: -5.5px;
+      background: #ffe3a3;
+      box-shadow: 0 0 24px #ffe3a3, 0 0 40px #f59e0b;
     }
-    .orbit:after {
+    .orbit::after {
       left: auto;
-      right: -5px;
-      background: #5da6ff;
-      box-shadow: 0 0 22px #378bff;
+      right: -5.5px;
+      background: #38bdf8;
+      box-shadow: 0 0 24px #38bdf8, 0 0 40px #2563eb;
     }
     .orbit2 {
-      width: 300px;
-      height: 300px;
-      border-style: dashed;
-      border-color: #e5bd7550;
+      width: 315px;
+      height: 315px;
+      border: 1.5px dashed rgba(240, 207, 142, 0.48);
       animation-direction: reverse;
-      animation-duration: 28s;
+      animation-duration: 22s;
     }
+    .orbit3 {
+      width: 245px;
+      height: 245px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      animation-duration: 16s;
+    }
+
     .core {
-      width: 215px;
-      height: 250px;
+      width: 210px;
+      height: 240px;
       display: grid;
       place-items: center;
       position: relative;
-      transform: perspective(600px) rotateY(-12deg);
-      filter: drop-shadow(0 0 32px #2676ff55);
+      filter: drop-shadow(0 0 38px rgba(56, 189, 248, 0.45));
+      animation: floatY 4.5s ease-in-out infinite;
     }
-    .core:before {
+    .core::before {
       content: '';
       position: absolute;
-      inset: 13px;
-      border: 2px solid #c9a364;
-      border-radius: 35px;
+      inset: 14px;
+      border: 2px solid rgba(240, 207, 142, 0.85);
+      border-radius: 34px;
       transform: rotate(45deg);
-      box-shadow: 0 0 45px #d4a76766, inset 0 0 40px #367eff44;
-      background: linear-gradient(135deg, #e1b97012, #005dff16);
+      box-shadow: 0 0 50px rgba(234, 185, 107, 0.42), inset 0 0 45px rgba(56, 189, 248, 0.35);
+      background: linear-gradient(135deg, rgba(240, 207, 142, 0.14), rgba(37, 99, 235, 0.22));
+      backdrop-filter: blur(6px);
     }
     .core span {
-      font: 800 175px "Space Grotesk", Arial;
+      font: 800 168px "Space Grotesk", Arial;
       z-index: 1;
-      text-shadow: 0 0 38px #d6a7657c;
+      text-shadow: 0 0 42px rgba(240, 207, 142, 0.55);
     }
+
     .float {
       position: absolute;
-      background: #0d1629e6;
-      border: 1px solid #cba86745;
-      border-radius: 12px;
-      padding: 12px 15px;
-      box-shadow: 0 15px 45px #0008;
-      backdrop-filter: blur(12px);
-      font-size: 11px;
-      color: #d6e1f2;
+      background: rgba(10, 17, 34, 0.86);
+      border: 1px solid rgba(240, 207, 142, 0.35);
+      border-radius: 14px;
+      padding: 12px 16px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65), 0 0 20px rgba(56, 189, 248, 0.12);
+      backdrop-filter: blur(14px);
+      font-size: 11.5px;
+      color: #dce6f7;
     }
-    .float strong { display: block; color: #f5d99c; font-size: 12px; margin-bottom: 3px; }
-    .f1 { top: 32px; right: 0; }
-    .f2 { bottom: 38px; left: 0; }
-    .f3 { right: 0; bottom: 74px; }
+    .float strong {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #ffe3a3;
+      font-size: 12px;
+      margin-bottom: 3px;
+    }
+    .float strong::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 10px #4ade80;
+    }
+    .f1 { top: 24px; right: 0; animation: floatY 5s ease-in-out infinite; }
+    .f2 { bottom: 32px; left: 0; animation: floatY 5.8s ease-in-out infinite 0.8s; }
+    .f3 { right: 0; bottom: 72px; animation: floatY 5.3s ease-in-out infinite 1.4s; }
 
     /* Band */
-    .band { border-block: 1px solid #ffffff12; background: #0b1322; }
+    .band {
+      border-block: 1px solid rgba(56, 189, 248, 0.18);
+      background: linear-gradient(90deg, rgba(10, 18, 36, 0.9), rgba(16, 28, 54, 0.9), rgba(10, 18, 36, 0.9));
+    }
     .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      padding: 30px 0;
+      padding: 28px 0;
       text-align: center;
     }
-    .stats strong { display: block; font: 700 22px "Space Grotesk", Arial; color: #efd49f; }
-    .stats span { display: block; font-size: 12px; color: #9aabc1; margin-top: 6px; }
+    .stats strong { display: block; font: 700 24px "Space Grotesk", Arial; color: #ffe3a3; }
+    .stats span { display: block; font-size: 12.5px; color: #a7b8d0; margin-top: 5px; }
 
     /* Sections */
-    .section { padding: 86px 0; }
-    .section-head { text-align: center; max-width: 700px; margin: 0 auto 46px; }
+    .section { padding: 90px 0; position: relative; }
+    .section-head { text-align: center; max-width: 720px; margin: 0 auto 48px; }
     .section h2 {
-      font: 700 clamp(28px, 4vw, 44px)/1.16 "Space Grotesk", Arial;
+      font: 700 clamp(28px, 4vw, 45px)/1.14 "Space Grotesk", Arial;
       letter-spacing: -.04em;
-      margin: 12px 0 15px;
+      margin: 14px 0 15px;
     }
-    .section-head p, .muted { color: #9daec3; line-height: 1.8; font-size: 14.5px; }
+    .section-head p, .muted { color: #a2b3cc; line-height: 1.8; font-size: 14.5px; }
 
     /* Services */
-    .services { background: linear-gradient(180deg, #080d18, #070b13); }
-    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .services { background: linear-gradient(180deg, rgba(6, 10, 22, 0.75), rgba(4, 7, 16, 0.92)); }
+    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
     .card {
       position: relative;
       overflow: hidden;
-      background: linear-gradient(150deg, #172137, #0b101b 70%);
-      border: 1px solid #d2ad6640;
-      border-radius: 19px;
+      background: linear-gradient(155deg, rgba(22, 34, 60, 0.82), rgba(9, 14, 27, 0.92) 75%);
+      border: 1px solid rgba(240, 207, 142, 0.26);
+      border-radius: 20px;
       padding: 26px 22px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform .25s, border-color .25s, box-shadow .25s;
+      backdrop-filter: blur(12px);
+      transition: transform .26s, border-color .26s, box-shadow .26s;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.16), transparent 55%);
+      opacity: 0;
+      transition: opacity .26s;
+      pointer-events: none;
     }
     .card:hover {
       transform: translateY(-8px);
-      border-color: #ebc68a;
-      box-shadow: 0 22px 55px #0009, 0 0 25px #276eff21;
+      border-color: #ffe09e;
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.75), 0 0 30px rgba(56, 189, 248, 0.22);
     }
+    .card:hover::before { opacity: 1; }
     .card .ico {
       font-size: 26px;
       display: grid;
@@ -344,51 +490,51 @@
       width: 56px;
       height: 56px;
       border-radius: 16px;
-      background: #d7b27715;
-      border: 1px solid #e6c1853d;
-      color: #f2d499;
+      background: linear-gradient(145deg, rgba(240, 207, 142, 0.16), rgba(56, 189, 248, 0.12));
+      border: 1px solid rgba(240, 207, 142, 0.35);
+      box-shadow: 0 0 20px rgba(240, 207, 142, 0.14);
     }
     .card h3 { font: 700 19px "Space Grotesk", Arial; margin: 20px 0 10px; }
-    .card p { color: #a6b5c8; font-size: 12.5px; line-height: 1.8; margin-bottom: 18px; }
+    .card p { color: #acc0d8; font-size: 13px; line-height: 1.78; margin-bottom: 18px; }
     .card-link {
-      font-size: 12px;
+      font-size: 12.5px;
       font-weight: 800;
-      color: #f3d397;
+      color: #ffe09e;
       background: none;
       border: 0;
       padding: 0;
       text-align: left;
     }
-    .card-link:hover { color: #fff0c4; }
+    .card-link:hover { color: #fff6d6; }
 
-    /* Portfolio / Projetos com Mockups Reais */
+    /* Portfolio */
     .portfolio {
-      background: #060a14;
-      border-top: 1px solid #ffffff10;
+      background: rgba(4, 7, 16, 0.85);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
     .proj-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
     }
     .proj-card {
-      background: linear-gradient(160deg, #10182b, #080c17 85%);
-      border: 1px solid #ffffff1e;
+      background: linear-gradient(160deg, rgba(16, 25, 46, 0.9), rgba(7, 11, 22, 0.96) 85%);
+      border: 1px solid rgba(56, 189, 248, 0.22);
       border-radius: 22px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform .25s, border-color .25s, box-shadow .25s;
+      transition: transform .26s, border-color .26s, box-shadow .26s;
     }
     .proj-card:hover {
-      transform: translateY(-6px);
-      border-color: #e9c88b88;
-      box-shadow: 0 22px 55px rgba(0, 0, 0, .65);
+      transform: translateY(-7px);
+      border-color: rgba(240, 207, 142, 0.72);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 28px rgba(56, 189, 248, 0.18);
     }
     .mockup-win {
-      background: #070b14;
-      border-bottom: 1px solid #ffffff14;
+      background: #050812;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.09);
       padding: 12px 14px 16px;
     }
     .mockup-bar {
@@ -397,26 +543,22 @@
       justify-content: space-between;
       margin-bottom: 11px;
       padding-bottom: 8px;
-      border-bottom: 1px solid #ffffff0f;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     }
-    .mockup-dots {
-      display: flex;
-      gap: 5px;
-    }
+    .mockup-dots { display: flex; gap: 5px; }
     .mockup-dots i {
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: #ffffff28;
       display: block;
     }
-    .mockup-dots i:first-child { background: #ff6b6b88; }
-    .mockup-dots i:nth-child(2) { background: #ffd16688; }
-    .mockup-dots i:nth-child(3) { background: #06d6a088; }
+    .mockup-dots i:first-child { background: #ff6b6b99; }
+    .mockup-dots i:nth-child(2) { background: #ffd16699; }
+    .mockup-dots i:nth-child(3) { background: #06d6a099; }
     .mockup-url {
       font-size: 10px;
-      color: #889bb5;
-      background: #ffffff08;
+      color: #93a7c4;
+      background: rgba(255, 255, 255, 0.06);
       padding: 3px 9px;
       border-radius: 6px;
       font-family: monospace;
@@ -424,23 +566,23 @@
     .mockup-screen {
       border-radius: 12px;
       padding: 13px;
-      min-height: 132px;
+      min-height: 134px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       gap: 8px;
     }
     .scr-salon {
-      background: linear-gradient(145deg, #211529, #101524);
-      border: 1px solid #e9c88b33;
+      background: linear-gradient(145deg, #24162e, #0f1526);
+      border: 1px solid rgba(240, 207, 142, 0.28);
     }
     .scr-wa {
-      background: linear-gradient(145deg, #0d2122, #0b1422);
-      border: 1px solid #38d39933;
+      background: linear-gradient(145deg, #0c2325, #0a1424);
+      border: 1px solid rgba(56, 211, 153, 0.28);
     }
     .scr-erp {
-      background: linear-gradient(145deg, #0e1d36, #0a101d);
-      border: 1px solid #5da6ff33;
+      background: linear-gradient(145deg, #0e203d, #09101f);
+      border: 1px solid rgba(56, 189, 248, 0.3);
     }
     .ui-pill {
       display: inline-flex;
@@ -450,18 +592,18 @@
       font-weight: 700;
       padding: 5px 9px;
       border-radius: 8px;
-      background: #ffffff0d;
+      background: rgba(255, 255, 255, 0.07);
       color: #f3f6fc;
     }
     .ui-pill.ok {
-      background: #1c4738;
-      color: #7ef2be;
-      border: 1px solid #38d39944;
+      background: rgba(22, 101, 52, 0.55);
+      color: #86efac;
+      border: 1px solid rgba(74, 222, 128, 0.35);
     }
     .ui-pill.gold-ui {
-      background: #332614;
-      color: #f7d99c;
-      border: 1px solid #e9c88b44;
+      background: rgba(120, 83, 28, 0.45);
+      color: #fde68a;
+      border: 1px solid rgba(253, 230, 138, 0.35);
     }
     .ui-metrics {
       display: grid;
@@ -469,20 +611,13 @@
       gap: 7px;
     }
     .ui-kpi {
-      background: #05071199;
-      border: 1px solid #ffffff12;
+      background: rgba(3, 5, 12, 0.68);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 8px;
       padding: 7px 9px;
     }
-    .ui-kpi b {
-      display: block;
-      font: 700 13px "Space Grotesk", Arial;
-      color: #f5d99c;
-    }
-    .ui-kpi small {
-      font-size: 9.5px;
-      color: #93a5be;
-    }
+    .ui-kpi b { display: block; font: 700 13.5px "Space Grotesk", Arial; color: #fde68a; }
+    .ui-kpi small { font-size: 9.5px; color: #9ab0cc; }
 
     .proj-body {
       padding: 20px 22px 22px;
@@ -495,54 +630,37 @@
     .proj-cat {
       font-size: 10.5px;
       font-weight: 800;
-      letter-spacing: .12em;
+      letter-spacing: .13em;
       text-transform: uppercase;
-      color: #e9c88b;
+      color: #7dd3fc;
       margin-bottom: 4px;
     }
-    .proj-body h3 {
-      margin: 0 0 8px;
-      font: 700 18.5px "Space Grotesk", Arial;
-      color: #fff;
-    }
-    .proj-body p {
-      margin: 0;
-      color: #a6b5c8;
-      font-size: 13px;
-      line-height: 1.72;
-    }
-    .proj-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 12px;
-    }
+    .proj-body h3 { margin: 0 0 8px; font: 700 18.5px "Space Grotesk", Arial; color: #fff; }
+    .proj-body p { margin: 0; color: #a8bad1; font-size: 13px; line-height: 1.72; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
     .proj-tags span {
       font-size: 11px;
-      color: #cbd7e8;
-      background: #ffffff0a;
-      border: 1px solid #ffffff14;
+      color: #d3e0f2;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       padding: 4px 10px;
       border-radius: 8px;
     }
-    .proj-actions {
-      padding-top: 12px;
-      border-top: 1px solid #ffffff10;
-    }
+    .proj-actions { padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
     .proj-btn {
       font-size: 12.5px;
       font-weight: 800;
-      color: #f3d397;
+      color: #ffe09e;
       background: none;
       border: 0;
       padding: 0;
     }
-    .proj-btn:hover { color: #fff0c4; }
+    .proj-btn:hover { color: #fff6d6; }
 
-    /* Testimonials / Depoimentos Naturais */
+    /* Testimonials */
     .testimonials {
-      background: linear-gradient(180deg, #080d18, #060a14);
-      border-top: 1px solid #ffffff10;
+      background: linear-gradient(180deg, rgba(7, 11, 22, 0.9), rgba(4, 7, 16, 0.95));
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
     .testi-grid {
       display: grid;
@@ -550,14 +668,15 @@
       gap: 20px;
     }
     .testi-card {
-      background: #0b1220;
-      border: 1px solid #d2ad6633;
-      border-radius: 19px;
+      background: rgba(11, 18, 34, 0.85);
+      border: 1px solid rgba(240, 207, 142, 0.24);
+      border-radius: 20px;
       padding: 24px 22px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       gap: 18px;
+      backdrop-filter: blur(10px);
     }
     .testi-top {
       display: flex;
@@ -565,32 +684,23 @@
       justify-content: space-between;
       margin-bottom: 10px;
     }
-    .stars {
-      color: #f4ce7d;
-      font-size: 13px;
-      letter-spacing: 2px;
-    }
+    .stars { color: #facc15; font-size: 13px; letter-spacing: 2px; }
     .verified-tag {
       font-size: 10px;
       font-weight: 700;
-      color: #7ee8b7;
-      background: #143629;
-      border: 1px solid #38d39933;
-      padding: 3px 8px;
+      color: #86efac;
+      background: rgba(20, 83, 45, 0.55);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      padding: 3px 9px;
       border-radius: 999px;
     }
-    .testi-card p {
-      margin: 0;
-      color: #d6e0ee;
-      font-size: 13.5px;
-      line-height: 1.78;
-    }
+    .testi-card p { margin: 0; color: #dbe5f4; font-size: 13.5px; line-height: 1.78; }
     .testi-author {
       display: flex;
       align-items: center;
       gap: 12px;
       padding-top: 14px;
-      border-top: 1px solid #ffffff12;
+      border-top: 1px solid rgba(255, 255, 255, 0.09);
     }
     .testi-avatar {
       width: 40px;
@@ -599,25 +709,17 @@
       display: grid;
       place-items: center;
       font: 800 14px "Space Grotesk", Arial;
-      background: linear-gradient(135deg, #ffe5a4, #a97734);
-      color: #141019;
+      background: linear-gradient(135deg, #ffe7a8, #b07932);
+      color: #120f18;
       flex-shrink: 0;
     }
-    .testi-author strong {
-      display: block;
-      font-size: 13.5px;
-      color: #f5d99c;
-    }
-    .testi-author span {
-      display: block;
-      font-size: 11.5px;
-      color: #8fa1ba;
-    }
+    .testi-author strong { display: block; font-size: 13.5px; color: #ffe09e; }
+    .testi-author span { display: block; font-size: 11.5px; color: #93a7c2; }
 
     /* Interactive AI Commercial Assistant Section */
     .ai-sec {
-      background: radial-gradient(ellipse at 20% 20%, #155dd024, transparent 50%), #060a14;
-      border-block: 1px solid #ffffff12;
+      background: radial-gradient(ellipse at 22% 25%, rgba(37, 99, 235, 0.22), transparent 52%), rgba(4, 7, 16, 0.94);
+      border-block: 1px solid rgba(56, 189, 248, 0.18);
     }
     .ai-grid {
       display: grid;
@@ -628,20 +730,20 @@
     .ai-bullets { display: grid; gap: 13px; margin-top: 24px; }
     .ai-bullets div {
       padding: 14px 16px;
-      border-radius: 13px;
-      background: #ffffff07;
-      border: 1px solid #ffffff14;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid rgba(56, 189, 248, 0.2);
       font-size: 13px;
-      color: #c8d4e4;
-      line-height: 1.6;
+      color: #cfdbec;
+      line-height: 1.62;
     }
-    .ai-bullets strong { color: #f4d79b; }
+    .ai-bullets strong { color: #ffe09e; }
 
     .ai-chat-card {
-      border: 1px solid #d7ad6455;
+      border: 1px solid rgba(240, 207, 142, 0.48);
       border-radius: 24px;
-      background: #0a101e;
-      box-shadow: 0 25px 75px rgba(0, 0, 0, .65), 0 0 40px rgba(38, 118, 255, .16);
+      background: #080d1a;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.78), 0 0 45px rgba(37, 99, 235, 0.24);
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -649,8 +751,8 @@
     }
     .ai-chat-head {
       padding: 16px 20px;
-      background: linear-gradient(135deg, #131f36 0%, #0b1221 100%);
-      border-bottom: 1px solid #ffffff16;
+      background: linear-gradient(135deg, #121f3b 0%, #091020 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -658,35 +760,36 @@
     }
     .ai-chat-id { display: flex; align-items: center; gap: 11px; }
     .ai-chat-badge {
-      width: 38px;
-      height: 38px;
-      border-radius: 11px;
+      width: 39px;
+      height: 39px;
+      border-radius: 12px;
       display: grid;
       place-items: center;
       font: 800 20px "Space Grotesk", Arial;
-      background: linear-gradient(145deg, #fff0b3, #a67a35);
-      color: #101019;
+      background: linear-gradient(145deg, #fff3c4, #a8742e);
+      color: #0f0e16;
+      box-shadow: 0 0 18px rgba(240, 207, 142, 0.35);
     }
-    .ai-chat-id strong { display: block; font: 700 14.5px "Space Grotesk", Arial; color: #f6ddb0; }
-    .ai-chat-id span { font-size: 11.5px; color: #8fa6c4; display: flex; align-items: center; gap: 6px; }
+    .ai-chat-id strong { display: block; font: 700 14.5px "Space Grotesk", Arial; color: #ffe3a3; }
+    .ai-chat-id span { font-size: 11.5px; color: #95aecb; display: flex; align-items: center; gap: 6px; }
     .ai-chat-id span::before {
       content: "";
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: #72e6ad;
-      box-shadow: 0 0 10px #72e6ad;
+      background: #4ade80;
+      box-shadow: 0 0 10px #4ade80;
     }
     .ai-reset-btn {
-      border: 1px solid #ffffff24;
-      background: #ffffff0a;
-      color: #cbd7e8;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.06);
+      color: #d2deee;
       border-radius: 999px;
       padding: 6px 12px;
       font-size: 11px;
       font-weight: 700;
     }
-    .ai-reset-btn:hover { background: #ffffff18; }
+    .ai-reset-btn:hover { background: rgba(255, 255, 255, 0.14); }
 
     .ai-chat-log {
       flex: 1;
@@ -695,30 +798,30 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      background: radial-gradient(circle at 85% 15%, #1659c41c, transparent 45%), #070b15;
+      background: radial-gradient(circle at 85% 15%, rgba(37, 99, 235, 0.16), transparent 45%), #060a14;
     }
     .chat-msg {
       max-width: 86%;
       padding: 12px 15px;
       border-radius: 15px;
       font-size: 13.5px;
-      line-height: 1.6;
+      line-height: 1.62;
       white-space: pre-line;
       animation: msgIn .22s ease;
     }
     @keyframes msgIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
     .chat-msg.ai {
       align-self: flex-start;
-      background: #121c30;
-      border: 1px solid #ffffff18;
-      color: #eaf0fa;
+      background: #111b30;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #eef3fc;
       border-bottom-left-radius: 4px;
     }
     .chat-msg.user {
       align-self: flex-end;
-      background: linear-gradient(125deg, #a97734, #e7c27d);
-      color: #121017;
-      font-weight: 600;
+      background: linear-gradient(125deg, #ad7830, #f3ce84);
+      color: #110f16;
+      font-weight: 700;
       border-bottom-right-radius: 4px;
     }
 
@@ -727,25 +830,25 @@
       gap: 8px;
       padding: 10px 16px;
       overflow-x: auto;
-      border-top: 1px solid #ffffff10;
-      background: #090f1d;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      background: #080d1a;
     }
     .ai-chip {
       white-space: nowrap;
-      border: 1px solid #d7ad6444;
-      background: #d7ad6410;
-      color: #f2d59b;
+      border: 1px solid rgba(240, 207, 142, 0.34);
+      background: rgba(240, 207, 142, 0.08);
+      color: #ffe09e;
       border-radius: 999px;
       padding: 6px 12px;
       font-size: 11.5px;
       font-weight: 700;
     }
-    .ai-chip:hover { background: #d7ad6424; }
+    .ai-chip:hover { background: rgba(240, 207, 142, 0.18); }
 
     .wa-bar {
       padding: 10px 16px;
-      background: #0d1629;
-      border-top: 1px solid #d7ad6440;
+      background: #0b1324;
+      border-top: 1px solid rgba(240, 207, 142, 0.28);
       display: flex;
       justify-content: center;
     }
@@ -758,18 +861,18 @@
       padding: 12px 16px;
       border: 0;
       border-radius: 12px;
-      background: linear-gradient(115deg, #aa7835, #ffe5a4 47%, #b57c35);
-      color: #141019;
+      background: linear-gradient(115deg, #a8722d, #ffe7a8 48%, #ba8136);
+      color: #120f17;
       font-size: 13px;
       font-weight: 800;
-      box-shadow: 0 8px 25px #d3a05730;
+      box-shadow: 0 8px 26px rgba(226, 176, 98, 0.28);
       transition: transform .2s, opacity .2s;
     }
     .wa-btn:hover { transform: translateY(-2px); }
     .wa-btn:disabled { opacity: .65; cursor: not-allowed; transform: none; }
     .wa-btn.sent {
-      background: linear-gradient(115deg, #1f8f63, #4ae3a7);
-      color: #061c12;
+      background: linear-gradient(115deg, #15803d, #4ade80);
+      color: #051b0e;
     }
 
     .rec-bar {
@@ -778,9 +881,9 @@
       justify-content: space-between;
       gap: 10px;
       padding: 10px 16px;
-      background: #2b1018;
-      border-top: 1px solid #ff5a7955;
-      color: #ffd6de;
+      background: #2c0f18;
+      border-top: 1px solid rgba(251, 113, 133, 0.4);
+      color: #ffe4e6;
       font-size: 12.5px;
       font-weight: 700;
     }
@@ -790,15 +893,15 @@
       width: 9px;
       height: 9px;
       border-radius: 50%;
-      background: #ff4d6d;
+      background: #fb7185;
       margin-right: 7px;
       animation: pulse 1s infinite;
     }
     @keyframes pulse { 50% { opacity: .3; } }
     .rec-actions { display: flex; gap: 8px; }
     .rec-cancel {
-      border: 1px solid #ffffff30;
-      background: #ffffff10;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.08);
       color: #fff;
       border-radius: 9px;
       padding: 6px 11px;
@@ -807,8 +910,8 @@
     }
     .rec-send {
       border: 0;
-      background: #38d399;
-      color: #091a13;
+      background: #4ade80;
+      color: #052e16;
       border-radius: 9px;
       padding: 6px 13px;
       font-size: 12px;
@@ -820,41 +923,41 @@
       align-items: center;
       gap: 8px;
       padding: 12px 14px;
-      background: #0b1221;
-      border-top: 1px solid #ffffff16;
+      background: #091020;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
     .ai-input {
       flex: 1;
       min-width: 0;
-      background: #121c30;
-      border: 1px solid #ffffff20;
+      background: #111b30;
+      border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 12px;
       padding: 12px 14px;
       color: #fff;
       font-size: 13.5px;
       outline: none;
     }
-    .ai-input:focus { border-color: #e9c88b; }
+    .ai-input:focus { border-color: #ffe09e; }
     .ai-mic-btn {
       width: 44px;
       height: 44px;
       border-radius: 12px;
-      border: 1px solid #d7ad6455;
-      background: #d7ad6416;
-      color: #f5d89c;
+      border: 1px solid rgba(240, 207, 142, 0.42);
+      background: rgba(240, 207, 142, 0.1);
+      color: #ffe09e;
       font-size: 18px;
       display: grid;
       place-items: center;
       flex-shrink: 0;
     }
-    .ai-mic-btn:hover { background: #d7ad642b; }
+    .ai-mic-btn:hover { background: rgba(240, 207, 142, 0.2); }
     .ai-send-btn {
       height: 44px;
       padding: 0 16px;
       border-radius: 12px;
       border: 0;
-      background: linear-gradient(115deg, #aa7835, #ffe5a4 50%, #b57c35);
-      color: #141019;
+      background: linear-gradient(115deg, #a8722d, #ffe7a8 50%, #ba8136);
+      color: #120f17;
       font-size: 13px;
       font-weight: 800;
       flex-shrink: 0;
@@ -867,30 +970,57 @@
       gap: 18px;
     }
     .step-box {
-      background: #0b1220;
-      border: 1px solid #ffffff14;
+      background: rgba(11, 18, 34, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.2);
       border-radius: 18px;
       padding: 26px 22px;
     }
     .step-num {
-      font: 800 13px "Space Grotesk", Arial;
-      color: #141019;
-      background: linear-gradient(120deg, #ffe5a4, #b57c35);
+      font: 800 12.5px "Space Grotesk", Arial;
+      color: #120f17;
+      background: linear-gradient(120deg, #ffe7a8, #ba8136);
       display: inline-block;
-      padding: 5px 11px;
+      padding: 5px 12px;
       border-radius: 8px;
       margin-bottom: 14px;
     }
     .step-box h3 { font: 700 18px "Space Grotesk", Arial; margin: 0 0 8px; }
-    .step-box p { color: #9daec3; font-size: 13px; line-height: 1.75; margin: 0; }
+    .step-box p { color: #a2b3cc; font-size: 13px; line-height: 1.75; margin: 0; }
+
+    /* Botão Flutuante */
+    .fab-ai {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 35;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 236, 179, 0.55);
+      background: linear-gradient(120deg, #0e172a, #172544);
+      color: #ffe5a4;
+      font-size: 12.5px;
+      font-weight: 800;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7), 0 0 24px rgba(56, 189, 248, 0.28);
+    }
+    .fab-ai::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 12px #4ade80;
+    }
 
     /* Footer */
     .footer {
-      border-top: 1px solid #ffffff12;
-      background: #04060e;
-      padding: 40px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      background: #02040a;
+      padding: 40px 0 80px;
       font-size: 13px;
-      color: #8f9fb5;
+      color: #93a4bc;
     }
     .footer-row {
       display: flex;
@@ -915,9 +1045,9 @@
         top: 78px;
         left: 0;
         right: 0;
-        background: #080e1c;
+        background: rgba(5, 9, 20, 0.98);
         padding: 20px;
-        border-bottom: 1px solid #ffffff18;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
       }
       .menu { display: block; }
       .cards, .stats { grid-template-columns: 1fr; }
@@ -955,29 +1085,30 @@
   <section class="hero">
     <div class="container">
       <div>
-        <span class="pill"><span class="dot"></span> TECNOLOGIA, SISTEMAS &amp; INTELIGÊNCIA ARTIFICIAL</span>
+        <span class="pill"><span class="dot"></span> ENGENHARIA DIGITAL &amp; INTELIGÊNCIA ARTIFICIAL</span>
         <h1>Estruturas digitais e <span class="gold">Agentes de IA</span> que vendem 24h.</h1>
-        <p>Desenvolvemos sites de alta conversão, aplicativos, sistemas sob medida e agentes inteligentes que atendem, qualificam e fecham oportunidades automaticamente pelo seu negócio.</p>
+        <p>Criamos sites de alta conversão, aplicativos, sistemas sob medida e agentes autônomos de IA que atendem, qualificam leads e enviam orçamentos prontos direto no seu WhatsApp.</p>
 
         <div class="actions">
           <button type="button" onclick="irParaChat()" class="button primary">Iniciar Briefing com IA ↗</button>
-          <a href="#projetos" class="button secondary">Ver Projetos Entregues</a>
+          <a href="#projetos" class="button secondary">Explorar Projetos</a>
         </div>
 
         <div class="trust">
-          <span>Projetos Sob Medida</span>
-          <span>Atendimento IA por Texto &amp; Áudio</span>
-          <span>Envio Automático</span>
+          <span>Design Futurista</span>
+          <span>IA por Texto &amp; Áudio</span>
+          <span>Automação WhatsApp</span>
         </div>
       </div>
 
       <div class="visual">
         <div class="orbit"></div>
         <div class="orbit orbit2"></div>
+        <div class="orbit orbit3"></div>
         <div class="core"><span class="gold">V</span></div>
         <div class="float f1"><strong>Agente Comercial IA</strong>Atendimento &amp; triagem 24/7</div>
         <div class="float f2"><strong>Sistemas &amp; Apps</strong>Arquitetura sob medida</div>
-        <div class="float f3"><strong>Alta Performance</strong>Design &amp; velocidade extrema</div>
+        <div class="float f3"><strong>Alta Performance</strong>Velocidade extrema no 4G/5G</div>
       </div>
     </div>
   </section>
@@ -994,8 +1125,8 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">SOLUÇÕES VEZQORA</span>
-        <h2>Tecnologia completa para escalar sua operação</h2>
-        <p>Do posicionamento digital à automação comercial com inteligência artificial integrada ao seu fluxo de atendimento.</p>
+        <h2>Tecnologia de <span class="cyber-text">próxima geração</span> para escalar</h2>
+        <p>Do posicionamento digital de alto impacto à automação comercial com inteligência artificial integrada ao seu WhatsApp.</p>
       </div>
 
       <div class="cards">
@@ -1003,7 +1134,7 @@
           <div>
             <div class="ico">🌐</div>
             <h3>Sites Profissionais</h3>
-            <p>Páginas institucionais e landing pages ultrarrápidas com design exclusivo, foco em autoridade e conversão imediata.</p>
+            <p>Sites institucionais e landing pages ultrarrápidas com estética futurista, autoridade imediata e foco total em conversão.</p>
           </div>
           <button class="card-link" onclick="preencherChat('Quero criar um site profissional de alta conversão para minha empresa.')">Solicitar orçamento →</button>
         </div>
@@ -1038,7 +1169,7 @@
     </div>
   </section>
 
-  <!-- PROJETOS ENTREGUES COM PRÉVIA REALISTA -->
+  <!-- PROJETOS ENTREGUES -->
   <section class="section portfolio" id="projetos">
     <div class="container">
       <div class="section-head">
@@ -1048,7 +1179,6 @@
       </div>
 
       <div class="proj-grid">
-        <!-- Projeto 1 -->
         <div class="proj-card">
           <div class="mockup-win">
             <div class="mockup-bar">
@@ -1078,7 +1208,6 @@
           </div>
         </div>
 
-        <!-- Projeto 2 -->
         <div class="proj-card">
           <div class="mockup-win">
             <div class="mockup-bar">
@@ -1108,7 +1237,6 @@
           </div>
         </div>
 
-        <!-- Projeto 3 -->
         <div class="proj-card">
           <div class="mockup-win">
             <div class="mockup-bar">
@@ -1143,7 +1271,7 @@
     </div>
   </section>
 
-  <!-- DEPOIMENTOS COM LINGUAGEM NATURAL -->
+  <!-- DEPOIMENTOS -->
   <section class="section testimonials" id="depoimentos">
     <div class="container">
       <div class="section-head">
@@ -1207,17 +1335,18 @@
     </div>
   </section>
 
+  <!-- CONSULTOR IA -->
   <section class="section ai-sec" id="ia">
     <div class="container ai-grid">
       <div>
         <span class="eyebrow">CONSULTOR IA (TEXTO &amp; ÁUDIO)</span>
         <h2>Explique sua ideia por texto ou grave um áudio agora</h2>
-        <p class="muted">Nossa inteligência artificial organiza os detalhes do seu projeto e encaminha o briefing completo automaticamente para a equipe VEZQORA entrar em contato.</p>
+        <p class="muted">Nossa inteligência artificial tira suas dúvidas, ajuda a definir cada detalhe e encaminha o briefing completo automaticamente para a equipe VEZQORA.</p>
 
         <div class="ai-bullets">
-          <div><strong>1. Converse ou mande áudio 🎤:</strong> Fale o que precisa criar, seu nome e seu WhatsApp para retorno.</div>
-          <div><strong>2. Estruturação automática:</strong> A IA organiza objetivos, funcionalidades e prioridades do projeto.</div>
-          <div><strong>3. Disparo automático ⚡:</strong> Seu briefing chega direto na nossa central sem você precisar sair do site.</div>
+          <div><strong>1. Converse ou mande áudio 🎤:</strong> Fale o que precisa criar, seu nome e seu WhatsApp com DDD.</div>
+          <div><strong>2. Escopo sem falhas:</strong> A IA verifica se não faltou nenhum detalhe importante no seu pedido.</div>
+          <div><strong>3. Disparo automático ⚡:</strong> Seu orçamento completo chega direto na nossa central sem sair do site.</div>
         </div>
       </div>
 
@@ -1236,7 +1365,7 @@
         <div class="ai-chat-log" id="chatLog">
           <div class="chat-msg ai">Olá! Sou o consultor inteligente da <b>VEZQORA</b>. 👋
 
-Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar — e informe seu <b>nome e WhatsApp</b> para nossa equipe enviar sua proposta!</div>
+Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar — e informe seu <b>nome e WhatsApp</b> para montarmos sua proposta completa!</div>
         </div>
 
         <div class="ai-chips">
@@ -1294,11 +1423,13 @@ Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar
     </div>
   </section>
 
+  <button type="button" class="fab-ai" onclick="irParaChat()">Orçamento IA ⚡</button>
+
   <footer class="footer" id="contato">
     <div class="container footer-row">
-      <div><strong style="color:#f5d99c;">VEZQORA</strong> — Tecnologia, Sistemas &amp; Agentes de IA</div>
+      <div><strong style="color:#ffe09e;">VEZQORA</strong> — Engenharia Digital, Sistemas &amp; Agentes de IA</div>
       <div>
-        <a href="https://wa.me/5551991895177?text=Ol%C3%A1%2C%20VEZQORA!%20Vim%20pelo%20site." target="_blank" rel="noopener noreferrer" style="color:#f3d397;font-weight:700;">
+        <a href="https://wa.me/5551991895177?text=Ol%C3%A1%2C%20VEZQORA!%20Vim%20pelo%20site." target="_blank" rel="noopener noreferrer" style="color:#ffe09e;font-weight:700;">
           WhatsApp Comercial: (51) 99189-5177 ↗
         </a>
       </div>
@@ -1306,7 +1437,6 @@ Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar
   </footer>
 
   <script>
-    // CONFIGURAÇÕES PRINCIPAIS
     const WORKER_URL = "https://vezqoraai.vezqoraai.workers.dev";
     const WHATSAPP_NUMBER = "5551991895177";
 
@@ -1386,7 +1516,7 @@ Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar
           latestBriefing = data.briefing;
         }
 
-        const resposta = data.reply || data.response || data.text || data.message || "Perfeito! Já estruturei os pontos principais do seu projeto. Toque no botão acima para concluir o envio automático.";
+        const resposta = data.reply || data.response || data.text || data.message || "Perfeito! Já estruturei os pontos principais do seu projeto. Pode me informar seu nome e WhatsApp para completarmos?";
         adicionarMensagem(resposta, "ai");
         chatHistory.push({ role: "assistant", content: resposta });
 
@@ -1395,21 +1525,20 @@ Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar
         }
       } catch (err) {
         pensando.remove();
-        adicionarMensagem("Anotei os detalhes do seu pedido! Toque no botão acima para finalizar e enviar seu briefing.", "ai");
+        adicionarMensagem("Anotei os detalhes do seu pedido! Informe seu nome, WhatsApp e o que precisa para completarmos o orçamento.", "ai");
       }
     }
 
-    // ENVIO AUTOMÁTICO DIRETO PARA O WORKER -> WHATSAPP (5551991895177)
     autoSendBtn.addEventListener("click", async () => {
       const resumo = montarResumoBriefing();
       if (!resumo) {
-        adicionarMensagem("Antes de enviar, conte-me rapidamente pelo chat ou por áudio 🎤 o que você precisa e seu WhatsApp para contato!", "ai");
+        adicionarMensagem("Antes de enviar, conte-me pelo chat ou por áudio 🎤 o que você precisa, seu nome e seu WhatsApp com DDD!", "ai");
         chatInput.focus();
         return;
       }
 
       autoSendBtn.disabled = true;
-      autoSendBtn.textContent = "⏳ Enviando orçamento automaticamente...";
+      autoSendBtn.textContent = "⏳ Verificando e enviando orçamento...";
 
       try {
         const res = await fetch(WORKER_URL, {
@@ -1426,14 +1555,19 @@ Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar
 
         if (res.ok && (data.sent || data.ok || data.autoSent)) {
           marcarComoEnviado();
-          adicionarMensagem("✅ Briefing enviado automaticamente para a equipe VEZQORA! Em instantes entraremos em contato pelo seu WhatsApp.", "ai");
+          adicionarMensagem("✅ Briefing completo enviado automaticamente para a equipe VEZQORA! Em instantes entraremos em contato pelo seu WhatsApp.", "ai");
+        } else if (data.missing && data.reply) {
+          autoSendBtn.disabled = false;
+          autoSendBtn.textContent = "⚡ Concluir e Enviar Orçamento Automaticamente";
+          adicionarMensagem(data.reply, "ai");
+          chatInput.focus();
         } else {
           throw new Error("Falha no envio automático");
         }
       } catch (err) {
         autoSendBtn.disabled = false;
         autoSendBtn.textContent = "⚡ Concluir e Enviar Orçamento Automaticamente";
-        adicionarMensagem("⚠️ Não foi possível concluir o envio automático agora. Verifique a conexão do servidor ou tente novamente em instantes.", "ai");
+        adicionarMensagem("⚠️ Não foi possível concluir o envio automático agora. Verifique se informou seu projeto, nome e WhatsApp com DDD e tente novamente.", "ai");
       }
     });
 
@@ -1460,7 +1594,6 @@ Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar
       chatLog.innerHTML = `<div class="chat-msg ai">Conversa reiniciada! 👋 Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar e informe seu <b>nome e WhatsApp</b>.</div>`;
     });
 
-    // GRAVAÇÃO DE ÁUDIO
     let mediaRecorder = null;
     let audioChunks = [];
     let timerInterval = null;
