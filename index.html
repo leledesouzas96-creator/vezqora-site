@@ -23,7 +23,6 @@
       --text-muted: #94a3b8;
       --green: #16a34a;
       --green-bright: #22c55e;
-      --red-soft: rgba(239, 68, 68, 0.14);
       --radius: 20px;
     }
 
@@ -368,36 +367,6 @@
     .compare-good ul li { color: #f8fafc; }
     .compare-good ul li::before { content: "✓ "; color: var(--green-bright); font-weight: 800; }
 
-    /* SOLUCOES */
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: linear-gradient(180deg, var(--bg-card), #080c18);
-      border: 1px solid var(--border-soft);
-      border-radius: var(--radius);
-      padding: 26px;
-      transition: transform 0.25s, border-color 0.25s;
-    }
-    .card:hover { transform: translateY(-4px); border-color: var(--border); }
-    .card-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 13px;
-      background: rgba(229, 185, 76, 0.12);
-      border: 1px solid var(--border);
-      display: grid;
-      place-items: center;
-      font-size: 1.4rem;
-      margin-bottom: 16px;
-    }
-    .card h3 { font-size: 1.16rem; margin-bottom: 8px; }
-    .card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px; }
-    .card ul { list-style: none; display: grid; gap: 8px; font-size: 0.86rem; color: #cbd5e1; }
-    .card ul li::before { content: "✓ "; color: var(--gold); font-weight: 700; }
-
     /* PROJETOS REALISTAS (MOCKUPS 3D) */
     .portfolio-grid {
       display: grid;
@@ -479,14 +448,20 @@
       height: 100%;
       border-radius: 23px;
       overflow: hidden;
-      background: #111827;
+      background: #ffffff;
       position: relative;
     }
-    .phone-screen img.real-shot {
-      width: 100%;
-      height: 118%;
-      object-fit: cover;
-      object-position: center 11%;
+    .phone-screen.dark-screen {
+      background: #0b141a;
+    }
+    .live-iframe {
+      width: 390px;
+      height: 620px;
+      border: 0;
+      transform: scale(0.505);
+      transform-origin: 0 0;
+      pointer-events: none;
+      background: #ffffff;
       display: block;
     }
     .sim-wa {
@@ -996,7 +971,7 @@
         </div>
 
         <div class="portfolio-grid">
-          <!-- PROJETO 1: DIVAS SALAO DE BELEZA (CAPTURA REAL) -->
+          <!-- PROJETO 1: DIVAS SALAO DE BELEZA (SITE AO VIVO DENTRO DO TELEMOVEL) -->
           <article class="project-card">
             <div>
               <div class="mockup-stage">
@@ -1004,7 +979,12 @@
                 <div class="phone-frame">
                   <div class="phone-notch"></div>
                   <div class="phone-screen">
-                    <img src="projeto-divas.png" alt="DIVAS Salão de Beleza - Site e Agendamento" class="real-shot" />
+                    <iframe
+                      src="https://leledesouzas96-creator.github.io/Divas/"
+                      title="DIVAS Salão de Beleza"
+                      loading="lazy"
+                      class="live-iframe">
+                    </iframe>
                   </div>
                 </div>
               </div>
@@ -1031,7 +1011,7 @@
                 <span class="live-pill"><span class="dot-live"></span> IA Ativa 24/7</span>
                 <div class="phone-frame">
                   <div class="phone-notch"></div>
-                  <div class="phone-screen">
+                  <div class="phone-screen dark-screen">
                     <div class="sim-wa">
                       <div class="sim-wa-top">
                         <div class="sim-wa-avatar">V</div>
@@ -1076,7 +1056,7 @@
                 <span class="live-pill"><span class="dot-live"></span> Alta Conversão</span>
                 <div class="phone-frame">
                   <div class="phone-notch"></div>
-                  <div class="phone-screen">
+                  <div class="phone-screen dark-screen">
                     <div class="sim-dash">
                       <div style="display:flex;justify-content:space-between;align-items:center;">
                         <strong style="color:var(--gold);font-size:0.75rem;">Painel de Pedidos</strong>
@@ -1426,7 +1406,6 @@
       reconhecimento.start();
     }
 
-    // Prova social discreta no desktop
     const toasts = [
       "Novo orçamento gerado agora • Site + Agente IA",
       "Agendamento automático ativo • Salão de Beleza",
