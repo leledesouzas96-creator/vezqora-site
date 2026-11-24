@@ -1,1671 +1,511 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#03050c">
-  <meta name="description" content="VEZQORA — Engenharia digital futurista, sites de alta conversão, aplicativos, sistemas sob medida e Agentes de IA que vendem 24h.">
-  <meta name="robots" content="index,follow">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="VEZQORA — Tecnologia Futurista & Agentes de IA">
-  <meta property="og:description" content="Estruturas digitais de próxima geração e Agentes de IA que atendem, qualificam e fecham vendas 24/7.">
-  <meta property="og:site_name" content="VEZQORA">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23fff0b3'/%3E%3Cstop offset='100%25' stop-color='%23b57c35'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2304060f'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='900' font-size='38' fill='url(%23g)'%3EV%3C/text%3E%3C/svg%3E">
-  <title>VEZQORA — Engenharia Digital &amp; Agentes de IA</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VEZQORA | Tecnologia, Sites, Apps e Agentes de IA</title>
+  <meta name="description" content="Sites de alta conversão, aplicativos, sistemas sob medida e Agentes de IA que atendem e vendem 24h no piloto automático." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
-
     :root {
-      --bg: #03050c;
-      --bg-2: #070b17;
-      --panel: rgba(12, 19, 36, 0.72);
-      --gold: #f0cf8e;
-      --gold-deep: #b8823b;
-      --cyan: #38bdf8;
-      --blue: #2563eb;
-      --muted: #9eb0c9;
-      --line: rgba(255, 255, 255, 0.11);
+      --bg-main: #060913;
+      --bg-card: #0c1222;
+      --bg-card-2: #10182c;
+      --border: rgba(212, 175, 55, 0.22);
+      --border-soft: rgba(255, 255, 255, 0.08);
+      --gold: #e5b94c;
+      --gold-2: #c9972c;
+      --gold-glow: rgba(229, 185, 76, 0.25);
+      --text-main: #f5f7fb;
+      --text-muted: #9aa6be;
+      --green: #16a34a;
+      --green-bright: #22c55e;
+      --radius: 18px;
     }
 
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      margin: 0;
-      color: #f6f8fe;
-      background: var(--bg);
-      font-family: 'Manrope', Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(229, 185, 76, 0.09), transparent 36%),
+        radial-gradient(circle at 85% 25%, rgba(56, 189, 248, 0.06), transparent 40%),
+        var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: -2;
-      background:
-        radial-gradient(circle at 82% 18%, rgba(37, 99, 235, 0.24), transparent 42%),
-        radial-gradient(circle at 14% 72%, rgba(217, 165, 89, 0.14), transparent 45%),
-        radial-gradient(circle at 50% 45%, rgba(56, 189, 248, 0.08), transparent 55%);
-    }
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: -1;
-      opacity: 0.25;
-      background-image:
-        linear-gradient(rgba(56, 189, 248, 0.14) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(56, 189, 248, 0.14) 1px, transparent 1px);
-      background-size: 52px 52px;
-      mask-image: radial-gradient(ellipse at center, black 35%, transparent 88%);
-    }
+    .container { width: min(1140px, 92%); margin: 0 auto; }
 
-    a { color: inherit; text-decoration: none; }
-    button, input { font: inherit; }
-    button { cursor: pointer; }
-    .container { max-width: 1180px; margin: auto; padding: 0 22px; }
-
-    .gold {
-      background: linear-gradient(115deg, #b57e36 0%, #fff4c7 38%, #eab96b 68%, #fff1be 100%);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-
-    .cyber-text {
-      background: linear-gradient(110deg, #60a5fa, #7dd3fc 50%, #f5d89c 100%);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 11px;
-      letter-spacing: .24em;
-      text-transform: uppercase;
-      font-weight: 800;
-      color: var(--gold);
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: rgba(240, 207, 142, 0.07);
-      border: 1px solid rgba(240, 207, 142, 0.24);
-    }
-
-    /* Header */
-    .header {
+    /* HEADER */
+    header {
       position: sticky;
       top: 0;
-      z-index: 40;
-      background: rgba(3, 5, 12, 0.82);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 50;
+      background: rgba(6, 9, 19, 0.86);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-soft);
     }
     .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 78px;
-      gap: 20px;
+      padding: 14px 0;
+      gap: 12px;
     }
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .mark {
-      position: relative;
-      display: grid;
-      place-items: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 13px;
-      font: 800 26px "Space Grotesk", Arial;
-      background: linear-gradient(145deg, #fff3c4, #a6742e);
-      color: #0b0c14;
-      box-shadow: 0 0 28px rgba(234, 185, 107, 0.42), inset 0 1px 1px #fff;
-    }
-    .brand b { display: block; font: 700 22px "Space Grotesk", Arial; letter-spacing: .16em; }
-    .brand small { display: block; font-size: 8.5px; letter-spacing: .3em; color: #e2c285; }
-
-    .links {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 22px;
-      font-size: 12.5px;
-      font-weight: 700;
-      color: #c5d1e3;
+      gap: 11px;
+      text-decoration: none;
+      color: var(--text-main);
     }
-    .links a { position: relative; padding: 4px 0; transition: color .2s; }
-    .links a:hover { color: #ffe5a4; }
-    .links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(90deg, #ffe5a4, #38bdf8);
-      transition: width .25s;
-    }
-    .links a:hover::after { width: 100%; }
-
-    .nav-actions { display: flex; align-items: center; gap: 10px; }
-    .menu {
-      display: none;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      background: rgba(255, 255, 255, 0.06);
+    .brand-logo {
+      width: 40px;
+      height: 40px;
       border-radius: 11px;
-      color: white;
-      padding: 9px 13px;
-      font-size: 16px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #090d16;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 6px 20px var(--gold-glow);
     }
-
-    /* Botões */
-    .button {
-      position: relative;
-      overflow: hidden;
+    .brand-text strong {
+      display: block;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+      line-height: 1.1;
+    }
+    .brand-text span {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #090d16;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      padding: 11px 18px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: none;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
-      padding: 15px 24px;
-      border-radius: 13px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      font-size: 13.5px;
-      font-weight: 800;
-      letter-spacing: .01em;
-      transition: transform .22s, box-shadow .22s, border-color .22s;
+      gap: 8px;
+      box-shadow: 0 8px 24px var(--gold-glow);
+      transition: transform 0.2s, filter 0.2s;
     }
-    .button:hover { transform: translateY(-3px); }
-    .button.primary {
-      background: linear-gradient(115deg, #a8722d, #ffe7a8 48%, #ba8136);
-      border: 0;
-      color: #110e17;
-      box-shadow: 0 12px 36px rgba(226, 176, 98, 0.34), 0 0 0 1px rgba(255, 240, 195, 0.35) inset;
-    }
-    .button.primary::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -120%;
-      width: 80%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
-      transform: skewX(-22deg);
-      animation: sheen 4.2s infinite;
-    }
-    @keyframes sheen {
-      0%, 60% { left: -120%; }
-      100% { left: 160%; }
-    }
-    .button.primary:hover { box-shadow: 0 16px 48px rgba(242, 194, 114, 0.55); }
-    .button.secondary {
-      background: rgba(15, 23, 42, 0.75);
-      border-color: rgba(56, 189, 248, 0.35);
-      color: #e6f0ff;
-      backdrop-filter: blur(10px);
-    }
-    .button.secondary:hover {
-      border-color: #7dd3fc;
-      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
-    }
-
-    /* Hero */
-    .hero {
-      position: relative;
-      min-height: 680px;
-      overflow: hidden;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: -140px;
-      width: 140%;
-      height: 340px;
-      transform: translateX(-50%) perspective(420px) rotateX(68deg);
-      background-image:
-        linear-gradient(rgba(56, 189, 248, 0.25) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(56, 189, 248, 0.25) 1px, transparent 1px);
-      background-size: 46px 46px;
-      mask-image: linear-gradient(to top, rgba(0,0,0,0.85), transparent 80%);
-      pointer-events: none;
-    }
-    .hero .container {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1.06fr .94fr;
-      align-items: center;
-      gap: 36px;
-      padding-top: 76px;
-      padding-bottom: 84px;
-    }
-    .pill {
+    .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.06); }
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 11px 18px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 9px;
-      border: 1px solid rgba(56, 189, 248, 0.38);
-      background: rgba(14, 28, 56, 0.72);
-      color: #bae6fd;
-      border-radius: 50px;
-      padding: 9px 16px;
-      font-size: 10.5px;
-      font-weight: 800;
-      letter-spacing: .14em;
-      box-shadow: 0 0 25px rgba(56, 189, 248, 0.16);
+      justify-content: center;
+      gap: 8px;
+      transition: border-color 0.2s, background 0.2s;
     }
-    .dot {
+    .btn-outline:hover { border-color: var(--gold); background: rgba(229, 185, 76, 0.08); }
+
+    /* HERO */
+    .hero {
+      padding: 58px 0 42px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(229, 185, 76, 0.1);
+      border: 1px solid var(--border);
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .dot-live {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #38bdf8;
-      box-shadow: 0 0 14px #38bdf8;
-      animation: blink 1.8s infinite;
+      background: var(--green-bright);
+      box-shadow: 0 0 10px var(--green-bright);
     }
-    @keyframes blink { 50% { opacity: 0.35; transform: scale(0.85); } }
-
     .hero h1 {
-      font: 700 clamp(38px, 5.1vw, 70px)/1.04 "Space Grotesk", Arial;
-      letter-spacing: -.045em;
-      margin: 22px 0 20px;
-      max-width: 700px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      font-weight: 800;
+      line-height: 1.13;
+      max-width: 840px;
+      margin: 0 auto 18px;
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, #fbe29c, var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .hero p {
-      color: #b2c2d9;
-      line-height: 1.85;
-      font-size: 15.5px;
-      max-width: 540px;
+      color: var(--text-muted);
+      font-size: clamp(1rem, 2.2vw, 1.15rem);
+      max-width: 670px;
+      margin: 0 auto 28px;
     }
-    .actions { display: flex; gap: 13px; flex-wrap: wrap; margin: 30px 0; }
-    .trust {
+    .hero-actions {
       display: flex;
-      gap: 18px;
       flex-wrap: wrap;
-      font-size: 12px;
-      color: #a9bad1;
-      margin-top: 24px;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 36px;
     }
-    .trust span {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 6px 12px;
-      border-radius: 999px;
-    }
-    .trust span::before { content: '✦'; color: #f3d28c; }
-
-    /* Núcleo Holográfico 3D */
-    .visual {
-      position: relative;
-      min-height: 450px;
-      display: grid;
-      place-items: center;
-      isolation: isolate;
-    }
-    .visual::before {
-      content: '';
-      position: absolute;
-      width: 410px;
-      height: 410px;
-      max-width: 96%;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(37, 99, 235, 0.42), rgba(56, 189, 248, 0.12) 48%, transparent 70%);
-      filter: blur(18px);
-      animation: auraPulse 5s ease-in-out infinite;
-    }
-    @keyframes auraPulse {
-      0%, 100% { transform: scale(0.96); opacity: 0.85; }
-      50% { transform: scale(1.06); opacity: 1; }
-    }
-    @keyframes rotate { to { transform: rotate(360deg); } }
-    @keyframes floatY {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-    }
-
-    .orbit {
-      position: absolute;
-      width: 410px;
-      height: 410px;
-      max-width: 96%;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      border: 1px solid rgba(56, 189, 248, 0.36);
-      box-shadow: 0 0 60px rgba(37, 99, 235, 0.22), inset 0 0 60px rgba(56, 189, 248, 0.14);
-      animation: rotate 30s linear infinite;
-    }
-    .orbit::before, .orbit::after {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      width: 11px;
-      height: 11px;
-      top: 50%;
-      left: -5.5px;
-      background: #ffe3a3;
-      box-shadow: 0 0 24px #ffe3a3, 0 0 40px #f59e0b;
-    }
-    .orbit::after {
-      left: auto;
-      right: -5.5px;
-      background: #38bdf8;
-      box-shadow: 0 0 24px #38bdf8, 0 0 40px #2563eb;
-    }
-    .orbit2 {
-      width: 315px;
-      height: 315px;
-      border: 1.5px dashed rgba(240, 207, 142, 0.48);
-      animation-direction: reverse;
-      animation-duration: 22s;
-    }
-    .orbit3 {
-      width: 245px;
-      height: 245px;
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      animation-duration: 16s;
-    }
-
-    .core {
-      width: 210px;
-      height: 240px;
-      display: grid;
-      place-items: center;
-      position: relative;
-      filter: drop-shadow(0 0 38px rgba(56, 189, 248, 0.45));
-      animation: floatY 4.5s ease-in-out infinite;
-    }
-    .core::before {
-      content: '';
-      position: absolute;
-      inset: 14px;
-      border: 2px solid rgba(240, 207, 142, 0.85);
-      border-radius: 34px;
-      transform: rotate(45deg);
-      box-shadow: 0 0 50px rgba(234, 185, 107, 0.42), inset 0 0 45px rgba(56, 189, 248, 0.35);
-      background: linear-gradient(135deg, rgba(240, 207, 142, 0.14), rgba(37, 99, 235, 0.22));
-      backdrop-filter: blur(6px);
-    }
-    .core span {
-      font: 800 168px "Space Grotesk", Arial;
-      z-index: 1;
-      text-shadow: 0 0 42px rgba(240, 207, 142, 0.55);
-    }
-
-    .float {
-      position: absolute;
-      background: rgba(10, 17, 34, 0.86);
-      border: 1px solid rgba(240, 207, 142, 0.35);
-      border-radius: 14px;
-      padding: 12px 16px;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65), 0 0 20px rgba(56, 189, 248, 0.12);
-      backdrop-filter: blur(14px);
-      font-size: 11.5px;
-      color: #dce6f7;
-    }
-    .float strong {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: #ffe3a3;
-      font-size: 12px;
-      margin-bottom: 3px;
-    }
-    .float strong::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #4ade80;
-      box-shadow: 0 0 10px #4ade80;
-    }
-    .f1 { top: 24px; right: 0; animation: floatY 5s ease-in-out infinite; }
-    .f2 { bottom: 32px; left: 0; animation: floatY 5.8s ease-in-out infinite 0.8s; }
-    .f3 { right: 0; bottom: 72px; animation: floatY 5.3s ease-in-out infinite 1.4s; }
-
-    /* Band */
-    .band {
-      border-block: 1px solid rgba(56, 189, 248, 0.18);
-      background: linear-gradient(90deg, rgba(10, 18, 36, 0.9), rgba(16, 28, 54, 0.9), rgba(10, 18, 36, 0.9));
-    }
-    .stats {
+    .stats-bar {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding: 28px 0;
-      text-align: center;
-    }
-    .stats strong { display: block; font: 700 24px "Space Grotesk", Arial; color: #ffe3a3; }
-    .stats span { display: block; font-size: 12.5px; color: #a7b8d0; margin-top: 5px; }
-
-    /* Sections */
-    .section { padding: 90px 0; position: relative; }
-    .section-head { text-align: center; max-width: 720px; margin: 0 auto 48px; }
-    .section h2 {
-      font: 700 clamp(28px, 4vw, 45px)/1.14 "Space Grotesk", Arial;
-      letter-spacing: -.04em;
-      margin: 14px 0 15px;
-    }
-    .section-head p, .muted { color: #a2b3cc; line-height: 1.8; font-size: 14.5px; }
-
-    /* Services */
-    .services { background: linear-gradient(180deg, rgba(6, 10, 22, 0.75), rgba(4, 7, 16, 0.92)); }
-    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-    .card {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(155deg, rgba(22, 34, 60, 0.82), rgba(9, 14, 27, 0.92) 75%);
-      border: 1px solid rgba(240, 207, 142, 0.26);
-      border-radius: 20px;
-      padding: 26px 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      backdrop-filter: blur(12px);
-      transition: transform .26s, border-color .26s, box-shadow .26s;
-    }
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.16), transparent 55%);
-      opacity: 0;
-      transition: opacity .26s;
-      pointer-events: none;
-    }
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: #ffe09e;
-      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.75), 0 0 30px rgba(56, 189, 248, 0.22);
-    }
-    .card:hover::before { opacity: 1; }
-    .card .ico {
-      font-size: 26px;
-      display: grid;
-      place-items: center;
-      width: 56px;
-      height: 56px;
+      gap: 14px;
+      max-width: 780px;
+      margin: 0 auto;
+      background: rgba(12, 18, 34, 0.75);
+      border: 1px solid var(--border-soft);
       border-radius: 16px;
-      background: linear-gradient(145deg, rgba(240, 207, 142, 0.16), rgba(56, 189, 248, 0.12));
-      border: 1px solid rgba(240, 207, 142, 0.35);
-      box-shadow: 0 0 20px rgba(240, 207, 142, 0.14);
+      padding: 18px;
     }
-    .card h3 { font: 700 19px "Space Grotesk", Arial; margin: 20px 0 10px; }
-    .card p { color: #acc0d8; font-size: 13px; line-height: 1.78; margin-bottom: 18px; }
-    .card-link {
-      font-size: 12.5px;
-      font-weight: 800;
-      color: #ffe09e;
-      background: none;
-      border: 0;
-      padding: 0;
-      text-align: left;
+    .stat strong {
+      display: block;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.45rem;
+      color: var(--gold);
     }
-    .card-link:hover { color: #fff6d6; }
+    .stat span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
 
-    /* Portfolio */
-    .portfolio {
-      background: rgba(4, 7, 16, 0.85);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    /* SECTIONS */
+    section { padding: 56px 0; }
+    .section-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 38px;
     }
-    .proj-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-    .proj-card {
-      background: linear-gradient(160deg, rgba(16, 25, 46, 0.9), rgba(7, 11, 22, 0.96) 85%);
-      border: 1px solid rgba(56, 189, 248, 0.22);
-      border-radius: 22px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform .26s, border-color .26s, box-shadow .26s;
-    }
-    .proj-card:hover {
-      transform: translateY(-7px);
-      border-color: rgba(240, 207, 142, 0.72);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 28px rgba(56, 189, 248, 0.18);
-    }
-    .mockup-win {
-      background: #050812;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.09);
-      padding: 12px 14px 16px;
-    }
-    .mockup-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 11px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    }
-    .mockup-dots { display: flex; gap: 5px; }
-    .mockup-dots i {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
+    .section-tag {
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
       display: block;
     }
-    .mockup-dots i:first-child { background: #ff6b6b99; }
-    .mockup-dots i:nth-child(2) { background: #ffd16699; }
-    .mockup-dots i:nth-child(3) { background: #06d6a099; }
-    .mockup-url {
-      font-size: 10px;
-      color: #93a7c4;
-      background: rgba(255, 255, 255, 0.06);
-      padding: 3px 9px;
-      border-radius: 6px;
-      font-family: monospace;
+    .section-head h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(1.65rem, 3.6vw, 2.35rem);
+      margin-bottom: 10px;
     }
-    .mockup-screen {
+    .section-head p { color: var(--text-muted); font-size: 0.96rem; }
+
+    /* SOLUCOES */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: linear-gradient(180deg, var(--bg-card), #090e1c);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 26px;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .card:hover { transform: translateY(-4px); border-color: var(--border); }
+    .card-icon {
+      width: 46px;
+      height: 46px;
       border-radius: 12px;
-      padding: 13px;
-      min-height: 134px;
+      background: rgba(229, 185, 76, 0.12);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+    }
+    .card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+    .card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px; }
+    .card ul { list-style: none; display: grid; gap: 8px; font-size: 0.86rem; color: #cbd5e1; }
+    .card ul li::before { content: "✓ "; color: var(--gold); font-weight: 700; }
+
+    /* PROJETOS REALISTAS (MOCKUPS 3D) */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 26px;
+    }
+    .project-card {
+      background: linear-gradient(180deg, #0e1629, #080d19);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 22px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 8px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+      transition: transform 0.28s, box-shadow 0.28s;
     }
-    .scr-salon {
-      background: linear-gradient(145deg, #24162e, #0f1526);
-      border: 1px solid rgba(240, 207, 142, 0.28);
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 52px rgba(229, 185, 76, 0.12);
     }
-    .scr-wa {
-      background: linear-gradient(145deg, #0c2325, #0a1424);
-      border: 1px solid rgba(56, 211, 153, 0.28);
+    .mockup-stage {
+      background: radial-gradient(circle at 50% 35%, rgba(229, 185, 76, 0.16), rgba(6, 9, 19, 0.95) 75%);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 20px 14px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 360px;
+      position: relative;
+      overflow: hidden;
     }
-    .scr-erp {
-      background: linear-gradient(145deg, #0e203d, #09101f);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-    }
-    .ui-pill {
+    .live-pill {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 4;
+      background: rgba(6, 9, 19, 0.85);
+      border: 1px solid rgba(34, 197, 94, 0.45);
+      color: #86efac;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 10.5px;
-      font-weight: 700;
-      padding: 5px 9px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.07);
-      color: #f3f6fc;
     }
-    .ui-pill.ok {
-      background: rgba(22, 101, 52, 0.55);
-      color: #86efac;
-      border: 1px solid rgba(74, 222, 128, 0.35);
+    /* Moldura realista de iPhone */
+    .phone-frame {
+      width: 215px;
+      height: 330px;
+      background: #05070d;
+      border-radius: 32px;
+      padding: 9px;
+      border: 2px solid #2b354d;
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.75),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+      position: relative;
+      transition: transform 0.35s ease;
     }
-    .ui-pill.gold-ui {
-      background: rgba(120, 83, 28, 0.45);
-      color: #fde68a;
-      border: 1px solid rgba(253, 230, 138, 0.35);
+    .project-card:hover .phone-frame { transform: scale(1.03); }
+    .phone-notch {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 64px;
+      height: 15px;
+      background: #05070d;
+      border-radius: 999px;
+      z-index: 3;
+      border: 1px solid rgba(255, 255, 255, 0.06);
     }
-    .ui-metrics {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 7px;
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 23px;
+      overflow: hidden;
+      background: #111827;
+      position: relative;
     }
-    .ui-kpi {
-      background: rgba(3, 5, 12, 0.68);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      padding: 7px 9px;
+    /* Recorte inteligente da captura real do salao para esconder barras do Android */
+    .phone-screen img.real-shot {
+      width: 100%;
+      height: 118%;
+      object-fit: cover;
+      object-position: center 11%;
+      display: block;
     }
-    .ui-kpi b { display: block; font: 700 13.5px "Space Grotesk", Arial; color: #fde68a; }
-    .ui-kpi small { font-size: 9.5px; color: #9ab0cc; }
-
-    .proj-body {
-      padding: 20px 22px 22px;
+    /* Mockup realista da tela do Agente de IA + WhatsApp */
+    .sim-wa {
+      height: 100%;
+      background: #0b141a;
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      flex: 1;
-      justify-content: space-between;
+      font-size: 0.66rem;
+      color: #e9edef;
+      padding-top: 22px;
     }
-    .proj-cat {
-      font-size: 10.5px;
-      font-weight: 800;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-      color: #7dd3fc;
-      margin-bottom: 4px;
-    }
-    .proj-body h3 { margin: 0 0 8px; font: 700 18.5px "Space Grotesk", Arial; color: #fff; }
-    .proj-body p { margin: 0; color: #a8bad1; font-size: 13px; line-height: 1.72; }
-    .proj-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-    .proj-tags span {
-      font-size: 11px;
-      color: #d3e0f2;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 4px 10px;
-      border-radius: 8px;
-    }
-    .proj-actions { padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
-    .proj-btn {
-      font-size: 12.5px;
-      font-weight: 800;
-      color: #ffe09e;
-      background: none;
-      border: 0;
-      padding: 0;
-    }
-    .proj-btn:hover { color: #fff6d6; }
-
-    /* Testimonials */
-    .testimonials {
-      background: linear-gradient(180deg, rgba(7, 11, 22, 0.9), rgba(4, 7, 16, 0.95));
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .testi-card {
-      background: rgba(11, 18, 34, 0.85);
-      border: 1px solid rgba(240, 207, 142, 0.24);
-      border-radius: 20px;
-      padding: 24px 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 18px;
-      backdrop-filter: blur(10px);
-    }
-    .testi-top {
+    .sim-wa-top {
+      background: #1f2c34;
+      padding: 7px 10px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 7px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .sim-wa-avatar {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #090d16;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      font-size: 0.65rem;
+    }
+    .sim-wa-body {
+      padding: 9px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      flex: 1;
+    }
+    .bubble-in {
+      background: #1f2c34;
+      padding: 7px 9px;
+      border-radius: 10px 10px 10px 2px;
+      max-width: 88%;
+      line-height: 1.35;
+    }
+    .bubble-out {
+      background: #005c4b;
+      padding: 7px 9px;
+      border-radius: 10px 10px 2px 10px;
+      max-width: 84%;
+      align-self: flex-end;
+      line-height: 1.35;
+    }
+    .bubble-lead {
+      background: rgba(229, 185, 76, 0.14);
+      border: 1px solid rgba(229, 185, 76, 0.4);
+      color: #fde68a;
+      padding: 7px 9px;
+      border-radius: 9px;
+      font-size: 0.62rem;
+      line-height: 1.35;
+    }
+    /* Mockup realista de Painel / E-commerce */
+    .sim-dash {
+      height: 100%;
+      background: linear-gradient(180deg, #0f172a, #090d16);
+      padding: 26px 10px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.65rem;
+    }
+    .dash-kpi-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .dash-kpi {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(229, 185, 76, 0.25);
+      border-radius: 10px;
+      padding: 8px;
+    }
+    .dash-kpi strong { display: block; color: var(--gold); font-size: 0.85rem; }
+    .dash-kpi span { color: var(--text-muted); font-size: 0.58rem; }
+    .dash-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      padding: 8px;
+    }
+    .dash-bar-wrap {
+      display: flex;
+      align-items: flex-end;
+      gap: 5px;
+      height: 68px;
+      margin-top: 8px;
+    }
+    .dash-bar {
+      flex: 1;
+      border-radius: 4px 4px 0 0;
+      background: linear-gradient(180deg, var(--gold), rgba(229, 185, 76, 0.25));
+    }
+    .project-meta .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
       margin-bottom: 10px;
     }
-    .stars { color: #facc15; font-size: 13px; letter-spacing: 2px; }
-    .verified-tag {
-      font-size: 10px;
-      font-weight: 700;
-      color: #86efac;
-      background: rgba(20, 83, 45, 0.55);
-      border: 1px solid rgba(74, 222, 128, 0.3);
-      padding: 3px 9px;
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 10px;
       border-radius: 999px;
+      background: rgba(229, 185, 76, 0.12);
+      color: var(--gold);
+      border: 1px solid rgba(229, 185, 76, 0.25);
     }
-    .testi-card p { margin: 0; color: #dbe5f4; font-size: 13.5px; line-height: 1.78; }
-    .testi-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(255, 255, 255, 0.09);
-    }
-    .testi-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font: 800 14px "Space Grotesk", Arial;
-      background: linear-gradient(135deg, #ffe7a8, #b07932);
-      color: #120f18;
-      flex-shrink: 0;
-    }
-    .testi-author strong { display: block; font-size: 13.5px; color: #ffe09e; }
-    .testi-author span { display: block; font-size: 11.5px; color: #93a7c2; }
+    .project-meta h3 { font-size: 1.18rem; margin-bottom: 6px; }
+    .project-meta p { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px; }
+    .project-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 
-    /* Interactive AI Commercial Assistant Section */
-    .ai-sec {
-      background: radial-gradient(ellipse at 22% 25%, rgba(37, 99, 235, 0.22), transparent 52%), rgba(4, 7, 16, 0.94);
-      border-block: 1px solid rgba(56, 189, 248, 0.18);
-    }
-    .ai-grid {
-      display: grid;
-      grid-template-columns: .92fr 1.08fr;
-      gap: 44px;
-      align-items: center;
-    }
-    .ai-bullets { display: grid; gap: 13px; margin-top: 24px; }
-    .ai-bullets div {
-      padding: 14px 16px;
-      border-radius: 14px;
-      background: rgba(15, 23, 42, 0.72);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      font-size: 13px;
-      color: #cfdbec;
-      line-height: 1.62;
-    }
-    .ai-bullets strong { color: #ffe09e; }
-
-    .ai-chat-card {
-      border: 1px solid rgba(240, 207, 142, 0.48);
+    /* CONSULTOR IA WIDGET */
+    .ia-box {
+      max-width: 760px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #0d1426, #080d19);
+      border: 1px solid var(--border);
       border-radius: 24px;
-      background: #080d1a;
-      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.78), 0 0 45px rgba(37, 99, 235, 0.24);
-      overflow: hidden;
+      padding: 22px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+    }
+    .ia-header {
       display: flex;
-      flex-direction: column;
-      height: 590px;
-    }
-    .ai-chat-head {
-      padding: 16px 20px;
-      background: linear-gradient(135deg, #121f3b 0%, #091020 100%);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    .ai-chat-id { display: flex; align-items: center; gap: 11px; }
-    .ai-chat-badge {
-      width: 39px;
-      height: 39px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      font: 800 20px "Space Grotesk", Arial;
-      background: linear-gradient(145deg, #fff3c4, #a8742e);
-      color: #0f0e16;
-      box-shadow: 0 0 18px rgba(240, 207, 142, 0.35);
-    }
-    .ai-chat-id strong { display: block; font: 700 14.5px "Space Grotesk", Arial; color: #ffe3a3; }
-    .ai-chat-id span { font-size: 11.5px; color: #95aecb; display: flex; align-items: center; gap: 6px; }
-    .ai-chat-id span::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #4ade80;
-      box-shadow: 0 0 10px #4ade80;
-    }
-    .ai-reset-btn {
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background: rgba(255, 255, 255, 0.06);
-      color: #d2deee;
-      border-radius: 999px;
-      padding: 6px 12px;
-      font-size: 11px;
-      font-weight: 700;
-    }
-    .ai-reset-btn:hover { background: rgba(255, 255, 255, 0.14); }
-
-    .ai-chat-log {
-      flex: 1;
-      padding: 18px;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      background: radial-gradient(circle at 85% 15%, rgba(37, 99, 235, 0.16), transparent 45%), #060a14;
-    }
-    .chat-msg {
-      max-width: 86%;
-      padding: 12px 15px;
-      border-radius: 15px;
-      font-size: 13.5px;
-      line-height: 1.62;
-      white-space: pre-line;
-      animation: msgIn .22s ease;
-    }
-    @keyframes msgIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-    .chat-msg.ai {
-      align-self: flex-start;
-      background: #111b30;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: #eef3fc;
-      border-bottom-left-radius: 4px;
-    }
-    .chat-msg.user {
-      align-self: flex-end;
-      background: linear-gradient(125deg, #ad7830, #f3ce84);
-      color: #110f16;
-      font-weight: 700;
-      border-bottom-right-radius: 4px;
-    }
-
-    .ai-chips {
-      display: flex;
-      gap: 8px;
-      padding: 10px 16px;
-      overflow-x: auto;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      background: #080d1a;
-    }
-    .ai-chip {
-      white-space: nowrap;
-      border: 1px solid rgba(240, 207, 142, 0.34);
-      background: rgba(240, 207, 142, 0.08);
-      color: #ffe09e;
-      border-radius: 999px;
-      padding: 6px 12px;
-      font-size: 11.5px;
-      font-weight: 700;
-    }
-    .ai-chip:hover { background: rgba(240, 207, 142, 0.18); }
-
-    .wa-bar {
-      padding: 10px 16px;
-      background: #0b1324;
-      border-top: 1px solid rgba(240, 207, 142, 0.28);
-      display: flex;
-      justify-content: center;
-    }
-    .wa-btn {
-      width: 100%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 16px;
-      border: 0;
-      border-radius: 12px;
-      background: linear-gradient(115deg, #a8722d, #ffe7a8 48%, #ba8136);
-      color: #120f17;
-      font-size: 13px;
-      font-weight: 800;
-      box-shadow: 0 8px 26px rgba(226, 176, 98, 0.28);
-      transition: transform .2s, opacity .2s;
-    }
-    .wa-btn:hover { transform: translateY(-2px); }
-    .wa-btn:disabled { opacity: .65; cursor: not-allowed; transform: none; }
-    .wa-btn.sent {
-      background: linear-gradient(115deg, #15803d, #4ade80);
-      color: #051b0e;
-    }
-
-    .rec-bar {
-      display: none;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      padding: 10px 16px;
-      background: #2c0f18;
-      border-top: 1px solid rgba(251, 113, 133, 0.4);
-      color: #ffe4e6;
-      font-size: 12.5px;
-      font-weight: 700;
-    }
-    .rec-bar.active { display: flex; }
-    .rec-dot {
-      display: inline-block;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #fb7185;
-      margin-right: 7px;
-      animation: pulse 1s infinite;
-    }
-    @keyframes pulse { 50% { opacity: .3; } }
-    .rec-actions { display: flex; gap: 8px; }
-    .rec-cancel {
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff;
-      border-radius: 9px;
-      padding: 6px 11px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-    .rec-send {
-      border: 0;
-      background: #4ade80;
-      color: #052e16;
-      border-radius: 9px;
-      padding: 6px 13px;
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .ai-input-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 14px;
-      background: #091020;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .ai-input {
-      flex: 1;
-      min-width: 0;
-      background: #111b30;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 12px;
-      padding: 12px 14px;
-      color: #fff;
-      font-size: 13.5px;
-      outline: none;
-    }
-    .ai-input:focus { border-color: #ffe09e; }
-    .ai-mic-btn {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      border: 1px solid rgba(240, 207, 142, 0.42);
-      background: rgba(240, 207, 142, 0.1);
-      color: #ffe09e;
-      font-size: 18px;
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-    }
-    .ai-mic-btn:hover { background: rgba(240, 207, 142, 0.2); }
-    .ai-send-btn {
-      height: 44px;
-      padding: 0 16px;
-      border-radius: 12px;
-      border: 0;
-      background: linear-gradient(115deg, #a8722d, #ffe7a8 50%, #ba8136);
-      color: #120f17;
-      font-size: 13px;
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-
-    /* Process */
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-    .step-box {
-      background: rgba(11, 18, 34, 0.85);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      border-radius: 18px;
-      padding: 26px 22px;
-    }
-    .step-num {
-      font: 800 12.5px "Space Grotesk", Arial;
-      color: #120f17;
-      background: linear-gradient(120deg, #ffe7a8, #ba8136);
-      display: inline-block;
-      padding: 5px 12px;
-      border-radius: 8px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-soft);
       margin-bottom: 14px;
     }
-    .step-box h3 { font: 700 18px "Space Grotesk", Arial; margin: 0 0 8px; }
-    .step-box p { color: #a2b3cc; font-size: 13px; line-height: 1.75; margin: 0; }
-
-    /* Botão Flutuante */
-    .fab-ai {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 35;
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 13px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 236, 179, 0.55);
-      background: linear-gradient(120deg, #0e172a, #172544);
-      color: #ffe5a4;
-      font-size: 12.5px;
+    .ia-title { display: flex; align-items: center; gap: 10px; }
+    .ia-badge-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #090d16;
       font-weight: 800;
-      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7), 0 0 24px rgba(56, 189, 248, 0.28);
-    }
-    .fab-ai::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #4ade80;
-      box-shadow: 0 0 12px #4ade80;
-    }
-
-    /* Footer */
-    .footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      background: #02040a;
-      padding: 40px 0 80px;
-      font-size: 13px;
-      color: #93a4bc;
-    }
-    .footer-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    @media (max-width: 960px) {
-      .hero .container, .ai-grid { grid-template-columns: 1fr; }
-      .cards { grid-template-columns: repeat(2, 1fr); }
-      .proj-grid, .testi-grid, .steps-grid { grid-template-columns: 1fr; }
-      .visual { min-height: 360px; }
-    }
-    @media (max-width: 640px) {
-      .links { display: none; }
-      .links.open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 78px;
-        left: 0;
-        right: 0;
-        background: rgba(5, 9, 20, 0.98);
-        padding: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-      }
-      .menu { display: block; }
-      .cards, .stats { grid-template-columns: 1fr; }
-      .ai-chat-card { height: 550px; }
-    }
-  </style>
-</head>
-<body>
-
-  <header class="header">
-    <div class="container nav">
-      <a href="#" class="brand">
-        <span class="mark">V</span>
-        <span>
-          <b>VEZQORA</b>
-          <small>TECNOLOGIA &amp; IA</small>
-        </span>
-      </a>
-
-      <nav class="links" id="navLinks">
-        <a href="#servicos">Soluções</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#ia">Consultor IA</a>
-        <a href="#processo">Como Funciona</a>
-      </nav>
-
-      <div class="nav-actions">
-        <button type="button" onclick="irParaChat()" class="button primary">Falar com IA</button>
-        <button class="menu" id="menuBtn" aria-label="Abrir menu">☰</button>
-      </div>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <div>
-        <span class="pill"><span class="dot"></span> ENGENHARIA DIGITAL &amp; INTELIGÊNCIA ARTIFICIAL</span>
-        <h1>Estruturas digitais e <span class="gold">Agentes de IA</span> que vendem 24h.</h1>
-        <p>Criamos sites de alta conversão, aplicativos, sistemas sob medida e agentes autônomos de IA que atendem, qualificam leads e enviam orçamentos prontos direto no seu WhatsApp.</p>
-
-        <div class="actions">
-          <button type="button" onclick="irParaChat()" class="button primary">Iniciar Briefing com IA ↗</button>
-          <a href="#projetos" class="button secondary">Explorar Projetos</a>
-        </div>
-
-        <div class="trust">
-          <span>Design Futurista</span>
-          <span>IA por Texto &amp; Áudio</span>
-          <span>Automação WhatsApp</span>
-        </div>
-      </div>
-
-      <div class="visual">
-        <div class="orbit"></div>
-        <div class="orbit orbit2"></div>
-        <div class="orbit orbit3"></div>
-        <div class="core"><span class="gold">V</span></div>
-        <div class="float f1"><strong>Agente Comercial IA</strong>Atendimento &amp; triagem 24/7</div>
-        <div class="float f2"><strong>Sistemas &amp; Apps</strong>Arquitetura sob medida</div>
-        <div class="float f3"><strong>Alta Performance</strong>Velocidade extrema no 4G/5G</div>
-      </div>
-    </div>
-  </section>
-
-  <div class="band">
-    <div class="container stats">
-      <div><strong>24h / 7 dias</strong><span>Operação contínua com Agentes de IA</span></div>
-      <div><strong>Texto &amp; Áudio</strong><span>Briefing inteligente transcrito na hora</span></div>
-      <div><strong>100% Sob Medida</strong><span>Sites, sistemas e automações exclusivas</span></div>
-    </div>
-  </div>
-
-  <section class="section services" id="servicos">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">SOLUÇÕES VEZQORA</span>
-        <h2>Tecnologia de <span class="cyber-text">próxima geração</span> para escalar</h2>
-        <p>Do posicionamento digital de alto impacto à automação comercial com inteligência artificial integrada ao seu WhatsApp.</p>
-      </div>
-
-      <div class="cards">
-        <div class="card">
-          <div>
-            <div class="ico">🌐</div>
-            <h3>Sites Profissionais</h3>
-            <p>Sites institucionais e landing pages ultrarrápidas com estética futurista, autoridade imediata e foco total em conversão.</p>
-          </div>
-          <button class="card-link" onclick="preencherChat('Quero criar um site profissional de alta conversão para minha empresa.')">Solicitar orçamento →</button>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="ico">📱</div>
-            <h3>Aplicativos</h3>
-            <p>Aplicativos Android, iOS e Web Apps modernos com painel administrativo, notificações e experiência fluida.</p>
-          </div>
-          <button class="card-link" onclick="preencherChat('Tenho interesse em desenvolver um aplicativo personalizado.')">Solicitar orçamento →</button>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="ico">⚙️</div>
-            <h3>Sistemas Sob Medida</h3>
-            <p>Plataformas internas, dashboards, CRMs e painéis de gestão criados exatamente conforme as regras do seu negócio.</p>
-          </div>
-          <button class="card-link" onclick="preencherChat('Preciso de um sistema sob medida para gerenciar minha operação.')">Solicitar orçamento →</button>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="ico">🤖</div>
-            <h3>Agentes de IA</h3>
-            <p>Assistentes comerciais treinados no seu negócio para responder clientes, interpretar áudios, agendar e enviar resumos.</p>
-          </div>
-          <button class="card-link" onclick="preencherChat('Quero implementar um Agente de IA no atendimento da minha empresa.')">Solicitar orçamento →</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJETOS ENTREGUES -->
-  <section class="section portfolio" id="projetos">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">PORTFÓLIO REAL</span>
-        <h2>Alguns projetos já colocados no ar</h2>
-        <p>Estruturas criadas sob medida para negócios locais e operações comerciais que precisavam vender e atender sem depender de processos manuais.</p>
-      </div>
-
-      <div class="proj-grid">
-        <div class="proj-card">
-          <div class="mockup-win">
-            <div class="mockup-bar">
-              <span class="mockup-dots"><i></i><i></i><i></i></span>
-              <span class="mockup-url">divas-studio.app</span>
-            </div>
-            <div class="mockup-screen scr-salon">
-              <div class="ui-pill gold-ui">💇‍♀️ Divas Studio • Agendamento Online</div>
-              <div class="ui-pill ok">✓ Horário gravado no Google Agenda</div>
-              <div class="ui-pill">📲 Confirmação enviada no WhatsApp</div>
-            </div>
-          </div>
-          <div class="proj-body">
-            <div>
-              <div class="proj-cat">Site + Agendamento Automático</div>
-              <h3>Studio Divas Beleza &amp; Estética</h3>
-              <p>Site completo para celular com vitrine de procedimentos e reserva automática de horários ligada direto no Google Agenda, e-mail e alerta no WhatsApp.</p>
-              <div class="proj-tags">
-                <span>Site Mobile</span>
-                <span>Google Agenda</span>
-                <span>Aviso WhatsApp</span>
-              </div>
-            </div>
-            <div class="proj-actions">
-              <button type="button" class="proj-btn" onclick="preencherChat('Vi o projeto do Studio Divas e quero um site com agendamento automático para o meu negócio.')">Pedir um projeto parecido →</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="proj-card">
-          <div class="mockup-win">
-            <div class="mockup-bar">
-              <span class="mockup-dots"><i></i><i></i><i></i></span>
-              <span class="mockup-url">atendimento-ia.whatsapp</span>
-            </div>
-            <div class="mockup-screen scr-wa">
-              <div class="ui-pill">🎤 Áudio de 24s transcrito pela IA</div>
-              <div class="ui-pill gold-ui">🤖 Orçamento estruturado em 4s</div>
-              <div class="ui-pill ok">⚡ Enviado direto pro WhatsApp do dono</div>
-            </div>
-          </div>
-          <div class="proj-body">
-            <div>
-              <div class="proj-cat">Agente de IA Comercial</div>
-              <h3>Triagem &amp; Orçamento 24h no WhatsApp</h3>
-              <p>Assistente inteligente que conversa por texto ou áudio com o cliente no site, entende o pedido, coleta contato e dispara o resumo pronto no WhatsApp comercial.</p>
-              <div class="proj-tags">
-                <span>Gemini IA</span>
-                <span>Leitura de Áudio</span>
-                <span>Disparo Direto</span>
-              </div>
-            </div>
-            <div class="proj-actions">
-              <button type="button" class="proj-btn" onclick="preencherChat('Quero colocar um Agente de IA que atenda por texto e áudio e mande o resumo no meu WhatsApp.')">Pedir um projeto parecido →</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="proj-card">
-          <div class="mockup-win">
-            <div class="mockup-bar">
-              <span class="mockup-dots"><i></i><i></i><i></i></span>
-              <span class="mockup-url">painel.gestao-pro.br</span>
-            </div>
-            <div class="mockup-screen scr-erp">
-              <div class="ui-pill gold-ui">📊 Painel Operacional • Tempo Real</div>
-              <div class="ui-metrics">
-                <div class="ui-kpi"><b>+42%</b><small>Leads respondidos</small></div>
-                <div class="ui-kpi"><b>&lt; 5 seg</b><small>Tempo de resposta</small></div>
-              </div>
-            </div>
-          </div>
-          <div class="proj-body">
-            <div>
-              <div class="proj-cat">Sistema Web Sob Medida</div>
-              <h3>Painel de Pedidos &amp; Controle Comercial</h3>
-              <p>Sistema web leve hospedado em nuvem para acompanhar orçamentos recebidos, histórico de clientes e status de atendimento direto pelo celular ou computador.</p>
-              <div class="proj-tags">
-                <span>Sistema Web</span>
-                <span>Painel Admin</span>
-                <span>Nuvem Cloudflare</span>
-              </div>
-            </div>
-            <div class="proj-actions">
-              <button type="button" class="proj-btn" onclick="preencherChat('Preciso de um sistema sob medida para organizar pedidos e clientes da minha empresa.')">Pedir um projeto parecido →</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DEPOIMENTOS -->
-  <section class="section testimonials" id="depoimentos">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">QUEM JÁ USA</span>
-        <h2>O que o pessoal fala depois que coloca no ar</h2>
-        <p>Relatos de quem saiu do atendimento manual no papel e no WhatsApp para ter tudo rodando automático.</p>
-      </div>
-
-      <div class="testi-grid">
-        <div class="testi-card">
-          <div>
-            <div class="testi-top">
-              <span class="stars">★★★★★</span>
-              <span class="verified-tag">Projeto entregue</span>
-            </div>
-            <p>"Eu vivia parando atendimento no meio do serviço pra responder horário no WhatsApp. Agora a cliente entra no link, escolhe o procedimento e já cai direto na minha agenda com aviso no celular. Facilitou demais minha rotina."</p>
-          </div>
-          <div class="testi-author">
-            <div class="testi-avatar">PL</div>
-            <div>
-              <strong>Patrícia Lima</strong>
-              <span>Proprietária • Studio Divas</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card">
-          <div>
-            <div class="testi-top">
-              <span class="stars">★★★★★</span>
-              <span class="verified-tag">Projeto entregue</span>
-            </div>
-            <p>"O que mais gostei foi que o cliente manda áudio explicando o problema e a IA já resume tudo mastigado pro meu WhatsApp com o telefone dele. Antes a gente perdia orçamento de noite porque ninguém respondia na hora."</p>
-          </div>
-          <div class="testi-author">
-            <div class="testi-avatar">RS</div>
-            <div>
-              <strong>Rodrigo Silveira</strong>
-              <span>Sócio • RS Climatização &amp; Manutenção</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card">
-          <div>
-            <div class="testi-top">
-              <span class="stars">★★★★★</span>
-              <span class="verified-tag">Projeto entregue</span>
-            </div>
-            <p>"Eu achava que ia demorar meses pra ter um site bonito e rápido desse jeito. Em poucos dias já estava no ar, abre super leve no 4G e os clientes começaram a chamar direto pelo formulário inteligente."</p>
-          </div>
-          <div class="testi-author">
-            <div class="testi-avatar">FC</div>
-            <div>
-              <strong>Fernanda Costa</strong>
-              <span>Consultora Imobiliária • FC Imóveis</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONSULTOR IA -->
-  <section class="section ai-sec" id="ia">
-    <div class="container ai-grid">
-      <div>
-        <span class="eyebrow">CONSULTOR IA (TEXTO &amp; ÁUDIO)</span>
-        <h2>Explique sua ideia por texto ou grave um áudio agora</h2>
-        <p class="muted">Nossa inteligência artificial tira suas dúvidas, ajuda a definir cada detalhe e encaminha o briefing completo automaticamente para a equipe VEZQORA.</p>
-
-        <div class="ai-bullets">
-          <div><strong>1. Converse ou mande áudio 🎤:</strong> Fale o que precisa criar, seu nome e seu WhatsApp com DDD.</div>
-          <div><strong>2. Escopo sem falhas:</strong> A IA verifica se não faltou nenhum detalhe importante no seu pedido.</div>
-          <div><strong>3. Disparo automático ⚡:</strong> Seu orçamento completo chega direto na nossa central sem sair do site.</div>
-        </div>
-      </div>
-
-      <div class="ai-chat-card">
-        <div class="ai-chat-head">
-          <div class="ai-chat-id">
-            <div class="ai-chat-badge">V</div>
-            <div>
-              <strong>VEZQORA IA</strong>
-              <span>Online agora • Texto &amp; Áudio</span>
-            </div>
-          </div>
-          <button class="ai-reset-btn" id="resetChatBtn" type="button">Nova conversa</button>
-        </div>
-
-        <div class="ai-chat-log" id="chatLog">
-          <div class="chat-msg ai">Olá! Sou o consultor inteligente da <b>VEZQORA</b>. 👋
-
-Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar — e informe seu <b>nome e WhatsApp</b> para montarmos sua proposta completa!</div>
-        </div>
-
-        <div class="ai-chips">
-          <button type="button" class="ai-chip" onclick="preencherChat('Quero um site profissional com agente de IA')">🌐 Site + Agente IA</button>
-          <button type="button" class="ai-chip" onclick="preencherChat('Preciso de um agente de IA para atender no WhatsApp')">🤖 IA no WhatsApp</button>
-          <button type="button" class="ai-chip" onclick="preencherChat('Quero desenvolver um aplicativo ou sistema próprio')">📱 App / Sistema</button>
-        </div>
-
-        <div class="wa-bar">
-          <button type="button" id="autoSendBtn" class="wa-btn">
-            ⚡ Concluir e Enviar Orçamento Automaticamente
-          </button>
-        </div>
-
-        <div class="rec-bar" id="recBar">
-          <div><span class="rec-dot"></span> Gravando áudio... <span id="recTimer">00:00</span></div>
-          <div class="rec-actions">
-            <button type="button" class="rec-cancel" id="cancelRecBtn">Cancelar</button>
-            <button type="button" class="rec-send" id="sendRecBtn">Enviar Áudio ✓</button>
-          </div>
-        </div>
-
-        <form class="ai-input-row" id="chatForm">
-          <input type="text" class="ai-input" id="chatInput" placeholder="Digite sua ideia, nome e WhatsApp..." autocomplete="off">
-          <button type="button" class="ai-mic-btn" id="micBtn" title="Gravar áudio" aria-label="Gravar áudio">🎤</button>
-          <button type="submit" class="ai-send-btn" id="sendBtn">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="processo">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">COMO TRABALHAMOS</span>
-        <h2>Do briefing à entrega em produção</h2>
-      </div>
-      <div class="steps-grid">
-        <div class="step-box">
-          <span class="step-num">01 • DIAGNÓSTICO</span>
-          <h3>Briefing Inteligente</h3>
-          <p>Você envia sua necessidade pelo chat de IA e nossa equipe recebe na hora a arquitetura e escopo do projeto.</p>
-        </div>
-        <div class="step-box">
-          <span class="step-num">02 • ENGENHARIA</span>
-          <h3>Desenvolvimento &amp; Treinamento</h3>
-          <p>Construímos a interface, integrações e fluxos de inteligência artificial com acompanhamento transparente.</p>
-        </div>
-        <div class="step-box">
-          <span class="step-num">03 • ESCALA</span>
-          <h3>Publicação &amp; Suporte</h3>
-          <p>Colocamos sua estrutura online com alta disponibilidade e velocidade para gerar resultados desde o primeiro dia.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <button type="button" class="fab-ai" onclick="irParaChat()">Orçamento IA ⚡</button>
-
-  <footer class="footer" id="contato">
-    <div class="container footer-row">
-      <div><strong style="color:#ffe09e;">VEZQORA</strong> — Engenharia Digital, Sistemas &amp; Agentes de IA</div>
-      <div>
-        <a href="https://wa.me/5551991895177?text=Ol%C3%A1%2C%20VEZQORA!%20Vim%20pelo%20site." target="_blank" rel="noopener noreferrer" style="color:#ffe09e;font-weight:700;">
-          WhatsApp Comercial: (51) 99189-5177 ↗
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const WORKER_URL = "https://vezqoraai.vezqoraai.workers.dev";
-    const WHATSAPP_NUMBER = "5551991895177";
-
-    const chatLog = document.getElementById("chatLog");
-    const chatForm = document.getElementById("chatForm");
-    const chatInput = document.getElementById("chatInput");
-    const autoSendBtn = document.getElementById("autoSendBtn");
-    const resetChatBtn = document.getElementById("resetChatBtn");
-    const micBtn = document.getElementById("micBtn");
-    const recBar = document.getElementById("recBar");
-    const recTimer = document.getElementById("recTimer");
-    const cancelRecBtn = document.getElementById("cancelRecBtn");
-    const sendRecBtn = document.getElementById("sendRecBtn");
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
-
-    let chatHistory = [];
-    let userNotes = [];
-    let latestBriefing = "";
-
-    menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
-
-    function irParaChat() {
-      navLinks.classList.remove("open");
-      const sec = document.getElementById("ia");
-      if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
-      setTimeout(() => chatInput.focus(), 450);
-    }
-
-    function montarResumoBriefing() {
-      if (latestBriefing) return latestBriefing;
-      if (userNotes.length > 0) {
-        return `📋 *NOVO ORÇAMENTO — SITE VEZQORA*\n\n${userNotes.map((n, i) => `${i + 1}. ${n}`).join("\n")}`;
-      }
-      return "";
-    }
-
-    function adicionarMensagem(texto, tipo) {
-      const div = document.createElement("div");
-      div.className = `chat-msg ${tipo}`;
-      div.textContent = texto;
-      chatLog.appendChild(div);
-      chatLog.scrollTop = chatLog.scrollHeight;
-      return div;
-    }
-
-    function preencherChat(texto) {
-      irParaChat();
-      chatInput.value = texto;
-    }
-
-    function marcarComoEnviado() {
-      autoSendBtn.classList.add("sent");
-      autoSendBtn.textContent = "✅ Orçamento Enviado com Sucesso!";
-    }
-
-    async function enviarParaIA(payload, bolhaUsuario) {
-      const pensando = adicionarMensagem("Analisando seu projeto...", "ai");
-      try {
-        const res = await fetch(WORKER_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            ...payload,
-            targetPhone: WHATSAPP_NUMBER
-          })
-        });
-        const data = await res.json();
-        pensando.remove();
-
-        if (data.transcript && bolhaUsuario) {
-          bolhaUsuario.textContent = `🎤 "${data.transcript}"`;
-          userNotes.push(data.transcript);
-        }
-
-        if (data.briefing) {
-          latestBriefing = data.briefing;
-        }
-
-        const resposta = data.reply || data.response || data.text || data.message || "Perfeito! Já estruturei os pontos principais do seu projeto. Pode me informar seu nome e WhatsApp para completarmos?";
-        adicionarMensagem(resposta, "ai");
-        chatHistory.push({ role: "assistant", content: resposta });
-
-        if (data.autoSent) {
-          marcarComoEnviado();
-        }
-      } catch (err) {
-        pensando.remove();
-        adicionarMensagem("Anotei os detalhes do seu pedido! Informe seu nome, WhatsApp e o que precisa para completarmos o orçamento.", "ai");
-      }
-    }
-
-    autoSendBtn.addEventListener("click", async () => {
-      const resumo = montarResumoBriefing();
-      if (!resumo) {
-        adicionarMensagem("Antes de enviar, conte-me pelo chat ou por áudio 🎤 o que você precisa, seu nome e seu WhatsApp com DDD!", "ai");
-        chatInput.focus();
-        return;
-      }
-
-      autoSendBtn.disabled = true;
-      autoSendBtn.textContent = "⏳ Verificando e enviando orçamento...";
-
-      try {
-        const res = await fetch(WORKER_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            action: "send_whatsapp",
-            targetPhone: WHATSAPP_NUMBER,
-            briefing: resumo,
-            history: chatHistory
-          })
-        });
-        const data = await res.json();
-
-        if (res.ok && (data.sent || data.ok || data.autoSent)) {
-          marcarComoEnviado();
-          adicionarMensagem("✅ Briefing completo enviado automaticamente para a equipe VEZQORA! Em instantes entraremos em contato pelo seu WhatsApp.", "ai");
-        } else if (data.missing && data.reply) {
-          autoSendBtn.disabled = false;
-          autoSendBtn.textContent = "⚡ Concluir e Enviar Orçamento Automaticamente";
-          adicionarMensagem(data.reply, "ai");
-          chatInput.focus();
-        } else {
-          throw new Error("Falha no envio automático");
-        }
-      } catch (err) {
-        autoSendBtn.disabled = false;
-        autoSendBtn.textContent = "⚡ Concluir e Enviar Orçamento Automaticamente";
-        adicionarMensagem("⚠️ Não foi possível concluir o envio automático agora. Verifique se informou seu projeto, nome e WhatsApp com DDD e tente novamente.", "ai");
-      }
-    });
-
-    chatForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const texto = chatInput.value.trim();
-      if (!texto) return;
-
-      chatInput.value = "";
-      const bolha = adicionarMensagem(texto, "user");
-      userNotes.push(texto);
-      chatHistory.push({ role: "user", content: texto });
-
-      await enviarParaIA({ message: texto, history: chatHistory }, bolha);
-    });
-
-    resetChatBtn.addEventListener("click", () => {
-      chatHistory = [];
-      userNotes = [];
-      latestBriefing = "";
-      autoSendBtn.disabled = false;
-      autoSendBtn.classList.remove("sent");
-      autoSendBtn.textContent = "⚡ Concluir e Enviar Orçamento Automaticamente";
-      chatLog.innerHTML = `<div class="chat-msg ai">Conversa reiniciada! 👋 Me conte por texto ou grave um áudio 🎤 explicando o projeto que deseja criar e informe seu <b>nome e WhatsApp</b>.</div>`;
-    });
-
-    let mediaRecorder = null;
-    let audioChunks = [];
-    let timerInterval = null;
-    let secondsElapsed = 0;
-    let shouldSendAudio = false;
-
-    function formatarTempo(seg) {
-      const m = String(Math.floor(seg / 60)).padStart(2, "0");
-      const s = String(seg % 60).padStart(2, "0");
-      return `${m}:${s}`;
-    }
-
-    micBtn.addEventListener("click", async () => {
-      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-        alert("Seu navegador não suporta gravação de áudio. Digite sua mensagem no campo ao lado.");
-        return;
-      }
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        audioChunks = [];
-        shouldSendAudio = false;
-        mediaRecorder = new MediaRecorder(stream);
-
-        mediaRecorder.ondataavailable = (ev) => {
-          if (ev.data.size > 0) audioChunks.push(ev.data);
-        };
-
-        mediaRecorder.onstop = async () => {
-          stream.getTracks().forEach((t) => t.stop());
-          clearInterval(timerInterval);
-          recBar.classList.remove("active");
-
-          if (!shouldSendAudio || audioChunks.length === 0) return;
-
-          const mimeType = mediaRecorder.mimeType || "audio/webm";
-          const blob = new Blob(audioChunks, { type: mimeType });
-          const bolhaAudio = adicionarMensagem("🎤 Áudio enviado (transcrevendo...)", "user");
-
-          const reader = new FileReader();
-          reader.onloadend = async () => {
-            const base64Audio = reader.result.split(",")[1];
-            await enviarParaIA({
-              audio: base64Audio,
-              mimeType: mimeType,
-              history: chatHistory
-            }, bolhaAudio);
-          };
-          reader.readAsDataURL(blob);
-        };
-
-        mediaRecorder.start();
-        secondsElapsed = 0;
-        recTimer.textContent = "00:00";
-        recBar.classList.add("active");
-        timerInterval = setInterval(() => {
-          secondsElapsed++;
-          recTimer.textContent = formatarTempo(secondsElapsed);
-        }, 1000);
-      } catch (err) {
-        alert("Permita o acesso ao microfone no navegador para gravar seu áudio.");
-      }
-    });
-
-    cancelRecBtn.addEventListener("click", () => {
-      shouldSendAudio = false;
-      if (mediaRecorder && mediaRecorder.state !== "inactive") mediaRecorder.stop();
-    });
-
-    sendRecBtn.addEventListener("click", () => {
-      shouldSendAudio = true;
-      if (mediaRecorder && mediaRecorder.state !== "inactive") mediaRecorder.stop();
-    });
-  </script>
-</body>
-</html>
+      display: grid;
+      
