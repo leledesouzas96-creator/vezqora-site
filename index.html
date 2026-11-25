@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0A0A14">
+<meta name="theme-color" content="#070710">
 <meta name="description" content="VEZQORA — Tecnologia, Sites Profissionais, Aplicativos, Agentes de Inteligência Artificial e Automações para Empresas.">
 <title>VEZQORA | Tecnologia, IA & Automações para Empresas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,85 +11,99 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#090912;
-  --card:#121223;
-  --card-2:#17172c;
+  --bg:#070710;
+  --card:#101020;
+  --card-2:#16162b;
   --primary:#7C3AED;
   --primary-light:#A855F7;
   --accent:#06B6D4;
+  --emerald:#10B981;
   --gold:#F59E0B;
   --text:#F8FAFC;
   --muted:#94A3B8;
   --line:rgba(148,163,184,.16);
-  --shadow:0 20px 55px rgba(0,0,0,.45);
+  --shadow:0 24px 60px rgba(0,0,0,.55);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(circle at 80% 0%,rgba(124,58,237,.18),transparent 40%),radial-gradient(circle at 10% 30%,rgba(6,182,212,.12),transparent 35%),var(--bg);color:var(--text);font-family:"Inter",sans-serif;line-height:1.6}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 82% 4%,rgba(124,58,237,.22),transparent 42%),
+    radial-gradient(circle at 12% 28%,rgba(6,182,212,.14),transparent 38%),
+    var(--bg);
+  color:var(--text);
+  font-family:"Inter",sans-serif;
+  line-height:1.6;
+  overflow-x:hidden;
+}
 a{color:inherit;text-decoration:none}
 button,input{font:inherit}
 .container{width:min(1160px,92%);margin:auto}
 
 /* HEADER */
-header{position:sticky;top:0;z-index:30;background:rgba(9,9,18,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:30;background:rgba(7,7,16,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk",sans-serif;font-size:24px;font-weight:700;letter-spacing:2px}
-.brand-badge{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));display:grid;place-items:center;font-weight:700;font-size:18px;color:#fff;box-shadow:0 8px 24px rgba(124,58,237,.4)}
+.brand-badge{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));display:grid;place-items:center;font-weight:700;font-size:18px;color:#fff;box-shadow:0 8px 24px rgba(124,58,237,.45)}
 .brand small{display:block;font:600 9px "Inter";letter-spacing:3px;color:var(--accent)}
 .navlinks{display:flex;align-items:center;gap:26px;font-size:13px;font-weight:600;color:var(--muted)}
 .navlinks a:hover{color:#fff}
 .menu{display:none;border:1px solid var(--line);background:var(--card);color:#fff;border-radius:10px;padding:8px 12px;font-size:20px;cursor:pointer}
 
-.btn{border:0;border-radius:999px;padding:14px 24px;background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;font-weight:700;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 12px 30px rgba(124,58,237,.35);transition:transform .25s ease,box-shadow .25s ease}
-.btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(124,58,237,.5)}
+.btn{border:0;border-radius:999px;padding:14px 26px;background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;font-weight:700;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 12px 32px rgba(124,58,237,.38);transition:transform .25s ease,box-shadow .25s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(124,58,237,.55)}
 .btn-outline{background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:none}
-.btn-outline:hover{border-color:var(--accent);background:rgba(6,182,212,.08)}
+.btn-outline:hover{border-color:var(--accent);background:rgba(6,182,212,.1)}
 
-/* ESFERA PULSANTE DE IA (HERO + CHAT + BOTAO) */
-.ai-orb-stage{position:relative;width:136px;height:136px;margin:0 auto 22px;display:grid;place-items:center;cursor:pointer}
-.ai-orb-ring{position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(6,182,212,.45);animation:orbSpin 8s linear infinite}
-.ai-orb-ring::before{content:"";position:absolute;top:-4px;left:50%;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
-.ai-orb-ring-2{position:absolute;inset:12px;border-radius:50%;border:1.5px dashed rgba(168,85,247,.55);animation:orbSpinReverse 11s linear infinite}
-.ai-orb-wave{position:absolute;inset:18px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.45),transparent 70%);animation:orbWave 2.8s ease-out infinite}
-.ai-orb-core{position:relative;width:82px;height:82px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#E0F2FE 0%,#06B6D4 28%,#7C3AED 70%,#1E1B4B 100%);box-shadow:0 0 28px rgba(6,182,212,.65),0 0 60px rgba(124,58,237,.55),inset 0 0 18px rgba(255,255,255,.55);animation:orbBreathe 3.2s ease-in-out infinite;display:grid;place-items:center}
-.ai-orb-core::after{content:"";width:28px;height:28px;border-radius:50%;background:radial-gradient(circle,#fff 0%,rgba(255,255,255,.2) 65%,transparent 100%);filter:blur(2px);animation:orbCorePulse 2s ease-in-out infinite}
+/* ESFERA PULSANTE DE IA 3D */
+.ai-orb-stage{position:relative;width:150px;height:150px;margin:0 auto 22px;display:grid;place-items:center;cursor:pointer;user-select:none}
+.ai-orb-ring{position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(6,182,212,.5);animation:orbSpin 7.5s linear infinite}
+.ai-orb-ring::before{content:"";position:absolute;top:-4.5px;left:50%;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent)}
+.ai-orb-ring-2{position:absolute;inset:14px;border-radius:50%;border:1.5px dashed rgba(168,85,247,.6);animation:orbSpinReverse 10s linear infinite}
+.ai-orb-ring-2::after{content:"";position:absolute;bottom:-4px;left:50%;width:8px;height:8px;border-radius:50%;background:var(--primary-light);box-shadow:0 0 12px var(--primary-light)}
+.ai-orb-wave{position:absolute;inset:20px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.5),transparent 72%);animation:orbWave 2.6s ease-out infinite}
+.ai-orb-core{
+  position:relative;
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 28%,#F0F9FF 0%,#22D3EE 26%,#7C3AED 68%,#1E1B4B 100%);
+  box-shadow:
+    0 0 32px rgba(6,182,212,.75),
+    0 0 68px rgba(124,58,237,.65),
+    inset 0 0 22px rgba(255,255,255,.65);
+  animation:orbBreathe 3s ease-in-out infinite;
+  display:grid;
+  place-items:center;
+}
+.ai-orb-core::after{
+  content:"";
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:radial-gradient(circle,#fff 0%,rgba(255,255,255,.22) 65%,transparent 100%);
+  filter:blur(2px);
+  animation:orbCorePulse 1.9s ease-in-out infinite;
+}
 
-/* Mini esfera no chat e no botao flutuante */
-.mini-orb{position:relative;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
-.mini-orb::before{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(6,182,212,.6);animation:orbSpin 6s linear infinite}
-.mini-orb-core{width:32px;height:32px;border-radius:50%;background:radial-gradient(circle at 32% 32%,#E0F2FE,#06B6D4 35%,#7C3AED 78%,#1E1B4B);box-shadow:0 0 16px rgba(6,182,212,.75),0 0 26px rgba(124,58,237,.65);animation:orbBreathe 2.6s ease-in-out infinite}
-.chat-box.thinking .mini-orb-core,.chat-box.thinking .ai-orb-core{animation:orbThinking .7s ease-in-out infinite;box-shadow:0 0 26px #34D399,0 0 42px #06B6D4}
+.mini-orb{position:relative;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
+.mini-orb::before{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(6,182,212,.65);animation:orbSpin 5.5s linear infinite}
+.mini-orb-core{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 32% 32%,#E0F2FE,#06B6D4 35%,#7C3AED 78%,#1E1B4B);box-shadow:0 0 18px rgba(6,182,212,.8),0 0 28px rgba(124,58,237,.7);animation:orbBreathe 2.5s ease-in-out infinite}
+.chat-box.thinking .mini-orb-core{animation:orbThinking .65s ease-in-out infinite;box-shadow:0 0 28px #34D399,0 0 44px #06B6D4}
 
 .btn-orb{width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,#06B6D4 45%,#A855F7);box-shadow:0 0 10px #06B6D4,0 0 18px #A855F7;animation:orbBreathe 2s ease-in-out infinite;display:inline-block}
 
-@keyframes orbBreathe{
-  0%,100%{transform:scale(.95)}
-  50%{transform:scale(1.07)}
-}
-@keyframes orbCorePulse{
-  0%,100%{opacity:.55;transform:scale(.85)}
-  50%{opacity:1;transform:scale(1.15)}
-}
-@keyframes orbWave{
-  0%{transform:scale(.85);opacity:.8}
-  100%{transform:scale(1.55);opacity:0}
-}
-@keyframes orbSpin{
-  from{transform:rotate(0deg)}
-  to{transform:rotate(360deg)}
-}
-@keyframes orbSpinReverse{
-  from{transform:rotate(360deg)}
-  to{transform:rotate(0deg)}
-}
-@keyframes orbThinking{
-  0%,100%{transform:scale(.92)}
-  50%{transform:scale(1.18)}
-}
+@keyframes orbBreathe{0%,100%{transform:scale(.94)}50%{transform:scale(1.08)}}
+@keyframes orbCorePulse{0%,100%{opacity:.55;transform:scale(.85)}50%{opacity:1;transform:scale(1.18)}}
+@keyframes orbWave{0%{transform:scale(.85);opacity:.85}100%{transform:scale(1.65);opacity:0}}
+@keyframes orbSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes orbSpinReverse{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
+@keyframes orbThinking{0%,100%{transform:scale(.9)}50%{transform:scale(1.2)}}
 
 /* HERO */
-.hero{padding:64px 0 64px;text-align:center}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:999px;background:rgba(124,58,237,.16);border:1px solid rgba(168,85,247,.35);color:#E9D5FF;font-size:12px;font-weight:600;letter-spacing:1px}
+.hero{padding:60px 0 64px;text-align:center}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:999px;background:rgba(124,58,237,.16);border:1px solid rgba(168,85,247,.38);color:#E9D5FF;font-size:12px;font-weight:600;letter-spacing:1px}
 .hero h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(36px,5.6vw,64px);line-height:1.1;margin:20px auto 18px;max-width:860px;background:linear-gradient(180deg,#FFFFFF 30%,#CBD5E1 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero p{color:var(--muted);font-size:clamp(16px,2vw,19px);max-width:670px;margin:0 auto 32px}
 .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
@@ -119,10 +133,10 @@ section{padding:78px 0}
 .cases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .case-card{background:var(--card-2);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;transition:.3s;box-shadow:var(--shadow)}
 .case-card:hover{border-color:var(--accent);transform:translateY(-5px)}
-.case-thumb{position:relative;width:100%;height:230px;overflow:hidden;background:#0D0D1A;border-bottom:1px solid var(--line)}
+.case-thumb{position:relative;width:100%;height:250px;overflow:hidden;background:#0C0C18;border-bottom:1px solid var(--line)}
 .case-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
 .case-card:hover .case-thumb img{transform:scale(1.05)}
-.case-live-badge{position:absolute;top:14px;right:14px;background:rgba(9,9,18,.86);border:1px solid #34D399;color:#34D399;font-size:11px;font-weight:700;padding:5px 11px;border-radius:999px;backdrop-filter:blur(8px)}
+.case-live-badge{position:absolute;top:14px;right:14px;background:rgba(7,7,16,.88);border:1px solid #34D399;color:#34D399;font-size:11px;font-weight:700;padding:5px 12px;border-radius:999px;backdrop-filter:blur(8px)}
 .case-content{padding:24px;display:flex;flex-direction:column;justify-content:space-between;flex:1;gap:18px}
 .case-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
 .case-card h3{font-family:"Space Grotesk",sans-serif;font-size:22px;margin:0 0 10px}
@@ -133,36 +147,35 @@ section{padding:78px 0}
 .ai-wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:42px;align-items:center}
 .ai-benefits{display:grid;gap:12px;margin-top:22px}
 .ai-benefit{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14px;color:#E2E8F0}
-.chat-box{background:#0F0F1E;border:1px solid rgba(168,85,247,.45);border-radius:24px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.6)}
+.chat-box{background:#0D0D1C;border:1px solid rgba(168,85,247,.5);border-radius:24px;overflow:hidden;box-shadow:0 28px 75px rgba(0,0,0,.65)}
 .chat-head{background:linear-gradient(135deg,#1E1B4B,#311042);padding:16px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--line)}
 .chat-head strong{display:block;font-size:15px}
 .chat-head span{font-size:12px;color:#34D399}
-.chat-body{height:350px;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:12px;background:#0B0B16}
+.chat-body{height:360px;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:12px;background:#090914}
 .msg{padding:12px 16px;border-radius:16px;font-size:14px;line-height:1.55;max-width:86%;white-space:pre-wrap;word-break:break-word}
 .msg.bot{background:var(--card-2);border:1px solid var(--line);color:#F1F5F9;align-self:flex-start;border-bottom-left-radius:4px}
 .msg.user{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
-.chat-chips{padding:10px 14px 6px;display:flex;gap:7px;flex-wrap:wrap;background:#0B0B16;border-top:1px solid var(--line)}
+.chat-chips{padding:10px 14px 6px;display:flex;gap:7px;flex-wrap:wrap;background:#090914;border-top:1px solid var(--line)}
 .chip{border:1px solid var(--line);background:var(--card);color:#E2E8F0;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;transition:.2s}
 .chip:hover{border-color:var(--accent);color:#fff}
-.chat-form{display:flex;gap:8px;padding:12px 14px;background:#0F0F1E;border-top:1px solid var(--line)}
+.chat-form{display:flex;gap:8px;padding:12px 14px;background:#0D0D1C;border-top:1px solid var(--line)}
 .chat-form input{flex:1;background:#16162B;border:1px solid var(--line);border-radius:999px;padding:12px 16px;color:#fff;font-size:14px;outline:none}
 .chat-form input:focus{border-color:var(--accent)}
-.chat-form button{border:0;border-radius:999px;padding:0 20px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-weight:700;font-size:14px;cursor:pointer}
+.chat-form button{border:0;border-radius:999px;padding:0 22px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-weight:700;font-size:14px;cursor:pointer}
 
 /* CTA FINAL */
-.cta-box{background:linear-gradient(135deg,rgba(124,58,237,.25),rgba(6,182,212,.15));border:1px solid rgba(168,85,247,.35);border-radius:28px;padding:48px 28px;text-align:center}
+.cta-box{background:linear-gradient(135deg,rgba(124,58,237,.25),rgba(6,182,212,.15));border:1px solid rgba(168,85,247,.38);border-radius:28px;padding:48px 28px;text-align:center}
 .cta-box h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(26px,4vw,38px);margin:0 0 12px}
 .cta-box p{color:#CBD5E1;max-width:600px;margin:0 auto 26px}
 
 footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);font-size:13px}
 .footer-row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
 
-/* BOTAO FLUTUANTE COM ESFERA PULSANTE */
-.floating-cta{position:fixed;right:18px;bottom:18px;z-index:40;border:1px solid rgba(6,182,212,.55);border-radius:999px;padding:13px 20px;background:linear-gradient(135deg,#1E1B4B,#6D28D9);color:#fff;font-weight:700;font-size:13px;box-shadow:0 12px 32px rgba(0,0,0,.5);display:inline-flex;align-items:center;gap:10px}
+.floating-cta{position:fixed;right:18px;bottom:18px;z-index:40;border:1px solid rgba(6,182,212,.55);border-radius:999px;padding:13px 20px;background:linear-gradient(135deg,#1E1B4B,#6D28D9);color:#fff;font-weight:700;font-size:13px;box-shadow:0 12px 32px rgba(0,0,0,.55);display:inline-flex;align-items:center;gap:10px}
 
 @media(max-width:820px){
   .menu{display:block}
-  .navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#0F0F1E;padding:20px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:16px}
+  .navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#0D0D1C;padding:20px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:16px}
   .navlinks.open{display:flex}
   .grid-4,.cases-grid,.ai-wrap,.metrics{grid-template-columns:1fr}
 }
@@ -189,7 +202,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
 <main>
   <section class="hero" id="inicio" data-track="inicio_hero">
     <div class="container">
-      <div class="ai-orb-stage" onclick="document.getElementById('consultor').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('vezqoraInput').focus(),450)" title="Clique para falar com a Inteligência Artificial VEZQORA">
+      <div class="ai-orb-stage" onclick="document.getElementById('consultor').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('vezqoraInput').focus(),450)" title="Toque para ativar o Consultor IA VEZQORA">
         <div class="ai-orb-wave"></div>
         <div class="ai-orb-ring"></div>
         <div class="ai-orb-ring-2"></div>
@@ -273,13 +286,13 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
         <article class="case-card">
           <div class="case-thumb">
             <span class="case-live-badge">● Em produção</span>
-            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=80" alt="DIVAS Salão de Beleza — Projeto Real VEZQORA" loading="lazy">
+            <img id="divasRealPhoto" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=80" alt="DIVAS Salão de Beleza — Foto Real do Projeto" loading="lazy">
           </div>
           <div class="case-content">
             <div>
               <span class="case-tag">Case Real • Beleza & Estética</span>
               <h3>DIVAS Salão de Beleza — Agenda 100% Autônoma</h3>
-              <p>Site completo com galeria de resultados, catálogo de serviços e Recepcionista Virtual IA integrada ao banco de dados que verifica horários livres, reserva na hora e gera comprovante com localização.</p>
+              <p>Site completo com galeria de resultados reais, catálogo de serviços e Recepcionista Virtual IA integrada ao banco de dados que verifica horários livres, reserva na hora e gera comprovante com localização.</p>
             </div>
             <a class="btn btn-outline" href="https://leledesouzas96-creator.github.io/Divas/" target="_blank" rel="noopener">Ver projeto ao vivo ↗</a>
           </div>
@@ -288,10 +301,211 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
         <article class="case-card">
           <div class="case-thumb">
             <span class="case-live-badge">● Demo Interativa</span>
-            <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=900&q=80" alt="Brava Burger IA — Projeto Real VEZQORA" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=900&q=80" alt="Brava Burger IA — Foto Real do Projeto" loading="lazy">
           </div>
           <div class="case-content">
             <div>
               <span class="case-tag">Projeto Real • Delivery & Gastronomia</span>
               <h3>Brava Burger IA — Atendente de Pedidos 24h</h3>
-              <p>Catálogo digital com fotos reais e agente vendedor com IA que monta o pedido item
+              <p>Catálogo digital com fotos reais e agente vendedor com IA que monta o pedido item por item, sugere adicionais, calcula automaticamente a taxa de entrega por bairro e gera o comprovante pronto.</p>
+            </div>
+            <a class="btn btn-outline" href="https://leledesouzas96-creator.github.io/burger-IA/" target="_blank" rel="noopener">Testar projeto ao vivo ↗</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ai-section" id="consultor" data-track="consultor_ia">
+    <div class="container ai-wrap">
+      <div>
+        <span class="kicker">Consultoria Inteligente</span>
+        <h2 class="section-title">Descubra o que podemos automatizar na sua empresa.</h2>
+        <p class="section-lead">Converse com nosso Consultor IA. Conte qual é o ramo do seu negócio e o que hoje toma mais tempo da sua equipe — ele monta um plano sob medida na hora.</p>
+        <div class="ai-benefits">
+          <div class="ai-benefit">✦ Diagnóstico personalizado para o ramo da sua empresa</div>
+          <div class="ai-benefit">✦ Ideias práticas para aumentar vendas e reduzir trabalho manual</div>
+          <div class="ai-benefit">✦ Projeto 100% adaptado à identidade visual do seu negócio</div>
+        </div>
+      </div>
+
+      <div class="chat-box" id="vezqoraChatBox" aria-label="Consultor Comercial VEZQORA IA">
+        <div class="chat-head">
+          <div class="mini-orb"><div class="mini-orb-core"></div></div>
+          <div>
+            <strong>Consultor VEZQORA IA</strong>
+            <span id="vezqoraStatus">● Núcleo Ativo • Diagnóstico de Automação & Sites</span>
+          </div>
+        </div>
+        <div class="chat-body" id="vezqoraMessages">
+          <div class="msg bot">Olá! Sou o Consultor Inteligente da VEZQORA. Para eu te mostrar como podemos automatizar seu atendimento e atrair mais clientes, qual é o ramo da sua empresa hoje?</div>
+        </div>
+        <div class="chat-chips">
+          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Tenho um salão de beleza / clínica e quero automatizar agendamentos')">💇 Salão / Clínica</button>
+          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Tenho uma loja / comércio e quero vender mais')">🛍️ Loja / Comércio</button>
+          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Sou prestador de serviços e preciso de um site profissional')">🛠️ Prestador de Serviços</button>
+          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Quero saber como funciona uma recepcionista IA')">🤖 Como funciona a IA?</button>
+        </div>
+        <form class="chat-form" onsubmit="enviarChatVezqora(event)">
+          <input type="text" id="vezqoraInput" placeholder="Digite o ramo da sua empresa ou sua dúvida..." autocomplete="off">
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" data-track="contato_cta">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Pronto para modernizar sua empresa?</h2>
+        <p>Inicie seu diagnóstico gratuito com nosso Consultor IA agora mesmo e receba uma proposta personalizada para o seu negócio.</p>
+        <a class="btn" href="#consultor" onclick="setTimeout(()=>document.getElementById('vezqoraInput').focus(),250)">Iniciar Diagnóstico com IA ✦</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer data-track="rodape">
+  <div class="container footer-row">
+    <div><strong>VEZQORA</strong> — Sites, Aplicativos, Agentes de IA & Automações</div>
+    <div>Atendimento Inteligente 24h</div>
+  </div>
+</footer>
+
+<a class="floating-cta" href="#consultor" onclick="setTimeout(()=>document.getElementById('vezqoraInput').focus(),250)">
+  <span class="btn-orb"></span> Falar com Consultor IA
+</a>
+
+<script>
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navlinks');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+// CARREGA AUTOMATICAMENTE A FOTO REAL DO REPOSITÓRIO DIVAS
+(async function carregarFotoRealDivas(){
+  try{
+    const res=await fetch('https://api.github.com/repos/leledesouzas96-creator/Divas/contents/');
+    if(!res.ok)return;
+    const files=await res.json();
+    const imgFile=files.find(f=>/\.(jpe?g|png|webp)$/i.test(f.name) && !/logo|icon|favicon|avatar/i.test(f.name))
+               || files.find(f=>/\.(jpe?g|png|webp)$/i.test(f.name));
+    if(imgFile && imgFile.name){
+      const imgEl=document.getElementById('divasRealPhoto');
+      if(imgEl) imgEl.src=`https://leledesouzas96-creator.github.io/Divas/${encodeURIComponent(imgFile.name)}`;
+    }
+  }catch(e){}
+})();
+
+const VEZQORA_IA_URL='https://vezqoraai.vezqoraai.workers.dev';
+const chatBox=document.getElementById('vezqoraChatBox');
+const statusEl=document.getElementById('vezqoraStatus');
+const msgBox=document.getElementById('vezqoraMessages');
+const inputBox=document.getElementById('vezqoraInput');
+let historyVezqora=[];
+let busyVezqora=false;
+
+function addVezqoraMsg(text,role){
+  const div=document.createElement('div');
+  div.className=`msg ${role}`;
+  div.textContent=String(text).replace(/\*\*/g,'');
+  msgBox.appendChild(div);
+  msgBox.scrollTop=msgBox.scrollHeight;
+}
+
+function enviarAtalhoVezqora(text){
+  inputBox.value=text;
+  enviarChatVezqora();
+}
+
+async function enviarChatVezqora(e){
+  if(e)e.preventDefault();
+  const text=inputBox.value.trim();
+  if(!text||busyVezqora)return;
+  busyVezqora=true;
+  inputBox.value='';
+  addVezqoraMsg(text,'user');
+  historyVezqora.push({role:'user',content:text});
+
+  chatBox.classList.add('thinking');
+  statusEl.textContent='● Processando diagnóstico inteligente...';
+
+  const typing=document.createElement('div');
+  typing.className='msg bot';
+  typing.textContent='Analisando soluções para sua empresa... ⚡';
+  msgBox.appendChild(typing);
+  msgBox.scrollTop=msgBox.scrollHeight;
+
+  try{
+    const res=await fetch(VEZQORA_IA_URL,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({message:text,history:historyVezqora})
+    });
+    const data=await res.json();
+    typing.remove();
+    const reply=data.reply||'Conte-me qual é o ramo da sua empresa para eu montar uma solução personalizada.';
+    addVezqoraMsg(reply,'bot');
+    historyVezqora.push({role:'assistant',content:reply});
+  }catch(err){
+    typing.remove();
+    addVezqoraMsg('Nosso consultor está reconectando. Tente enviar novamente em alguns segundos!','bot');
+  }finally{
+    busyVezqora=false;
+    chatBox.classList.remove('thinking');
+    statusEl.textContent='● Núcleo Ativo • Diagnóstico de Automação & Sites';
+  }
+}
+</script>
+
+<!-- RASTREAMENTO MICROSOFT CLARITY + TEMPO POR SEÇÃO (VEZQORA) -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "zisow5jda1");
+
+  (function(){
+    const inicioVisita = Date.now();
+    const tempoPorSecao = {};
+    let secaoAtual = "inicio_hero";
+    let inicioSecao = Date.now();
+
+    function registrarTrocaSecao(novaSecao){
+      if(!novaSecao || novaSecao === secaoAtual) return;
+      const agora = Date.now();
+      tempoPorSecao[secaoAtual] = (tempoPorSecao[secaoAtual] || 0) + Math.round((agora - inicioSecao) / 1000);
+      secaoAtual = novaSecao;
+      inicioSecao = agora;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting && entry.intersectionRatio >= 0.45){
+          const nome = entry.target.getAttribute("data-track") || entry.target.id || "secao";
+          registrarTrocaSecao(nome);
+        }
+      });
+    }, { threshold: [0.45] });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("section, header, footer").forEach(el => observer.observe(el));
+    });
+
+    document.addEventListener("visibilitychange", () => {
+      if(document.visibilityState === "hidden"){
+        registrarTrocaSecao("fim");
+        const totalSegundos = Math.round((Date.now() - inicioVisita) / 1000);
+        const minutos = (totalSegundos / 60).toFixed(1);
+        const maisVista = Object.entries(tempoPorSecao).sort((a,b) => b[1] - a[1])[0] || ["inicio_hero", totalSegundos];
+
+        if(window.clarity){
+          window.clarity("set", "tempo_total_min", `${minutos} min`);
+          window.clarity("set", "secao_mais_vista", `${maisVista[0]} (${maisVista[1]}s)`);
+        }
+      }
+    });
+  })();
+</script>
+</body>
+</html>
