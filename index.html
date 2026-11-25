@@ -119,13 +119,18 @@ section{padding:78px 0}
 .studio-section{background:radial-gradient(circle at 80% 30%,rgba(6,182,212,.16),transparent 48%),rgba(255,255,255,.015);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .studio-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:38px;align-items:start}
 .studio-form-card{background:var(--card);border:1px solid rgba(6,182,212,.45);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+.quick-presets{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.preset-btn{border:1px solid var(--line);background:#16162B;color:#E2E8F0;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;transition:.2s}
+.preset-btn:hover{border-color:var(--accent);background:rgba(6,182,212,.14);color:#fff}
 .field-group{margin-bottom:16px}
 .field-group label{display:block;font-size:13px;font-weight:600;color:#CBD5E1;margin-bottom:7px}
-.field-group input,.field-group select{width:100%;background:#16162B;border:1px solid var(--line);border-radius:14px;padding:13px 15px;color:#fff;font-size:14px;outline:none}
+.field-group input,.field-group select{width:100%;background:#16162B;border:1px solid var(--line);border-radius:14px;padding:13px 15px;color:#fff;font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s}
 .field-group input:focus,.field-group select:focus{border-color:var(--accent)}
+.field-group input.input-warn{border-color:#F59E0B;box-shadow:0 0 0 3px rgba(245,158,11,.22)}
 
 /* MOCKUP DE CELULAR INTERATIVO AO VIVO */
-.phone-preview{background:#0B0B16;border:2px solid rgba(168,85,247,.55);border-radius:32px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.75)}
+.phone-preview{background:#0B0B16;border:2px solid rgba(168,85,247,.55);border-radius:32px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.75);transition:box-shadow .4s ease,border-color .4s ease}
+.phone-preview.highlight{border-color:#06B6D4;box-shadow:0 0 0 3px rgba(6,182,212,.35),0 30px 80px rgba(0,0,0,.8)}
 .phone-topbar{background:#121224;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted);border-bottom:1px solid var(--line)}
 .phone-url{background:#1B1B32;padding:5px 12px;border-radius:999px;color:#E2E8F0;font-weight:600}
 .phone-hero{padding:22px 20px;background:linear-gradient(135deg,rgba(124,58,237,.35),rgba(6,182,212,.22));border-bottom:1px solid var(--line)}
@@ -269,11 +274,19 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
       <div class="section-head">
         <span class="kicker">Exclusivo VEZQORA • Experiência ao Vivo</span>
         <h2 class="section-title">Veja o site e o Agente de IA da SUA empresa funcionando agora</h2>
-        <p class="section-lead">Digite o nome e o ramo do seu negócio. Nossa Inteligência Artificial monta um protótipo interativo na hora para você testar como seus clientes serão atendidos.</p>
+        <p class="section-lead">Digite os dados do seu negócio ou toque em um exemplo rápido abaixo. Nossa IA monta um protótipo interativo na hora para você testar.</p>
       </div>
 
       <div class="studio-grid">
         <div class="studio-form-card">
+          <div style="font-size:12px;font-weight:700;color:var(--accent);margin-bottom:8px;letter-spacing:.5px">⚡ TESTE RÁPIDO EM 1 TOQUE:</div>
+          <div class="quick-presets">
+            <button type="button" class="preset-btn" onclick="preencherExemplo('Loja Pé Forte','Loja de Calçados & Moda','Responder numeração e fechar vendas no WhatsApp')">👟 Loja de Calçados</button>
+            <button type="button" class="preset-btn" onclick="preencherExemplo('Studio Bella & Corte','Salão & Barbearia','Agendar horários 24h sem furos na agenda')">💇 Salão / Barbearia</button>
+            <button type="button" class="preset-btn" onclick="preencherExemplo('Prime Auto Estética','Oficina & Estética Auto','Enviar orçamentos rápidos e agendar serviços')">🚗 Oficina Auto</button>
+            <button type="button" class="preset-btn" onclick="preencherExemplo('Brava Grill','Hamburgueria & Delivery','Anotar pedidos completos e calcular entrega')">🍔 Hamburgueria</button>
+          </div>
+
           <div class="field-group">
             <label for="protoEmpresa">Nome da sua empresa</label>
             <input type="text" id="protoEmpresa" placeholder="Ex: Barbearia Imperial, Loja Pé Forte, Clínica Vida...">
@@ -287,10 +300,10 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
             <input type="text" id="protoGargalo" placeholder="Ex: Demora no WhatsApp, agenda bagunçada, orçamentos lentos...">
           </div>
           <button type="button" class="btn btn-cyan" id="btnGerarProto" style="width:100%" onclick="gerarPrototipoEmpresa()">Gerar Site + Agente IA da Minha Empresa ⚡</button>
-          <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0;text-align:center">100% gratuito • O agente criado ao lado já responde como funcionário da sua empresa.</p>
+          <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0;text-align:center">100% gratuito • A tela desliza direto para o celular interativo da sua empresa.</p>
         </div>
 
-        <div class="phone-preview" aria-label="Prévia interativa da empresa do visitante">
+        <div class="phone-preview" id="phonePreviewCard" aria-label="Prévia interativa da empresa do visitante">
           <div class="phone-topbar">
             <span>● VEZQORA Live Engine</span>
             <span class="phone-url" id="previewUrl">suaempresa.com.br</span>
@@ -299,7 +312,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
           <div class="phone-hero">
             <span class="phone-badge" id="previewBadge">● Prévia Interativa Gerada por IA</span>
             <h3 id="previewHeadline">Sua Empresa: Atendimento & Vendas 24h</h3>
-            <p id="previewSubheadline">Preencha os campos ao lado e veja aqui um site moderno com agente inteligente treinado para o seu ramo.</p>
+            <p id="previewSubheadline">Preencha os campos ao lado (ou toque em um exemplo rápido) e veja aqui um site moderno com agente inteligente treinado para o seu ramo.</p>
           </div>
           <div class="phone-plan">
             <strong>Arquitetura recomendada pela VEZQORA:</strong>
@@ -554,6 +567,14 @@ function atualizarSimulador(){
 }
 atualizarSimulador();
 
+// PREENCHIMENTO RAPIDO EM 1 TOQUE PARA DEMO/TIKTOK
+function preencherExemplo(empresa,ramo,gargalo){
+  document.getElementById('protoEmpresa').value=empresa;
+  document.getElementById('protoRamo').value=ramo;
+  document.getElementById('protoGargalo').value=gargalo;
+  gerarPrototipoEmpresa();
+}
+
 // GERADOR DE PROTOTIPO AO VIVO DA EMPRESA DO CLIENTE
 let protoContext={empresa:'Sua Empresa',ramo:'Comércio & Serviços'};
 let protoHistory=[];
@@ -569,10 +590,23 @@ function addPreviewMsg(text,role){
 }
 
 async function gerarPrototipoEmpresa(){
-  const empresa=document.getElementById('protoEmpresa').value.trim()||'Minha Empresa';
-  const ramo=document.getElementById('protoRamo').value.trim()||'Comércio & Serviços';
-  const gargalo=document.getElementById('protoGargalo').value.trim()||'Demora no atendimento e perda de vendas';
+  const inpEmpresa=document.getElementById('protoEmpresa');
+  const inpRamo=document.getElementById('protoRamo');
+  const inpGargalo=document.getElementById('protoGargalo');
+
+  if(!inpEmpresa.value.trim()){
+    inpEmpresa.classList.add('input-warn');
+    inpEmpresa.focus();
+    inpEmpresa.placeholder='Digite aqui o nome da sua empresa para testar!';
+    setTimeout(()=>inpEmpresa.classList.remove('input-warn'),1800);
+    return;
+  }
+
+  const empresa=inpEmpresa.value.trim();
+  const ramo=inpRamo.value.trim()||'Comércio & Serviços';
+  const gargalo=inpGargalo.value.trim()||'Demora no atendimento e perda de vendas';
   const btn=document.getElementById('btnGerarProto');
+  const previewCard=document.getElementById('phonePreviewCard');
 
   btn.disabled=true;
   btn.textContent='Construindo site + treinando IA... ⚡';
@@ -613,6 +647,12 @@ async function gerarPrototipoEmpresa(){
       c.onclick=()=>testarNoMockup(atalho);
       chipsBox.appendChild(c);
     });
+
+    if(previewCard){
+      previewCard.classList.add('highlight');
+      previewCard.scrollIntoView({behavior:'smooth',block:'center'});
+      setTimeout(()=>previewCard.classList.remove('highlight'),2200);
+    }
   }catch(e){
     addPreviewMsg('Não foi possível gerar agora. Tente novamente em instantes.','bot');
   }finally{
