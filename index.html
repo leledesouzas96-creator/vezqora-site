@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#070710">
-<meta name="description" content="VEZQORA — Tecnologia, Sites Profissionais, Aplicativos, Sistemas, Agentes de Inteligência Artificial e Automações para Empresas.">
+<meta name="description" content="VEZQORA — Sites de Alta Conversão, Aplicativos, Sistemas Sob Medida e Agentes de Inteligência Artificial 24h para Empresas.">
 <title>VEZQORA | Sites, Aplicativos, Sistemas & Agentes de IA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,22 +38,23 @@ body{
   overflow-x:hidden;
 }
 a{color:inherit;text-decoration:none}
-button,input{font:inherit}
+button,input,select{font:inherit}
 .container{width:min(1160px,92%);margin:auto}
 
 /* HEADER */
-header{position:sticky;top:0;z-index:30;background:rgba(7,7,16,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:30;background:rgba(7,7,16,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk",sans-serif;font-size:24px;font-weight:700;letter-spacing:2px}
 .brand-badge{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));display:grid;place-items:center;font-weight:700;font-size:18px;color:#fff;box-shadow:0 8px 24px rgba(124,58,237,.45)}
 .brand small{display:block;font:600 9px "Inter";letter-spacing:3px;color:var(--accent)}
-.navlinks{display:flex;align-items:center;gap:24px;font-size:13px;font-weight:600;color:var(--muted)}
+.navlinks{display:flex;align-items:center;gap:22px;font-size:13px;font-weight:600;color:var(--muted)}
 .navlinks a:hover{color:#fff}
 .nav-pill{padding:7px 14px;border-radius:999px;background:rgba(6,182,212,.14);border:1px solid rgba(6,182,212,.45);color:var(--accent) !important}
 .menu{display:none;border:1px solid var(--line);background:var(--card);color:#fff;border-radius:10px;padding:8px 12px;font-size:20px;cursor:pointer}
 
 .btn{border:0;border-radius:999px;padding:14px 26px;background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;font-weight:700;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 12px 32px rgba(124,58,237,.38);transition:transform .25s ease,box-shadow .25s ease}
 .btn:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(124,58,237,.55)}
+.btn-cyan{background:linear-gradient(135deg,#0891B2,#06B6D4);box-shadow:0 12px 32px rgba(6,182,212,.35)}
 .btn-outline{background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:none}
 .btn-outline:hover{border-color:var(--accent);background:rgba(6,182,212,.1)}
 
@@ -70,10 +71,7 @@ header{position:sticky;top:0;z-index:30;background:rgba(7,7,16,.86);backdrop-fil
   height:90px;
   border-radius:50%;
   background:radial-gradient(circle at 30% 28%,#F0F9FF 0%,#22D3EE 26%,#7C3AED 68%,#1E1B4B 100%);
-  box-shadow:
-    0 0 32px rgba(6,182,212,.75),
-    0 0 68px rgba(124,58,237,.65),
-    inset 0 0 22px rgba(255,255,255,.65);
+  box-shadow:0 0 32px rgba(6,182,212,.75),0 0 68px rgba(124,58,237,.65),inset 0 0 22px rgba(255,255,255,.65);
   animation:orbBreathe 3s ease-in-out infinite;
   display:grid;
   place-items:center;
@@ -87,12 +85,10 @@ header{position:sticky;top:0;z-index:30;background:rgba(7,7,16,.86);backdrop-fil
   filter:blur(2px);
   animation:orbCorePulse 1.9s ease-in-out infinite;
 }
-
 .mini-orb{position:relative;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
 .mini-orb::before{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(6,182,212,.65);animation:orbSpin 5.5s linear infinite}
 .mini-orb-core{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 32% 32%,#E0F2FE,#06B6D4 35%,#7C3AED 78%,#1E1B4B);box-shadow:0 0 18px rgba(6,182,212,.8),0 0 28px rgba(124,58,237,.7);animation:orbBreathe 2.5s ease-in-out infinite}
-.chat-box.thinking .mini-orb-core,.chat-box.thinking .ai-orb-core{animation:orbThinking .65s ease-in-out infinite;box-shadow:0 0 28px #34D399,0 0 44px #06B6D4}
-
+.chat-box.thinking .mini-orb-core{animation:orbThinking .65s ease-in-out infinite;box-shadow:0 0 28px #34D399,0 0 44px #06B6D4}
 .btn-orb{width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,#06B6D4 45%,#A855F7);box-shadow:0 0 10px #06B6D4,0 0 18px #A855F7;animation:orbBreathe 2s ease-in-out infinite;display:inline-block}
 
 @keyframes orbBreathe{0%,100%{transform:scale(.94)}50%{transform:scale(1.08)}}
@@ -103,22 +99,61 @@ header{position:sticky;top:0;z-index:30;background:rgba(7,7,16,.86);backdrop-fil
 @keyframes orbThinking{0%,100%{transform:scale(.9)}50%{transform:scale(1.2)}}
 
 /* HERO */
-.hero{padding:60px 0 64px;text-align:center}
+.hero{padding:56px 0 64px;text-align:center}
 .pill{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:999px;background:rgba(124,58,237,.16);border:1px solid rgba(168,85,247,.38);color:#E9D5FF;font-size:12px;font-weight:600;letter-spacing:1px}
-.hero h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(36px,5.6vw,64px);line-height:1.1;margin:20px auto 18px;max-width:880px;background:linear-gradient(180deg,#FFFFFF 30%,#CBD5E1 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{color:var(--muted);font-size:clamp(16px,2vw,19px);max-width:700px;margin:0 auto 32px}
+.hero h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(36px,5.6vw,64px);line-height:1.1;margin:20px auto 18px;max-width:900px;background:linear-gradient(180deg,#FFFFFF 30%,#CBD5E1 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--muted);font-size:clamp(16px,2vw,19px);max-width:720px;margin:0 auto 32px}
 .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:820px;margin:54px auto 0}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:840px;margin:50px auto 0}
 .metric-box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
 .metric-box strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:28px;color:var(--accent)}
 .metric-box span{font-size:13px;color:var(--muted)}
 
-/* SECTIONS */
 section{padding:78px 0}
-.section-head{text-align:center;max-width:700px;margin:0 auto 48px}
+.section-head{text-align:center;max-width:720px;margin:0 auto 48px}
 .kicker{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase}
 .section-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(28px,4vw,42px);line-height:1.15;margin:10px 0 14px}
 .section-lead{color:var(--muted);font-size:16px}
+
+/* GERADOR DE PROTOTIPO AO VIVO (EXCLUSIVO VEZQORA) */
+.studio-section{background:radial-gradient(circle at 80% 30%,rgba(6,182,212,.16),transparent 48%),rgba(255,255,255,.015);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.studio-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:38px;align-items:start}
+.studio-form-card{background:var(--card);border:1px solid rgba(6,182,212,.45);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+.field-group{margin-bottom:16px}
+.field-group label{display:block;font-size:13px;font-weight:600;color:#CBD5E1;margin-bottom:7px}
+.field-group input,.field-group select{width:100%;background:#16162B;border:1px solid var(--line);border-radius:14px;padding:13px 15px;color:#fff;font-size:14px;outline:none}
+.field-group input:focus,.field-group select:focus{border-color:var(--accent)}
+
+/* MOCKUP DE CELULAR INTERATIVO AO VIVO */
+.phone-preview{background:#0B0B16;border:2px solid rgba(168,85,247,.55);border-radius:32px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.75)}
+.phone-topbar{background:#121224;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted);border-bottom:1px solid var(--line)}
+.phone-url{background:#1B1B32;padding:5px 12px;border-radius:999px;color:#E2E8F0;font-weight:600}
+.phone-hero{padding:22px 20px;background:linear-gradient(135deg,rgba(124,58,237,.35),rgba(6,182,212,.22));border-bottom:1px solid var(--line)}
+.phone-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(0,0,0,.45);color:#34D399;margin-bottom:8px}
+.phone-hero h3{font-family:"Space Grotesk",sans-serif;font-size:21px;line-height:1.2;margin:0 0 8px}
+.phone-hero p{font-size:13px;color:#E2E8F0;margin:0}
+.phone-plan{padding:14px 20px;background:#111122;border-bottom:1px solid var(--line);font-size:12.5px;color:#CBD5E1}
+.phone-plan strong{color:var(--accent);display:block;margin-bottom:3px}
+.phone-chat-body{height:230px;overflow-y:auto;padding:14px 18px;display:flex;flex-direction:column;gap:10px;background:#080812}
+.p-msg{padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.45;max-width:88%;white-space:pre-wrap}
+.p-msg.bot{background:#16162B;border:1px solid var(--line);color:#F8FAFC;align-self:flex-start}
+.p-msg.user{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;align-self:flex-end}
+.phone-chips{padding:8px 14px;display:flex;gap:6px;flex-wrap:wrap;background:#080812;border-top:1px solid var(--line)}
+.p-chip{border:1px solid var(--line);background:#141428;color:#E2E8F0;border-radius:999px;padding:5px 10px;font-size:11.5px;font-weight:600;cursor:pointer}
+.p-chip:hover{border-color:var(--accent)}
+.phone-form{display:flex;gap:8px;padding:10px 14px;background:#101020;border-top:1px solid var(--line)}
+.phone-form input{flex:1;background:#16162B;border:1px solid var(--line);border-radius:999px;padding:10px 14px;color:#fff;font-size:13px;outline:none}
+.phone-form button{border:0;border-radius:999px;padding:0 16px;background:var(--accent);color:#070710;font-weight:700;font-size:13px;cursor:pointer}
+
+/* SIMULADOR DE LUCRO / PREJUIZO INVISIVEL */
+.calc-card{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:34px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+.slider-row{margin-bottom:20px}
+.slider-row label{display:flex;justify-content:space-between;font-size:14px;font-weight:600;margin-bottom:8px}
+.slider-row input[type=range]{width:100%;accent-color:var(--accent);cursor:pointer}
+.calc-result{background:linear-gradient(135deg,rgba(124,58,237,.22),rgba(6,182,212,.16));border:1px solid rgba(168,85,247,.45);border-radius:20px;padding:24px;text-align:center}
+.calc-result span{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#CBD5E1}
+.calc-result strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:clamp(30px,4vw,42px);color:#34D399;margin:8px 0}
+.calc-result p{font-size:13px;color:#E2E8F0;margin:0 0 16px}
 
 /* SERVICOS */
 .grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
@@ -165,18 +200,16 @@ section{padding:78px 0}
 .chat-form input:focus{border-color:var(--accent)}
 .chat-form button{border:0;border-radius:999px;padding:0 22px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-weight:700;font-size:14px;cursor:pointer}
 
-/* CTA FINAL */
 .cta-box{background:linear-gradient(135deg,rgba(124,58,237,.25),rgba(6,182,212,.15));border:1px solid rgba(168,85,247,.38);border-radius:28px;padding:48px 28px;text-align:center}
 .cta-box h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(26px,4vw,38px);margin:0 0 12px}
 .cta-box p{color:#CBD5E1;max-width:600px;margin:0 auto 26px}
 
 footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);font-size:13px}
 .footer-row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-
 .floating-cta{position:fixed;right:18px;bottom:18px;z-index:40;border:1px solid rgba(6,182,212,.55);border-radius:999px;padding:13px 20px;background:linear-gradient(135deg,#1E1B4B,#6D28D9);color:#fff;font-weight:700;font-size:13px;box-shadow:0 12px 32px rgba(0,0,0,.55);display:inline-flex;align-items:center;gap:10px}
 
 @media(max-width:960px){
-  .cases-grid{grid-template-columns:1fr}
+  .cases-grid,.studio-grid,.calc-card{grid-template-columns:1fr}
 }
 @media(max-width:820px){
   .menu{display:block}
@@ -196,7 +229,8 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
     </a>
     <button class="menu" id="menuBtn" aria-label="Abrir menu">☰</button>
     <nav class="navlinks" id="navlinks">
-      <a href="#inicio">Início</a>
+      <a href="#laboratorio">Gerar Meu Site IA</a>
+      <a href="#simulador">Simulador</a>
       <a href="#servicos">Soluções</a>
       <a href="#portfolio">Projetos</a>
       <a class="nav-pill" href="https://leledesouzas96-creator.github.io/demos-ia/" target="_blank" rel="noopener">Central Demos IA ↗</a>
@@ -208,23 +242,108 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
 <main>
   <section class="hero" id="inicio" data-track="inicio_hero">
     <div class="container">
-      <div class="ai-orb-stage" onclick="document.getElementById('consultor').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('vezqoraInput').focus(),450)" title="Toque para ativar o Consultor IA VEZQORA">
+      <div class="ai-orb-stage" onclick="document.getElementById('laboratorio').scrollIntoView({behavior:'smooth'})" title="Toque para gerar o protótipo da sua empresa com IA">
         <div class="ai-orb-wave"></div>
         <div class="ai-orb-ring"></div>
         <div class="ai-orb-ring-2"></div>
         <div class="ai-orb-core"></div>
       </div>
-      <span class="pill">⚡ Sites, Aplicativos, Sistemas & Agentes de IA</span>
-      <h1>Tecnologia que eleva seu padrão e resolve problemas reais com IA.</h1>
-      <p>Criamos sites que impressionam à primeira vista, aplicativos, sistemas sob medida e agentes de Inteligência Artificial que atendem, organizam e vendem para a sua empresa.</p>
+      <span class="pill">⚡ Exclusivo VEZQORA • Teste o Site e a IA da Sua Empresa Agora</span>
+      <h1>Se o nosso site já faz isso, imagina o que criamos para o seu negócio.</h1>
+      <p>Construímos sites de alta conversão, aplicativos, sistemas sob medida e agentes de Inteligência Artificial que atendem, orçam e vendem 24h por dia.</p>
       <div class="hero-actions">
-        <a class="btn" href="#consultor" onclick="setTimeout(()=>document.getElementById('vezqoraInput').focus(),250)">Resolver meu Gargalo com IA ✦</a>
+        <a class="btn btn-cyan" href="#laboratorio">Gerar Prévia da Minha Empresa Agora ✦</a>
         <a class="btn btn-outline" href="https://leledesouzas96-creator.github.io/demos-ia/" target="_blank" rel="noopener">Testar Agentes por Ramo ↗</a>
       </div>
       <div class="metrics">
-        <div class="metric-box"><strong>24/7</strong><span>IA operando sem pausas</span></div>
-        <div class="metric-box"><strong>&lt; 3s</strong><span>Resposta rápida ao cliente</span></div>
-        <div class="metric-box"><strong>Sob Medida</strong><span>Site, App, Sistema ou IA</span></div>
+        <div class="metric-box"><strong>10s</strong><span>Para ver sua empresa com IA na tela</span></div>
+        <div class="metric-box"><strong>&lt; 3s</strong><span>Tempo de resposta ao seu cliente</span></div>
+        <div class="metric-box"><strong>24/7</strong><span>Vendas e agendamentos sem pausas</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECURSO EXCLUSIVO: GERADOR DE PROTOTIPO AO VIVO DA EMPRESA DO CLIENTE -->
+  <section class="studio-section" id="laboratorio" data-track="laboratorio_prototipo">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Exclusivo VEZQORA • Experiência ao Vivo</span>
+        <h2 class="section-title">Veja o site e o Agente de IA da SUA empresa funcionando agora</h2>
+        <p class="section-lead">Digite o nome e o ramo do seu negócio. Nossa Inteligência Artificial monta um protótipo interativo na hora para você testar como seus clientes serão atendidos.</p>
+      </div>
+
+      <div class="studio-grid">
+        <div class="studio-form-card">
+          <div class="field-group">
+            <label for="protoEmpresa">Nome da sua empresa</label>
+            <input type="text" id="protoEmpresa" placeholder="Ex: Barbearia Imperial, Loja Pé Forte, Clínica Vida...">
+          </div>
+          <div class="field-group">
+            <label for="protoRamo">Qual é o seu ramo?</label>
+            <input type="text" id="protoRamo" placeholder="Ex: Loja de calçados, Salão de beleza, Oficina, Delivery...">
+          </div>
+          <div class="field-group">
+            <label for="protoGargalo">O que hoje mais trava suas vendas ou atendimento?</label>
+            <input type="text" id="protoGargalo" placeholder="Ex: Demora no WhatsApp, agenda bagunçada, orçamentos lentos...">
+          </div>
+          <button type="button" class="btn btn-cyan" id="btnGerarProto" style="width:100%" onclick="gerarPrototipoEmpresa()">Gerar Site + Agente IA da Minha Empresa ⚡</button>
+          <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0;text-align:center">100% gratuito • O agente criado ao lado já responde como funcionário da sua empresa.</p>
+        </div>
+
+        <div class="phone-preview" aria-label="Prévia interativa da empresa do visitante">
+          <div class="phone-topbar">
+            <span>● VEZQORA Live Engine</span>
+            <span class="phone-url" id="previewUrl">suaempresa.com.br</span>
+            <span>24h IA</span>
+          </div>
+          <div class="phone-hero">
+            <span class="phone-badge" id="previewBadge">● Prévia Interativa Gerada por IA</span>
+            <h3 id="previewHeadline">Sua Empresa: Atendimento & Vendas 24h</h3>
+            <p id="previewSubheadline">Preencha os campos ao lado e veja aqui um site moderno com agente inteligente treinado para o seu ramo.</p>
+          </div>
+          <div class="phone-plan">
+            <strong>Arquitetura recomendada pela VEZQORA:</strong>
+            <span id="previewSolucao">Site Profissional de Alta Conversão + Sistema de Gestão + Agente de IA 24h sob medida.</span>
+          </div>
+          <div class="phone-chat-body" id="previewChatBody">
+            <div class="p-msg bot" id="previewWelcome">Olá! Assim que você gerar sua prévia ao lado, eu assumo o papel de Agente de IA da sua empresa para você testar ao vivo.</div>
+          </div>
+          <div class="phone-chips" id="previewChips">
+            <button type="button" class="p-chip" onclick="testarNoMockup('Quero saber valores e como funciona')">💰 Consultar valores</button>
+            <button type="button" class="p-chip" onclick="testarNoMockup('Quero agendar um horário ou fazer pedido')">📅 Agendar / Pedir</button>
+          </div>
+          <form class="phone-form" onsubmit="enviarNoMockup(event)">
+            <input type="text" id="previewInput" placeholder="Teste conversar com a IA da sua empresa...">
+            <button type="submit">Testar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULADOR DE FATURAMENTO RECUPERADO -->
+  <section id="simulador" data-track="simulador_lucro">
+    <div class="container">
+      <div class="calc-card">
+        <div>
+          <span class="kicker">Impacto no Caixa</span>
+          <h2 class="section-title" style="font-size:clamp(24px,3.2vw,34px)">Quanto dinheiro escapa hoje por demora no atendimento?</h2>
+          <p class="section-lead" style="margin-bottom:24px">Clientes que chamam fora do horário ou esperam mais de 5 minutos fecham com o concorrente. Simule o potencial de recuperação com IA 24h:</p>
+          <div class="slider-row">
+            <label><span>Mensagens / orçamentos por dia:</span> <strong id="lblLeads" style="color:var(--accent)">15 clientes/dia</strong></label>
+            <input type="range" id="rangeLeads" min="3" max="80" value="15" oninput="atualizarSimulador()">
+          </div>
+          <div class="slider-row" style="margin-bottom:0">
+            <label><span>Ticket médio (valor médio de cada venda/serviço):</span> <strong id="lblTicket" style="color:var(--accent)">R$ 120</strong></label>
+            <input type="range" id="rangeTicket" min="30" max="1500" step="10" value="120" oninput="atualizarSimulador()">
+          </div>
+        </div>
+        <div class="calc-result">
+          <span>Potencial extra recuperado por mês</span>
+          <strong id="lblRecuperado">+ R$ 13.500/mês</strong>
+          <p>Estimativa considerando apenas 25% dos atendimentos perdidos fora do horário comercial ou por demora convertidos pela IA VEZQORA.</p>
+          <a class="btn" href="#consultor" onclick="setTimeout(()=>document.getElementById('vezqoraInput').focus(),250)">Quero Capturar Esse Resultado ✦</a>
+        </div>
       </div>
     </div>
   </section>
@@ -233,48 +352,48 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
     <div class="container">
       <div class="section-head">
         <span class="kicker">O que construímos</span>
-        <h2 class="section-title">Soluções completas para transformar a operação do seu negócio</h2>
-        <p class="section-lead">Cada empresa tem um desafio diferente — combinamos site, aplicativo, sistema e inteligência artificial para resolver o que trava o seu crescimento.</p>
+        <h2 class="section-title">Tecnologia completa para multiplicar seus clientes e seu lucro</h2>
+        <p class="section-lead">Não entregamos apenas código — entregamos estrutura comercial e operacional pronta para escalar.</p>
       </div>
       <div class="grid-4">
         <article class="card">
           <div class="icon-box">🌐</div>
           <h3>Sites de Alta Conversão</h3>
-          <p>Sites modernos, rápidos e com visual marcante que transmitem autoridade imediata e transformam visitantes em clientes.</p>
+          <p>Páginas rápidas, modernas e com impacto visual imediato que fazem o cliente confiar na sua empresa no primeiro segundo.</p>
           <ul>
             <li>Design exclusivo alinhado à sua marca</li>
-            <li>Experiência fluida no celular e computador</li>
-            <li>Integração direta com assistentes de IA</li>
+            <li>Experiência perfeita no celular e computador</li>
+            <li>Integração nativa com Agentes de IA</li>
           </ul>
         </article>
         <article class="card">
           <div class="icon-box">🤖</div>
-          <h3>Agentes de IA que Resolvem</h3>
-          <p>Agentes inteligentes treinados para tirar dúvidas, orçar, agendar, vender e resolver gargalos de atendimento sozinhos.</p>
+          <h3>Agentes de IA que Vendem e Resolvem</h3>
+          <p>Assistentes inteligentes treinados com os dados reais do seu negócio para atender, orçar, agendar e fechar vendas 24h.</p>
           <ul>
-            <li>Atendimento contextual por segmento</li>
-            <li>Agendamento, orçamento e triagem automáticos</li>
-            <li>Reativação e acompanhamento de clientes</li>
+            <li>Consulta horários e estoque em tempo real</li>
+            <li>Aumenta o ticket médio sugerindo adicionais</li>
+            <li>Envia comprovante e alerta o gestor na hora</li>
           </ul>
         </article>
         <article class="card">
           <div class="icon-box">⚙️</div>
           <h3>Sistemas Web Sob Medida</h3>
-          <p>Sistemas próprios para organizar agendas, pedidos, clientes, orçamentos e rotinas sem depender de planilhas soltas.</p>
+          <p>Painéis próprios para gerenciar agendas, pedidos, clientes e orçamentos sem depender de planilhas ou ferramentas engessadas.</p>
           <ul>
-            <li>Fluxos adaptados à rotina real da empresa</li>
-            <li>Controle centralizado e fácil de operar</li>
-            <li>Sem mensalidades engessadas de ferramentas genéricas</li>
+            <li>Feito exatamente para o fluxo da sua equipe</li>
+            <li>Acesso fácil pelo celular ou computador</li>
+            <li>Sem mensalidades abusivas por usuário</li>
           </ul>
         </article>
         <article class="card">
           <div class="icon-box">📱</div>
           <h3>Aplicativos & Automações</h3>
-          <p>Aplicativos e automações que conectam atendimento, gestão e notificações para eliminar retrabalho da equipe.</p>
+          <p>Apps e fluxos automáticos que eliminam tarefas repetitivas e conectam seu site direto ao WhatsApp e à sua operação.</p>
           <ul>
-            <li>Alertas imediatos de novos pedidos ou leads</li>
-            <li>Acesso prático para gestores e equipes</li>
-            <li>Mais agilidade do primeiro clique ao fechamento</li>
+            <li>Notificações instantâneas de novos leads e pedidos</li>
+            <li>Reativação automática de clientes antigos</li>
+            <li>Operação enxuta com máxima produtividade</li>
           </ul>
         </article>
       </div>
@@ -286,7 +405,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
       <div class="section-head">
         <span class="kicker">Na prática</span>
         <h2 class="section-title">Projetos em produção & Laboratório IA</h2>
-        <p class="section-lead">Veja como aplicamos visual profissional, sistema e inteligência artificial em negócios reais e demonstrações interativas.</p>
+        <p class="section-lead">Teste ao vivo soluções reais desenvolvidas pela VEZQORA.</p>
       </div>
       <div class="cases-grid">
         <article class="case-card">
@@ -298,7 +417,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
             <div>
               <span class="case-tag">Case Real • Beleza & Estética</span>
               <h3>DIVAS Salão de Beleza — Agenda 100% Autônoma</h3>
-              <p>Site completo com vitrine de serviços, galeria e Recepcionista Virtual IA que verifica horários livres, reserva na hora e gera comprovante com localização.</p>
+              <p>Site completo com vitrine de serviços, galeria real e Recepcionista Virtual IA que mostra horários livres clicáveis, reserva na hora e gera comprovante no WhatsApp.</p>
             </div>
             <a class="btn btn-outline" href="https://leledesouzas96-creator.github.io/Divas/" target="_blank" rel="noopener">Ver projeto ao vivo ↗</a>
           </div>
@@ -313,7 +432,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
             <div>
               <span class="case-tag">Projeto Real • Delivery & Gastronomia</span>
               <h3>Brava Burger IA — Atendente de Pedidos 24h</h3>
-              <p>Catálogo digital e agente vendedor com IA que monta o pedido item por item, sugere adicionais, calcula a taxa por bairro e gera o comprovante pronto.</p>
+              <p>Catálogo digital e agente vendedor com IA que monta o pedido item por item, sugere adicionais, calcula a entrega por bairro e gera o comprovante pronto.</p>
             </div>
             <a class="btn btn-outline" href="https://leledesouzas96-creator.github.io/burger-IA/" target="_blank" rel="noopener">Testar projeto ao vivo ↗</a>
           </div>
@@ -340,13 +459,13 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
   <section class="ai-section" id="consultor" data-track="consultor_ia">
     <div class="container ai-wrap">
       <div>
-        <span class="kicker">Diagnóstico com IA</span>
-        <h2 class="section-title">Conte o problema do seu negócio e veja como a IA resolve.</h2>
-        <p class="section-lead">Nosso Consultor IA analisa o seu ramo e aponta qual combinação de site, aplicativo, sistema ou agente de IA faz mais sentido para resolver o que hoje toma tempo da sua empresa.</p>
+        <span class="kicker">Consultoria Estratégica</span>
+        <h2 class="section-title">Quer fechar seu projeto com a VEZQORA? Fale com nosso Consultor IA.</h2>
+        <p class="section-lead">Conte qual é o ramo da sua empresa e o que você precisa (site, aplicativo, sistema ou agente de IA). Ele monta o plano ideal e encaminha direto para nossa equipe.</p>
         <div class="ai-benefits">
-          <div class="ai-benefit">✦ Soluções específicas para o seu ramo — sem resposta pronta genérica</div>
-          <div class="ai-benefit">✦ Integração entre visual profissional, sistema e automação com IA</div>
-          <div class="ai-benefit">✦ Direcionamento direto para testar demos ou montar seu projeto</div>
+          <div class="ai-benefit">✦ Diagnóstico técnico personalizado para o seu ramo</div>
+          <div class="ai-benefit">✦ Projeto completo: visual profissional + sistema + IA treinada</div>
+          <div class="ai-benefit">✦ Atendimento rápido para colocar sua empresa no ar</div>
         </div>
       </div>
 
@@ -355,20 +474,20 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
           <div class="mini-orb"><div class="mini-orb-core"></div></div>
           <div>
             <strong>Consultor VEZQORA IA</strong>
-            <span id="vezqoraStatus">● Núcleo Ativo • Diagnóstico Sob Medida com IA</span>
+            <span id="vezqoraStatus">● Núcleo Ativo • Planejamento de Projetos & IA</span>
           </div>
         </div>
         <div class="chat-body" id="vezqoraMessages">
-          <div class="msg bot">Olá! Sou o Consultor Inteligente da VEZQORA. Qual é o ramo da sua empresa e qual problema você quer resolver hoje — atendimento lento, agenda, vendas, sistema ou um site/aplicativo do zero?</div>
+          <div class="msg bot">Olá! Sou o Consultor Inteligente da VEZQORA. Qual é o ramo da sua empresa e o que você quer colocar para rodar primeiro — site profissional, aplicativo, sistema sob medida ou agente de IA 24h?</div>
         </div>
         <div class="chat-chips">
-          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Tenho uma oficina / estética automotiva e perco tempo fazendo orçamento')">🚗 Oficina / Estética Auto</button>
-          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Tenho loja de roupas / comércio e quero vender mais e organizar pedidos')">🛍️ Loja / Comércio</button>
-          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Quero um site profissional, sistema ou aplicativo para meu serviço')">⚙️ Site / App / Sistema</button>
-          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Quero um agente de IA para atender clientes e agendar sozinho')">🤖 Agente de IA 24h</button>
+          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Tenho loja de calçados / moda e quero vender mais com site e IA')">👟 Loja de Calçados / Moda</button>
+          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Tenho salão / barbearia / clínica e quero agendamento automático')">💇 Salão / Barbearia / Clínica</button>
+          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Preciso de um sistema ou aplicativo sob medida para minha empresa')">⚙️ App / Sistema Sob Medida</button>
+          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Quero orçamento para criar meu site e agente de IA')">🚀 Quero Orçamento</button>
         </div>
         <form class="chat-form" onsubmit="enviarChatVezqora(event)">
-          <input type="text" id="vezqoraInput" placeholder="Ex: tenho barbearia, clínica, loja, oficina..." autocomplete="off">
+          <input type="text" id="vezqoraInput" placeholder="Digite o ramo da sua empresa ou sua ideia..." autocomplete="off">
           <button type="submit">Enviar</button>
         </form>
       </div>
@@ -378,9 +497,9 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
   <section id="contato" data-track="contato_cta">
     <div class="container">
       <div class="cta-box">
-        <h2>Pronto para colocar esse nível de tecnologia no seu negócio?</h2>
-        <p>Faça o diagnóstico com nosso Consultor IA acima e veja como estruturar seu site, aplicativo, sistema ou agente de IA.</p>
-        <a class="btn" href="#consultor" onclick="setTimeout(()=>document.getElementById('vezqoraInput').focus(),250)">Falar com o Consultor IA ✦</a>
+        <h2>Sua empresa merece esse padrão de tecnologia.</h2>
+        <p>Gere sua prévia acima ou converse com nosso Consultor IA para lançar seu site, aplicativo, sistema ou agente de IA.</p>
+        <a class="btn btn-cyan" href="#laboratorio">Gerar Prévia da Minha Empresa ✦</a>
       </div>
     </div>
   </section>
@@ -389,19 +508,21 @@ footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);f
 <footer data-track="rodape">
   <div class="container footer-row">
     <div><strong>VEZQORA</strong> — Sites, Aplicativos, Sistemas & Agentes de IA</div>
-    <div>Soluções Inteligentes para Empresas</div>
+    <div>Engenharia de IA & Automação Comercial</div>
   </div>
 </footer>
 
-<a class="floating-cta" href="#consultor" onclick="setTimeout(()=>document.getElementById('vezqoraInput').focus(),250)">
-  <span class="btn-orb"></span> Consultor IA
+<a class="floating-cta" href="#laboratorio">
+  <span class="btn-orb"></span> Testar na Minha Empresa
 </a>
 
 <script>
+const VEZQORA_IA_URL='https://vezqoraai.vezqoraai.workers.dev';
 const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navlinks');
 menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 
+// Carrega foto principal real do DIVAS no card do portfolio
 (async function carregarFotoBannerDivas(){
   try{
     const res=await fetch('https://leledesouzas96-creator.github.io/Divas/');
@@ -422,7 +543,123 @@ nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classLis
   }catch(e){}
 })();
 
-const VEZQORA_IA_URL='https://vezqoraai.vezqoraai.workers.dev';
+// SIMULADOR DE FATURAMENTO RECUPERADO
+function atualizarSimulador(){
+  const leads=Number(document.getElementById('rangeLeads').value);
+  const ticket=Number(document.getElementById('rangeTicket').value);
+  document.getElementById('lblLeads').textContent=`${leads} clientes/dia`;
+  document.getElementById('lblTicket').textContent=`R$ ${ticket.toLocaleString('pt-BR')}`;
+  const ganhoMensal=Math.round(leads*30*0.25*ticket);
+  document.getElementById('lblRecuperado').textContent=`+ R$ ${ganhoMensal.toLocaleString('pt-BR')}/mês`;
+}
+atualizarSimulador();
+
+// GERADOR DE PROTOTIPO AO VIVO DA EMPRESA DO CLIENTE
+let protoContext={empresa:'Sua Empresa',ramo:'Comércio & Serviços'};
+let protoHistory=[];
+let protoBusy=false;
+
+function addPreviewMsg(text,role){
+  const body=document.getElementById('previewChatBody');
+  const div=document.createElement('div');
+  div.className=`p-msg ${role}`;
+  div.textContent=String(text).replace(/\*\*/g,'');
+  body.appendChild(div);
+  body.scrollTop=body.scrollHeight;
+}
+
+async function gerarPrototipoEmpresa(){
+  const empresa=document.getElementById('protoEmpresa').value.trim()||'Minha Empresa';
+  const ramo=document.getElementById('protoRamo').value.trim()||'Comércio & Serviços';
+  const gargalo=document.getElementById('protoGargalo').value.trim()||'Demora no atendimento e perda de vendas';
+  const btn=document.getElementById('btnGerarProto');
+
+  btn.disabled=true;
+  btn.textContent='Construindo site + treinando IA... ⚡';
+  document.getElementById('previewBadge').textContent='⚡ Gerando ambiente exclusivo...';
+
+  try{
+    const res=await fetch(VEZQORA_IA_URL,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({mode:'prototype',empresa,ramo,gargalo})
+    });
+    const data=await res.json();
+    const p=data.prototype||{};
+
+    protoContext={empresa,ramo};
+    protoHistory=[];
+
+    const slug=empresa.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'')||'suaempresa';
+    document.getElementById('previewUrl').textContent=`${slug}.com.br`;
+    document.getElementById('previewBadge').textContent=`● ${p.ganhoEstimado||'IA Ativa 24h'}`;
+    document.getElementById('previewHeadline').textContent=p.headline||`${empresa}: Atendimento Inteligente 24h`;
+    document.getElementById('previewSubheadline').textContent=p.subheadline||`Solução moderna para clientes de ${ramo}.`;
+    document.getElementById('previewSolucao').textContent=p.solucaoVezqora||`Site + Sistema + Agente IA sob medida para ${empresa}.`;
+
+    const body=document.getElementById('previewChatBody');
+    body.innerHTML='';
+    const welcome=p.boasVindasIA||`Olá! Bem-vindo(a) à ${empresa}. Como posso ajudar você hoje?`;
+    addPreviewMsg(welcome,'bot');
+    protoHistory.push({role:'assistant',content:welcome});
+
+    const chipsBox=document.getElementById('previewChips');
+    chipsBox.innerHTML='';
+    (p.atalhosCliente||['Ver serviços e preços','Agendar / fazer pedido']).forEach(atalho=>{
+      const c=document.createElement('button');
+      c.type='button';
+      c.className='p-chip';
+      c.textContent=atalho;
+      c.onclick=()=>testarNoMockup(atalho);
+      chipsBox.appendChild(c);
+    });
+  }catch(e){
+    addPreviewMsg('Não foi possível gerar agora. Tente novamente em instantes.','bot');
+  }finally{
+    btn.disabled=false;
+    btn.textContent='Gerar Site + Agente IA da Minha Empresa ⚡';
+  }
+}
+
+function testarNoMockup(texto){
+  document.getElementById('previewInput').value=texto;
+  enviarNoMockup();
+}
+
+async function enviarNoMockup(e){
+  if(e)e.preventDefault();
+  const inp=document.getElementById('previewInput');
+  const text=inp.value.trim();
+  if(!text||protoBusy)return;
+  protoBusy=true;
+  inp.value='';
+  addPreviewMsg(text,'user');
+  protoHistory.push({role:'user',content:text});
+
+  try{
+    const res=await fetch(VEZQORA_IA_URL,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        mode:'demo_agent',
+        empresa:protoContext.empresa,
+        ramo:protoContext.ramo,
+        message:text,
+        history:protoHistory
+      })
+    });
+    const data=await res.json();
+    const reply=data.reply||'Perfeito! Posso já separar isso para você agora mesmo.';
+    addPreviewMsg(reply,'bot');
+    protoHistory.push({role:'assistant',content:reply});
+  }catch{
+    addPreviewMsg('Reconectando agente de demonstração...','bot');
+  }finally{
+    protoBusy=false;
+  }
+}
+
+// CONSULTOR COMERCIAL VEZQORA IA
 const chatBox=document.getElementById('vezqoraChatBox');
 const statusEl=document.getElementById('vezqoraStatus');
 const msgBox=document.getElementById('vezqoraMessages');
@@ -453,11 +690,11 @@ async function enviarChatVezqora(e){
   historyVezqora.push({role:'user',content:text});
 
   chatBox.classList.add('thinking');
-  statusEl.textContent='● Montando diagnóstico sob medida com IA...';
+  statusEl.textContent='● Montando plano sob medida com IA...';
 
   const typing=document.createElement('div');
   typing.className='msg bot';
-  typing.textContent='Analisando seu ramo e montando soluções com IA... ⚡';
+  typing.textContent='Analisando seu ramo e estruturando soluções... ⚡';
   msgBox.appendChild(typing);
   msgBox.scrollTop=msgBox.scrollHeight;
 
@@ -465,20 +702,20 @@ async function enviarChatVezqora(e){
     const res=await fetch(VEZQORA_IA_URL,{
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({message:text,history:historyVezqora})
+      body:JSON.stringify({mode:'consultor',message:text,history:historyVezqora})
     });
     const data=await res.json();
     typing.remove();
-    const reply=data.reply||'Conte-me qual é o ramo da sua empresa e qual problema você quer resolver hoje.';
+    const reply=data.reply||'Conte-me qual é o ramo da sua empresa para eu desenhar a solução ideal.';
     addVezqoraMsg(reply,'bot');
     historyVezqora.push({role:'assistant',content:reply});
   }catch(err){
     typing.remove();
-    addVezqoraMsg('Nosso consultor está reconectando. Tente enviar novamente em alguns segundos!','bot');
+    addVezqoraMsg('Nosso consultor está reconectando. Tente novamente em segundos!','bot');
   }finally{
     busyVezqora=false;
     chatBox.classList.remove('thinking');
-    statusEl.textContent='● Núcleo Ativo • Diagnóstico Sob Medida com IA';
+    statusEl.textContent='● Núcleo Ativo • Planejamento de Projetos & IA';
   }
 }
 </script>
