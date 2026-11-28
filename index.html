@@ -12,6 +12,9 @@
       --border-glow: rgba(139, 92, 246, 0.35);
       --text-main: #f5f3ff;
       --text-muted: #a59ec9;
+      --purple: #7c3aed;
+      --pink: #ec4899;
+      --cyan: #22d3ee;
       --green: #10b981;
       --grad-brand: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 55%, #ec4899 100%);
     }
@@ -271,11 +274,6 @@
       cursor: pointer;
     }
 
-    .btn-send:disabled {
-      opacity: 0.6;
-      cursor: wait;
-    }
-
     .status-note {
       margin-top: 8px;
       font-size: 11px;
@@ -343,7 +341,7 @@
         <button class="chip" type="button" onclick="enviarRapido('Sistema')">Sistema</button>
       </div>
 
-      <form class="input-row" id="chat-form" onsubmit="enviarFormulario(event)">
+      <form class="input-row" onsubmit="enviarFormulario(event)">
         <input
           class="chat-input"
           id="chat-input"
@@ -351,7 +349,7 @@
           placeholder="Responda aqui ou use o microfone..."
           autocomplete="off"
         />
-        <button class="btn-send" id="btn-send" type="submit">Enviar</button>
+        <button class="btn-send" type="submit">Enviar</button>
       </form>
 
       <div class="status-note" id="status-note"></div>
@@ -372,7 +370,6 @@
     const WORKER_URL = "https://vezqora-ia.SEU-SUBDOMINIO.workers.dev";
 
     let somAtivo = true;
-    let enviandoTexto = false;
     let audioAtual = null;
     let audioUrlAtual = null;
     let recognition = null;
@@ -381,7 +378,6 @@
 
     const chatBox = document.getElementById("chat-box");
     const chatInput = document.getElementById("chat-input");
-    const btnSend = document.getElementById("btn-send");
     const statusNote = document.getElementById("status-note");
     const voiceSelect = document.getElementById("voz-gemini-select");
     const btnSom = document.getElementById("btn-som");
@@ -489,13 +485,12 @@
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            mode: "tts",
             text: textoLimpo,
             voiceName
           })
         });
 
-        const data = await res.json().catch(() => ({}));
+        const data = await res.json();
         if (!res.ok || !data.audioBase64) {
           throw new Error(data.details || data.error || "Falha no áudio do Gemini");
         }
@@ -504,7 +499,7 @@
         statusNote.textContent = `Reproduzindo voz nativa Gemini: ${voiceName}`;
       } catch (err) {
         console.error(err);
-        statusNote.textContent = `Áudio indisponível no momento (${err.message}). O chat de texto segue normal.`;
+        statusNote.textContent = `Não foi possível reproduzir o áudio do Gemini: ${err.message}`;
       } finally {
         if (botaoEl) {
           botaoEl.disabled = false;
@@ -513,7 +508,7 @@
       }
     }
 
-    function adicionarMensagem(role, texto, botaoElRef = null) {
+    function adicionarMensagem(role, texto, audioBase64 = null, audioMimeType = null, autoPlay = false) {
       const div = document.createElement("div");
       div.className = `msg ${role === "user" ? "msg-user" : "msg-bot"}`;
 
@@ -528,7 +523,16 @@
         btn.textContent = "🔊 Ouvir com voz Gemini";
         btn.onclick = () => ouvirComVozGemini(texto, btn);
         div.appendChild(btn);
-        if (botaoElRef) botaoElRef.current = btn;
+
+        if (autoPlay && somAtivo) {
+          if (audioBase64) {
+            tocarAudioBase64(audioBase64, audioMimeType).catch(() => {
+              ouvirComVozGemini(texto, btn);
+            });
+          } else {
+            ouvirComVozGemini(texto, btn);
+          }
+        }
       }
 
       chatBox.appendChild(div);
@@ -549,16 +553,11 @@
 
     async function enviarMensagem(texto) {
       const msgLimpa = String(texto || "").trim();
-      if (!msgLimpa || enviandoTexto) return;
-
-      enviandoTexto = true;
-      btnSend.disabled = true;
+      if (!msgLimpa) return;
 
       adicionarMensagem("user", msgLimpa);
       historico.push({ role: "user", content: msgLimpa });
-      statusNote.textContent = "Consultora VEZQORA digitando...";
-
-      const btnBotRef = { current: null };
+      statusNote.textContent = "Consultora VEZQORA digitando e preparando voz Gemini...";
 
       try {
         const voiceName = getVozSelecionada();
@@ -568,40 +567,38 @@
           body: JSON.stringify({
             message: msgLimpa,
             history: historico.slice(-10),
-            voiceName,
-            includeAudio: false
+            voiceName
           })
         });
 
-        const data = await res.json().catch(() => ({}));
+        const data = await res.json();
         if (!res.ok) {
-          throw new Error(data.details || data.error || `HTTP ${res.status}`);
+          throw new Error(data.details || data.error || "Erro ao consultar IA");
         }
 
         const reply = data.reply || "Entendido! Pode me contar mais detalhes do seu projeto?";
         historico.push({ role: "assistant", content: reply });
 
-        adicionarMensagem("assistant", reply, btnBotRef);
+        adicionarMensagem(
+          "assistant",
+          reply,
+          data.audioBase64 || null,
+          data.audioMimeType || null,
+          somAtivo
+        );
 
         statusNote.textContent = data.lead
           ? "Briefing enviado para o WhatsApp e planilha da VEZQORA!"
-          : "";
-
-        // Áudio roda em segundo plano sem bloquear ou travar o envio de texto
-        if (somAtivo && reply) {
-          ouvirComVozGemini(reply, btnBotRef.current).catch(() => {});
-        }
+          : data.ttsError
+            ? `Aviso de áudio: ${data.ttsError}`
+            : "";
       } catch (err) {
         console.error(err);
-        statusNote.textContent = `Erro ao enviar texto: ${err.message}`;
+        statusNote.textContent = `Erro: ${err.message}`;
         adicionarMensagem(
           "assistant",
-          "Não consegui responder agora. Confira se a URL do Worker está correta e tente novamente."
+          "Tive uma instabilidade momentânea na conexão. Pode tentar enviar novamente?"
         );
-      } finally {
-        enviandoTexto = false;
-        btnSend.disabled = false;
-        chatInput.focus();
       }
     }
 
@@ -652,7 +649,7 @@
     const mensagemInicial =
       "Olá! Sou a consultora especialista da VEZQORA. Qual solução você busca hoje: Site Profissional, Aplicativo Interativo, Agente de IA ou Sistema Personalizado?";
     historico.push({ role: "assistant", content: mensagemInicial });
-    adicionarMensagem("assistant", mensagemInicial);
+    adicionarMensagem("assistant", mensagemInicial, null, null, false);
   </script>
 </body>
 </html>
