@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VEZQORA — AI Engineering, Sites, Apps &amp; Sistemas</title>
   <style>
     :root {
-      --bg-dark: #090714;
-      --bg-soft: #0f0c20;
-      --card-bg: #120f24;
-      --panel-bg: #17132e;
-      --border-glow: rgba(139, 92, 246, 0.35);
+      --bg-dark: #070510;
+      --bg-card: #120e24;
+      --bg-panel: #181330;
+      --bg-elevated: #201940;
+      --border-soft: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(139, 92, 246, 0.42);
       --text-main: #f5f3ff;
-      --text-muted: #a59ec9;
+      --text-muted: #a7a0cb;
       --green: #10b981;
-      --grad-brand: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 55%, #ec4899 100%);
+      --grad-brand: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 52%, #ec4899 100%);
     }
 
     * {
@@ -29,24 +30,27 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #1d123d 0%, var(--bg-dark) 62%);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.24) 0%, transparent 45%),
+        radial-gradient(circle at 85% 25%, rgba(236, 72, 153, 0.12) 0%, transparent 38%),
+        var(--bg-dark);
       color: var(--text-main);
       min-height: 100vh;
-      padding-bottom: 92px;
-      line-height: 1.5;
+      padding-bottom: 100px;
+      line-height: 1.55;
     }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 30;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 18px;
-      background: rgba(9, 7, 20, 0.9);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 14px 20px;
+      background: rgba(7, 5, 16, 0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-soft);
     }
 
     .brand {
@@ -63,16 +67,22 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      font-size: 20px;
+      font-weight: 900;
+      font-size: 21px;
       color: #fff;
-      animation: pulseV 2.4s infinite ease-in-out;
-      box-shadow: 0 0 22px rgba(139, 92, 246, 0.45);
+      animation: pulseV 2.2s infinite ease-in-out;
+      box-shadow: 0 0 22px rgba(139, 92, 246, 0.5);
     }
 
     @keyframes pulseV {
-      0%, 100% { transform: scale(1); box-shadow: 0 0 18px rgba(139, 92, 246, 0.4); }
-      50% { transform: scale(1.06); box-shadow: 0 0 30px rgba(236, 72, 153, 0.65); }
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.45);
+      }
+      50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 36px rgba(236, 72, 153, 0.75);
+      }
     }
 
     .brand-title {
@@ -83,7 +93,7 @@
 
     .brand-sub {
       font-size: 10px;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.13em;
       color: var(--text-muted);
     }
 
@@ -91,49 +101,65 @@
       background: var(--grad-brand);
       color: #fff;
       border: none;
-      border-radius: 10px;
-      padding: 10px 14px;
+      border-radius: 11px;
+      padding: 10px 15px;
       font-weight: 700;
       font-size: 13px;
       cursor: pointer;
+      box-shadow: 0 8px 24px rgba(139, 92, 246, 0.35);
     }
 
     .container {
-      max-width: 780px;
+      max-width: 860px;
       margin: 0 auto;
-      padding: 22px 16px 0;
+      padding: 28px 18px 0;
     }
 
     .hero {
       text-align: center;
-      padding: 18px 8px 26px;
+      padding: 12px 10px 30px;
+    }
+
+    .badge-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid var(--border-glow);
+      color: #e9d5ff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 18px;
     }
 
     .hero-v-big {
-      width: 78px;
-      height: 78px;
-      margin: 0 auto 16px;
-      border-radius: 22px;
+      width: 92px;
+      height: 92px;
+      margin: 0 auto 18px;
+      border-radius: 26px;
       background: var(--grad-brand);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 38px;
+      font-size: 46px;
       font-weight: 900;
       color: #fff;
-      animation: pulseV 2.4s infinite ease-in-out;
+      animation: pulseV 2.2s infinite ease-in-out;
     }
 
     .hero h1 {
-      font-size: clamp(24px, 5vw, 36px);
+      font-size: clamp(26px, 5.2vw, 42px);
       font-weight: 800;
-      margin-bottom: 10px;
+      line-height: 1.18;
+      margin-bottom: 12px;
     }
 
     .hero p {
       color: var(--text-muted);
-      max-width: 580px;
-      margin: 0 auto 18px;
+      max-width: 620px;
+      margin: 0 auto 22px;
       font-size: 15px;
     }
 
@@ -141,7 +167,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .btn-primary {
@@ -149,19 +175,20 @@
       color: #fff;
       border: none;
       border-radius: 12px;
-      padding: 12px 18px;
+      padding: 13px 20px;
       font-weight: 700;
       font-size: 14px;
       cursor: pointer;
       text-decoration: none;
+      box-shadow: 0 10px 28px rgba(139, 92, 246, 0.35);
     }
 
     .btn-secondary {
-      background: var(--panel-bg);
+      background: var(--bg-panel);
       color: var(--text-main);
       border: 1px solid var(--border-glow);
       border-radius: 12px;
-      padding: 12px 18px;
+      padding: 13px 20px;
       font-weight: 700;
       font-size: 14px;
       cursor: pointer;
@@ -169,17 +196,41 @@
     }
 
     .assistant-card {
-      background: var(--card-bg);
+      background: var(--bg-card);
       border: 1px solid var(--border-glow);
-      border-radius: 22px;
-      padding: 18px;
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
-      margin-bottom: 34px;
+      border-radius: 24px;
+      padding: 20px;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.65);
+      margin-bottom: 42px;
+    }
+
+    .assistant-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .assistant-title {
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .assistant-pill {
+      font-size: 11px;
+      font-weight: 700;
+      color: #a7f3d0;
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
     }
 
     .voice-controls {
-      background: var(--panel-bg);
-      border: 1px solid rgba(255, 255, 255, 0.07);
+      background: var(--bg-panel);
+      border: 1px solid var(--border-soft);
       border-radius: 16px;
       padding: 14px;
       margin-bottom: 16px;
@@ -195,7 +246,7 @@
 
     .voice-select {
       width: 100%;
-      background: #0d0a1c;
+      background: #0b0818;
       color: #fff;
       border: 1px solid rgba(139, 92, 246, 0.45);
       border-radius: 12px;
@@ -229,7 +280,7 @@
     }
 
     .btn-sound {
-      background: #231d42;
+      background: var(--bg-elevated);
       color: #fff;
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 12px;
@@ -240,15 +291,15 @@
     }
 
     .btn-sound.muted {
-      opacity: 0.7;
-      background: #1b1730;
+      opacity: 0.72;
+      background: #19142e;
     }
 
     .chat-box {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      max-height: 420px;
+      max-height: 430px;
       overflow-y: auto;
       padding-right: 4px;
       margin-bottom: 14px;
@@ -256,17 +307,17 @@
 
     .msg {
       max-width: 88%;
-      padding: 12px 14px;
+      padding: 12px 15px;
       border-radius: 16px;
       font-size: 14px;
-      line-height: 1.45;
+      line-height: 1.48;
       white-space: pre-line;
     }
 
     .msg-bot {
       align-self: flex-start;
-      background: #1d1836;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-soft);
       color: var(--text-main);
     }
 
@@ -305,14 +356,18 @@
     }
 
     .chip {
-      background: #1d1836;
-      color: #e2dcff;
+      background: var(--bg-elevated);
+      color: #e9e4ff;
       border: 1px solid rgba(139, 92, 246, 0.35);
       border-radius: 10px;
-      padding: 7px 12px;
+      padding: 8px 13px;
       font-size: 12px;
       font-weight: 600;
       cursor: pointer;
+    }
+
+    .chip:hover {
+      border-color: rgba(236, 72, 153, 0.65);
     }
 
     .input-row {
@@ -322,7 +377,7 @@
 
     .chat-input {
       flex: 1;
-      background: #0d0a1c;
+      background: #0b0818;
       color: #fff;
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 12px;
@@ -336,7 +391,7 @@
       color: #fff;
       border: none;
       border-radius: 12px;
-      padding: 0 18px;
+      padding: 0 20px;
       font-weight: 800;
       font-size: 14px;
       cursor: pointer;
@@ -355,11 +410,11 @@
     }
 
     .section-block {
-      margin-bottom: 34px;
+      margin-bottom: 42px;
     }
 
     .section-title {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 800;
       margin-bottom: 6px;
     }
@@ -367,50 +422,57 @@
     .section-sub {
       color: var(--text-muted);
       font-size: 14px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .grid-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
     }
 
     .info-card {
-      background: var(--card-bg);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 18px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-glow);
     }
 
     .info-card h3 {
       font-size: 16px;
-      margin-bottom: 6px;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
     .info-card p {
       font-size: 13px;
       color: var(--text-muted);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .tag-orcamento {
       display: inline-block;
       font-size: 11px;
       font-weight: 700;
-      color: #ddd6fe;
-      background: rgba(139, 92, 246, 0.2);
-      border: 1px solid rgba(139, 92, 246, 0.35);
-      padding: 4px 10px;
+      color: #e9d5ff;
+      background: rgba(139, 92, 246, 0.18);
+      border: 1px solid rgba(139, 92, 246, 0.38);
+      padding: 4px 11px;
       border-radius: 999px;
     }
 
     .footer-box {
       text-align: center;
-      padding: 20px 12px;
+      padding: 24px 12px;
       color: var(--text-muted);
       font-size: 13px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid var(--border-soft);
     }
 
     .wa-float {
@@ -443,18 +505,24 @@
 
   <main class="container">
     <section class="hero">
+      <div class="badge-top">⚡ Engenharia de IA, Sites, Apps e Sistemas</div>
       <div class="hero-v-big">V</div>
-      <h1>Engenharia de IA, Sites, Apps e Sistemas</h1>
+      <h1>Tecnologia inteligente sob medida para o seu negócio</h1>
       <p>
-        Soluções sob medida para o seu negócio atender, agendar e vender no automático — com proposta e orçamento personalizados.
+        Desenvolvemos sites, aplicativos interativos, sistemas e agentes de IA que atendem clientes, organizam processos e geram oportunidades com orçamento personalizado.
       </p>
       <div class="hero-actions">
-        <button class="btn-primary" type="button" onclick="irParaChat()">Iniciar Consultoria IA</button>
+        <button class="btn-primary" type="button" onclick="irParaChat()">Montar Briefing com IA</button>
         <a class="btn-secondary" href="#projetos">Ver Demonstrações</a>
       </div>
     </section>
 
     <section class="assistant-card" id="assistente-vezqora">
+      <div class="assistant-header">
+        <div class="assistant-title">VEZQORA IA Consultor</div>
+        <div class="assistant-pill">Voz Nativa Gemini</div>
+      </div>
+
       <div class="voice-controls">
         <label class="voice-label" for="voz-gemini-select">Voz do Gemini:</label>
         <select class="voice-select" id="voz-gemini-select">
@@ -501,21 +569,21 @@
 
     <section class="section-block" id="solucoes">
       <h2 class="section-title">Soluções Sob Orçamento</h2>
-      <p class="section-sub">Cada projeto é dimensionado conforme as funcionalidades e fluxos do seu negócio.</p>
+      <p class="section-sub">Cada projeto é planejado de acordo com os objetivos e fluxos da sua operação.</p>
       <div class="grid-cards">
         <div class="info-card">
           <h3>Agentes de IA</h3>
-          <p>Atendimento instantâneo, qualificação de clientes e encaminhamento de pedidos com resumo organizado.</p>
+          <p>Atendimento instantâneo, qualificação de leads, agendamentos e alertas automáticos no fluxo do negócio.</p>
           <span class="tag-orcamento">Sob orçamento</span>
         </div>
         <div class="info-card">
           <h3>Sites &amp; Aplicativos</h3>
-          <p>Páginas rápidas e aplicações interativas pensadas para conversão e experiência mobile.</p>
+          <p>Sites modernos e aplicativos interativos com foco em performance, clareza e conversão.</p>
           <span class="tag-orcamento">Sob orçamento</span>
         </div>
         <div class="info-card">
           <h3>Sistemas &amp; Automações</h3>
-          <p>Fluxos integrados entre atendimento, agenda e notificações para eliminar trabalho manual.</p>
+          <p>Sistemas personalizados e integrações para reduzir tarefas manuais e acelerar o atendimento.</p>
           <span class="tag-orcamento">Sob orçamento</span>
         </div>
       </div>
@@ -523,7 +591,7 @@
 
     <section class="section-block" id="projetos">
       <h2 class="section-title">Portfólio &amp; Demonstrações</h2>
-      <p class="section-sub">Exemplos práticos de automação e atendimento inteligente aplicados a negócios reais.</p>
+      <p class="section-sub">Exemplos reais e protótipos interativos desenvolvidos pela VEZQORA.</p>
       <div class="grid-cards">
         <div class="info-card">
           <h3>DIVAS Salão de Beleza</h3>
@@ -532,14 +600,19 @@
         </div>
         <div class="info-card">
           <h3>Hamburgueria / Burger IA</h3>
-          <p>Atendimento de pedidos, cardápio interativo e captação rápida de dados de entrega.</p>
+          <p>Atendimento de pedidos, opções do cardápio e captura rápida de dados de entrega.</p>
+          <span class="tag-orcamento">Demonstração IA</span>
+        </div>
+        <div class="info-card">
+          <h3>Varejo &amp; Loja de Roupas</h3>
+          <p>Assistente para tirar dúvidas de produtos, tamanhos e encaminhar pedidos com agilidade.</p>
           <span class="tag-orcamento">Demonstração IA</span>
         </div>
       </div>
     </section>
 
     <footer class="footer-box">
-      VEZQORA — AI Engineering &amp; Systems • Atendimento e orçamentos personalizados.
+      VEZQORA — AI Engineering &amp; Systems • WhatsApp (51) 99189-5177
     </footer>
   </main>
 
@@ -554,6 +627,8 @@
 
   <script>
     const WORKER_URL = "https://vezqoraai";
+    const SHEETS_WEBHOOK = "https://script.google.com/macros/s/AKfycbwNe6oNJ-rjj2uDWUwQr2ekJc9fC8-9fY62BMzx8H0RhqRgOr2NSt7ezhR4rbx-hfsz/exec";
+    const WHATSAPP_VEZQORA = "5551991895177";
 
     let somAtivo = true;
     let enviandoTexto = false;
@@ -731,6 +806,20 @@
       enviarMensagem(texto);
     }
 
+    function registrarLeadLocal(lead) {
+      if (!lead || typeof lead !== "object") return;
+      fetch(SHEETS_WEBHOOK, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          origem: "VEZQORA Site",
+          whatsappDestino: WHATSAPP_VEZQORA,
+          dataHora: new Date().toISOString(),
+          ...lead
+        })
+      }).catch(() => {});
+    }
+
     async function enviarMensagem(texto) {
       const msgLimpa = String(texto || "").trim();
       if (!msgLimpa || enviandoTexto) return;
@@ -767,9 +856,12 @@
 
         adicionarMensagem("assistant", reply, btnBotRef);
 
-        statusNote.textContent = data.lead
-          ? "Briefing enviado para o WhatsApp e planilha da VEZQORA!"
-          : "";
+        if (data.lead) {
+          registrarLeadLocal(data.lead);
+          statusNote.textContent = "Briefing registrado e enviado para o atendimento VEZQORA!";
+        } else {
+          statusNote.textContent = "";
+        }
 
         if (somAtivo && reply) {
           ouvirComVozGemini(reply, btnBotRef.current).catch(() => {});
@@ -779,7 +871,7 @@
         statusNote.textContent = `Erro: ${err.message}`;
         adicionarMensagem(
           "assistant",
-          "Não consegui conectar ao Worker agora. Verifique se o endereço https://vezqoraai está ativo e tente novamente."
+          "Não consegui conectar ao Worker agora. Verifique se o endereço do Worker está ativo e tente novamente."
         );
       } finally {
         enviandoTexto = false;
@@ -791,7 +883,7 @@
     function alternarMicrofone() {
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       if (!SpeechRecognition) {
-        statusNote.textContent = "O teu navegador não suporta reconhecimento de voz. Escreve a resposta abaixo.";
+        statusNote.textContent = "Seu navegador não suporta reconhecimento de voz. Digite sua resposta abaixo.";
         return;
       }
 
@@ -809,7 +901,7 @@
         ouvindo = true;
         btnMic.textContent = "⏹️ Parar Microfone";
         btnMic.classList.add("listening");
-        statusNote.textContent = "A ouvir a tua voz...";
+        statusNote.textContent = "Ouvindo você falar...";
       };
 
       recognition.onresult = (event) => {
