@@ -7,17 +7,15 @@
   <style>
     :root {
       --bg-base: #06040e;
-      --bg-surface: #0e0b1d;
-      --bg-card: #130f26;
-      --bg-panel: #191431;
+      --bg-card: #120e24;
+      --bg-panel: #181330;
       --bg-elevated: #211b40;
-      --line-subtle: rgba(255, 255, 255, 0.07);
-      --line-accent: rgba(139, 92, 246, 0.42);
+      --line-subtle: rgba(255, 255, 255, 0.08);
+      --line-accent: rgba(139, 92, 246, 0.45);
       --text-primary: #f7f5ff;
-      --text-secondary: #b1aad4;
-      --text-muted: #7c759e;
+      --text-secondary: #b5aed8;
+      --text-muted: #7f78a2;
       --accent-green: #10b981;
-      --accent-cyan: #38bdf8;
       --grad-brand: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 52%, #ec4899 100%);
     }
 
@@ -39,9 +37,20 @@
         var(--bg-base);
       color: var(--text-primary);
       min-height: 100vh;
-      padding-bottom: 104px;
+      padding-bottom: 108px;
       line-height: 1.55;
       -webkit-font-smoothing: antialiased;
+    }
+
+    .scroll-meter {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      z-index: 60;
+      background: var(--grad-brand);
+      transition: width 0.12s linear;
     }
 
     .topbar {
@@ -53,7 +62,7 @@
       justify-content: space-between;
       gap: 16px;
       padding: 14px 24px;
-      background: rgba(6, 4, 14, 0.84);
+      background: rgba(6, 4, 14, 0.86);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--line-subtle);
     }
@@ -66,31 +75,61 @@
       color: var(--text-primary);
     }
 
-    .logo-v {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: var(--grad-brand);
-      display: flex;
+    /* Somente o "V" pulsa, sem esfera ou círculo ao redor */
+    .v-pulse-wordmark {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       font-weight: 900;
-      font-size: 21px;
-      color: #fff;
-      animation: pulseV 2.2s infinite ease-in-out;
-      box-shadow: 0 0 24px rgba(139, 92, 246, 0.5);
-      flex-shrink: 0;
+      background: var(--grad-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 12px rgba(139, 92, 246, 0.55));
+      animation: pulseVOnly 1.8s infinite ease-in-out;
+      user-select: none;
     }
 
-    @keyframes pulseV {
+    .v-top {
+      font-size: 32px;
+      line-height: 1;
+      width: 34px;
+      height: 34px;
+    }
+
+    .v-hero {
+      font-size: 80px;
+      line-height: 1;
+      margin: 0 auto 14px;
+      width: 88px;
+      height: 88px;
+    }
+
+    .v-live {
+      font-size: 30px;
+      line-height: 1;
+      width: 34px;
+      height: 34px;
+    }
+
+    .v-pulse-wordmark.speaking {
+      animation: speakVFast 0.4s infinite alternate ease-in-out;
+      filter: drop-shadow(0 0 24px rgba(236, 72, 153, 0.95));
+    }
+
+    @keyframes pulseVOnly {
       0%, 100% {
         transform: scale(1);
-        box-shadow: 0 0 20px rgba(139, 92, 246, 0.45);
+        filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.45));
       }
       50% {
-        transform: scale(1.08);
-        box-shadow: 0 0 36px rgba(236, 72, 153, 0.72);
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 22px rgba(236, 72, 153, 0.82));
       }
+    }
+
+    @keyframes speakVFast {
+      0% { transform: scale(1) translateY(0); }
+      100% { transform: scale(1.24) translateY(-2px); }
     }
 
     .brand-title {
@@ -127,9 +166,7 @@
     }
 
     @media (min-width: 720px) {
-      .nav-links {
-        display: flex;
-      }
+      .nav-links { display: flex; }
     }
 
     .btn-top {
@@ -142,16 +179,10 @@
       font-size: 13px;
       cursor: pointer;
       box-shadow: 0 8px 24px rgba(139, 92, 246, 0.35);
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
-
-    .btn-top:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 28px rgba(139, 92, 246, 0.48);
     }
 
     .container {
-      max-width: 960px;
+      max-width: 980px;
       margin: 0 auto;
       padding: 36px 20px 0;
     }
@@ -170,25 +201,9 @@
       color: #e9d5ff;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.02em;
       padding: 6px 14px;
       border-radius: 999px;
-      margin-bottom: 20px;
-    }
-
-    .hero-v-big {
-      width: 96px;
-      height: 96px;
-      margin: 0 auto 20px;
-      border-radius: 26px;
-      background: var(--grad-brand);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 48px;
-      font-weight: 900;
-      color: #fff;
-      animation: pulseV 2.2s infinite ease-in-out;
+      margin-bottom: 18px;
     }
 
     .hero h1 {
@@ -196,7 +211,7 @@
       font-weight: 800;
       line-height: 1.14;
       letter-spacing: -0.02em;
-      max-width: 760px;
+      max-width: 780px;
       margin: 0 auto 14px;
     }
 
@@ -208,7 +223,7 @@
 
     .hero p {
       color: var(--text-secondary);
-      max-width: 640px;
+      max-width: 650px;
       margin: 0 auto 24px;
       font-size: 15.5px;
     }
@@ -232,11 +247,6 @@
       cursor: pointer;
       text-decoration: none;
       box-shadow: 0 10px 28px rgba(139, 92, 246, 0.35);
-      transition: transform 0.18s ease;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
     }
 
     .btn-secondary {
@@ -249,24 +259,18 @@
       font-size: 14px;
       cursor: pointer;
       text-decoration: none;
-      transition: border-color 0.18s ease, background 0.18s ease;
-    }
-
-    .btn-secondary:hover {
-      background: var(--bg-elevated);
-      border-color: rgba(236, 72, 153, 0.6);
     }
 
     .stats-strip {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 12px;
-      max-width: 780px;
+      max-width: 820px;
       margin: 0 auto;
     }
 
     .stat-item {
-      background: rgba(19, 15, 38, 0.85);
+      background: rgba(18, 14, 36, 0.88);
       border: 1px solid var(--line-subtle);
       border-radius: 14px;
       padding: 14px 16px;
@@ -299,8 +303,14 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
+      gap: 12px;
       margin-bottom: 16px;
+    }
+
+    .assistant-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .assistant-title {
@@ -389,7 +399,7 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      max-height: 430px;
+      max-height: 440px;
       overflow-y: auto;
       padding-right: 4px;
       margin-bottom: 14px;
@@ -400,7 +410,7 @@
       padding: 12px 15px;
       border-radius: 16px;
       font-size: 14px;
-      line-height: 1.48;
+      line-height: 1.5;
       white-space: pre-line;
     }
 
@@ -418,19 +428,25 @@
       font-weight: 500;
     }
 
-    .btn-listen {
+    .msg-tools {
       margin-top: 9px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .btn-listen, .btn-mini-copy {
       background: #100c22;
       color: #e9d5ff;
       border: 1px solid rgba(168, 85, 247, 0.45);
       border-radius: 999px;
-      padding: 6px 12px;
-      font-size: 12px;
+      padding: 5px 11px;
+      font-size: 11.5px;
       font-weight: 700;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
     .btn-listen:disabled {
@@ -454,7 +470,6 @@
       font-size: 12px;
       font-weight: 600;
       cursor: pointer;
-      transition: border-color 0.18s ease, background 0.18s ease;
     }
 
     .chip:hover {
@@ -505,6 +520,34 @@
       min-height: 16px;
     }
 
+    .briefing-box {
+      margin-top: 14px;
+      background: var(--bg-panel);
+      border: 1px solid var(--line-accent);
+      border-radius: 16px;
+      padding: 14px 16px;
+      display: none;
+    }
+
+    .briefing-box.visible {
+      display: block;
+    }
+
+    .briefing-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #e9d5ff;
+      margin-bottom: 8px;
+    }
+
+    .briefing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+    }
+
     .section-block {
       margin-bottom: 48px;
     }
@@ -529,29 +572,52 @@
       color: var(--text-secondary);
       font-size: 14.5px;
       margin-bottom: 20px;
-      max-width: 680px;
+      max-width: 700px;
     }
 
     .grid-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
       gap: 16px;
     }
 
-    .info-card {
+    button.info-card {
+      width: 100%;
+      text-align: left;
       background: var(--bg-card);
+      color: var(--text-primary);
       border: 1px solid var(--line-subtle);
       border-radius: 18px;
-      padding: 20px;
+      padding: 0;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      cursor: pointer;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
 
-    .info-card:hover {
+    button.info-card:hover {
       transform: translateY(-2px);
       border-color: var(--line-accent);
+      background: var(--bg-panel);
+    }
+
+    .card-thumb {
+      width: 100%;
+      height: 154px;
+      object-fit: cover;
+      display: block;
+      background: #0d091c;
+      border-bottom: 1px solid var(--line-subtle);
+    }
+
+    .card-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
     }
 
     .info-card h3 {
@@ -566,9 +632,15 @@
       margin-bottom: 14px;
     }
 
+    .card-footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
     .tag-orcamento {
       display: inline-block;
-      align-self: flex-start;
       font-size: 11px;
       font-weight: 700;
       color: #e9d5ff;
@@ -576,6 +648,83 @@
       border: 1px solid rgba(139, 92, 246, 0.36);
       padding: 5px 12px;
       border-radius: 999px;
+    }
+
+    .card-action-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #c4b5fd;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      background: rgba(4, 3, 10, 0.78);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-box {
+      width: 100%;
+      max-width: 490px;
+      background: var(--bg-card);
+      border: 1px solid var(--line-accent);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.75);
+    }
+
+    .modal-img {
+      width: 100%;
+      height: 176px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      border: 1px solid var(--line-subtle);
+    }
+
+    .modal-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .modal-title {
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .btn-close-modal {
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+      border: 1px solid var(--line-subtle);
+      border-radius: 10px;
+      padding: 6px 11px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .modal-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .modal-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .footer-box {
@@ -603,9 +752,11 @@
   </style>
 </head>
 <body>
+  <div class="scroll-meter" id="scroll-meter"></div>
+
   <header class="topbar">
     <a class="brand" href="#">
-      <div class="logo-v">V</div>
+      <span class="v-pulse-wordmark v-top" aria-hidden="true">V</span>
       <div>
         <div class="brand-title">VEZQORA</div>
         <div class="brand-sub">AI ENGINEERING &amp; SYSTEMS</div>
@@ -622,7 +773,7 @@
   <main class="container">
     <section class="hero">
       <div class="badge-top">⚡ Engenharia de IA, Sites, Apps e Sistemas</div>
-      <div class="hero-v-big">V</div>
+      <div class="v-pulse-wordmark v-hero" id="v-hero" aria-hidden="true">V</div>
       <h1>Engenharia de IA e sistemas sob medida para <span>escalar seu negócio</span></h1>
       <p>
         Criamos sites, aplicativos interativos, sistemas e agentes de IA que atendem clientes, organizam fluxos e captam oportunidades reais — com proposta e orçamento personalizados.
@@ -649,8 +800,11 @@
 
     <section class="assistant-card" id="assistente-vezqora">
       <div class="assistant-header">
-        <div class="assistant-title">VEZQORA IA Consultor</div>
-        <div class="assistant-pill">Voz Nativa Gemini</div>
+        <div class="assistant-left">
+          <span class="v-pulse-wordmark v-live" id="v-live" aria-hidden="true">V</span>
+          <div class="assistant-title">VEZQORA IA Consultor</div>
+        </div>
+        <div class="assistant-pill" id="live-state-pill">Tempo Real • Voz Gemini</div>
       </div>
 
       <div class="voice-controls">
@@ -695,63 +849,157 @@
       </form>
 
       <div class="status-note" id="status-note"></div>
+
+      <div class="briefing-box" id="briefing-box">
+        <div class="briefing-title">✅ Briefing Capturado pela IA</div>
+        <div class="briefing-grid" id="briefing-grid"></div>
+      </div>
     </section>
 
     <section class="section-block" id="solucoes">
       <div class="section-kicker">Arquitetura &amp; Entrega</div>
       <h2 class="section-title">Soluções Sob Orçamento</h2>
-      <p class="section-sub">Projetos construídos sob demanda, sem pacotes engessados, focados em velocidade de atendimento e conversão.</p>
+      <p class="section-sub">Toque em qualquer solução para abrir os detalhes e iniciar o briefing com a IA.</p>
       <div class="grid-cards">
-        <div class="info-card">
-          <div>
-            <h3>Agentes de IA</h3>
-            <p>Atendimento consultivo, qualificação de clientes, agendamentos e envio estruturado de briefings e alertas.</p>
+        <button
+          type="button"
+          class="info-card"
+          onclick="abrirOpcao('Agentes de IA', 'Atendimento consultivo, qualificação de leads, agendamentos e envio estruturado de briefings e alertas automáticos.', 'Quero orçamento para um Agente de IA personalizado', 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80')"
+        >
+          <img
+            class="card-thumb"
+            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+            alt="Ilustração Agentes de IA"
+          />
+          <div class="card-body">
+            <div>
+              <h3>Agentes de IA</h3>
+              <p>Atendimento consultivo, qualificação de leads, agendamentos e envio estruturado de briefings e alertas.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="tag-orcamento">Sob orçamento</span>
+              <span class="card-action-label">Abrir opção →</span>
+            </div>
           </div>
-          <span class="tag-orcamento">Sob orçamento</span>
-        </div>
-        <div class="info-card">
-          <div>
-            <h3>Sites &amp; Aplicativos</h3>
-            <p>Interfaces rápidas, responsivas e orientadas a resultado para negócios locais, marcas e serviços digitais.</p>
+        </button>
+
+        <button
+          type="button"
+          class="info-card"
+          onclick="abrirOpcao('Sites & Aplicativos', 'Interfaces rápidas, responsivas e orientadas a conversão para negócios locais, marcas e serviços digitais.', 'Quero orçamento para Site ou Aplicativo', 'https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80')"
+        >
+          <img
+            class="card-thumb"
+            src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80"
+            alt="Ilustração Sites e Aplicativos"
+          />
+          <div class="card-body">
+            <div>
+              <h3>Sites &amp; Aplicativos</h3>
+              <p>Interfaces rápidas, responsivas e orientadas a resultado para negócios locais, marcas e serviços digitais.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="tag-orcamento">Sob orçamento</span>
+              <span class="card-action-label">Abrir opção →</span>
+            </div>
           </div>
-          <span class="tag-orcamento">Sob orçamento</span>
-        </div>
-        <div class="info-card">
-          <div>
-            <h3>Sistemas &amp; Automações</h3>
-            <p>Integrações inteligentes para conectar atendimento, planilhas, notificações e rotinas operacionais.</p>
+        </button>
+
+        <button
+          type="button"
+          class="info-card"
+          onclick="abrirOpcao('Sistemas & Automações', 'Integrações inteligentes para conectar atendimento, planilhas, notificações e rotinas operacionais.', 'Quero orçamento para um Sistema ou Automação', 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80')"
+        >
+          <img
+            class="card-thumb"
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+            alt="Ilustração Sistemas e Automações"
+          />
+          <div class="card-body">
+            <div>
+              <h3>Sistemas &amp; Automações</h3>
+              <p>Integrações inteligentes para conectar atendimento, planilhas, notificações e rotinas operacionais.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="tag-orcamento">Sob orçamento</span>
+              <span class="card-action-label">Abrir opção →</span>
+            </div>
           </div>
-          <span class="tag-orcamento">Sob orçamento</span>
-        </div>
+        </button>
       </div>
     </section>
 
     <section class="section-block" id="projetos">
       <div class="section-kicker">Cases &amp; Protótipos</div>
       <h2 class="section-title">Portfólio &amp; Demonstrações</h2>
-      <p class="section-sub">Aplicações reais e demonstrações práticas de IA aplicadas a diferentes segmentos comerciais.</p>
+      <p class="section-sub">DIVAS com foto real do projeto e demonstrações com imagem ilustrativa.</p>
       <div class="grid-cards">
-        <div class="info-card">
-          <div>
-            <h3>DIVAS Salão de Beleza</h3>
-            <p>Atendimento automatizado com apresentação de serviços, consulta de horários e alerta direto de agendamento.</p>
+        <button
+          type="button"
+          class="info-card"
+          onclick="abrirOpcao('DIVAS Salão de Beleza', 'Recepção inteligente com apresentação de serviços, consulta de horários e alerta automático do agendamento.', 'Quero saber mais sobre o projeto DIVAS Salão de Beleza', 'https://leledesouzas96-creator.github.io/Divas/fotos/salao.jpg')"
+        >
+          <img
+            class="card-thumb"
+            src="https://leledesouzas96-creator.github.io/Divas/fotos/salao.jpg"
+            alt="Foto real do projeto DIVAS Salão de Beleza"
+            onerror="this.onerror=null;this.src='https://leledesouzas96-creator.github.io/Divas/fotos/logo.png';"
+          />
+          <div class="card-body">
+            <div>
+              <h3>DIVAS Salão de Beleza</h3>
+              <p>Atendimento automatizado com apresentação de serviços, consulta de horários e alerta direto de agendamento.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="tag-orcamento">Foto Real • Case</span>
+              <span class="card-action-label">Abrir case →</span>
+            </div>
           </div>
-          <span class="tag-orcamento">Case em Produção</span>
-        </div>
-        <div class="info-card">
-          <div>
-            <h3>Hamburgueria / Burger IA</h3>
-            <p>Fluxo interativo de pedidos, opções do cardápio e coleta ágil de informações para entrega ou retirada.</p>
+        </button>
+
+        <button
+          type="button"
+          class="info-card"
+          onclick="abrirOpcao('Hamburgueria / Burger IA', 'Fluxo interativo de pedidos, opções do cardápio e coleta ágil de informações para entrega ou retirada.', 'Quero ver como funciona o Agente de IA para Hamburgueria', 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80')"
+        >
+          <img
+            class="card-thumb"
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+            alt="Foto ilustrativa Hamburgueria Burger IA"
+          />
+          <div class="card-body">
+            <div>
+              <h3>Hamburgueria / Burger IA</h3>
+              <p>Fluxo interativo de pedidos, opções do cardápio e coleta ágil de informações para entrega ou retirada.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="tag-orcamento">Demonstração IA</span>
+              <span class="card-action-label">Abrir demo →</span>
+            </div>
           </div>
-          <span class="tag-orcamento">Demonstração IA</span>
-        </div>
-        <div class="info-card">
-          <div>
-            <h3>Varejo &amp; Loja de Roupas</h3>
-            <p>Assistente virtual para orientar clientes sobre catálogo, tamanhos, condições e encaminhamento de compra.</p>
+        </button>
+
+        <button
+          type="button"
+          class="info-card"
+          onclick="abrirOpcao('Varejo & Loja de Roupas', 'Assistente virtual para orientar clientes sobre catálogo, tamanhos, condições e encaminhamento de compra.', 'Quero ver como funciona o Agente de IA para Loja de Roupas', 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80')"
+        >
+          <img
+            class="card-thumb"
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80"
+            alt="Foto ilustrativa Varejo e Loja de Roupas"
+          />
+          <div class="card-body">
+            <div>
+              <h3>Varejo &amp; Loja de Roupas</h3>
+              <p>Assistente virtual para orientar clientes sobre catálogo, tamanhos, condições e encaminhamento de compra.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="tag-orcamento">Demonstração IA</span>
+              <span class="card-action-label">Abrir demo →</span>
+            </div>
           </div>
-          <span class="tag-orcamento">Demonstração IA</span>
-        </div>
+        </button>
       </div>
     </section>
 
@@ -759,6 +1007,29 @@
       VEZQORA — AI Engineering &amp; Systems • WhatsApp (51) 99189-5177
     </footer>
   </main>
+
+  <div class="modal-backdrop" id="opcao-modal" onclick="fecharModalBackdrop(event)">
+    <div class="modal-box">
+      <img class="modal-img" id="modal-imagem" src="" alt="" style="display:none;" />
+      <div class="modal-top">
+        <h3 class="modal-title" id="modal-titulo"></h3>
+        <button type="button" class="btn-close-modal" onclick="fecharOpcaoModal()">Fechar</button>
+      </div>
+      <p class="modal-desc" id="modal-descricao"></p>
+      <div class="modal-actions">
+        <button type="button" class="btn-primary" id="modal-btn-ia">Conversar com a IA sobre isso</button>
+        <a
+          class="btn-secondary"
+          id="modal-btn-wa"
+          href="https://wa.me/5551991895177"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
 
   <a
     class="wa-float"
@@ -780,8 +1051,10 @@
     let audioUrlAtual = null;
     let recognition = null;
     let ouvindo = false;
+    let promptOpcaoSelecionada = "";
     const historico = [];
 
+    const scrollMeter = document.getElementById("scroll-meter");
     const chatBox = document.getElementById("chat-box");
     const chatInput = document.getElementById("chat-input");
     const btnSend = document.getElementById("btn-send");
@@ -789,6 +1062,29 @@
     const voiceSelect = document.getElementById("voz-gemini-select");
     const btnSom = document.getElementById("btn-som");
     const btnMic = document.getElementById("btn-mic");
+    const vHero = document.getElementById("v-hero");
+    const vLive = document.getElementById("v-live");
+    const liveStatePill = document.getElementById("live-state-pill");
+    const briefingBox = document.getElementById("briefing-box");
+    const briefingGrid = document.getElementById("briefing-grid");
+    const opcaoModal = document.getElementById("opcao-modal");
+    const modalImagem = document.getElementById("modal-imagem");
+    const modalTitulo = document.getElementById("modal-titulo");
+    const modalDescricao = document.getElementById("modal-descricao");
+    const modalBtnIa = document.getElementById("modal-btn-ia");
+    const modalBtnWa = document.getElementById("modal-btn-wa");
+
+    window.addEventListener("scroll", () => {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = maxScroll > 0 ? Math.min(100, Math.max(0, (window.scrollY / maxScroll) * 100)) : 0;
+      scrollMeter.style.width = `${pct}%`;
+    });
+
+    function definirEstadoV(ativoFalando, rotulo = "Tempo Real • Voz Gemini") {
+      vHero.classList.toggle("speaking", ativoFalando);
+      vLive.classList.toggle("speaking", ativoFalando);
+      liveStatePill.textContent = rotulo;
+    }
 
     function getVozSelecionada() {
       return String(voiceSelect.value || "Charon").split(/[\s(]/)[0].trim() || "Charon";
@@ -798,6 +1094,43 @@
       document.getElementById("assistente-vezqora").scrollIntoView({ behavior: "smooth", block: "start" });
       setTimeout(() => chatInput.focus(), 250);
     }
+
+    function abrirOpcao(titulo, descricao, mensagemIa, imagemUrl = "") {
+      promptOpcaoSelecionada = mensagemIa;
+      modalTitulo.textContent = titulo;
+      modalDescricao.textContent = descricao;
+
+      if (imagemUrl) {
+        modalImagem.src = imagemUrl;
+        modalImagem.alt = titulo;
+        modalImagem.style.display = "block";
+      } else {
+        modalImagem.style.display = "none";
+      }
+
+      const textoWa = encodeURIComponent(`Olá! Vim pelo site da VEZQORA e quero saber mais sobre: ${titulo}.`);
+      modalBtnWa.href = `https://wa.me/${WHATSAPP_VEZQORA}?text=${textoWa}`;
+      opcaoModal.classList.add("open");
+    }
+
+    function fecharOpcaoModal() {
+      opcaoModal.classList.remove("open");
+    }
+
+    function fecharModalBackdrop(event) {
+      if (event.target === opcaoModal) {
+        fecharOpcaoModal();
+      }
+    }
+
+    modalBtnIa.addEventListener("click", () => {
+      const msg = promptOpcaoSelecionada;
+      fecharOpcaoModal();
+      irParaChat();
+      if (msg) {
+        enviarMensagem(msg);
+      }
+    });
 
     function alternarSom() {
       somAtivo = !somAtivo;
@@ -818,6 +1151,9 @@
         URL.revokeObjectURL(audioUrlAtual);
         audioUrlAtual = null;
       }
+      if (!enviandoTexto) {
+        definirEstadoV(false, "Tempo Real • Voz Gemini");
+      }
     }
 
     function pcm16Base64ToWavBlob(base64Pcm, sampleRate = 24000, numChannels = 1) {
@@ -827,251 +1163,4 @@
       const view = new DataView(buffer);
 
       const writeAscii = (offset, str) => {
-        for (let i = 0; i < str.length; i++) {
-          view.setUint8(offset + i, str.charCodeAt(i));
-        }
-      };
-
-      writeAscii(0, "RIFF");
-      view.setUint32(4, 36 + pcmLength, true);
-      writeAscii(8, "WAVE");
-      writeAscii(12, "fmt ");
-      view.setUint32(16, 16, true);
-      view.setUint16(20, 1, true);
-      view.setUint16(22, numChannels, true);
-      view.setUint32(24, sampleRate, true);
-      view.setUint32(28, sampleRate * numChannels * 2, true);
-      view.setUint16(32, numChannels * 2, true);
-      view.setUint16(34, 16, true);
-      writeAscii(36, "data");
-      view.setUint32(40, pcmLength, true);
-
-      for (let i = 0; i < pcmLength; i++) {
-        view.setUint8(44 + i, binaryString.charCodeAt(i));
-      }
-
-      return new Blob([buffer], { type: "audio/wav" });
-    }
-
-    async function tocarAudioBase64(audioBase64, audioMimeType = "audio/L16;rate=24000") {
-      if (!audioBase64) return false;
-      pararAudioAtual();
-
-      const rateMatch = /rate=(\d+)/.exec(audioMimeType || "");
-      const sampleRate = rateMatch ? Number(rateMatch[1]) : 24000;
-      const wavBlob = pcm16Base64ToWavBlob(audioBase64, sampleRate, 1);
-
-      audioUrlAtual = URL.createObjectURL(wavBlob);
-      audioAtual = new Audio(audioUrlAtual);
-      audioAtual.onended = () => {
-        if (audioUrlAtual) {
-          URL.revokeObjectURL(audioUrlAtual);
-          audioUrlAtual = null;
-        }
-      };
-
-      await audioAtual.play();
-      return true;
-    }
-
-    async function ouvirComVozGemini(texto, botaoEl = null) {
-      const textoLimpo = String(texto || "").trim();
-      if (!textoLimpo) return;
-
-      const voiceName = getVozSelecionada();
-      const textoOriginalBtn = botaoEl ? botaoEl.textContent : "";
-
-      try {
-        if (botaoEl) {
-          botaoEl.disabled = true;
-          botaoEl.textContent = `⏳ Gerando ${voiceName}...`;
-        }
-        statusNote.textContent = `Gerando áudio nativo do Gemini (${voiceName})...`;
-
-        const res = await fetch(`${WORKER_URL}/api/tts`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            mode: "tts",
-            text: textoLimpo,
-            voiceName
-          })
-        });
-
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok || !data.audioBase64) {
-          throw new Error(data.details || data.error || "Falha no áudio do Gemini");
-        }
-
-        await tocarAudioBase64(data.audioBase64, data.audioMimeType);
-        statusNote.textContent = `Reproduzindo voz nativa Gemini: ${voiceName}`;
-      } catch (err) {
-        console.error(err);
-        statusNote.textContent = `Áudio indisponível no momento (${err.message}).`;
-      } finally {
-        if (botaoEl) {
-          botaoEl.disabled = false;
-          botaoEl.textContent = textoOriginalBtn || "🔊 Ouvir com voz Gemini";
-        }
-      }
-    }
-
-    function adicionarMensagem(role, texto, botaoElRef = null) {
-      const div = document.createElement("div");
-      div.className = `msg ${role === "user" ? "msg-user" : "msg-bot"}`;
-
-      const textoNode = document.createElement("div");
-      textoNode.textContent = texto;
-      div.appendChild(textoNode);
-
-      if (role === "assistant") {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "btn-listen";
-        btn.textContent = "🔊 Ouvir com voz Gemini";
-        btn.onclick = () => ouvirComVozGemini(texto, btn);
-        div.appendChild(btn);
-        if (botaoElRef) botaoElRef.current = btn;
-      }
-
-      chatBox.appendChild(div);
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }
-
-    function enviarRapido(texto) {
-      enviarMensagem(texto);
-    }
-
-    function enviarFormulario(event) {
-      event.preventDefault();
-      const texto = chatInput.value.trim();
-      if (!texto) return;
-      chatInput.value = "";
-      enviarMensagem(texto);
-    }
-
-    function registrarLeadLocal(lead) {
-      if (!lead || typeof lead !== "object") return;
-      fetch(SHEETS_WEBHOOK, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          origem: "VEZQORA Site",
-          whatsappDestino: WHATSAPP_VEZQORA,
-          dataHora: new Date().toISOString(),
-          ...lead
-        })
-      }).catch(() => {});
-    }
-
-    async function enviarMensagem(texto) {
-      const msgLimpa = String(texto || "").trim();
-      if (!msgLimpa || enviandoTexto) return;
-
-      enviandoTexto = true;
-      btnSend.disabled = true;
-
-      adicionarMensagem("user", msgLimpa);
-      historico.push({ role: "user", content: msgLimpa });
-      statusNote.textContent = "Consultora VEZQORA digitando...";
-
-      const btnBotRef = { current: null };
-
-      try {
-        const voiceName = getVozSelecionada();
-        const res = await fetch(`${WORKER_URL}/api/chat`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            message: msgLimpa,
-            history: historico.slice(-10),
-            voiceName,
-            includeAudio: false
-          })
-        });
-
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok) {
-          throw new Error(data.details || data.error || `HTTP ${res.status}`);
-        }
-
-        const reply = data.reply || "Entendido! Pode me contar mais detalhes do seu projeto?";
-        historico.push({ role: "assistant", content: reply });
-
-        adicionarMensagem("assistant", reply, btnBotRef);
-
-        if (data.lead) {
-          registrarLeadLocal(data.lead);
-          statusNote.textContent = "Briefing registrado e enviado para o atendimento VEZQORA!";
-        } else {
-          statusNote.textContent = "";
-        }
-
-        if (somAtivo && reply) {
-          ouvirComVozGemini(reply, btnBotRef.current).catch(() => {});
-        }
-      } catch (err) {
-        console.error(err);
-        statusNote.textContent = `Erro: ${err.message}`;
-        adicionarMensagem(
-          "assistant",
-          "Não consegui conectar ao Worker agora. Verifique se o endereço do Worker está ativo e tente novamente."
-        );
-      } finally {
-        enviandoTexto = false;
-        btnSend.disabled = false;
-        chatInput.focus();
-      }
-    }
-
-    function alternarMicrofone() {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (!SpeechRecognition) {
-        statusNote.textContent = "Seu navegador não suporta reconhecimento de voz. Digite sua resposta abaixo.";
-        return;
-      }
-
-      if (ouvindo && recognition) {
-        recognition.stop();
-        return;
-      }
-
-      recognition = new SpeechRecognition();
-      recognition.lang = "pt-BR";
-      recognition.interimResults = false;
-      recognition.maxAlternatives = 1;
-
-      recognition.onstart = () => {
-        ouvindo = true;
-        btnMic.textContent = "⏹️ Parar Microfone";
-        btnMic.classList.add("listening");
-        statusNote.textContent = "Ouvindo você falar...";
-      };
-
-      recognition.onresult = (event) => {
-        const transcricao = event.results?.[0]?.[0]?.transcript || "";
-        if (transcricao.trim()) {
-          enviarMensagem(transcricao.trim());
-        }
-      };
-
-      recognition.onerror = (event) => {
-        statusNote.textContent = `Microfone: ${event.error || "não foi possível capturar voz"}`;
-      };
-
-      recognition.onend = () => {
-        ouvindo = false;
-        btnMic.textContent = "🎙️ Ativar Voz e Falar";
-        btnMic.classList.remove("listening");
-      };
-
-      recognition.start();
-    }
-
-    const mensagemInicial =
-      "Olá! Sou a consultora especialista da VEZQORA. Qual solução você busca hoje: Site Profissional, Aplicativo Interativo, Agente de IA ou Sistema Personalizado?";
-    historico.push({ role: "assistant", content: mensagemInicial });
-    adicionarMensagem("assistant", mensagemInicial);
-  </script>
-</body>
-</html>
+        for (let i = 0; i < str.length; i++)
