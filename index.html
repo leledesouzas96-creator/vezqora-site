@@ -1,814 +1,1555 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#070710">
-<meta name="description" content="VEZQORA — Sites de Alta Conversão, Aplicativos, Sistemas Sob Medida e Agentes de Inteligência Artificial 24h para Empresas.">
-<title>VEZQORA | Sites, Aplicativos, Sistemas & Agentes de IA</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#070710;
-  --card:#101020;
-  --card-2:#16162b;
-  --primary:#7C3AED;
-  --primary-light:#A855F7;
-  --accent:#06B6D4;
-  --emerald:#10B981;
-  --gold:#F59E0B;
-  --text:#F8FAFC;
-  --muted:#94A3B8;
-  --line:rgba(148,163,184,.16);
-  --shadow:0 24px 60px rgba(0,0,0,.55);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:
-    radial-gradient(circle at 82% 4%,rgba(124,58,237,.22),transparent 42%),
-    radial-gradient(circle at 12% 28%,rgba(6,182,212,.14),transparent 38%),
-    var(--bg);
-  color:var(--text);
-  font-family:"Inter",sans-serif;
-  line-height:1.6;
-  overflow-x:hidden;
-}
-a{color:inherit;text-decoration:none}
-button,input,select{font:inherit}
-.container{width:min(1160px,92%);margin:auto}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>VEZQORA — Engenharia de IA, Sites, Aplicativos & Sistemas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #060814;
+      --bg-card: rgba(14, 19, 42, 0.82);
+      --border: rgba(56, 189, 248, 0.24);
+      --border-strong: rgba(168, 85, 247, 0.48);
+      --cyan: #22d3ee;
+      --violet: #a855f7;
+      --pink: #ec4899;
+      --emerald: #34d399;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
 
-/* HEADER */
-header{position:sticky;top:0;z-index:30;background:rgba(7,7,16,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk",sans-serif;font-size:24px;font-weight:700;letter-spacing:2px}
-.brand-badge{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));display:grid;place-items:center;font-weight:700;font-size:18px;color:#fff;box-shadow:0 8px 24px rgba(124,58,237,.45)}
-.brand small{display:block;font:600 9px "Inter";letter-spacing:3px;color:var(--accent)}
-.navlinks{display:flex;align-items:center;gap:22px;font-size:13px;font-weight:600;color:var(--muted)}
-.navlinks a:hover{color:#fff}
-.nav-pill{padding:7px 14px;border-radius:999px;background:rgba(6,182,212,.14);border:1px solid rgba(6,182,212,.45);color:var(--accent) !important}
-.menu{display:none;border:1px solid var(--line);background:var(--card);color:#fff;border-radius:10px;padding:8px 12px;font-size:20px;cursor:pointer}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.btn{border:0;border-radius:999px;padding:14px 26px;background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;font-weight:700;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 12px 32px rgba(124,58,237,.38);transition:transform .25s ease,box-shadow .25s ease}
-.btn:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(124,58,237,.55)}
-.btn-cyan{background:linear-gradient(135deg,#0891B2,#06B6D4);box-shadow:0 12px 32px rgba(6,182,212,.35)}
-.btn-outline{background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:none}
-.btn-outline:hover{border-color:var(--accent);background:rgba(6,182,212,.1)}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* ESFERA PULSANTE DE IA 3D */
-.ai-orb-stage{position:relative;width:150px;height:150px;margin:0 auto 22px;display:grid;place-items:center;cursor:pointer;user-select:none}
-.ai-orb-ring{position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(6,182,212,.5);animation:orbSpin 7.5s linear infinite}
-.ai-orb-ring::before{content:"";position:absolute;top:-4.5px;left:50%;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent)}
-.ai-orb-ring-2{position:absolute;inset:14px;border-radius:50%;border:1.5px dashed rgba(168,85,247,.6);animation:orbSpinReverse 10s linear infinite}
-.ai-orb-ring-2::after{content:"";position:absolute;bottom:-4px;left:50%;width:8px;height:8px;border-radius:50%;background:var(--primary-light);box-shadow:0 0 12px var(--primary-light)}
-.ai-orb-wave{position:absolute;inset:20px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.5),transparent 72%);animation:orbWave 2.6s ease-out infinite}
-.ai-orb-core{
-  position:relative;
-  width:90px;
-  height:90px;
-  border-radius:50%;
-  background:radial-gradient(circle at 30% 28%,#F0F9FF 0%,#22D3EE 26%,#7C3AED 68%,#1E1B4B 100%);
-  box-shadow:0 0 32px rgba(6,182,212,.75),0 0 68px rgba(124,58,237,.65),inset 0 0 22px rgba(255,255,255,.65);
-  animation:orbBreathe 3s ease-in-out infinite;
-  display:grid;
-  place-items:center;
-}
-.ai-orb-core::after{
-  content:"";
-  width:32px;
-  height:32px;
-  border-radius:50%;
-  background:radial-gradient(circle,#fff 0%,rgba(255,255,255,.22) 65%,transparent 100%);
-  filter:blur(2px);
-  animation:orbCorePulse 1.9s ease-in-out infinite;
-}
-.mini-orb{position:relative;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
-.mini-orb::before{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(6,182,212,.65);animation:orbSpin 5.5s linear infinite}
-.mini-orb-core{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 32% 32%,#E0F2FE,#06B6D4 35%,#7C3AED 78%,#1E1B4B);box-shadow:0 0 18px rgba(6,182,212,.8),0 0 28px rgba(124,58,237,.7);animation:orbBreathe 2.5s ease-in-out infinite}
-.chat-box.thinking .mini-orb-core{animation:orbThinking .65s ease-in-out infinite;box-shadow:0 0 28px #34D399,0 0 44px #06B6D4}
-.btn-orb{width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,#06B6D4 45%,#A855F7);box-shadow:0 0 10px #06B6D4,0 0 18px #A855F7;animation:orbBreathe 2s ease-in-out infinite;display:inline-block}
+    body {
+      font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(ellipse 75% 45% at 15% 0%, rgba(34, 211, 238, 0.18), transparent 65%),
+        radial-gradient(ellipse 80% 50% at 85% 5%, rgba(168, 85, 247, 0.22), transparent 70%),
+        var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      min-height: 100dvh;
+      padding-bottom: 96px;
+    }
 
-@keyframes orbBreathe{0%,100%{transform:scale(.94)}50%{transform:scale(1.08)}}
-@keyframes orbCorePulse{0%,100%{opacity:.55;transform:scale(.85)}50%{opacity:1;transform:scale(1.18)}}
-@keyframes orbWave{0%{transform:scale(.85);opacity:.85}100%{transform:scale(1.65);opacity:0}}
-@keyframes orbSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-@keyframes orbSpinReverse{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
-@keyframes orbThinking{0%,100%{transform:scale(.9)}50%{transform:scale(1.2)}}
+    h1, h2, h3, .font-display {
+      font-family: "Outfit", sans-serif;
+    }
 
-/* HERO */
-.hero{padding:56px 0 64px;text-align:center}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:999px;background:rgba(124,58,237,.16);border:1px solid rgba(168,85,247,.38);color:#E9D5FF;font-size:12px;font-weight:600;letter-spacing:1px}
-.hero h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(36px,5.6vw,64px);line-height:1.1;margin:20px auto 18px;max-width:900px;background:linear-gradient(180deg,#FFFFFF 30%,#CBD5E1 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{color:var(--muted);font-size:clamp(16px,2vw,19px);max-width:720px;margin:0 auto 32px}
-.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:840px;margin:50px auto 0}
-.metric-box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
-.metric-box strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:28px;color:var(--accent)}
-.metric-box span{font-size:13px;color:var(--muted)}
+    @keyframes logoVPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 18px rgba(34, 211, 238, 0.55), 0 0 34px rgba(168, 85, 247, 0.4);
+      }
+      50% {
+        transform: scale(1.13);
+        box-shadow: 0 0 30px rgba(34, 211, 238, 0.95), 0 0 52px rgba(236, 72, 153, 0.75);
+      }
+    }
 
-section{padding:78px 0}
-.section-head{text-align:center;max-width:720px;margin:0 auto 48px}
-.kicker{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase}
-.section-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(28px,4vw,42px);line-height:1.15;margin:10px 0 14px}
-.section-lead{color:var(--muted);font-size:16px}
+    @keyframes heroVHeartbeat {
+      0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 26px rgba(34, 211, 238, 0.65)) drop-shadow(0 0 48px rgba(168, 85, 247, 0.5));
+      }
+      18% {
+        transform: scale(1.14);
+        filter: drop-shadow(0 0 46px rgba(34, 211, 238, 1)) drop-shadow(0 0 82px rgba(168, 85, 247, 0.9));
+      }
+      34% {
+        transform: scale(1.03);
+      }
+      50% {
+        transform: scale(1.11);
+        filter: drop-shadow(0 0 42px rgba(236, 72, 153, 0.9)) drop-shadow(0 0 74px rgba(34, 211, 238, 0.85));
+      }
+    }
 
-/* GERADOR DE PROTOTIPO AO VIVO (EXCLUSIVO VEZQORA) */
-.studio-section{background:radial-gradient(circle at 80% 30%,rgba(6,182,212,.16),transparent 48%),rgba(255,255,255,.015);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.studio-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:38px;align-items:start}
-.studio-form-card{background:var(--card);border:1px solid rgba(6,182,212,.45);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
-.quick-presets{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
-.preset-btn{border:1px solid var(--line);background:#16162B;color:#E2E8F0;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;transition:.2s}
-.preset-btn:hover{border-color:var(--accent);background:rgba(6,182,212,.14);color:#fff}
-.field-group{margin-bottom:16px}
-.field-group label{display:block;font-size:13px;font-weight:600;color:#CBD5E1;margin-bottom:7px}
-.field-group input,.field-group select{width:100%;background:#16162B;border:1px solid var(--line);border-radius:14px;padding:13px 15px;color:#fff;font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s}
-.field-group input:focus,.field-group select:focus{border-color:var(--accent)}
-.field-group input.input-warn{border-color:#F59E0B;box-shadow:0 0 0 3px rgba(245,158,11,.22)}
+    @keyframes vSpeakingBeat {
+      0%, 100% {
+        transform: scale(1.02);
+        filter: drop-shadow(0 0 34px rgba(34, 211, 238, 0.9)) drop-shadow(0 0 65px rgba(168, 85, 247, 0.85));
+      }
+      20% {
+        transform: scale(1.24);
+        filter: drop-shadow(0 0 60px rgba(34, 211, 238, 1)) drop-shadow(0 0 105px rgba(236, 72, 153, 1));
+      }
+      40% {
+        transform: scale(1.08);
+      }
+      65% {
+        transform: scale(1.28);
+        filter: drop-shadow(0 0 68px rgba(236, 72, 153, 1)) drop-shadow(0 0 115px rgba(34, 211, 238, 1));
+      }
+      85% {
+        transform: scale(1.12);
+      }
+    }
 
-/* MOCKUP DE CELULAR INTERATIVO AO VIVO */
-.phone-preview{background:#0B0B16;border:2px solid rgba(168,85,247,.55);border-radius:32px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.75);transition:box-shadow .4s ease,border-color .4s ease}
-.phone-preview.highlight{border-color:#06B6D4;box-shadow:0 0 0 3px rgba(6,182,212,.35),0 30px 80px rgba(0,0,0,.8)}
-.phone-topbar{background:#121224;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted);border-bottom:1px solid var(--line)}
-.phone-url{background:#1B1B32;padding:5px 12px;border-radius:999px;color:#E2E8F0;font-weight:600}
-.phone-hero{padding:22px 20px;background:linear-gradient(135deg,rgba(124,58,237,.35),rgba(6,182,212,.22));border-bottom:1px solid var(--line)}
-.phone-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(0,0,0,.45);color:#34D399;margin-bottom:8px}
-.phone-hero h3{font-family:"Space Grotesk",sans-serif;font-size:21px;line-height:1.2;margin:0 0 8px}
-.phone-hero p{font-size:13px;color:#E2E8F0;margin:0}
-.phone-plan{padding:14px 20px;background:#111122;border-bottom:1px solid var(--line);font-size:12.5px;color:#CBD5E1}
-.phone-plan strong{color:var(--accent);display:block;margin-bottom:3px}
-.phone-chat-body{height:230px;overflow-y:auto;padding:14px 18px;display:flex;flex-direction:column;gap:10px;background:#080812}
-.p-msg{padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.45;max-width:88%;white-space:pre-wrap}
-.p-msg.bot{background:#16162B;border:1px solid var(--line);color:#F8FAFC;align-self:flex-start}
-.p-msg.user{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;align-self:flex-end}
-.phone-chips{padding:8px 14px;display:flex;gap:6px;flex-wrap:wrap;background:#080812;border-top:1px solid var(--line)}
-.p-chip{border:1px solid var(--line);background:#141428;color:#E2E8F0;border-radius:999px;padding:5px 10px;font-size:11.5px;font-weight:600;cursor:pointer}
-.p-chip:hover{border-color:var(--accent)}
-.phone-form{display:flex;gap:8px;padding:10px 14px;background:#101020;border-top:1px solid var(--line)}
-.phone-form input{flex:1;background:#16162B;border:1px solid var(--line);border-radius:999px;padding:10px 14px;color:#fff;font-size:13px;outline:none}
-.phone-form button{border:0;border-radius:999px;padding:0 16px;background:var(--accent);color:#070710;font-weight:700;font-size:13px;cursor:pointer}
+    @keyframes sonarRipple {
+      0% {
+        transform: scale(0.65);
+        opacity: 0.85;
+      }
+      100% {
+        transform: scale(1.55);
+        opacity: 0;
+      }
+    }
 
-/* SIMULADOR DE LUCRO / PREJUIZO INVISIVEL */
-.calc-card{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:34px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
-.slider-row{margin-bottom:20px}
-.slider-row label{display:flex;justify-content:space-between;font-size:14px;font-weight:600;margin-bottom:8px}
-.slider-row input[type=range]{width:100%;accent-color:var(--accent);cursor:pointer}
-.calc-result{background:linear-gradient(135deg,rgba(124,58,237,.22),rgba(6,182,212,.16));border:1px solid rgba(168,85,247,.45);border-radius:20px;padding:24px;text-align:center}
-.calc-result span{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#CBD5E1}
-.calc-result strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:clamp(30px,4vw,42px);color:#34D399;margin:8px 0}
-.calc-result p{font-size:13px;color:#E2E8F0;margin:0 0 16px}
+    @keyframes spinOrbit {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
 
-/* SERVICOS */
-.grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;transition:.3s;box-shadow:var(--shadow)}
-.card:hover{transform:translateY(-5px);border-color:rgba(168,85,247,.5)}
-.icon-box{width:48px;height:48px;border-radius:14px;background:rgba(124,58,237,.18);border:1px solid rgba(168,85,247,.3);display:grid;place-items:center;font-size:22px;margin-bottom:18px}
-.card h3{font-family:"Space Grotesk",sans-serif;font-size:21px;margin:0 0 10px}
-.card p{color:var(--muted);font-size:14px;margin:0 0 16px}
-.card ul{margin:0;padding-left:18px;color:#CBD5E1;font-size:13px;line-height:1.9}
+    @keyframes spinOrbitReverse {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
 
-/* PORTFOLIO COM FOTOS REAIS */
-.portfolio{background:rgba(255,255,255,.015);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.case-card{background:var(--card-2);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;transition:.3s;box-shadow:var(--shadow)}
-.case-card:hover{border-color:var(--accent);transform:translateY(-5px)}
-.case-card.featured{border-color:rgba(168,85,247,.55);background:linear-gradient(180deg,rgba(124,58,237,.14),var(--card-2))}
-.case-thumb{position:relative;width:100%;height:220px;overflow:hidden;background:#0C0C18;border-bottom:1px solid var(--line)}
-.case-thumb img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;transition:transform .45s ease}
-.case-card:hover .case-thumb img{transform:scale(1.05)}
-.case-live-badge{position:absolute;top:14px;right:14px;background:rgba(7,7,16,.88);border:1px solid #34D399;color:#34D399;font-size:11px;font-weight:700;padding:5px 12px;border-radius:999px;backdrop-filter:blur(8px)}
-.case-content{padding:22px;display:flex;flex-direction:column;justify-content:space-between;flex:1;gap:18px}
-.case-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
-.case-card h3{font-family:"Space Grotesk",sans-serif;font-size:20px;margin:0 0 10px}
-.case-card p{color:var(--muted);font-size:13.5px;margin:0}
+    @keyframes soundWave {
+      0%, 100% { height: 8px; }
+      50% { height: 32px; }
+    }
 
-/* CONSULTOR IA */
-.ai-section{background:radial-gradient(circle at 20% 50%,rgba(124,58,237,.22),transparent 50%)}
-.ai-wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:42px;align-items:center}
-.ai-benefits{display:grid;gap:12px;margin-top:22px}
-.ai-benefit{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14px;color:#E2E8F0}
-.chat-box{background:#0D0D1C;border:1px solid rgba(168,85,247,.5);border-radius:24px;overflow:hidden;box-shadow:0 28px 75px rgba(0,0,0,.65)}
-.chat-head{background:linear-gradient(135deg,#1E1B4B,#311042);padding:16px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--line)}
-.chat-head strong{display:block;font-size:15px}
-.chat-head span{font-size:12px;color:#34D399}
-.chat-body{height:360px;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:12px;background:#090914}
-.msg{padding:12px 16px;border-radius:16px;font-size:14px;line-height:1.55;max-width:86%;white-space:pre-wrap;word-break:break-word}
-.msg.bot{background:var(--card-2);border:1px solid var(--line);color:#F1F5F9;align-self:flex-start;border-bottom-left-radius:4px}
-.msg.user{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
-.chat-chips{padding:10px 14px 6px;display:flex;gap:7px;flex-wrap:wrap;background:#090914;border-top:1px solid var(--line)}
-.chip{border:1px solid var(--line);background:var(--card);color:#E2E8F0;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;transition:.2s}
-.chip:hover{border-color:var(--accent);color:#fff}
-.chat-form{display:flex;gap:8px;padding:12px 14px;background:#0D0D1C;border-top:1px solid var(--line)}
-.chat-form input{flex:1;background:#16162B;border:1px solid var(--line);border-radius:999px;padding:12px 16px;color:#fff;font-size:14px;outline:none}
-.chat-form input:focus{border-color:var(--accent)}
-.chat-form button{border:0;border-radius:999px;padding:0 22px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-weight:700;font-size:14px;cursor:pointer}
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: rgba(6, 8, 20, 0.88);
+      border-bottom: 1px solid var(--border);
+    }
 
-.cta-box{background:linear-gradient(135deg,rgba(124,58,237,.25),rgba(6,182,212,.15));border:1px solid rgba(168,85,247,.38);border-radius:28px;padding:48px 28px;text-align:center}
-.cta-box h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(26px,4vw,38px);margin:0 0 12px}
-.cta-box p{color:#CBD5E1;max-width:600px;margin:0 auto 26px}
+    .nav-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
 
-footer{border-top:1px solid var(--line);padding:34px 0 92px;color:var(--muted);font-size:13px}
-.footer-row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.floating-cta{position:fixed;right:18px;bottom:18px;z-index:40;border:1px solid rgba(6,182,212,.55);border-radius:999px;padding:13px 20px;background:linear-gradient(135deg,#1E1B4B,#6D28D9);color:#fff;font-weight:700;font-size:13px;box-shadow:0 12px 32px rgba(0,0,0,.55);display:inline-flex;align-items:center;gap:10px}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+    }
 
-@media(max-width:960px){
-  .cases-grid,.studio-grid,.calc-card{grid-template-columns:1fr}
-}
-@media(max-width:820px){
-  .menu{display:block}
-  .navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#0D0D1C;padding:20px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:16px}
-  .navlinks.open{display:flex}
-  .grid-4,.ai-wrap,.metrics{grid-template-columns:1fr}
-}
-</style>
+    .logo-v {
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #0ea5e9, #9333ea, #ec4899);
+      display: grid;
+      place-items: center;
+      font-family: "Outfit", sans-serif;
+      font-weight: 900;
+      font-size: 1.55rem;
+      color: #ffffff;
+      animation: logoVPulse 1.6s infinite ease-in-out;
+    }
+
+    .brand-name {
+      font-family: "Outfit", sans-serif;
+      font-weight: 900;
+      font-size: 1.15rem;
+      letter-spacing: 0.16em;
+      background: linear-gradient(90deg, #ffffff, var(--cyan), #d8b4fe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-tag {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: none;
+      gap: 22px;
+    }
+
+    @media (min-width: 840px) {
+      .nav-links { display: flex; }
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    .btn-header {
+      background: linear-gradient(135deg, var(--cyan), var(--violet));
+      color: #050814;
+      border: none;
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: center;
+      padding-top: 8px;
+    }
+
+    @media (min-width: 880px) {
+      .hero {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 40px;
+      }
+    }
+
+    .badge-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.35);
+      color: var(--cyan);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+
+    .dot-green {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 10px var(--emerald);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.8vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, var(--cyan), #c084fc, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin-bottom: 24px;
+      max-width: 560px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #06b6d4, #9333ea);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 14px;
+      padding: 13px 22px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 12px 30px rgba(147, 51, 234, 0.35);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      border: 1px solid var(--border-strong);
+      border-radius: 14px;
+      padding: 13px 20px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .v-core-stage {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+
+    @media (min-width: 880px) {
+      .v-core-stage {
+        width: 350px;
+        height: 350px;
+      }
+    }
+
+    .sonar-ring {
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      border: 2px solid rgba(34, 211, 238, 0.55);
+      animation: sonarRipple 2.4s infinite ease-out;
+      pointer-events: none;
+    }
+
+    .sonar-ring.r2 {
+      animation-delay: 0.8s;
+      border-color: rgba(168, 85, 247, 0.55);
+    }
+
+    .sonar-ring.r3 {
+      animation-delay: 1.6s;
+      border-color: rgba(236, 72, 153, 0.45);
+    }
+
+    .orbit-1 {
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      border: 1.5px dashed rgba(34, 211, 238, 0.5);
+      animation: spinOrbit 14s linear infinite;
+    }
+
+    .orbit-2 {
+      position: absolute;
+      inset: 28px;
+      border-radius: 50%;
+      border: 2px solid rgba(168, 85, 247, 0.42);
+      border-top-color: var(--cyan);
+      border-bottom-color: var(--pink);
+      animation: spinOrbitReverse 9s linear infinite;
+    }
+
+    .v-svg-core {
+      width: 190px;
+      height: 190px;
+      animation: heroVHeartbeat 1.7s infinite ease-in-out;
+      z-index: 2;
+    }
+
+    body.ia-falando .v-svg-core,
+    body.ia-falando .v-avatar-svg {
+      animation: vSpeakingBeat 0.42s infinite ease-in-out !important;
+    }
+
+    body.ia-falando .sonar-ring,
+    body.ia-falando .avatar-sonar {
+      animation-duration: 0.85s !important;
+      border-width: 3px;
+    }
+
+    .sec-head {
+      margin-bottom: 24px;
+    }
+
+    .sec-kicker {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--cyan);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .sec-head h2 {
+      font-size: clamp(1.7rem, 3.4vw, 2.35rem);
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .sec-head p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      max-width: 640px;
+      line-height: 1.55;
+    }
+
+    .ai-hub {
+      background: linear-gradient(155deg, rgba(15, 23, 42, 0.95), rgba(26, 14, 52, 0.95));
+      border: 1.5px solid var(--border-strong);
+      border-radius: 26px;
+      padding: 22px;
+      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.6);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    @media (min-width: 900px) {
+      .ai-hub {
+        grid-template-columns: 0.88fr 1.12fr;
+        padding: 28px;
+      }
+    }
+
+    .voice-panel {
+      background: radial-gradient(circle at 50% 35%, rgba(34, 211, 238, 0.12), rgba(6, 10, 26, 0.92) 72%);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .v-avatar-stage {
+      position: relative;
+      width: 158px;
+      height: 158px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+
+    .avatar-sonar {
+      position: absolute;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      border: 2px solid rgba(34, 211, 238, 0.65);
+      animation: sonarRipple 2s infinite ease-out;
+      pointer-events: none;
+    }
+
+    .avatar-sonar.s2 {
+      animation-delay: 0.7s;
+      border-color: rgba(236, 72, 153, 0.65);
+    }
+
+    .avatar-orbit {
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      border: 1.5px dashed rgba(34, 211, 238, 0.55);
+      animation: spinOrbit 10s linear infinite;
+    }
+
+    .v-avatar-svg {
+      width: 102px;
+      height: 102px;
+      z-index: 2;
+      animation: heroVHeartbeat 1.6s infinite ease-in-out;
+    }
+
+    .wave-bars {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      height: 34px;
+    }
+
+    .wave-bars span {
+      width: 5px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--cyan);
+      transition: height 0.15s;
+    }
+
+    .wave-bars.falando span {
+      animation: soundWave 0.48s infinite ease-in-out;
+    }
+
+    .wave-bars.falando span:nth-child(2) { animation-delay: 0.1s; background: var(--violet); }
+    .wave-bars.falando span:nth-child(3) { animation-delay: 0.2s; background: var(--pink); }
+    .wave-bars.falando span:nth-child(4) { animation-delay: 0.3s; background: var(--violet); }
+    .wave-bars.falando span:nth-child(5) { animation-delay: 0.4s; }
+
+    .voice-select {
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--cyan);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 6px 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      outline: none;
+    }
+
+    .voice-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .btn-voice {
+      background: linear-gradient(135deg, var(--emerald), #059669);
+      color: #04130d;
+      border: none;
+      border-radius: 12px;
+      padding: 11px 16px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .btn-voice.ouvindo {
+      background: linear-gradient(135deg, #f43f5e, #e11d48);
+      color: #ffffff;
+    }
+
+    .btn-sound-toggle {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 11px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .chat-box {
+      background: rgba(6, 10, 26, 0.88);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-messages {
+      padding: 16px;
+      height: 320px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .bubble {
+      max-width: 86%;
+      padding: 11px 14px;
+      border-radius: 14px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      white-space: pre-line;
+    }
+
+    .bubble.ia {
+      align-self: flex-start;
+      background: rgba(30, 41, 59, 0.94);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      color: #f1f5f9;
+    }
+
+    .bubble.user {
+      align-self: flex-end;
+      background: linear-gradient(135deg, #0284c7, #7e22ce);
+      color: #ffffff;
+    }
+
+    .btn-replay {
+      display: inline-block;
+      margin-top: 6px;
+      background: rgba(34, 211, 238, 0.14);
+      border: 1px solid rgba(34, 211, 238, 0.35);
+      color: var(--cyan);
+      border-radius: 8px;
+      padding: 3px 9px;
+      font-size: 0.73rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .quick-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 10px 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .chip {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--cyan);
+      border-radius: 999px;
+      padding: 5px 11px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .chat-input-row {
+      display: flex;
+      gap: 8px;
+      padding: 12px 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .chat-input-row input {
+      flex: 1;
+      min-width: 0;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.95);
+      color: #ffffff;
+      padding: 0 13px;
+      font-size: 0.88rem;
+      outline: none;
+    }
+
+    .chat-input-row button {
+      height: 44px;
+      padding: 0 18px;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, var(--cyan), var(--violet));
+      color: #050814;
+      font-weight: 800;
+      font-size: 0.86rem;
+      cursor: pointer;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--cyan);
+    }
+
+    .card-tag {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--cyan);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-top: 4px;
+    }
+
+    .card p {
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .roi-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 22px;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 820px) {
+      .roi-box {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+      }
+    }
+
+    .slider-group {
+      margin-bottom: 16px;
+    }
+
+    .slider-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.86rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--cyan);
+    }
+
+    .roi-result {
+      background: rgba(6, 10, 26, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .roi-valor {
+      font-family: "Outfit", sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--emerald);
+      margin: 6px 0;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    @media (min-width: 720px) {
+      .form-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .span-2 {
+        grid-column: span 2;
+      }
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      background: rgba(6, 10, 26, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 11px 13px;
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+    }
+
+    details {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+    }
+
+    summary {
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+    }
+
+    details p {
+      margin-top: 8px;
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 26px 20px 10px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .float-wa {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 45;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.84rem;
+      padding: 12px 18px;
+      border-radius: 999px;
+      box-shadow: 0 10px 28px rgba(16, 185, 129, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="nav-wrap">
+      <a href="#topo" class="brand">
+        <div class="logo-v">V</div>
+        <div>
+          <div class="brand-name">VEZQORA</div>
+          <div class="brand-tag">AI Engineering &amp; Systems</div>
+        </div>
+      </a>
 
-<header data-track="cabecalho">
-  <div class="container nav">
-    <a class="brand" href="#inicio">
-      <div class="brand-badge">V</div>
-      <div>VEZQORA<small>TECNOLOGIA & IA</small></div>
-    </a>
-    <button class="menu" id="menuBtn" aria-label="Abrir menu">☰</button>
-    <nav class="navlinks" id="navlinks">
-      <a href="#laboratorio">Gerar Meu Site IA</a>
-      <a href="#simulador">Simulador</a>
-      <a href="#servicos">Soluções</a>
-      <a href="#portfolio">Projetos</a>
-      <a class="nav-pill" href="https://leledesouzas96-creator.github.io/demos-ia/" target="_blank" rel="noopener">Central Demos IA ↗</a>
-      <a href="#consultor">Consultor IA</a>
-    </nav>
-  </div>
-</header>
+      <nav class="nav-links">
+        <a href="#vendedora-ia">Voz Gemini ao Vivo</a>
+        <a href="#projetos">Projetos &amp; Sistemas</a>
+        <a href="#roi">Calculadora ROI</a>
+        <a href="#orcamento">Orçamento</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
 
-<main>
-  <section class="hero" id="inicio" data-track="inicio_hero">
-    <div class="container">
-      <div class="ai-orb-stage" onclick="document.getElementById('laboratorio').scrollIntoView({behavior:'smooth'})" title="Toque para gerar o protótipo da sua empresa com IA">
-        <div class="ai-orb-wave"></div>
-        <div class="ai-orb-ring"></div>
-        <div class="ai-orb-ring-2"></div>
-        <div class="ai-orb-core"></div>
-      </div>
-      <span class="pill">⚡ Exclusivo VEZQORA • Teste o Site e a IA da Sua Empresa Agora</span>
-      <h1>Se o nosso site já faz isso, imagina o que criamos para o seu negócio.</h1>
-      <p>Construímos sites de alta conversão, aplicativos, sistemas sob medida e agentes de Inteligência Artificial que atendem, orçam e vendem 24h por dia.</p>
-      <div class="hero-actions">
-        <a class="btn btn-cyan" href="#laboratorio">Gerar Prévia da Minha Empresa Agora ✦</a>
-        <a class="btn btn-outline" href="https://leledesouzas96-creator.github.io/demos-ia/" target="_blank" rel="noopener">Testar Agentes por Ramo ↗</a>
-      </div>
-      <div class="metrics">
-        <div class="metric-box"><strong>10s</strong><span>Para ver sua empresa com IA na tela</span></div>
-        <div class="metric-box"><strong>&lt; 3s</strong><span>Tempo de resposta ao seu cliente</span></div>
-        <div class="metric-box"><strong>24/7</strong><span>Vendas e agendamentos sem pausas</span></div>
-      </div>
+      <button type="button" class="btn-header" onclick="document.getElementById('vendedora-ia').scrollIntoView({behavior:'smooth'})">
+        Falar com IA
+      </button>
     </div>
-  </section>
+  </header>
 
-  <!-- RECURSO EXCLUSIVO: GERADOR DE PROTOTIPO AO VIVO DA EMPRESA DO CLIENTE -->
-  <section class="studio-section" id="laboratorio" data-track="laboratorio_prototipo">
-    <div class="container">
-      <div class="section-head">
-        <span class="kicker">Exclusivo VEZQORA • Experiência ao Vivo</span>
-        <h2 class="section-title">Veja o site e o Agente de IA da SUA empresa funcionando agora</h2>
-        <p class="section-lead">Digite os dados do seu negócio ou toque em um exemplo rápido abaixo. Nossa IA monta um protótipo interativo na hora para você testar.</p>
+  <main class="container" id="topo">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="badge-live">
+          <span class="dot-green"></span>
+          <span>VOZ NATIVA GEMINI • CONDIÇÕES ESPECIAIS DE LANÇAMENTO</span>
+        </div>
+        <h1>
+          Sites, Aplicativos, Sistemas e <span>Agentes de IA</span> que vendem por você 24h.
+        </h1>
+        <p>
+          Ajudamos empresários e autônomos a automatizar o atendimento, agendar clientes sozinhos e multiplicar vendas com tecnologia sob medida e investimento acessível.
+        </p>
+        <div class="hero-actions">
+          <button type="button" class="btn-primary" id="btnHeroVoz">
+            🎙️ Ouvir Voz do Gemini ao Vivo
+          </button>
+          <a href="#orcamento" class="btn-outline" style="text-decoration:none;">
+            Pedir Orçamento Gratuito
+          </a>
+        </div>
       </div>
 
-      <div class="studio-grid">
-        <div class="studio-form-card">
-          <div style="font-size:12px;font-weight:700;color:var(--accent);margin-bottom:8px;letter-spacing:.5px">⚡ TESTE RÁPIDO EM 1 TOQUE:</div>
-          <div class="quick-presets">
-            <button type="button" class="preset-btn" onclick="preencherExemplo('Loja Pé Forte','Loja de Calçados & Moda','Responder numeração e fechar vendas no WhatsApp')">👟 Loja de Calçados</button>
-            <button type="button" class="preset-btn" onclick="preencherExemplo('Studio Bella & Corte','Salão & Barbearia','Agendar horários 24h sem furos na agenda')">💇 Salão / Barbearia</button>
-            <button type="button" class="preset-btn" onclick="preencherExemplo('Prime Auto Estética','Oficina & Estética Auto','Enviar orçamentos rápidos e agendar serviços')">🚗 Oficina Auto</button>
-            <button type="button" class="preset-btn" onclick="preencherExemplo('Brava Grill','Hamburgueria & Delivery','Anotar pedidos completos e calcular entrega')">🍔 Hamburgueria</button>
+      <!-- V GRANDÃO PULSANTE -->
+      <div class="v-core-stage" id="heroVStage" title="Toque no V para ouvir a VEZQORA IA com voz Gemini">
+        <div class="sonar-ring"></div>
+        <div class="sonar-ring r2"></div>
+        <div class="sonar-ring r3"></div>
+        <div class="orbit-1"></div>
+        <div class="orbit-2"></div>
+        <svg class="v-svg-core" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="vezqoraGrad" x1="20" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#22D3EE" />
+              <stop offset="50%" stop-color="#8B5CF6" />
+              <stop offset="100%" stop-color="#EC4899" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M32 34H74L100 116L126 34H168L116 172H84L32 34Z"
+            fill="url(#vezqoraGrad)"
+            stroke="#F0F9FF"
+            stroke-width="3.5"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- VENDEDORA IA AO VIVO COM VOZ DO GEMINI -->
+    <section id="vendedora-ia">
+      <div class="sec-head">
+        <span class="sec-kicker">Voz Real Gemini &amp; Briefing em Tempo Real</span>
+        <h2>Vendedora VEZQORA IA ao Vivo</h2>
+        <p>
+          Converse por voz ou texto. O núcleo <strong>V</strong> responde com a voz natural do Gemini, faz todas as perguntas do seu projeto e envia o resumo em tempo real para nossa equipe.
+        </p>
+      </div>
+
+      <div class="ai-hub">
+        <div class="voice-panel">
+          <div class="v-avatar-stage" id="avatarVStage" title="Toque no V para falar">
+            <div class="avatar-sonar"></div>
+            <div class="avatar-sonar s2"></div>
+            <div class="avatar-orbit"></div>
+            <svg class="v-avatar-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="avatarVGrad" x1="20" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#22D3EE" />
+                  <stop offset="50%" stop-color="#A855F7" />
+                  <stop offset="100%" stop-color="#EC4899" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M32 34H74L100 116L126 34H168L116 172H84L32 34Z"
+                fill="url(#avatarVGrad)"
+                stroke="#FFFFFF"
+                stroke-width="4"
+                stroke-linejoin="round"
+              />
+            </svg>
           </div>
 
-          <div class="field-group">
-            <label for="protoEmpresa">Nome da sua empresa</label>
-            <input type="text" id="protoEmpresa" placeholder="Ex: Barbearia Imperial, Loja Pé Forte, Clínica Vida...">
+          <div>
+            <strong style="font-size:1.08rem;">Núcleo VEZQORA • Voz Gemini</strong>
+            <p id="voiceStatus" style="font-size:0.82rem; color:var(--muted); margin-top:4px;">
+              Toque no V ou em "Ativar Voz e Falar" para conversar com a voz do Gemini
+            </p>
           </div>
-          <div class="field-group">
-            <label for="protoRamo">Qual é o seu ramo?</label>
-            <input type="text" id="protoRamo" placeholder="Ex: Loja de calçados, Salão de beleza, Oficina, Delivery...">
+
+          <div class="wave-bars" id="waveBars">
+            <span></span><span></span><span></span><span></span><span></span>
           </div>
-          <div class="field-group">
-            <label for="protoGargalo">O que hoje mais trava suas vendas ou atendimento?</label>
-            <input type="text" id="protoGargalo" placeholder="Ex: Demora no WhatsApp, agenda bagunçada, orçamentos lentos...">
+
+          <div>
+            <label for="selectVozGemini" style="font-size:0.74rem; color:var(--muted); display:block; margin-bottom:4px;">
+              Voz do Gemini:
+            </label>
+            <select id="selectVozGemini" class="voice-select">
+              <option value="Aoede">Aoede (Feminina Natural)</option>
+              <option value="Kore">Kore (Feminina Firme)</option>
+              <option value="Puck">Puck (Masculina Dinâmica)</option>
+              <option value="Charon">Charon (Masculina Grave)</option>
+            </select>
           </div>
-          <button type="button" class="btn btn-cyan" id="btnGerarProto" style="width:100%" onclick="gerarPrototipoEmpresa()">Gerar Site + Agente IA da Minha Empresa ⚡</button>
-          <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0;text-align:center">100% gratuito • A tela desliza direto para o celular interativo da sua empresa.</p>
+
+          <div class="voice-controls">
+            <button type="button" class="btn-voice" id="btnMic">
+              🎙️ Ativar Voz e Falar
+            </button>
+            <button type="button" class="btn-sound-toggle" id="btnSom">
+              🔊 Som: Ativo
+            </button>
+          </div>
         </div>
 
-        <div class="phone-preview" id="phonePreviewCard" aria-label="Prévia interativa da empresa do visitante">
-          <div class="phone-topbar">
-            <span>● VEZQORA Live Engine</span>
-            <span class="phone-url" id="previewUrl">suaempresa.com.br</span>
-            <span>24h IA</span>
+        <div class="chat-box">
+          <div class="chat-messages" id="chatMessages">
+            <div class="bubble ia" id="msgInicial">
+              Olá! Sou a consultora da VEZQORA. Para eu montar o resumo ideal para você, me conta: você precisa de um Site, Aplicativo, Sistema ou Agente de IA, e qual é o ramo do seu negócio?
+              <br />
+              <button type="button" class="btn-replay" id="btnOuvirInicial">
+                🔊 Ouvir com voz Gemini
+              </button>
+            </div>
           </div>
-          <div class="phone-hero">
-            <span class="phone-badge" id="previewBadge">● Prévia Interativa Gerada por IA</span>
-            <h3 id="previewHeadline">Sua Empresa: Atendimento & Vendas 24h</h3>
-            <p id="previewSubheadline">Preencha os campos ao lado (ou toque em um exemplo rápido) e veja aqui um site moderno com agente inteligente treinado para o seu ramo.</p>
+
+          <div class="quick-chips">
+            <button type="button" class="chip" data-prompt="Quero um Site profissional com IA para meu negócio">Site + IA</button>
+            <button type="button" class="chip" data-prompt="Quero um Aplicativo interativo para meus clientes">Aplicativo</button>
+            <button type="button" class="chip" data-prompt="Quero um Agente de IA que atende e agenda no WhatsApp">Agente de IA</button>
+            <button type="button" class="chip" data-prompt="Quero um Sistema inteligente de gestão e vendas">Sistema</button>
           </div>
-          <div class="phone-plan">
-            <strong>Arquitetura recomendada pela VEZQORA:</strong>
-            <span id="previewSolucao">Site Profissional de Alta Conversão + Sistema de Gestão + Agente de IA 24h sob medida.</span>
-          </div>
-          <div class="phone-chat-body" id="previewChatBody">
-            <div class="p-msg bot" id="previewWelcome">Olá! Assim que você gerar sua prévia ao lado, eu assumo o papel de Agente de IA da sua empresa para você testar ao vivo.</div>
-          </div>
-          <div class="phone-chips" id="previewChips">
-            <button type="button" class="p-chip" onclick="testarNoMockup('Quero saber valores e como funciona')">💰 Consultar valores</button>
-            <button type="button" class="p-chip" onclick="testarNoMockup('Quero agendar um horário ou fazer pedido')">📅 Agendar / Pedir</button>
-          </div>
-          <form class="phone-form" onsubmit="enviarNoMockup(event)">
-            <input type="text" id="previewInput" placeholder="Teste conversar com a IA da sua empresa...">
-            <button type="submit">Testar</button>
+
+          <form class="chat-input-row" id="chatForm">
+            <input
+              type="text"
+              id="chatInput"
+              placeholder="Responda aqui ou use o microfone..."
+              autocomplete="off"
+              required
+            />
+            <button type="submit" id="btnSend">Enviar</button>
           </form>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SIMULADOR DE FATURAMENTO RECUPERADO -->
-  <section id="simulador" data-track="simulador_lucro">
-    <div class="container">
-      <div class="calc-card">
-        <div>
-          <span class="kicker">Impacto no Caixa</span>
-          <h2 class="section-title" style="font-size:clamp(24px,3.2vw,34px)">Quanto dinheiro escapa hoje por demora no atendimento?</h2>
-          <p class="section-lead" style="margin-bottom:24px">Clientes que chamam fora do horário ou esperam mais de 5 minutos fecham com o concorrente. Simule o potencial de recuperação com IA 24h:</p>
-          <div class="slider-row">
-            <label><span>Mensagens / orçamentos por dia:</span> <strong id="lblLeads" style="color:var(--accent)">15 clientes/dia</strong></label>
-            <input type="range" id="rangeLeads" min="3" max="80" value="15" oninput="atualizarSimulador()">
-          </div>
-          <div class="slider-row" style="margin-bottom:0">
-            <label><span>Ticket médio (valor médio de cada venda/serviço):</span> <strong id="lblTicket" style="color:var(--accent)">R$ 120</strong></label>
-            <input type="range" id="rangeTicket" min="30" max="1500" step="10" value="120" oninput="atualizarSimulador()">
-          </div>
-        </div>
-        <div class="calc-result">
-          <span>Potencial extra recuperado por mês</span>
-          <strong id="lblRecuperado">+ R$ 13.500/mês</strong>
-          <p>Estimativa considerando apenas 25% dos atendimentos perdidos fora do horário comercial ou por demora convertidos pela IA VEZQORA.</p>
-          <a class="btn" href="#consultor" onclick="setTimeout(()=>document.getElementById('vezqoraInput').focus(),250)">Quero Capturar Esse Resultado ✦</a>
-        </div>
+    <!-- PROJETOS REAIS & SISTEMAS INTELIGENTES -->
+    <section id="projetos">
+      <div class="sec-head">
+        <span class="sec-kicker">Portfólio &amp; Demonstrações</span>
+        <h2>Projetos Reais &amp; Sistemas Inteligentes</h2>
+        <p>Veja exemplos de plataformas, aplicativos e recepcionistas de IA criados pela VEZQORA.</p>
       </div>
-    </div>
-  </section>
 
-  <section id="servicos" data-track="servicos">
-    <div class="container">
-      <div class="section-head">
-        <span class="kicker">O que construímos</span>
-        <h2 class="section-title">Tecnologia completa para multiplicar seus clientes e seu lucro</h2>
-        <p class="section-lead">Não entregamos apenas código — entregamos estrutura comercial e operacional pronta para escalar.</p>
-      </div>
-      <div class="grid-4">
+      <div class="grid-cards">
         <article class="card">
-          <div class="icon-box">🌐</div>
-          <h3>Sites de Alta Conversão</h3>
-          <p>Páginas rápidas, modernas e com impacto visual imediato que fazem o cliente confiar na sua empresa no primeiro segundo.</p>
-          <ul>
-            <li>Design exclusivo alinhado à sua marca</li>
-            <li>Experiência perfeita no celular e computador</li>
-            <li>Integração nativa com Agentes de IA</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="icon-box">🤖</div>
-          <h3>Agentes de IA que Vendem e Resolvem</h3>
-          <p>Assistentes inteligentes treinados com os dados reais do seu negócio para atender, orçar, agendar e fechar vendas 24h.</p>
-          <ul>
-            <li>Consulta horários e estoque em tempo real</li>
-            <li>Aumenta o ticket médio sugerindo adicionais</li>
-            <li>Envia comprovante e alerta o gestor na hora</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="icon-box">⚙️</div>
-          <h3>Sistemas Web Sob Medida</h3>
-          <p>Painéis próprios para gerenciar agendas, pedidos, clientes e orçamentos sem depender de planilhas ou ferramentas engessadas.</p>
-          <ul>
-            <li>Feito exatamente para o fluxo da sua equipe</li>
-            <li>Acesso fácil pelo celular ou computador</li>
-            <li>Sem mensalidades abusivas por usuário</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="icon-box">📱</div>
-          <h3>Aplicativos & Automações</h3>
-          <p>Apps e fluxos automáticos que eliminam tarefas repetitivas e conectam seu site direto ao WhatsApp e à sua operação.</p>
-          <ul>
-            <li>Notificações instantâneas de novos leads e pedidos</li>
-            <li>Reativação automática de clientes antigos</li>
-            <li>Operação enxuta com máxima produtividade</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="portfolio" id="portfolio" data-track="portfolio">
-    <div class="container">
-      <div class="section-head">
-        <span class="kicker">Na prática</span>
-        <h2 class="section-title">Projetos em produção & Laboratório IA</h2>
-        <p class="section-lead">Teste ao vivo soluções reais desenvolvidas pela VEZQORA.</p>
-      </div>
-      <div class="cases-grid">
-        <article class="case-card">
-          <div class="case-thumb">
-            <span class="case-live-badge">● Em produção</span>
-            <img id="divasHeroPhoto" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80" alt="DIVAS Salão de Beleza — Seu momento. Sua beleza." loading="lazy">
-          </div>
-          <div class="case-content">
-            <div>
-              <span class="case-tag">Case Real • Beleza & Estética</span>
-              <h3>DIVAS Salão de Beleza — Agenda 100% Autônoma</h3>
-              <p>Site completo com vitrine de serviços, galeria real e Recepcionista Virtual IA que mostra horários livres clicáveis, reserva na hora e gera comprovante no WhatsApp.</p>
-            </div>
-            <a class="btn btn-outline" href="https://leledesouzas96-creator.github.io/Divas/" target="_blank" rel="noopener">Ver projeto ao vivo ↗</a>
-          </div>
-        </article>
-
-        <article class="case-card">
-          <div class="case-thumb">
-            <span class="case-live-badge">● Demo Interativa</span>
-            <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=900&q=80" alt="Brava Burger IA — Foto Real do Projeto" loading="lazy">
-          </div>
-          <div class="case-content">
-            <div>
-              <span class="case-tag">Projeto Real • Delivery & Gastronomia</span>
-              <h3>Brava Burger IA — Atendente de Pedidos 24h</h3>
-              <p>Catálogo digital e agente vendedor com IA que monta o pedido item por item, sugere adicionais, calcula a entrega por bairro e gera o comprovante pronto.</p>
-            </div>
-            <a class="btn btn-outline" href="https://leledesouzas96-creator.github.io/burger-IA/" target="_blank" rel="noopener">Testar projeto ao vivo ↗</a>
-          </div>
-        </article>
-
-        <article class="case-card featured">
-          <div class="case-thumb">
-            <span class="case-live-badge">⚡ 4 Agentes Ao Vivo</span>
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80" alt="Central de Agentes VEZQORA IA para Lojistas e Empresas" loading="lazy">
-          </div>
-          <div class="case-content">
-            <div>
-              <span class="case-tag">Hub Multi-Segmentos • Varejo, Auto & Clínicas</span>
-              <h3>Central de Agentes IA — Moda, Auto, Clínica & Pós-Venda</h3>
-              <p>Alterne com 1 clique entre 4 agentes especializados: Consultor de Vitrine, Orçamentista Automotivo, Recepcionista VIP e Reativação de Clientes.</p>
-            </div>
-            <a class="btn" href="https://leledesouzas96-creator.github.io/demos-ia/" target="_blank" rel="noopener">Abrir Central de Demos ↗</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="ai-section" id="consultor" data-track="consultor_ia">
-    <div class="container ai-wrap">
-      <div>
-        <span class="kicker">Consultoria Estratégica</span>
-        <h2 class="section-title">Quer fechar seu projeto com a VEZQORA? Fale com nosso Consultor IA.</h2>
-        <p class="section-lead">Conte qual é o ramo da sua empresa e o que você precisa (site, aplicativo, sistema ou agente de IA). Ele monta o plano ideal e encaminha direto para nossa equipe.</p>
-        <div class="ai-benefits">
-          <div class="ai-benefit">✦ Diagnóstico técnico personalizado para o seu ramo</div>
-          <div class="ai-benefit">✦ Projeto completo: visual profissional + sistema + IA treinada</div>
-          <div class="ai-benefit">✦ Atendimento rápido para colocar sua empresa no ar</div>
-        </div>
-      </div>
-
-      <div class="chat-box" id="vezqoraChatBox" aria-label="Consultor Comercial VEZQORA IA">
-        <div class="chat-head">
-          <div class="mini-orb"><div class="mini-orb-core"></div></div>
           <div>
-            <strong>Consultor VEZQORA IA</strong>
-            <span id="vezqoraStatus">● Núcleo Ativo • Planejamento de Projetos & IA</span>
+            <span class="card-tag">Caso Real em Produção</span>
+            <h3>DIVAS Salão de Beleza</h3>
+            <p style="margin-top:8px;">
+              Site completo com Recepcionista IA integrada que consulta horários livres em tempo real, confirma reservas e envia alertas automáticos no WhatsApp.
+            </p>
+          </div>
+          <a
+            href="https://divasbeleza.vezqoraai.workers.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-outline"
+            style="text-align:center; text-decoration:none; font-size:0.82rem; padding:10px;"
+          >
+            Abrir Projeto DIVAS →
+          </a>
+        </article>
+
+        <article class="card">
+          <div>
+            <span class="card-tag">App Interativo &amp; Delivery</span>
+            <h3>Brava Burger &amp; Grill IA</h3>
+            <p style="margin-top:8px;">
+              Cardápio digital inteligente com assistente de pedidos, sugestão automática de combos e envio do pedido formatado direto para a cozinha.
+            </p>
+          </div>
+          <button type="button" class="btn-outline" style="font-size:0.82rem; padding:10px;" onclick="selecionarBriefing('Aplicativo de Delivery com IA')">
+            Quero um App parecido →
+          </button>
+        </article>
+
+        <article class="card">
+          <div>
+            <span class="card-tag">Sistema Inteligente</span>
+            <h3>VEZQORA ClinicOS</h3>
+            <p style="margin-top:8px;">
+              Sistema de triagem e agendamento para clínicas, dentistas e autônomos com lembretes automáticos e redução de faltas.
+            </p>
+          </div>
+          <button type="button" class="btn-outline" style="font-size:0.82rem; padding:10px;" onclick="selecionarBriefing('Sistema de Agendamento & Triagem')">
+            Quero um Sistema assim →
+          </button>
+        </article>
+
+        <article class="card">
+          <div>
+            <span class="card-tag">Vendas Automatizadas</span>
+            <h3>StoreFlow AI Catálogo</h3>
+            <p style="margin-top:8px;">
+              Vitrine online conectada a um vendedor de IA que tira dúvidas de tamanhos, estoque e fecha vendas no WhatsApp 24 horas por dia.
+            </p>
+          </div>
+          <button type="button" class="btn-outline" style="font-size:0.82rem; padding:10px;" onclick="selecionarBriefing('Loja / Catálogo com Vendedor IA')">
+            Quero para minha Loja →
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- CALCULADORA DE ROI -->
+    <section id="roi">
+      <div class="sec-head">
+        <span class="sec-kicker">Retorno Sobre Investimento</span>
+        <h2>Quanto você deixa de faturar sem atendimento imediato?</h2>
+        <p>Simule quantos clientes você recupera por mês quando a IA responde em 2 segundos.</p>
+      </div>
+
+      <div class="roi-box">
+        <div>
+          <div class="slider-group">
+            <div class="slider-label">
+              <span>Clientes que chamam por dia</span>
+              <span id="lblLeads">15 clientes/dia</span>
+            </div>
+            <input type="range" id="rngLeads" min="3" max="80" value="15" />
+          </div>
+
+          <div class="slider-group" style="margin-bottom:0;">
+            <div class="slider-label">
+              <span>Valor médio do seu serviço ou venda</span>
+              <span id="lblTicket">R$ 120</span>
+            </div>
+            <input type="range" id="rngTicket" min="30" max="1500" step="10" value="120" />
           </div>
         </div>
-        <div class="chat-body" id="vezqoraMessages">
-          <div class="msg bot">Olá! Sou o Consultor Inteligente da VEZQORA. Qual é o ramo da sua empresa e o que você quer colocar para rodar primeiro — site profissional, aplicativo, sistema sob medida ou agente de IA 24h?</div>
+
+        <div class="roi-result">
+          <span style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--cyan); font-weight:800;">
+            Potencial extra estimado / mês
+          </span>
+          <div class="roi-valor" id="roiMensal">R$ 10.800</div>
+          <p style="font-size:0.82rem; color:var(--muted);">
+            Considerando apenas 20% de clientes recuperados fora do horário ou por resposta imediata.
+          </p>
         </div>
-        <div class="chat-chips">
-          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Tenho loja de calçados / moda e quero vender mais com site e IA')">👟 Loja de Calçados / Moda</button>
-          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Tenho salão / barbearia / clínica e quero agendamento automático')">💇 Salão / Barbearia / Clínica</button>
-          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Preciso de um sistema ou aplicativo sob medida para minha empresa')">⚙️ App / Sistema Sob Medida</button>
-          <button type="button" class="chip" onclick="enviarAtalhoVezqora('Quero orçamento para criar meu site e agente de IA')">🚀 Quero Orçamento</button>
+      </div>
+    </section>
+
+    <!-- ORÇAMENTO GRATUITO SOB MEDIDA -->
+    <section id="orcamento">
+      <div class="sec-head">
+        <span class="sec-kicker">Condição Especial de Lançamento</span>
+        <h2>Peça seu Orçamento Gratuito Sob Medida</h2>
+        <p>
+          Preencha os detalhes abaixo. O resumo é enviado na hora para nossa equipe e você também pode confirmar direto no WhatsApp.
+        </p>
+      </div>
+
+      <form class="form-grid" id="formOrcamento">
+        <div class="field">
+          <label for="orcNome">Seu Nome</label>
+          <input type="text" id="orcNome" placeholder="Ex: Carlos Silva" required />
         </div>
-        <form class="chat-form" onsubmit="enviarChatVezqora(event)">
-          <input type="text" id="vezqoraInput" placeholder="Digite o ramo da sua empresa ou sua ideia..." autocomplete="off">
-          <button type="submit">Enviar</button>
-        </form>
+
+        <div class="field">
+          <label for="orcWhats">Seu WhatsApp com DDD</label>
+          <input type="tel" id="orcWhats" placeholder="Ex: 51999999999" required />
+        </div>
+
+        <div class="field">
+          <label for="orcSolucao">O que você deseja criar?</label>
+          <select id="orcSolucao">
+            <option value="Site Profissional + IA">Site Profissional + IA</option>
+            <option value="Aplicativo Interativo">Aplicativo Interativo</option>
+            <option value="Agente de IA (WhatsApp / Site)">Agente de IA (WhatsApp / Site)</option>
+            <option value="Sistema Personalizado">Sistema Personalizado</option>
+            <option value="Pacote Completo (Site + Sistema + IA)">Pacote Completo (Site + Sistema + IA)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="orcRamo">Ramo do seu negócio</label>
+          <input type="text" id="orcRamo" placeholder="Ex: Salão, Barbearia, Clínica, Loja..." required />
+        </div>
+
+        <div class="field span-2">
+          <label for="orcDetalhes">O que você quer que o projeto faça? (Funcionalidades e objetivo)</label>
+          <textarea
+            id="orcDetalhes"
+            rows="3"
+            placeholder="Ex: Quero que a IA responda clientes, mostre serviços e agende horários automaticamente..."
+            required
+          ></textarea>
+        </div>
+
+        <div class="span-2" style="display:flex; flex-wrap:wrap; gap:12px;">
+          <button type="submit" class="btn-primary">
+            🚀 Enviar Resumo &amp; Abrir WhatsApp
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="sec-head">
+        <span class="sec-kicker">Perguntas Frequentes</span>
+        <h2>Dúvidas de Empresários e Autônomos</h2>
       </div>
-    </div>
-  </section>
 
-  <section id="contato" data-track="contato_cta">
-    <div class="container">
-      <div class="cta-box">
-        <h2>Sua empresa merece esse padrão de tecnologia.</h2>
-        <p>Gere sua prévia acima ou converse com nosso Consultor IA para lançar seu site, aplicativo, sistema ou agente de IA.</p>
-        <a class="btn btn-cyan" href="#laboratorio">Gerar Prévia da Minha Empresa ✦</a>
-      </div>
-    </div>
-  </section>
-</main>
+      <details open>
+        <summary>Preciso deixar algum computador ligado para a IA atender meus clientes?</summary>
+        <p>Não. Todo o sistema e o Agente de IA rodam 100% em nuvem 24 horas por dia, inclusive enquanto você está atendendo ou descansando.</p>
+      </details>
 
-<footer data-track="rodape">
-  <div class="container footer-row">
-    <div><strong>VEZQORA</strong> — Sites, Aplicativos, Sistemas & Agentes de IA</div>
-    <div>Engenharia de IA & Automação Comercial</div>
-  </div>
-</footer>
+      <details>
+        <summary>Quanto custa para criar meu site, aplicativo ou agente de IA?</summary>
+        <p>Trabalhamos com orçamento personalizado e valores acessíveis de lançamento para ajudar pequenos negócios e autônomos a começarem rápido. Converse com nossa IA acima para receber sua proposta.</p>
+      </details>
 
-<a class="floating-cta" href="#laboratorio">
-  <span class="btn-orb"></span> Testar na Minha Empresa
-</a>
+      <details>
+        <summary>Em quanto tempo meu projeto fica pronto?</summary>
+        <p>Landing pages e agentes de IA de atendimento ficam prontos em poucos dias após a aprovação do briefing.</p>
+      </details>
+    </section>
+  </main>
 
-<script>
-const VEZQORA_IA_URL='https://vezqoraai.vezqoraai.workers.dev';
-const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navlinks');
-menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  <footer>
+    VEZQORA — Engenharia de IA, Sites, Aplicativos &amp; Sistemas • WhatsApp (51) 99189-5177
+  </footer>
 
-// Carrega foto principal real do DIVAS no card do portfolio
-(async function carregarFotoBannerDivas(){
-  try{
-    const res=await fetch('https://leledesouzas96-creator.github.io/Divas/');
-    if(!res.ok)return;
-    const html=await res.text();
-    const doc=new DOMParser().parseFromString(html,'text/html');
-    const imgs=[...doc.querySelectorAll('img')];
-    const bannerImg=imgs.find(img=>{
-      const src=img.getAttribute('src')||'';
-      return src && !/logo|icon|avatar/i.test(src);
-    });
-    if(bannerImg){
-      const rawSrc=bannerImg.getAttribute('src');
-      const fullUrl=new URL(rawSrc,'https://leledesouzas96-creator.github.io/Divas/').href;
-      const target=document.getElementById('divasHeroPhoto');
-      if(target) target.src=fullUrl;
-    }
-  }catch(e){}
-})();
+  <a
+    href="https://wa.me/5551991895177?text=Ol%C3%A1%20VEZQORA!%20Quero%20um%20or%C3%A7amento%20para%20meu%20neg%C3%B3cio."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="float-wa"
+  >
+    💬 WhatsApp VEZQORA
+  </a>
 
-// SIMULADOR DE FATURAMENTO RECUPERADO
-function atualizarSimulador(){
-  const leads=Number(document.getElementById('rangeLeads').value);
-  const ticket=Number(document.getElementById('rangeTicket').value);
-  document.getElementById('lblLeads').textContent=`${leads} clientes/dia`;
-  document.getElementById('lblTicket').textContent=`R$ ${ticket.toLocaleString('pt-BR')}`;
-  const ganhoMensal=Math.round(leads*30*0.25*ticket);
-  document.getElementById('lblRecuperado').textContent=`+ R$ ${ganhoMensal.toLocaleString('pt-BR')}/mês`;
-}
-atualizarSimulador();
+  <audio id="audioGemini" preload="none"></audio>
 
-// PREENCHIMENTO RAPIDO EM 1 TOQUE PARA DEMO/TIKTOK
-function preencherExemplo(empresa,ramo,gargalo){
-  document.getElementById('protoEmpresa').value=empresa;
-  document.getElementById('protoRamo').value=ramo;
-  document.getElementById('protoGargalo').value=gargalo;
-  gerarPrototipoEmpresa();
-}
+  <script>
+    const WORKER_URL = "https://vezqoraai.vezqoraai.workers.dev";
+    const WHATSAPP_VEZQORA = "5551991895177";
 
-// GERADOR DE PROTOTIPO AO VIVO DA EMPRESA DO CLIENTE
-let protoContext={empresa:'Sua Empresa',ramo:'Comércio & Serviços'};
-let protoHistory=[];
-let protoBusy=false;
+    const chatMessages = document.getElementById("chatMessages");
+    const chatForm = document.getElementById("chatForm");
+    const chatInput = document.getElementById("chatInput");
+    const btnSend = document.getElementById("btnSend");
+    const btnMic = document.getElementById("btnMic");
+    const btnSom = document.getElementById("btnSom");
+    const btnHeroVoz = document.getElementById("btnHeroVoz");
+    const heroVStage = document.getElementById("heroVStage");
+    const avatarVStage = document.getElementById("avatarVStage");
+    const selectVozGemini = document.getElementById("selectVozGemini");
+    const voiceStatus = document.getElementById("voiceStatus");
+    const waveBars = document.getElementById("waveBars");
+    const audioGemini = document.getElementById("audioGemini");
 
-function addPreviewMsg(text,role){
-  const body=document.getElementById('previewChatBody');
-  const div=document.createElement('div');
-  div.className=`p-msg ${role}`;
-  div.textContent=String(text).replace(/\*\*/g,'');
-  body.appendChild(div);
-  body.scrollTop=body.scrollHeight;
-}
+    let somAtivo = true;
+    let historico = [];
+    let recognition = null;
+    let ouvindoAgora = false;
 
-async function gerarPrototipoEmpresa(){
-  const inpEmpresa=document.getElementById('protoEmpresa');
-  const inpRamo=document.getElementById('protoRamo');
-  const inpGargalo=document.getElementById('protoGargalo');
-
-  if(!inpEmpresa.value.trim()){
-    inpEmpresa.classList.add('input-warn');
-    inpEmpresa.focus();
-    inpEmpresa.placeholder='Digite aqui o nome da sua empresa para testar!';
-    setTimeout(()=>inpEmpresa.classList.remove('input-warn'),1800);
-    return;
-  }
-
-  const empresa=inpEmpresa.value.trim();
-  const ramo=inpRamo.value.trim()||'Comércio & Serviços';
-  const gargalo=inpGargalo.value.trim()||'Demora no atendimento e perda de vendas';
-  const btn=document.getElementById('btnGerarProto');
-  const previewCard=document.getElementById('phonePreviewCard');
-
-  btn.disabled=true;
-  btn.textContent='Construindo site + treinando IA... ⚡';
-  document.getElementById('previewBadge').textContent='⚡ Gerando ambiente exclusivo...';
-
-  try{
-    const res=await fetch(VEZQORA_IA_URL,{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({mode:'prototype',empresa,ramo,gargalo})
-    });
-    const data=await res.json();
-    const p=data.prototype||{};
-
-    protoContext={empresa,ramo};
-    protoHistory=[];
-
-    const slug=empresa.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'')||'suaempresa';
-    document.getElementById('previewUrl').textContent=`${slug}.com.br`;
-    document.getElementById('previewBadge').textContent=`● ${p.ganhoEstimado||'IA Ativa 24h'}`;
-    document.getElementById('previewHeadline').textContent=p.headline||`${empresa}: Atendimento Inteligente 24h`;
-    document.getElementById('previewSubheadline').textContent=p.subheadline||`Solução moderna para clientes de ${ramo}.`;
-    document.getElementById('previewSolucao').textContent=p.solucaoVezqora||`Site + Sistema + Agente IA sob medida para ${empresa}.`;
-
-    const body=document.getElementById('previewChatBody');
-    body.innerHTML='';
-    const welcome=p.boasVindasIA||`Olá! Bem-vindo(a) à ${empresa}. Como posso ajudar você hoje?`;
-    addPreviewMsg(welcome,'bot');
-    protoHistory.push({role:'assistant',content:welcome});
-
-    const chipsBox=document.getElementById('previewChips');
-    chipsBox.innerHTML='';
-    (p.atalhosCliente||['Ver serviços e preços','Agendar / fazer pedido']).forEach(atalho=>{
-      const c=document.createElement('button');
-      c.type='button';
-      c.className='p-chip';
-      c.textContent=atalho;
-      c.onclick=()=>testarNoMockup(atalho);
-      chipsBox.appendChild(c);
-    });
-
-    if(previewCard){
-      previewCard.classList.add('highlight');
-      previewCard.scrollIntoView({behavior:'smooth',block:'center'});
-      setTimeout(()=>previewCard.classList.remove('highlight'),2200);
-    }
-  }catch(e){
-    addPreviewMsg('Não foi possível gerar agora. Tente novamente em instantes.','bot');
-  }finally{
-    btn.disabled=false;
-    btn.textContent='Gerar Site + Agente IA da Minha Empresa ⚡';
-  }
-}
-
-function testarNoMockup(texto){
-  document.getElementById('previewInput').value=texto;
-  enviarNoMockup();
-}
-
-async function enviarNoMockup(e){
-  if(e)e.preventDefault();
-  const inp=document.getElementById('previewInput');
-  const text=inp.value.trim();
-  if(!text||protoBusy)return;
-  protoBusy=true;
-  inp.value='';
-  addPreviewMsg(text,'user');
-  protoHistory.push({role:'user',content:text});
-
-  try{
-    const res=await fetch(VEZQORA_IA_URL,{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        mode:'demo_agent',
-        empresa:protoContext.empresa,
-        ramo:protoContext.ramo,
-        message:text,
-        history:protoHistory
-      })
-    });
-    const data=await res.json();
-    const reply=data.reply||'Perfeito! Posso já separar isso para você agora mesmo.';
-    addPreviewMsg(reply,'bot');
-    protoHistory.push({role:'assistant',content:reply});
-  }catch{
-    addPreviewMsg('Reconectando agente de demonstração...','bot');
-  }finally{
-    protoBusy=false;
-  }
-}
-
-// CONSULTOR COMERCIAL VEZQORA IA
-const chatBox=document.getElementById('vezqoraChatBox');
-const statusEl=document.getElementById('vezqoraStatus');
-const msgBox=document.getElementById('vezqoraMessages');
-const inputBox=document.getElementById('vezqoraInput');
-let historyVezqora=[];
-let busyVezqora=false;
-
-function addVezqoraMsg(text,role){
-  const div=document.createElement('div');
-  div.className=`msg ${role}`;
-  div.textContent=String(text).replace(/\*\*/g,'');
-  msgBox.appendChild(div);
-  msgBox.scrollTop=msgBox.scrollHeight;
-}
-
-function enviarAtalhoVezqora(text){
-  inputBox.value=text;
-  enviarChatVezqora();
-}
-
-async function enviarChatVezqora(e){
-  if(e)e.preventDefault();
-  const text=inputBox.value.trim();
-  if(!text||busyVezqora)return;
-  busyVezqora=true;
-  inputBox.value='';
-  addVezqoraMsg(text,'user');
-  historyVezqora.push({role:'user',content:text});
-
-  chatBox.classList.add('thinking');
-  statusEl.textContent='● Montando plano sob medida com IA...';
-
-  const typing=document.createElement('div');
-  typing.className='msg bot';
-  typing.textContent='Analisando seu ramo e estruturando soluções... ⚡';
-  msgBox.appendChild(typing);
-  msgBox.scrollTop=msgBox.scrollHeight;
-
-  try{
-    const res=await fetch(VEZQORA_IA_URL,{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({mode:'consultor',message:text,history:historyVezqora})
-    });
-    const data=await res.json();
-    typing.remove();
-    const reply=data.reply||'Conte-me qual é o ramo da sua empresa para eu desenhar a solução ideal.';
-    addVezqoraMsg(reply,'bot');
-    historyVezqora.push({role:'assistant',content:reply});
-  }catch(err){
-    typing.remove();
-    addVezqoraMsg('Nosso consultor está reconectando. Tente novamente em segundos!','bot');
-  }finally{
-    busyVezqora=false;
-    chatBox.classList.remove('thinking');
-    statusEl.textContent='● Núcleo Ativo • Planejamento de Projetos & IA';
-  }
-}
-</script>
-
-<!-- RASTREAMENTO MICROSOFT CLARITY + TEMPO POR SEÇÃO (VEZQORA) -->
-<script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "zisow5jda1");
-
-  (function(){
-    const inicioVisita = Date.now();
-    const tempoPorSecao = {};
-    let secaoAtual = "inicio_hero";
-    let inicioSecao = Date.now();
-
-    function registrarTrocaSecao(novaSecao){
-      if(!novaSecao || novaSecao === secaoAtual) return;
-      const agora = Date.now();
-      tempoPorSecao[secaoAtual] = (tempoPorSecao[secaoAtual] || 0) + Math.round((agora - inicioSecao) / 1000);
-      secaoAtual = novaSecao;
-      inicioSecao = agora;
+    function ativarVisualVFalando() {
+      document.body.classList.add("ia-falando");
+      waveBars.classList.add("falando");
     }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting && entry.intersectionRatio >= 0.45){
-          const nome = entry.target.getAttribute("data-track") || entry.target.id || "secao";
-          registrarTrocaSecao(nome);
-        }
-      });
-    }, { threshold: [0.45] });
+    function desativarVisualVFalando() {
+      document.body.classList.remove("ia-falando");
+      waveBars.classList.remove("falando");
+    }
 
-    window.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll("section, header, footer").forEach(el => observer.observe(el));
-    });
+    // Converte PCM Linear 16-bit (24kHz) retornado pelo Gemini TTS para WAV reproduzível em qualquer navegador
+    function pcmBase64ParaWavUrl(base64Pcm, sampleRate = 24000) {
+      const binary = atob(base64Pcm);
+      const pcmLength = binary.length;
+      const wavBuffer = new ArrayBuffer(44 + pcmLength);
+      const view = new DataView(wavBuffer);
 
-    document.addEventListener("visibilitychange", () => {
-      if(document.visibilityState === "hidden"){
-        registrarTrocaSecao("fim");
-        const totalSegundos = Math.round((Date.now() - inicioVisita) / 1000);
-        const minutos = (totalSegundos / 60).toFixed(1);
-        const maisVista = Object.entries(tempoPorSecao).sort((a,b) => b[1] - a[1])[0] || ["inicio_hero", totalSegundos];
+      const writeStr = (offset, str) => {
+        for (let i = 0; i < str.length; i++) view.setUint8(offset + i, str.charCodeAt(i));
+      };
 
-        if(window.clarity){
-          window.clarity("set", "tempo_total_min", `${minutos} min`);
-          window.clarity("set", "secao_mais_vista", `${maisVista[0]} (${maisVista[1]}s)`);
-        }
+      writeStr(0, "RIFF");
+      view.setUint32(4, 36 + pcmLength, true);
+      writeStr(8, "WAVE");
+      writeStr(12, "fmt ");
+      view.setUint32(16, 16, true);
+      view.setUint16(20, 1, true); // PCM
+      view.setUint16(22, 1, true); // Mono
+      view.setUint32(24, sampleRate, true);
+      view.setUint32(28, sampleRate * 2, true);
+      view.setUint16(32, 2, true);
+      view.setUint16(34, 16, true);
+      writeStr(36, "data");
+      view.setUint32(40, pcmLength, true);
+
+      const bytes = new Uint8Array(wavBuffer, 44);
+      for (let i = 0; i < pcmLength; i++) {
+        bytes[i] = binary.charCodeAt(i);
+      }
+
+      const blob = new Blob([wavBuffer], { type: "audio/wav" });
+      return URL.createObjectURL(blob);
+    }
+
+    // Toca o áudio nativo retornado pelo Gemini (com fallback de navegador se necessário)
+    function reproduzirAudioGemini(audioBase64, audioMimeType, textoFallback) {
+      if (!somAtivo) return;
+
+      if (audioBase64) {
+        try {
+          audioGemini.pause();
+          let audioUrl = "";
+          if (!audioMimeType || /pcm|L16/i.test(audioMimeType)) {
+            const rateMatch = String(audioMimeType || "").match(/rate=(\d+)/i);
+            const rate = rateMatch ? Number(rateMatch[1]) : 24000;
+            audioUrl = pcmBase64ParaWavUrl(audioBase64, rate);
+          } else {
+            audioUrl = `data:${audioMimeType};base64,${audioBase64}`;
+          }
+
+          audioGemini.src = audioUrl;
+          audioGemini.onplay = ativarVisualVFalando;
+          audioGemini.onended = () => {
+            desativarVisualVFalando();
+            if (audioUrl.startsWith("blob:")) URL.revokeObjectURL(audioUrl);
+          };
+          audioGemini.onerror = () => {
+            desativarVisualVFalando();
+            falarFallbackNavegador(textoFallback);
+          };
+          audioGemini.play().catch(() => {
+            desativarVisualVFalando();
+            falarFallbackNavegador(textoFallback);
+          });
+          return;
+        } catch (_) {}
+      }
+
+      falarFallbackNavegador(textoFallback);
+    }
+
+    function falarFallbackNavegador(texto) {
+      if (!somAtivo || !texto || !("speechSynthesis" in window)) return;
+      try {
+        window.speechSynthesis.cancel();
+        const utter = new SpeechSynthesisUtterance(texto);
+        utter.lang = "pt-BR";
+        utter.onstart = ativarVisualVFalando;
+        utter.onend = desativarVisualVFalando;
+        utter.onerror = desativarVisualVFalando;
+        window.speechSynthesis.speak(utter);
+      } catch (_) {}
+    }
+
+    btnSom.addEventListener("click", () => {
+      somAtivo = !somAtivo;
+      btnSom.textContent = somAtivo ? "🔊 Som: Ativo" : "🔇 Som: Mudo";
+      if (!somAtivo) {
+        audioGemini.pause();
+        if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+        desativarVisualVFalando();
       }
     });
-  })();
-</script>
+
+    // Reconhecimento de Voz (Microfone)
+    const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRec) {
+      recognition = new SpeechRec();
+      recognition.lang = "pt-BR";
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      recognition.onstart = () => {
+        ouvindoAgora = true;
+        btnMic.classList.add("ouvindo");
+        btnMic.textContent = "⏹️ Ouvindo... Fale agora";
+        voiceStatus.textContent = "Pode falar o que você precisa no seu projeto...";
+      };
+
+      recognition.onresult = (event) => {
+        const falado = event.results[0][0].transcript;
+        if (falado) enviarParaIA(falado);
+      };
+
+      recognition.onerror = () => {
+        voiceStatus.textContent = "Microfone indisponível neste navegador. Você pode digitar no chat ao lado.";
+      };
+
+      recognition.onend = () => {
+        ouvindoAgora = false;
+        btnMic.classList.remove("ouvindo");
+        btnMic.textContent = "🎙️ Ativar Voz e Falar";
+      };
+    }
+
+    function iniciarVoz() {
+      if (!recognition) {
+        voiceStatus.textContent = "Digite no chat ao lado para ouvir a resposta com a voz do Gemini.";
+        chatInput.focus();
+        return;
+      }
+      if (ouvindoAgora) {
+        recognition.stop();
+      } else {
+        try {
+          recognition.start();
+        } catch (_) {}
+      }
+    }
+
+    btnMic.addEventListener("click", iniciarVoz);
+    avatarVStage.addEventListener("click", iniciarVoz);
+
+    function acionarApresentacaoGemini() {
+      document.getElementById("vendedora-ia").scrollIntoView({ behavior: "smooth" });
+      enviarParaIA("Olá! Me apresente rapidamente o que a VEZQORA faz e me pergunte sobre o meu projeto.");
+    }
+
+    btnHeroVoz.addEventListener("click", acionarApresentacaoGemini);
+    heroVStage.addEventListener("click", acionarApresentacaoGemini);
+    document.getElementById("btnOuvirInicial").addEventListener("click", acionarApresentacaoGemini);
+
+    function adicionarMensagem(texto, autor, audioBase64 = null, audioMimeType = null) {
+      const div = document.createElement("div");
+      div.className = "bubble " + autor;
+      div.textContent = texto;
+
+      if (autor === "ia") {
+        const br = document.createElement("br");
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "btn-replay";
+        btn.textContent = "🔊 Ouvir com voz Gemini";
+        btn.onclick = () => reproduzirAudioGemini(audioBase64, audioMimeType, texto);
+        div.appendChild(br);
+        div.appendChild(btn);
+      }
+
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      return div;
+    }
+
+    async function enviarParaIA(texto) {
+      const limpo = String(texto || "").trim();
+      if (!limpo || btnSend.disabled) return;
+
+      adicionarMensagem(limpo, "user");
+      chatInput.value = "";
+      btnSend.disabled = true;
+      voiceStatus.textContent = "Gerando resposta e voz nativa do Gemini...";
+
+      const carregando = adicionarMensagem("Núcleo V pensando e gerando voz Gemini...", "ia");
+
+      try {
+        const res = await fetch(WORKER_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            message: limpo,
+            history: historico.slice(-10),
+            voiceName: selectVozGemini.value
+          })
+        });
+
+        const data = await res.json().catch(() => ({}));
+        carregando.remove();
+
+        const resposta =
+          data.reply ||
+          "Perfeito! Me conta quais funcionalidades você quer no projeto e seu WhatsApp com DDD para enviarmos o orçamento.";
+
+        adicionarMensagem(resposta, "ia", data.audioBase64, data.audioMimeType);
+        reproduzirAudioGemini(data.audioBase64, data.audioMimeType, resposta);
+
+        historico.push(
+          { role: "user", content: limpo },
+          { role: "assistant", content: resposta }
+        );
+
+        if (data.lead) {
+          preencherFormularioComLead(data.lead);
+          voiceStatus.textContent = "✅ Resumo enviado em tempo real para a equipe VEZQORA!";
+        } else {
+          voiceStatus.textContent = "Voz Gemini pronta. Pode responder!";
+        }
+      } catch (_) {
+        carregando.remove();
+        const fallbackMsg = "Tive uma instabilidade rápida na conexão. Pode repetir sua resposta?";
+        adicionarMensagem(fallbackMsg, "ia");
+        falarFallbackNavegador(fallbackMsg);
+      } finally {
+        btnSend.disabled = false;
+        chatInput.focus();
+      }
+    }
+
+    function preencherFormularioComLead(lead) {
+      if (lead.nome) document.getElementById("orcNome").value = lead.nome;
+      if (lead.whatsapp) document.getElementById("orcWhats").value = lead.whatsapp;
+      if (lead.ramo) document.getElementById("orcRamo").value = lead.ramo;
+      if (lead.funcionalidades || lead.dor) {
+        document.getElementById("orcDetalhes").value =
+          `Solução: ${lead.solucao || ""}\nFuncionalidades: ${lead.funcionalidades || ""}\nDor principal: ${lead.dor || ""}`;
+      }
+    }
+
+    chatForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      enviarParaIA(chatInput.value);
+    });
+
+    document.querySelectorAll(".chip").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        enviarParaIA(chip.getAttribute("data-prompt"));
+      });
+    });
+
+    function selecionarBriefing(solucao) {
+      document.getElementById("orcSolucao").value = solucao;
+      document.getElementById("vendedora-ia").scrollIntoView({ behavior: "smooth" });
+      enviarParaIA("Quero fazer um orçamento de " + solucao);
+    }
+
+    const rngLeads = document.getElementById("rngLeads");
+    const rngTicket = document.getElementById("rngTicket");
+    function atualizarROI() {
+      const leads = Number(rngLeads.value);
+      const ticket = Number(rngTicket.value);
+      document.getElementById("lblLeads").textContent = leads + " clientes/dia";
+      document.getElementById("lblTicket").textContent = "R$ " + ticket.toLocaleString("pt-BR");
+      const extra = Math.round(leads * 30 * 0.2 * ticket);
+      document.getElementById("roiMensal").textContent = "R$ " + extra.toLocaleString("pt-BR");
+    }
+    rngLeads.addEventListener("input", atualizarROI);
+    rngTicket.addEventListener("input", atualizarROI);
+    atualizarROI();
+
+    document.getElementById("formOrcamento").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const lead = {
+        nome: document.getElementById("orcNome").value.trim(),
+        whatsapp: document.getElementById("orcWhats").value.trim(),
+        solucao: document.getElementById("orcSolucao").value,
+        ramo: document.getElementById("orcRamo").value.trim(),
+        funcionalidades: document.getElementById("orcDetalhes").value.trim(),
+        dor: "Enviado pelo formulário de orçamento"
+      };
+
+      fetch(WORKER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ lead })
+      }).catch(() => {});
+
+      const msgWa =
+        `Olá VEZQORA! Acabei de montar meu resumo no site:\n\n` +
+        `👤 Nome: ${lead.nome}\n` +
+        `💼 Ramo: ${lead.ramo}\n` +
+        `🛠️ Solução: ${lead.solucao}\n` +
+        `⚙️ Detalhes: ${lead.funcionalidades}`;
+
+      window.open(
+        `https://wa.me/${WHATSAPP_VEZQORA}?text=${encodeURIComponent(msgWa)}`,
+        "_blank",
+        "noopener,noreferrer"
+      );
+    });
+  </script>
 </body>
 </html>
