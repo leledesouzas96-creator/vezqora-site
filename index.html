@@ -75,7 +75,6 @@
       color: var(--text-primary);
     }
 
-    /* Somente o "V" pulsa, sem esfera ou círculo ao redor */
     .v-pulse-wordmark {
       display: inline-flex;
       align-items: center;
@@ -89,27 +88,9 @@
       user-select: none;
     }
 
-    .v-top {
-      font-size: 32px;
-      line-height: 1;
-      width: 34px;
-      height: 34px;
-    }
-
-    .v-hero {
-      font-size: 80px;
-      line-height: 1;
-      margin: 0 auto 14px;
-      width: 88px;
-      height: 88px;
-    }
-
-    .v-live {
-      font-size: 30px;
-      line-height: 1;
-      width: 34px;
-      height: 34px;
-    }
+    .v-top { font-size: 32px; line-height: 1; width: 34px; height: 34px; }
+    .v-hero { font-size: 80px; line-height: 1; margin: 0 auto 14px; width: 88px; height: 88px; }
+    .v-live { font-size: 30px; line-height: 1; width: 34px; height: 34px; }
 
     .v-pulse-wordmark.speaking {
       animation: speakVFast 0.4s infinite alternate ease-in-out;
@@ -132,19 +113,8 @@
       100% { transform: scale(1.24) translateY(-2px); }
     }
 
-    .brand-title {
-      font-weight: 800;
-      letter-spacing: 0.07em;
-      font-size: 16px;
-      line-height: 1.15;
-    }
-
-    .brand-sub {
-      font-size: 10px;
-      letter-spacing: 0.14em;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
+    .brand-title { font-weight: 800; letter-spacing: 0.07em; font-size: 16px; line-height: 1.15; }
+    .brand-sub { font-size: 10px; letter-spacing: 0.14em; color: var(--text-muted); font-weight: 600; }
 
     .nav-links {
       display: none;
@@ -155,15 +125,8 @@
       color: var(--text-secondary);
     }
 
-    .nav-links a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--text-primary);
-    }
+    .nav-links a { color: inherit; text-decoration: none; transition: color 0.2s ease; }
+    .nav-links a:hover { color: var(--text-primary); }
 
     @media (min-width: 720px) {
       .nav-links { display: flex; }
@@ -181,16 +144,8 @@
       box-shadow: 0 8px 24px rgba(139, 92, 246, 0.35);
     }
 
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 36px 20px 0;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 12px 10px 36px;
-    }
+    .container { max-width: 980px; margin: 0 auto; padding: 36px 20px 0; }
+    .hero { text-align: center; padding: 12px 10px 36px; }
 
     .badge-top {
       display: inline-flex;
@@ -221,20 +176,8 @@
       -webkit-text-fill-color: transparent;
     }
 
-    .hero p {
-      color: var(--text-secondary);
-      max-width: 650px;
-      margin: 0 auto 24px;
-      font-size: 15.5px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
+    .hero p { color: var(--text-secondary); max-width: 650px; margin: 0 auto 24px; font-size: 15.5px; }
+    .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 28px; }
 
     .btn-primary {
       background: var(--grad-brand);
@@ -247,6 +190,9 @@
       cursor: pointer;
       text-decoration: none;
       box-shadow: 0 10px 28px rgba(139, 92, 246, 0.35);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .btn-secondary {
@@ -259,6 +205,9 @@
       font-size: 14px;
       cursor: pointer;
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .stats-strip {
@@ -277,17 +226,8 @@
       text-align: left;
     }
 
-    .stat-value {
-      font-size: 15px;
-      font-weight: 800;
-      color: var(--text-primary);
-      margin-bottom: 2px;
-    }
-
-    .stat-label {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
+    .stat-value { font-size: 15px; font-weight: 800; color: var(--text-primary); margin-bottom: 2px; }
+    .stat-label { font-size: 12px; color: var(--text-muted); }
 
     .assistant-card {
       background: var(--bg-card);
@@ -307,16 +247,8 @@
       margin-bottom: 16px;
     }
 
-    .assistant-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .assistant-title {
-      font-size: 18px;
-      font-weight: 800;
-    }
+    .assistant-left { display: flex; align-items: center; gap: 10px; }
+    .assistant-title { font-size: 18px; font-weight: 800; }
 
     .assistant-pill {
       font-size: 11px;
@@ -336,13 +268,7 @@
       margin-bottom: 16px;
     }
 
-    .voice-label {
-      display: block;
-      text-align: center;
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
+    .voice-label { display: block; text-align: center; font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
 
     .voice-select {
       width: 100%;
@@ -357,11 +283,7 @@
       margin-bottom: 12px;
     }
 
-    .action-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
+    .action-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
     .btn-mic {
       background: var(--accent-green);
@@ -374,10 +296,7 @@
       cursor: pointer;
     }
 
-    .btn-mic.listening {
-      background: #f59e0b;
-      color: #170e02;
-    }
+    .btn-mic.listening { background: #f59e0b; color: #170e02; }
 
     .btn-sound {
       background: var(--bg-elevated);
@@ -390,10 +309,7 @@
       cursor: pointer;
     }
 
-    .btn-sound.muted {
-      opacity: 0.72;
-      background: #17122b;
-    }
+    .btn-sound.muted { opacity: 0.72; background: #17122b; }
 
     .chat-box {
       display: flex;
@@ -405,35 +321,11 @@
       margin-bottom: 14px;
     }
 
-    .msg {
-      max-width: 88%;
-      padding: 12px 15px;
-      border-radius: 16px;
-      font-size: 14px;
-      line-height: 1.5;
-      white-space: pre-line;
-    }
+    .msg { max-width: 88%; padding: 12px 15px; border-radius: 16px; font-size: 14px; line-height: 1.5; white-space: pre-line; }
+    .msg-bot { align-self: flex-start; background: var(--bg-elevated); border: 1px solid var(--line-subtle); color: var(--text-primary); }
+    .msg-user { align-self: flex-end; background: var(--grad-brand); color: #fff; font-weight: 500; }
 
-    .msg-bot {
-      align-self: flex-start;
-      background: var(--bg-elevated);
-      border: 1px solid var(--line-subtle);
-      color: var(--text-primary);
-    }
-
-    .msg-user {
-      align-self: flex-end;
-      background: var(--grad-brand);
-      color: #fff;
-      font-weight: 500;
-    }
-
-    .msg-tools {
-      margin-top: 9px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .msg-tools { margin-top: 9px; display: flex; flex-wrap: wrap; gap: 8px; }
 
     .btn-listen, .btn-mini-copy {
       background: #100c22;
@@ -449,17 +341,9 @@
       gap: 5px;
     }
 
-    .btn-listen:disabled {
-      opacity: 0.6;
-      cursor: wait;
-    }
+    .btn-listen:disabled { opacity: 0.6; cursor: wait; }
 
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
 
     .chip {
       background: var(--bg-elevated);
@@ -472,15 +356,9 @@
       cursor: pointer;
     }
 
-    .chip:hover {
-      background: #28204d;
-      border-color: rgba(236, 72, 153, 0.65);
-    }
+    .chip:hover { background: #28204d; border-color: rgba(236, 72, 153, 0.65); }
 
-    .input-row {
-      display: flex;
-      gap: 8px;
-    }
+    .input-row { display: flex; gap: 8px; }
 
     .chat-input {
       flex: 1;
@@ -493,9 +371,7 @@
       outline: none;
     }
 
-    .chat-input:focus {
-      border-color: rgba(139, 92, 246, 0.7);
-    }
+    .chat-input:focus { border-color: rgba(139, 92, 246, 0.7); }
 
     .btn-send {
       background: var(--grad-brand);
@@ -508,17 +384,8 @@
       cursor: pointer;
     }
 
-    .btn-send:disabled {
-      opacity: 0.6;
-      cursor: wait;
-    }
-
-    .status-note {
-      margin-top: 8px;
-      font-size: 11.5px;
-      color: var(--text-muted);
-      min-height: 16px;
-    }
+    .btn-send:disabled { opacity: 0.6; cursor: wait; }
+    .status-note { margin-top: 8px; font-size: 11.5px; color: var(--text-muted); min-height: 16px; }
 
     .briefing-box {
       margin-top: 14px;
@@ -529,57 +396,15 @@
       display: none;
     }
 
-    .briefing-box.visible {
-      display: block;
-    }
+    .briefing-box.visible { display: block; }
+    .briefing-title { font-size: 13px; font-weight: 800; color: #e9d5ff; margin-bottom: 8px; }
+    .briefing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 8px; font-size: 12.5px; color: var(--text-secondary); }
 
-    .briefing-title {
-      font-size: 13px;
-      font-weight: 800;
-      color: #e9d5ff;
-      margin-bottom: 8px;
-    }
-
-    .briefing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 8px;
-      font-size: 12.5px;
-      color: var(--text-secondary);
-    }
-
-    .section-block {
-      margin-bottom: 48px;
-    }
-
-    .section-kicker {
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #c4b5fd;
-      margin-bottom: 6px;
-    }
-
-    .section-title {
-      font-size: 24px;
-      font-weight: 800;
-      letter-spacing: -0.015em;
-      margin-bottom: 6px;
-    }
-
-    .section-sub {
-      color: var(--text-secondary);
-      font-size: 14.5px;
-      margin-bottom: 20px;
-      max-width: 700px;
-    }
-
-    .grid-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 16px;
-    }
+    .section-block { margin-bottom: 48px; }
+    .section-kicker { font-size: 11px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #c4b5fd; margin-bottom: 6px; }
+    .section-title { font-size: 24px; font-weight: 800; letter-spacing: -0.015em; margin-bottom: 6px; }
+    .section-sub { color: var(--text-secondary); font-size: 14.5px; margin-bottom: 20px; max-width: 700px; }
+    .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; }
 
     button.info-card {
       width: 100%;
@@ -594,14 +419,11 @@
       flex-direction: column;
       justify-content: space-between;
       cursor: pointer;
+      touch-action: manipulation;
       transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
 
-    button.info-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--line-accent);
-      background: var(--bg-panel);
-    }
+    button.info-card:hover { transform: translateY(-2px); border-color: var(--line-accent); background: var(--bg-panel); }
 
     .card-thumb {
       width: 100%;
@@ -610,34 +432,13 @@
       display: block;
       background: #0d091c;
       border-bottom: 1px solid var(--line-subtle);
+      pointer-events: none;
     }
 
-    .card-body {
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex: 1;
-    }
-
-    .info-card h3 {
-      font-size: 16.5px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .info-card p {
-      font-size: 13.5px;
-      color: var(--text-secondary);
-      margin-bottom: 14px;
-    }
-
-    .card-footer-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
+    .card-body { padding: 18px; display: flex; flex-direction: column; justify-content: space-between; flex: 1; pointer-events: none; }
+    .info-card h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 8px; }
+    .info-card p { font-size: 13.5px; color: var(--text-secondary); margin-bottom: 14px; }
+    .card-footer-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 
     .tag-orcamento {
       display: inline-block;
@@ -650,17 +451,13 @@
       border-radius: 999px;
     }
 
-    .card-action-label {
-      font-size: 12px;
-      font-weight: 700;
-      color: #c4b5fd;
-    }
+    .card-action-label { font-size: 12px; font-weight: 700; color: #c4b5fd; }
 
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      z-index: 60;
-      background: rgba(4, 3, 10, 0.78);
+      z-index: 80;
+      background: rgba(4, 3, 10, 0.82);
       backdrop-filter: blur(8px);
       display: none;
       align-items: center;
@@ -668,9 +465,7 @@
       padding: 18px;
     }
 
-    .modal-backdrop.open {
-      display: flex;
-    }
+    .modal-backdrop.open { display: flex; }
 
     .modal-box {
       width: 100%;
@@ -682,27 +477,9 @@
       box-shadow: 0 28px 70px rgba(0, 0, 0, 0.75);
     }
 
-    .modal-img {
-      width: 100%;
-      height: 176px;
-      object-fit: cover;
-      border-radius: 14px;
-      margin-bottom: 14px;
-      border: 1px solid var(--line-subtle);
-    }
-
-    .modal-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-
-    .modal-title {
-      font-size: 19px;
-      font-weight: 800;
-    }
+    .modal-img { width: 100%; height: 176px; object-fit: cover; border-radius: 14px; margin-bottom: 14px; border: 1px solid var(--line-subtle); }
+    .modal-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+    .modal-title { font-size: 19px; font-weight: 800; }
 
     .btn-close-modal {
       background: var(--bg-elevated);
@@ -715,25 +492,9 @@
       cursor: pointer;
     }
 
-    .modal-desc {
-      font-size: 14px;
-      color: var(--text-secondary);
-      margin-bottom: 16px;
-    }
-
-    .modal-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .footer-box {
-      text-align: center;
-      padding: 26px 14px;
-      color: var(--text-muted);
-      font-size: 13px;
-      border-top: 1px solid var(--line-subtle);
-    }
+    .modal-desc { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+    .modal-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .footer-box { text-align: center; padding: 26px 14px; color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--line-subtle); }
 
     .wa-float {
       position: fixed;
@@ -864,13 +625,13 @@
         <button
           type="button"
           class="info-card"
-          onclick="abrirOpcao('Agentes de IA', 'Atendimento consultivo, qualificação de leads, agendamentos e envio estruturado de briefings e alertas automáticos.', 'Quero orçamento para um Agente de IA personalizado', 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80')"
+          data-titulo="Agentes de IA"
+          data-descricao="Atendimento consultivo, qualificação de leads, agendamentos e envio estruturado de briefings e alertas automáticos."
+          data-prompt="Quero orçamento para um Agente de IA personalizado"
+          data-imagem="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+          data-site=""
         >
-          <img
-            class="card-thumb"
-            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
-            alt="Ilustração Agentes de IA"
-          />
+          <img class="card-thumb" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="Ilustração Agentes de IA" />
           <div class="card-body">
             <div>
               <h3>Agentes de IA</h3>
@@ -886,13 +647,13 @@
         <button
           type="button"
           class="info-card"
-          onclick="abrirOpcao('Sites & Aplicativos', 'Interfaces rápidas, responsivas e orientadas a conversão para negócios locais, marcas e serviços digitais.', 'Quero orçamento para Site ou Aplicativo', 'https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80')"
+          data-titulo="Sites & Aplicativos"
+          data-descricao="Interfaces rápidas, responsivas e orientadas a conversão para negócios locais, marcas e serviços digitais."
+          data-prompt="Quero orçamento para Site ou Aplicativo"
+          data-imagem="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80"
+          data-site=""
         >
-          <img
-            class="card-thumb"
-            src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80"
-            alt="Ilustração Sites e Aplicativos"
-          />
+          <img class="card-thumb" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80" alt="Ilustração Sites e Aplicativos" />
           <div class="card-body">
             <div>
               <h3>Sites &amp; Aplicativos</h3>
@@ -908,13 +669,13 @@
         <button
           type="button"
           class="info-card"
-          onclick="abrirOpcao('Sistemas & Automações', 'Integrações inteligentes para conectar atendimento, planilhas, notificações e rotinas operacionais.', 'Quero orçamento para um Sistema ou Automação', 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80')"
+          data-titulo="Sistemas & Automações"
+          data-descricao="Integrações inteligentes para conectar atendimento, planilhas, notificações e rotinas operacionais."
+          data-prompt="Quero orçamento para um Sistema ou Automação"
+          data-imagem="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+          data-site=""
         >
-          <img
-            class="card-thumb"
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
-            alt="Ilustração Sistemas e Automações"
-          />
+          <img class="card-thumb" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Ilustração Sistemas e Automações" />
           <div class="card-body">
             <div>
               <h3>Sistemas &amp; Automações</h3>
@@ -937,7 +698,11 @@
         <button
           type="button"
           class="info-card"
-          onclick="abrirOpcao('DIVAS Salão de Beleza', 'Recepção inteligente com apresentação de serviços, consulta de horários e alerta automático do agendamento.', 'Quero saber mais sobre o projeto DIVAS Salão de Beleza', 'https://leledesouzas96-creator.github.io/Divas/fotos/salao.jpg')"
+          data-titulo="DIVAS Salão de Beleza"
+          data-descricao="Recepção inteligente com apresentação de serviços, consulta de horários e alerta automático do agendamento."
+          data-prompt="Quero saber mais sobre o projeto DIVAS Salão de Beleza"
+          data-imagem="https://leledesouzas96-creator.github.io/Divas/fotos/salao.jpg"
+          data-site="https://leledesouzas96-creator.github.io/Divas/"
         >
           <img
             class="card-thumb"
@@ -952,7 +717,7 @@
             </div>
             <div class="card-footer-row">
               <span class="tag-orcamento">Foto Real • Case</span>
-              <span class="card-action-label">Abrir case →</span>
+              <span class="card-action-label">Abrir projeto →</span>
             </div>
           </div>
         </button>
@@ -960,13 +725,13 @@
         <button
           type="button"
           class="info-card"
-          onclick="abrirOpcao('Hamburgueria / Burger IA', 'Fluxo interativo de pedidos, opções do cardápio e coleta ágil de informações para entrega ou retirada.', 'Quero ver como funciona o Agente de IA para Hamburgueria', 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80')"
+          data-titulo="Hamburgueria / Burger IA"
+          data-descricao="Fluxo interativo de pedidos, opções do cardápio e coleta ágil de informações para entrega ou retirada."
+          data-prompt="Quero ver como funciona o Agente de IA para Hamburgueria"
+          data-imagem="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+          data-site=""
         >
-          <img
-            class="card-thumb"
-            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
-            alt="Foto ilustrativa Hamburgueria Burger IA"
-          />
+          <img class="card-thumb" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Foto ilustrativa Hamburgueria Burger IA" />
           <div class="card-body">
             <div>
               <h3>Hamburgueria / Burger IA</h3>
@@ -982,13 +747,13 @@
         <button
           type="button"
           class="info-card"
-          onclick="abrirOpcao('Varejo & Loja de Roupas', 'Assistente virtual para orientar clientes sobre catálogo, tamanhos, condições e encaminhamento de compra.', 'Quero ver como funciona o Agente de IA para Loja de Roupas', 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80')"
+          data-titulo="Varejo & Loja de Roupas"
+          data-descricao="Assistente virtual para orientar clientes sobre catálogo, tamanhos, condições e encaminhamento de compra."
+          data-prompt="Quero ver como funciona o Agente de IA para Loja de Roupas"
+          data-imagem="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80"
+          data-site=""
         >
-          <img
-            class="card-thumb"
-            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80"
-            alt="Foto ilustrativa Varejo e Loja de Roupas"
-          />
+          <img class="card-thumb" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Foto ilustrativa Varejo e Loja de Roupas" />
           <div class="card-body">
             <div>
               <h3>Varejo &amp; Loja de Roupas</h3>
@@ -1008,16 +773,26 @@
     </footer>
   </main>
 
-  <div class="modal-backdrop" id="opcao-modal" onclick="fecharModalBackdrop(event)">
-    <div class="modal-box">
+  <div class="modal-backdrop" id="opcao-modal">
+    <div class="modal-box" id="modal-box">
       <img class="modal-img" id="modal-imagem" src="" alt="" style="display:none;" />
       <div class="modal-top">
         <h3 class="modal-title" id="modal-titulo"></h3>
-        <button type="button" class="btn-close-modal" onclick="fecharOpcaoModal()">Fechar</button>
+        <button type="button" class="btn-close-modal" id="btn-fechar-modal">Fechar</button>
       </div>
       <p class="modal-desc" id="modal-descricao"></p>
       <div class="modal-actions">
         <button type="button" class="btn-primary" id="modal-btn-ia">Conversar com a IA sobre isso</button>
+        <a
+          class="btn-secondary"
+          id="modal-btn-site"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="display:none;"
+        >
+          Abrir Site do Projeto
+        </a>
         <a
           class="btn-secondary"
           id="modal-btn-wa"
@@ -1041,7 +816,7 @@
   </a>
 
   <script>
-    const WORKER_URL = "https://vezqoraai";
+    const WORKER_URL = "https://vezqora-ia.workers.dev";
     const SHEETS_WEBHOOK = "https://script.google.com/macros/s/AKfycbwNe6oNJ-rjj2uDWUwQr2ekJc9fC8-9fY62BMzx8H0RhqRgOr2NSt7ezhR4rbx-hfsz/exec";
     const WHATSAPP_VEZQORA = "5551991895177";
 
@@ -1068,11 +843,14 @@
     const briefingBox = document.getElementById("briefing-box");
     const briefingGrid = document.getElementById("briefing-grid");
     const opcaoModal = document.getElementById("opcao-modal");
+    const modalBox = document.getElementById("modal-box");
     const modalImagem = document.getElementById("modal-imagem");
     const modalTitulo = document.getElementById("modal-titulo");
     const modalDescricao = document.getElementById("modal-descricao");
     const modalBtnIa = document.getElementById("modal-btn-ia");
+    const modalBtnSite = document.getElementById("modal-btn-site");
     const modalBtnWa = document.getElementById("modal-btn-wa");
+    const btnFecharModal = document.getElementById("btn-fechar-modal");
 
     window.addEventListener("scroll", () => {
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -1095,7 +873,7 @@
       setTimeout(() => chatInput.focus(), 250);
     }
 
-    function abrirOpcao(titulo, descricao, mensagemIa, imagemUrl = "") {
+    function abrirOpcao(titulo, descricao, mensagemIa, imagemUrl = "", siteUrl = "") {
       promptOpcaoSelecionada = mensagemIa;
       modalTitulo.textContent = titulo;
       modalDescricao.textContent = descricao;
@@ -1108,6 +886,14 @@
         modalImagem.style.display = "none";
       }
 
+      if (siteUrl) {
+        modalBtnSite.href = siteUrl;
+        modalBtnSite.style.display = "inline-flex";
+      } else {
+        modalBtnSite.href = "#";
+        modalBtnSite.style.display = "none";
+      }
+
       const textoWa = encodeURIComponent(`Olá! Vim pelo site da VEZQORA e quero saber mais sobre: ${titulo}.`);
       modalBtnWa.href = `https://wa.me/${WHATSAPP_VEZQORA}?text=${textoWa}`;
       opcaoModal.classList.add("open");
@@ -1117,11 +903,32 @@
       opcaoModal.classList.remove("open");
     }
 
-    function fecharModalBackdrop(event) {
-      if (event.target === opcaoModal) {
-        fecharOpcaoModal();
-      }
-    }
+    document.querySelectorAll("button.info-card").forEach((card) => {
+      card.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        abrirOpcao(
+          card.dataset.titulo || "Projeto",
+          card.dataset.descricao || "",
+          card.dataset.prompt || "",
+          card.dataset.imagem || "",
+          card.dataset.site || ""
+        );
+      });
+    });
+
+    btnFecharModal.addEventListener("click", (e) => {
+      e.stopPropagation();
+      fecharOpcaoModal();
+    });
+
+    modalBox.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+
+    opcaoModal.addEventListener("click", () => {
+      fecharOpcaoModal();
+    });
 
     modalBtnIa.addEventListener("click", () => {
       const msg = promptOpcaoSelecionada;
@@ -1151,9 +958,24 @@
         URL.revokeObjectURL(audioUrlAtual);
         audioUrlAtual = null;
       }
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
       if (!enviandoTexto) {
         definirEstadoV(false, "Tempo Real • Voz Gemini");
       }
+    }
+
+    function falarFallbackNavegador(texto) {
+      if (!("speechSynthesis" in window)) return false;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(texto);
+      utter.lang = "pt-BR";
+      utter.onstart = () => definirEstadoV(true, "Falando...");
+      utter.onend = () => definirEstadoV(false, "Tempo Real • Voz Gemini");
+      utter.onerror = () => definirEstadoV(false, "Tempo Real • Voz Gemini");
+      window.speechSynthesis.speak(utter);
+      return true;
     }
 
     function pcm16Base64ToWavBlob(base64Pcm, sampleRate = 24000, numChannels = 1) {
@@ -1163,4 +985,386 @@
       const view = new DataView(buffer);
 
       const writeAscii = (offset, str) => {
-        for (let i = 0; i < str.length; i++)
+        for (let i = 0; i < str.length; i++) {
+          view.setUint8(offset + i, str.charCodeAt(i));
+        }
+      };
+
+      writeAscii(0, "RIFF");
+      view.setUint32(4, 36 + pcmLength, true);
+      writeAscii(8, "WAVE");
+      writeAscii(12, "fmt ");
+      view.setUint32(16, 16, true);
+      view.setUint16(20, 1, true);
+      view.setUint16(22, numChannels, true);
+      view.setUint32(24, sampleRate, true);
+      view.setUint32(28, sampleRate * numChannels * 2, true);
+      view.setUint16(32, numChannels * 2, true);
+      view.setUint16(34, 16, true);
+      writeAscii(36, "data");
+      view.setUint32(40, pcmLength, true);
+
+      for (let i = 0; i < pcmLength; i++) {
+        view.setUint8(44 + i, binaryString.charCodeAt(i));
+      }
+
+      return new Blob([buffer], { type: "audio/wav" });
+    }
+
+    async function tocarAudioBase64(audioBase64, audioMimeType = "audio/L16;rate=24000") {
+      if (!audioBase64) return false;
+      pararAudioAtual();
+
+      const rateMatch = /rate=(\d+)/.exec(audioMimeType || "");
+      const sampleRate = rateMatch ? Number(rateMatch[1]) : 24000;
+      const wavBlob = pcm16Base64ToWavBlob(audioBase64, sampleRate, 1);
+
+      audioUrlAtual = URL.createObjectURL(wavBlob);
+      audioAtual = new Audio(audioUrlAtual);
+
+      audioAtual.onplay = () => definirEstadoV(true, "Falando em tempo real...");
+      audioAtual.onended = () => {
+        if (audioUrlAtual) {
+          URL.revokeObjectURL(audioUrlAtual);
+          audioUrlAtual = null;
+        }
+        audioAtual = null;
+        definirEstadoV(false, "Tempo Real • Voz Gemini");
+      };
+
+      await audioAtual.play();
+      return true;
+    }
+
+    async function ouvirComVozGemini(texto, botaoEl = null) {
+      const textoLimpo = String(texto || "").trim();
+      if (!textoLimpo) return;
+
+      const voiceName = getVozSelecionada();
+      const textoOriginalBtn = botaoEl ? botaoEl.textContent : "";
+
+      try {
+        if (botaoEl) {
+          botaoEl.disabled = true;
+          botaoEl.textContent = `⏳ Gerando ${voiceName}...`;
+        }
+        definirEstadoV(true, `Preparando ${voiceName}...`);
+        statusNote.textContent = `Gerando áudio nativo do Gemini (${voiceName})...`;
+
+        const res = await fetch(`${WORKER_URL}/api/tts`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            mode: "tts",
+            text: textoLimpo,
+            voiceName
+          })
+        });
+
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.audioBase64) {
+          throw new Error(data.details || data.error || "Falha no áudio do Gemini");
+        }
+
+        await tocarAudioBase64(data.audioBase64, data.audioMimeType);
+        statusNote.textContent = `Reproduzindo voz nativa Gemini: ${voiceName}`;
+      } catch (err) {
+        console.error(err);
+        if (falarFallbackNavegador(textoLimpo)) {
+          statusNote.textContent = "Áudio Gemini indisponível no Worker; reproduzindo voz local do navegador.";
+        } else {
+          definirEstadoV(false, "Tempo Real • Voz Gemini");
+          statusNote.textContent = `Áudio indisponível no momento (${err.message}).`;
+        }
+      } finally {
+        if (botaoEl) {
+          botaoEl.disabled = false;
+          botaoEl.textContent = textoOriginalBtn || "🔊 Ouvir com voz Gemini";
+        }
+      }
+    }
+
+    function criarMensagemBotStreaming() {
+      const div = document.createElement("div");
+      div.className = "msg msg-bot";
+
+      const textoNode = document.createElement("div");
+      textoNode.textContent = "Digitando...";
+      div.appendChild(textoNode);
+
+      const tools = document.createElement("div");
+      tools.className = "msg-tools";
+
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "btn-listen";
+      btn.textContent = "🔊 Ouvir com voz Gemini";
+      tools.appendChild(btn);
+
+      const btnCopy = document.createElement("button");
+      btnCopy.type = "button";
+      btnCopy.className = "btn-mini-copy";
+      btnCopy.textContent = "Copiar";
+      tools.appendChild(btnCopy);
+
+      div.appendChild(tools);
+      chatBox.appendChild(div);
+      chatBox.scrollTop = chatBox.scrollHeight;
+
+      let textoAtual = "";
+      btn.onclick = () => ouvirComVozGemini(textoAtual, btn);
+      btnCopy.onclick = () => {
+        if (!textoAtual) return;
+        navigator.clipboard?.writeText(textoAtual).then(() => {
+          btnCopy.textContent = "Copiado ✓";
+          setTimeout(() => { btnCopy.textContent = "Copiar"; }, 1400);
+        }).catch(() => {});
+      };
+
+      return {
+        atualizar(novoTexto) {
+          textoAtual = novoTexto;
+          textoNode.textContent = novoTexto || "Digitando...";
+          chatBox.scrollTop = chatBox.scrollHeight;
+        },
+        btn
+      };
+    }
+
+    function adicionarMensagemUsuario(texto) {
+      const div = document.createElement("div");
+      div.className = "msg msg-user";
+      div.textContent = texto;
+      chatBox.appendChild(div);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function enviarRapido(texto) {
+      enviarMensagem(texto);
+    }
+
+    function enviarFormulario(event) {
+      event.preventDefault();
+      const texto = chatInput.value.trim();
+      if (!texto) return;
+      chatInput.value = "";
+      enviarMensagem(texto);
+    }
+
+    function renderizarBriefing(lead) {
+      if (!lead || typeof lead !== "object") return;
+      const campos = [
+        ["Nome", lead.nome],
+        ["WhatsApp", lead.whatsapp],
+        ["Solução", lead.solucao],
+        ["Ramo", lead.ramo],
+        ["Funcionalidades", lead.funcionalidades],
+        ["Dor principal", lead.dor]
+      ].filter(([, val]) => val && String(val).trim());
+
+      if (!campos.length) return;
+      briefingGrid.innerHTML = campos
+        .map(([rotulo, valor]) => `<div><strong>${rotulo}:</strong> ${String(valor)}</div>`)
+        .join("");
+      briefingBox.classList.add("visible");
+    }
+
+    function registrarLeadLocal(lead) {
+      if (!lead || typeof lead !== "object") return;
+      renderizarBriefing(lead);
+      fetch(SHEETS_WEBHOOK, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          origem: "VEZQORA Site",
+          whatsappDestino: WHATSAPP_VEZQORA,
+          dataHora: new Date().toISOString(),
+          ...lead
+        })
+      }).catch(() => {});
+    }
+
+    function respostaLocalTriagem(msg) {
+      const lower = msg.toLowerCase();
+      let solucaoSugerida = "projeto sob medida";
+      if (lower.includes("site")) solucaoSugerida = "Site Profissional com IA";
+      else if (lower.includes("app") || lower.includes("aplicativo")) solucaoSugerida = "Aplicativo Interativo";
+      else if (lower.includes("agente") || lower.includes("ia")) solucaoSugerida = "Agente de IA";
+      else if (lower.includes("sistema")) solucaoSugerida = "Sistema Personalizado";
+
+      return `Perfeito, podemos estruturar ${solucaoSugerida} sob medida para o seu negócio. Qual é o seu ramo de atuação e o que você precisa automatizar ou melhorar hoje? Se quiser, já pode me deixar seu nome e WhatsApp com DDD.`;
+    }
+
+    async function enviarMensagem(texto) {
+      const msgLimpa = String(texto || "").trim();
+      if (!msgLimpa || enviandoTexto) return;
+
+      enviandoTexto = true;
+      btnSend.disabled = true;
+      definirEstadoV(true, "Respondendo ao vivo...");
+
+      adicionarMensagemUsuario(msgLimpa);
+      historico.push({ role: "user", content: msgLimpa });
+      statusNote.textContent = "Respondendo em tempo real...";
+
+      const botMsg = criarMensagemBotStreaming();
+
+      try {
+        const voiceName = getVozSelecionada();
+        const res = await fetch(`${WORKER_URL}/api/chat`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            message: msgLimpa,
+            history: historico.slice(-10),
+            voiceName,
+            stream: true,
+            includeAudio: false
+          })
+        });
+
+        if (!res.ok) {
+          const errData = await res.json().catch(() => ({}));
+          throw new Error(errData.details || errData.error || `HTTP ${res.status}`);
+        }
+
+        const contentType = res.headers.get("content-type") || "";
+        let finalReply = "";
+        let leadRecebido = null;
+
+        if (contentType.includes("text/event-stream") && res.body) {
+          const reader = res.body.getReader();
+          const decoder = new TextDecoder();
+          let buffer = "";
+
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+            const linhas = buffer.split("\n");
+            buffer = linhas.pop() || "";
+
+            for (const linha of linhas) {
+              const limpo = linha.trim();
+              if (!limpo.startsWith("data:")) continue;
+              const payloadStr = limpo.slice(5).trim();
+              if (!payloadStr || payloadStr === "[DONE]") continue;
+
+              try {
+                const parsed = JSON.parse(payloadStr);
+                if (typeof parsed.delta === "string") {
+                  finalReply += parsed.delta;
+                  const visivel = finalReply.replace(/<LEAD_JSON>[\s\S]*$/i, "").replace(/[*#_`]/g, "").trimStart();
+                  botMsg.atualizar(visivel);
+                }
+                if (typeof parsed.reply === "string" && !finalReply) {
+                  finalReply = parsed.reply;
+                  botMsg.atualizar(finalReply);
+                }
+                if (parsed.lead) {
+                  leadRecebido = parsed.lead;
+                }
+              } catch (_) {}
+            }
+          }
+        } else {
+          const data = await res.json().catch(() => ({}));
+          finalReply = data.reply || "";
+          leadRecebido = data.lead || null;
+        }
+
+        const cleanReply = finalReply
+          .replace(/<LEAD_JSON>[\s\S]*?<\/LEAD_JSON>/gi, "")
+          .replace(/[*#_`]/g, "")
+          .trim() || respostaLocalTriagem(msgLimpa);
+
+        botMsg.atualizar(cleanReply);
+        historico.push({ role: "assistant", content: cleanReply });
+
+        if (leadRecebido) {
+          registrarLeadLocal(leadRecebido);
+          statusNote.textContent = "Briefing registrado e enviado para o atendimento VEZQORA!";
+        } else {
+          statusNote.textContent = "";
+        }
+
+        if (somAtivo && cleanReply) {
+          ouvirComVozGemini(cleanReply, botMsg.btn).catch(() => {});
+        } else {
+          definirEstadoV(false, "Tempo Real • Voz Gemini");
+        }
+      } catch (err) {
+        console.error(err);
+        const fallbackReply = respostaLocalTriagem(msgLimpa);
+        botMsg.atualizar(fallbackReply);
+        historico.push({ role: "assistant", content: fallbackReply });
+        statusNote.textContent = `Worker sem resposta (${err.message}) — usando modo local de triagem.`;
+        if (somAtivo) {
+          falarFallbackNavegador(fallbackReply);
+        } else {
+          definirEstadoV(false, "Tempo Real • Voz Gemini");
+        }
+      } finally {
+        enviandoTexto = false;
+        btnSend.disabled = false;
+        chatInput.focus();
+      }
+    }
+
+    function alternarMicrofone() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        statusNote.textContent = "Seu navegador não suporta reconhecimento de voz. Digite sua resposta abaixo.";
+        return;
+      }
+
+      if (ouvindo && recognition) {
+        recognition.stop();
+        return;
+      }
+
+      recognition = new SpeechRecognition();
+      recognition.lang = "pt-BR";
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      recognition.onstart = () => {
+        ouvindo = true;
+        btnMic.textContent = "⏹️ Parar Microfone";
+        btnMic.classList.add("listening");
+        definirEstadoV(true, "Ouvindo você...");
+        statusNote.textContent = "Ouvindo você falar...";
+      };
+
+      recognition.onresult = (event) => {
+        const transcricao = event.results?.[0]?.[0]?.transcript || "";
+        if (transcricao.trim()) {
+          enviarMensagem(transcricao.trim());
+        }
+      };
+
+      recognition.onerror = (event) => {
+        definirEstadoV(false, "Tempo Real • Voz Gemini");
+        statusNote.textContent = `Microfone: ${event.error || "não foi possível capturar voz"}`;
+      };
+
+      recognition.onend = () => {
+        ouvindo = false;
+        btnMic.textContent = "🎙️ Ativar Voz e Falar";
+        btnMic.classList.remove("listening");
+        if (!enviandoTexto && !audioAtual) {
+          definirEstadoV(false, "Tempo Real • Voz Gemini");
+        }
+      };
+
+      recognition.start();
+    }
+
+    const mensagemInicial =
+      "Olá! Sou a consultora especialista da VEZQORA. Qual solução você busca hoje: Site Profissional, Aplicativo Interativo, Agente de IA ou Sistema Personalizado?";
+    historico.push({ role: "assistant", content: mensagemInicial });
+    const msgInicialView = criarMensagemBotStreaming();
+    msgInicialView.atualizar(mensagemInicial);
+  </script>
+</body>
+</html>
