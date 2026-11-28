@@ -6,16 +6,16 @@
   <title>VEZQORA — AI Engineering, Sites, Apps &amp; Sistemas</title>
   <style>
     :root {
-      --bg-dark: #070510;
-      --bg-card: #120e24;
-      --bg-panel: #181330;
-      --bg-elevated: #201940;
+      --bg-dark: #06040e;
+      --bg-card: #110d24;
+      --bg-panel: #171230;
+      --bg-elevated: #1f1840;
       --border-soft: rgba(255, 255, 255, 0.08);
-      --border-glow: rgba(139, 92, 246, 0.42);
-      --text-main: #f5f3ff;
-      --text-muted: #a7a0cb;
+      --border-glow: rgba(168, 85, 247, 0.45);
+      --text-main: #f7f5ff;
+      --text-muted: #aba3d1;
       --green: #10b981;
-      --grad-brand: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 52%, #ec4899 100%);
+      --grad-brand: linear-gradient(135deg, #2563eb 0%, #8b5cf6 50%, #ec4899 100%);
     }
 
     * {
@@ -31,13 +31,15 @@
 
     body {
       background:
-        radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.24) 0%, transparent 45%),
-        radial-gradient(circle at 85% 25%, rgba(236, 72, 153, 0.12) 0%, transparent 38%),
+        radial-gradient(circle at 50% 4%, rgba(139, 92, 246, 0.28) 0%, transparent 46%),
+        radial-gradient(circle at 88% 22%, rgba(236, 72, 153, 0.16) 0%, transparent 38%),
+        radial-gradient(circle at 12% 35%, rgba(59, 130, 246, 0.14) 0%, transparent 40%),
         var(--bg-dark);
       color: var(--text-main);
       min-height: 100vh;
-      padding-bottom: 100px;
+      padding-bottom: 104px;
       line-height: 1.55;
+      overflow-x: hidden;
     }
 
     .topbar {
@@ -48,8 +50,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 14px 20px;
-      background: rgba(7, 5, 16, 0.88);
-      backdrop-filter: blur(14px);
+      background: rgba(6, 4, 14, 0.88);
+      backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-soft);
     }
 
@@ -60,40 +62,47 @@
     }
 
     .logo-v {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
+      position: relative;
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
       background: var(--grad-brand);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 900;
-      font-size: 21px;
-      color: #fff;
-      animation: pulseV 2.2s infinite ease-in-out;
-      box-shadow: 0 0 22px rgba(139, 92, 246, 0.5);
+      font-size: 22px;
+      color: #ffffff;
+      text-shadow: 0 0 14px rgba(255, 255, 255, 0.85);
+      animation: pulseVTop 2s infinite ease-in-out;
     }
 
-    @keyframes pulseV {
+    @keyframes pulseVTop {
       0%, 100% {
         transform: scale(1);
-        box-shadow: 0 0 20px rgba(139, 92, 246, 0.45);
+        box-shadow:
+          0 0 18px rgba(139, 92, 246, 0.65),
+          0 0 34px rgba(236, 72, 153, 0.35),
+          inset 0 0 10px rgba(255, 255, 255, 0.35);
       }
       50% {
-        transform: scale(1.08);
-        box-shadow: 0 0 36px rgba(236, 72, 153, 0.75);
+        transform: scale(1.1);
+        box-shadow:
+          0 0 28px rgba(168, 85, 247, 0.95),
+          0 0 52px rgba(236, 72, 153, 0.72),
+          inset 0 0 16px rgba(255, 255, 255, 0.65);
       }
     }
 
     .brand-title {
       font-weight: 800;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.07em;
       font-size: 16px;
     }
 
     .brand-sub {
       font-size: 10px;
-      letter-spacing: 0.13em;
+      letter-spacing: 0.14em;
       color: var(--text-muted);
     }
 
@@ -102,64 +111,126 @@
       color: #fff;
       border: none;
       border-radius: 11px;
-      padding: 10px 15px;
+      padding: 10px 16px;
       font-weight: 700;
       font-size: 13px;
       cursor: pointer;
-      box-shadow: 0 8px 24px rgba(139, 92, 246, 0.35);
+      box-shadow: 0 8px 26px rgba(139, 92, 246, 0.45);
     }
 
     .container {
-      max-width: 860px;
+      max-width: 880px;
       margin: 0 auto;
       padding: 28px 18px 0;
     }
 
     .hero {
       text-align: center;
-      padding: 12px 10px 30px;
+      padding: 10px 10px 32px;
     }
 
     .badge-top {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(139, 92, 246, 0.15);
+      background: rgba(139, 92, 246, 0.16);
       border: 1px solid var(--border-glow);
-      color: #e9d5ff;
+      color: #f3e8ff;
       font-size: 12px;
       font-weight: 700;
-      padding: 6px 14px;
+      padding: 6px 15px;
       border-radius: 999px;
-      margin-bottom: 18px;
+      margin-bottom: 22px;
+      box-shadow: 0 0 24px rgba(139, 92, 246, 0.22);
     }
 
-    .hero-v-big {
-      width: 92px;
-      height: 92px;
-      margin: 0 auto 18px;
-      border-radius: 26px;
-      background: var(--grad-brand);
+    .hero-v-wrap {
+      position: relative;
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 46px;
+    }
+
+    .hero-v-halo {
+      position: absolute;
+      inset: -10px;
+      border-radius: 34px;
+      background: var(--grad-brand);
+      filter: blur(22px);
+      opacity: 0.65;
+      animation: pulseHalo 2s infinite ease-in-out;
+      z-index: 0;
+    }
+
+    .hero-v-big {
+      position: relative;
+      z-index: 1;
+      width: 98px;
+      height: 98px;
+      border-radius: 28px;
+      background: var(--grad-brand);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
       font-weight: 900;
-      color: #fff;
-      animation: pulseV 2.2s infinite ease-in-out;
+      color: #ffffff;
+      text-shadow:
+        0 0 16px rgba(255, 255, 255, 0.9),
+        0 0 36px rgba(236, 72, 153, 0.85);
+      animation: pulseVHero 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseVHero {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow:
+          0 0 26px rgba(139, 92, 246, 0.75),
+          0 0 56px rgba(236, 72, 153, 0.45),
+          inset 0 0 14px rgba(255, 255, 255, 0.4);
+      }
+      50% {
+        transform: scale(1.12);
+        box-shadow:
+          0 0 42px rgba(168, 85, 247, 1),
+          0 0 82px rgba(236, 72, 153, 0.82),
+          inset 0 0 22px rgba(255, 255, 255, 0.72);
+      }
+    }
+
+    @keyframes pulseHalo {
+      0%, 100% {
+        transform: scale(0.95);
+        opacity: 0.52;
+      }
+      50% {
+        transform: scale(1.16);
+        opacity: 0.92;
+      }
     }
 
     .hero h1 {
-      font-size: clamp(26px, 5.2vw, 42px);
+      font-size: clamp(27px, 5.4vw, 44px);
       font-weight: 800;
-      line-height: 1.18;
-      margin-bottom: 12px;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 span {
+      background: var(--grad-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero p {
       color: var(--text-muted);
-      max-width: 620px;
-      margin: 0 auto 22px;
+      max-width: 640px;
+      margin: 0 auto 24px;
       font-size: 15px;
     }
 
@@ -175,12 +246,12 @@
       color: #fff;
       border: none;
       border-radius: 12px;
-      padding: 13px 20px;
+      padding: 13px 22px;
       font-weight: 700;
       font-size: 14px;
       cursor: pointer;
       text-decoration: none;
-      box-shadow: 0 10px 28px rgba(139, 92, 246, 0.35);
+      box-shadow: 0 12px 32px rgba(139, 92, 246, 0.42);
     }
 
     .btn-secondary {
@@ -188,7 +259,7 @@
       color: var(--text-main);
       border: 1px solid var(--border-glow);
       border-radius: 12px;
-      padding: 13px 20px;
+      padding: 13px 22px;
       font-weight: 700;
       font-size: 14px;
       cursor: pointer;
@@ -196,12 +267,14 @@
     }
 
     .assistant-card {
-      background: var(--bg-card);
+      background: linear-gradient(180deg, rgba(23, 18, 48, 0.92) 0%, rgba(15, 11, 33, 0.96) 100%);
       border: 1px solid var(--border-glow);
       border-radius: 24px;
       padding: 20px;
-      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.65);
-      margin-bottom: 42px;
+      box-shadow:
+        0 24px 64px rgba(0, 0, 0, 0.72),
+        0 0 36px rgba(139, 92, 246, 0.14);
+      margin-bottom: 44px;
     }
 
     .assistant-header {
@@ -224,7 +297,7 @@
       color: #a7f3d0;
       background: rgba(16, 185, 129, 0.14);
       border: 1px solid rgba(16, 185, 129, 0.35);
-      padding: 4px 10px;
+      padding: 4px 11px;
       border-radius: 999px;
     }
 
@@ -246,7 +319,7 @@
 
     .voice-select {
       width: 100%;
-      background: #0b0818;
+      background: #0a0716;
       color: #fff;
       border: 1px solid rgba(139, 92, 246, 0.45);
       border-radius: 12px;
@@ -292,7 +365,7 @@
 
     .btn-sound.muted {
       opacity: 0.72;
-      background: #19142e;
+      background: #18132d;
     }
 
     .chat-box {
@@ -326,13 +399,14 @@
       background: var(--grad-brand);
       color: #fff;
       font-weight: 500;
+      box-shadow: 0 8px 22px rgba(139, 92, 246, 0.3);
     }
 
     .btn-listen {
       margin-top: 9px;
-      background: #120e24;
-      color: #e9d5ff;
-      border: 1px solid rgba(168, 85, 247, 0.45);
+      background: #120d26;
+      color: #f3e8ff;
+      border: 1px solid rgba(168, 85, 247, 0.5);
       border-radius: 999px;
       padding: 6px 12px;
       font-size: 12px;
@@ -357,8 +431,8 @@
 
     .chip {
       background: var(--bg-elevated);
-      color: #e9e4ff;
-      border: 1px solid rgba(139, 92, 246, 0.35);
+      color: #ede9fe;
+      border: 1px solid rgba(139, 92, 246, 0.38);
       border-radius: 10px;
       padding: 8px 13px;
       font-size: 12px;
@@ -367,7 +441,7 @@
     }
 
     .chip:hover {
-      border-color: rgba(236, 72, 153, 0.65);
+      border-color: rgba(236, 72, 153, 0.72);
     }
 
     .input-row {
@@ -377,7 +451,7 @@
 
     .chat-input {
       flex: 1;
-      background: #0b0818;
+      background: #0a0716;
       color: #fff;
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 12px;
@@ -410,7 +484,7 @@
     }
 
     .section-block {
-      margin-bottom: 42px;
+      margin-bottom: 44px;
     }
 
     .section-title {
@@ -427,21 +501,22 @@
 
     .grid-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
       gap: 16px;
     }
 
     .info-card {
-      background: var(--bg-card);
+      background: linear-gradient(180deg, rgba(20, 15, 42, 0.92) 0%, rgba(14, 11, 30, 0.96) 100%);
       border: 1px solid var(--border-soft);
       border-radius: 18px;
       padding: 18px;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     .info-card:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
       border-color: var(--border-glow);
+      box-shadow: 0 14px 32px rgba(139, 92, 246, 0.16);
     }
 
     .info-card h3 {
@@ -460,9 +535,9 @@
       display: inline-block;
       font-size: 11px;
       font-weight: 700;
-      color: #e9d5ff;
-      background: rgba(139, 92, 246, 0.18);
-      border: 1px solid rgba(139, 92, 246, 0.38);
+      color: #f3e8ff;
+      background: rgba(139, 92, 246, 0.2);
+      border: 1px solid rgba(168, 85, 247, 0.42);
       padding: 4px 11px;
       border-radius: 999px;
     }
@@ -487,7 +562,7 @@
       font-size: 13px;
       padding: 12px 16px;
       border-radius: 999px;
-      box-shadow: 0 10px 28px rgba(22, 163, 74, 0.45);
+      box-shadow: 0 10px 28px rgba(22, 163, 74, 0.48);
     }
   </style>
 </head>
@@ -506,13 +581,16 @@
   <main class="container">
     <section class="hero">
       <div class="badge-top">⚡ Engenharia de IA, Sites, Apps e Sistemas</div>
-      <div class="hero-v-big">V</div>
-      <h1>Tecnologia inteligente sob medida para o seu negócio</h1>
+      <div class="hero-v-wrap">
+        <div class="hero-v-halo"></div>
+        <div class="hero-v-big">V</div>
+      </div>
+      <h1>Engenharia de IA que <span>transforma</span> seu atendimento</h1>
       <p>
-        Desenvolvemos sites, aplicativos interativos, sistemas e agentes de IA que atendem clientes, organizam processos e geram oportunidades com orçamento personalizado.
+        Criamos sites, aplicativos, sistemas e agentes de IA sob medida para o seu negócio — com respostas rápidas, automação de processos e proposta personalizada.
       </p>
       <div class="hero-actions">
-        <button class="btn-primary" type="button" onclick="irParaChat()">Montar Briefing com IA</button>
+        <button class="btn-primary" type="button" onclick="irParaChat()">Solicitar Orçamento com IA</button>
         <a class="btn-secondary" href="#projetos">Ver Demonstrações</a>
       </div>
     </section>
@@ -569,21 +647,21 @@
 
     <section class="section-block" id="solucoes">
       <h2 class="section-title">Soluções Sob Orçamento</h2>
-      <p class="section-sub">Cada projeto é planejado de acordo com os objetivos e fluxos da sua operação.</p>
+      <p class="section-sub">Projetos sob medida para cada operação — sem planos engessados.</p>
       <div class="grid-cards">
         <div class="info-card">
           <h3>Agentes de IA</h3>
-          <p>Atendimento instantâneo, qualificação de leads, agendamentos e alertas automáticos no fluxo do negócio.</p>
+          <p>Atendimento instantâneo, qualificação de clientes, agendamentos e envio de resumos automáticos.</p>
           <span class="tag-orcamento">Sob orçamento</span>
         </div>
         <div class="info-card">
           <h3>Sites &amp; Aplicativos</h3>
-          <p>Sites modernos e aplicativos interativos com foco em performance, clareza e conversão.</p>
+          <p>Sites modernos e aplicativos interativos com foco em conversão, velocidade e experiência mobile.</p>
           <span class="tag-orcamento">Sob orçamento</span>
         </div>
         <div class="info-card">
           <h3>Sistemas &amp; Automações</h3>
-          <p>Sistemas personalizados e integrações para reduzir tarefas manuais e acelerar o atendimento.</p>
+          <p>Integrações inteligentes para organizar fluxos, reduzir tarefas manuais e escalar o atendimento.</p>
           <span class="tag-orcamento">Sob orçamento</span>
         </div>
       </div>
@@ -595,12 +673,12 @@
       <div class="grid-cards">
         <div class="info-card">
           <h3>DIVAS Salão de Beleza</h3>
-          <p>Recepção inteligente com consulta de serviços, horários e alerta automático de agendamento.</p>
+          <p>Recepção automatizada com consulta de serviços, horários e alerta direto do agendamento.</p>
           <span class="tag-orcamento">Case em Produção</span>
         </div>
         <div class="info-card">
           <h3>Hamburgueria / Burger IA</h3>
-          <p>Atendimento de pedidos, opções do cardápio e captura rápida de dados de entrega.</p>
+          <p>Atendimento interativo de pedidos, opções do cardápio e captura rápida de dados de entrega.</p>
           <span class="tag-orcamento">Demonstração IA</span>
         </div>
         <div class="info-card">
@@ -618,316 +696,4 @@
 
   <a
     class="wa-float"
-    href="https://wa.me/5551991895177?text=Ol%C3%A1%20Leandro%2C%20vim%20pelo%20site%20da%20VEZQORA%20e%20quero%20um%20or%C3%A7amento."
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    💬 WhatsApp VEZQORA
-  </a>
-
-  <script>
-    const WORKER_URL = "https://vezqoraai";
-    const SHEETS_WEBHOOK = "https://script.google.com/macros/s/AKfycbwNe6oNJ-rjj2uDWUwQr2ekJc9fC8-9fY62BMzx8H0RhqRgOr2NSt7ezhR4rbx-hfsz/exec";
-    const WHATSAPP_VEZQORA = "5551991895177";
-
-    let somAtivo = true;
-    let enviandoTexto = false;
-    let audioAtual = null;
-    let audioUrlAtual = null;
-    let recognition = null;
-    let ouvindo = false;
-    const historico = [];
-
-    const chatBox = document.getElementById("chat-box");
-    const chatInput = document.getElementById("chat-input");
-    const btnSend = document.getElementById("btn-send");
-    const statusNote = document.getElementById("status-note");
-    const voiceSelect = document.getElementById("voz-gemini-select");
-    const btnSom = document.getElementById("btn-som");
-    const btnMic = document.getElementById("btn-mic");
-
-    function getVozSelecionada() {
-      return String(voiceSelect.value || "Charon").split(/[\s(]/)[0].trim() || "Charon";
-    }
-
-    function irParaChat() {
-      document.getElementById("assistente-vezqora").scrollIntoView({ behavior: "smooth", block: "start" });
-      setTimeout(() => chatInput.focus(), 250);
-    }
-
-    function alternarSom() {
-      somAtivo = !somAtivo;
-      btnSom.textContent = somAtivo ? "🔊 Som: Ativo" : "🔇 Som: Mudo";
-      btnSom.classList.toggle("muted", !somAtivo);
-      if (!somAtivo) {
-        pararAudioAtual();
-      }
-    }
-
-    function pararAudioAtual() {
-      if (audioAtual) {
-        audioAtual.pause();
-        audioAtual.currentTime = 0;
-        audioAtual = null;
-      }
-      if (audioUrlAtual) {
-        URL.revokeObjectURL(audioUrlAtual);
-        audioUrlAtual = null;
-      }
-    }
-
-    function pcm16Base64ToWavBlob(base64Pcm, sampleRate = 24000, numChannels = 1) {
-      const binaryString = atob(base64Pcm);
-      const pcmLength = binaryString.length;
-      const buffer = new ArrayBuffer(44 + pcmLength);
-      const view = new DataView(buffer);
-
-      const writeAscii = (offset, str) => {
-        for (let i = 0; i < str.length; i++) {
-          view.setUint8(offset + i, str.charCodeAt(i));
-        }
-      };
-
-      writeAscii(0, "RIFF");
-      view.setUint32(4, 36 + pcmLength, true);
-      writeAscii(8, "WAVE");
-      writeAscii(12, "fmt ");
-      view.setUint32(16, 16, true);
-      view.setUint16(20, 1, true);
-      view.setUint16(22, numChannels, true);
-      view.setUint32(24, sampleRate, true);
-      view.setUint32(28, sampleRate * numChannels * 2, true);
-      view.setUint16(32, numChannels * 2, true);
-      view.setUint16(34, 16, true);
-      writeAscii(36, "data");
-      view.setUint32(40, pcmLength, true);
-
-      for (let i = 0; i < pcmLength; i++) {
-        view.setUint8(44 + i, binaryString.charCodeAt(i));
-      }
-
-      return new Blob([buffer], { type: "audio/wav" });
-    }
-
-    async function tocarAudioBase64(audioBase64, audioMimeType = "audio/L16;rate=24000") {
-      if (!audioBase64) return false;
-      pararAudioAtual();
-
-      const rateMatch = /rate=(\d+)/.exec(audioMimeType || "");
-      const sampleRate = rateMatch ? Number(rateMatch[1]) : 24000;
-      const wavBlob = pcm16Base64ToWavBlob(audioBase64, sampleRate, 1);
-
-      audioUrlAtual = URL.createObjectURL(wavBlob);
-      audioAtual = new Audio(audioUrlAtual);
-      audioAtual.onended = () => {
-        if (audioUrlAtual) {
-          URL.revokeObjectURL(audioUrlAtual);
-          audioUrlAtual = null;
-        }
-      };
-
-      await audioAtual.play();
-      return true;
-    }
-
-    async function ouvirComVozGemini(texto, botaoEl = null) {
-      const textoLimpo = String(texto || "").trim();
-      if (!textoLimpo) return;
-
-      const voiceName = getVozSelecionada();
-      const textoOriginalBtn = botaoEl ? botaoEl.textContent : "";
-
-      try {
-        if (botaoEl) {
-          botaoEl.disabled = true;
-          botaoEl.textContent = `⏳ Gerando ${voiceName}...`;
-        }
-        statusNote.textContent = `Gerando áudio nativo do Gemini (${voiceName})...`;
-
-        const res = await fetch(`${WORKER_URL}/api/tts`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            mode: "tts",
-            text: textoLimpo,
-            voiceName
-          })
-        });
-
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok || !data.audioBase64) {
-          throw new Error(data.details || data.error || "Falha no áudio do Gemini");
-        }
-
-        await tocarAudioBase64(data.audioBase64, data.audioMimeType);
-        statusNote.textContent = `Reproduzindo voz nativa Gemini: ${voiceName}`;
-      } catch (err) {
-        console.error(err);
-        statusNote.textContent = `Áudio indisponível no momento (${err.message}).`;
-      } finally {
-        if (botaoEl) {
-          botaoEl.disabled = false;
-          botaoEl.textContent = textoOriginalBtn || "🔊 Ouvir com voz Gemini";
-        }
-      }
-    }
-
-    function adicionarMensagem(role, texto, botaoElRef = null) {
-      const div = document.createElement("div");
-      div.className = `msg ${role === "user" ? "msg-user" : "msg-bot"}`;
-
-      const textoNode = document.createElement("div");
-      textoNode.textContent = texto;
-      div.appendChild(textoNode);
-
-      if (role === "assistant") {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "btn-listen";
-        btn.textContent = "🔊 Ouvir com voz Gemini";
-        btn.onclick = () => ouvirComVozGemini(texto, btn);
-        div.appendChild(btn);
-        if (botaoElRef) botaoElRef.current = btn;
-      }
-
-      chatBox.appendChild(div);
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }
-
-    function enviarRapido(texto) {
-      enviarMensagem(texto);
-    }
-
-    function enviarFormulario(event) {
-      event.preventDefault();
-      const texto = chatInput.value.trim();
-      if (!texto) return;
-      chatInput.value = "";
-      enviarMensagem(texto);
-    }
-
-    function registrarLeadLocal(lead) {
-      if (!lead || typeof lead !== "object") return;
-      fetch(SHEETS_WEBHOOK, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          origem: "VEZQORA Site",
-          whatsappDestino: WHATSAPP_VEZQORA,
-          dataHora: new Date().toISOString(),
-          ...lead
-        })
-      }).catch(() => {});
-    }
-
-    async function enviarMensagem(texto) {
-      const msgLimpa = String(texto || "").trim();
-      if (!msgLimpa || enviandoTexto) return;
-
-      enviandoTexto = true;
-      btnSend.disabled = true;
-
-      adicionarMensagem("user", msgLimpa);
-      historico.push({ role: "user", content: msgLimpa });
-      statusNote.textContent = "Consultora VEZQORA digitando...";
-
-      const btnBotRef = { current: null };
-
-      try {
-        const voiceName = getVozSelecionada();
-        const res = await fetch(`${WORKER_URL}/api/chat`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            message: msgLimpa,
-            history: historico.slice(-10),
-            voiceName,
-            includeAudio: false
-          })
-        });
-
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok) {
-          throw new Error(data.details || data.error || `HTTP ${res.status}`);
-        }
-
-        const reply = data.reply || "Entendido! Pode me contar mais detalhes do seu projeto?";
-        historico.push({ role: "assistant", content: reply });
-
-        adicionarMensagem("assistant", reply, btnBotRef);
-
-        if (data.lead) {
-          registrarLeadLocal(data.lead);
-          statusNote.textContent = "Briefing registrado e enviado para o atendimento VEZQORA!";
-        } else {
-          statusNote.textContent = "";
-        }
-
-        if (somAtivo && reply) {
-          ouvirComVozGemini(reply, btnBotRef.current).catch(() => {});
-        }
-      } catch (err) {
-        console.error(err);
-        statusNote.textContent = `Erro: ${err.message}`;
-        adicionarMensagem(
-          "assistant",
-          "Não consegui conectar ao Worker agora. Verifique se o endereço do Worker está ativo e tente novamente."
-        );
-      } finally {
-        enviandoTexto = false;
-        btnSend.disabled = false;
-        chatInput.focus();
-      }
-    }
-
-    function alternarMicrofone() {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (!SpeechRecognition) {
-        statusNote.textContent = "Seu navegador não suporta reconhecimento de voz. Digite sua resposta abaixo.";
-        return;
-      }
-
-      if (ouvindo && recognition) {
-        recognition.stop();
-        return;
-      }
-
-      recognition = new SpeechRecognition();
-      recognition.lang = "pt-BR";
-      recognition.interimResults = false;
-      recognition.maxAlternatives = 1;
-
-      recognition.onstart = () => {
-        ouvindo = true;
-        btnMic.textContent = "⏹️ Parar Microfone";
-        btnMic.classList.add("listening");
-        statusNote.textContent = "Ouvindo você falar...";
-      };
-
-      recognition.onresult = (event) => {
-        const transcricao = event.results?.[0]?.[0]?.transcript || "";
-        if (transcricao.trim()) {
-          enviarMensagem(transcricao.trim());
-        }
-      };
-
-      recognition.onerror = (event) => {
-        statusNote.textContent = `Microfone: ${event.error || "não foi possível capturar voz"}`;
-      };
-
-      recognition.onend = () => {
-        ouvindo = false;
-        btnMic.textContent = "🎙️ Ativar Voz e Falar";
-        btnMic.classList.remove("listening");
-      };
-
-      recognition.start();
-    }
-
-    const mensagemInicial =
-      "Olá! Sou a consultora especialista da VEZQORA. Qual solução você busca hoje: Site Profissional, Aplicativo Interativo, Agente de IA ou Sistema Personalizado?";
-    historico.push({ role: "assistant", content: mensagemInicial });
-    adicionarMensagem("assistant", mensagemInicial);
-  </script>
-</body>
-</html>
+    href="
